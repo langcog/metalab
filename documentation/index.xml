@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Welcome | MetaLab</title>
-    <link>https://langcog.github.io/metalab-site/documentation/</link>
-      <atom:link href="https://langcog.github.io/metalab-site/documentation/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://langcog.github.io/metalab/documentation/</link>
+      <atom:link href="https://langcog.github.io/metalab/documentation/index.xml" rel="self" type="application/rss+xml" />
     <description>Welcome</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 26 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://langcog.github.io/metalab-site/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://langcog.github.io/metalab/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Welcome</title>
-      <link>https://langcog.github.io/metalab-site/documentation/</link>
+      <link>https://langcog.github.io/metalab/documentation/</link>
     </image>
     
     <item>
       <title>Getting Started</title>
-      <link>https://langcog.github.io/metalab-site/documentation/getting-started/</link>
+      <link>https://langcog.github.io/metalab/documentation/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab-site/documentation/getting-started/</guid>
+      <guid>https://langcog.github.io/metalab/documentation/getting-started/</guid>
       <description>&lt;p&gt;Getting started with MetaLab&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Contribution Challenge</title>
-      <link>https://langcog.github.io/metalab-site/documentation/challenge/</link>
+      <link>https://langcog.github.io/metalab/documentation/challenge/</link>
       <pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab-site/documentation/challenge/</guid>
+      <guid>https://langcog.github.io/metalab/documentation/challenge/</guid>
       <description>
 
 
@@ -45,7 +45,7 @@
 &lt;/div&gt;
 &lt;div id=&#34;data-sharing-policy&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Data-sharing policy&lt;/h2&gt;
-&lt;p&gt;Meta-analyses will be added to the MetaLab online database. Users will be able to download your data and potentially re-use it. However, MetaLab requires anyone who uses a dataset to cite the contributors of the dataset, even if there is no publication or pre-print yet. Citation that users should use are available in the &lt;a href=&#34;https://langcog.github.io/metalab-site/documentation.html#datasets&#34;&gt;documentation of each dataset&lt;/a&gt;, potentially specifying « in preparation », and/or linking to an online repository (such as OSF). Note that we will update these entries as preprints and published papers become available. Learn more by reading our &lt;a href=&#34;https://langcog.github.io/metalab-site/publications.html&#34;&gt;full citation policy&lt;/a&gt;. Unpublished meta-analyses shared on MetaLab do not count as publication.&lt;/p&gt;
+&lt;p&gt;Meta-analyses will be added to the MetaLab online database. Users will be able to download your data and potentially re-use it. However, MetaLab requires anyone who uses a dataset to cite the contributors of the dataset, even if there is no publication or pre-print yet. Citation that users should use are available in the &lt;a href=&#34;https://langcog.github.io/metalab/documentation.html#datasets&#34;&gt;documentation of each dataset&lt;/a&gt;, potentially specifying « in preparation », and/or linking to an online repository (such as OSF). Note that we will update these entries as preprints and published papers become available. Learn more by reading our &lt;a href=&#34;https://langcog.github.io/metalab/publications.html&#34;&gt;full citation policy&lt;/a&gt;. Unpublished meta-analyses shared on MetaLab do not count as publication.&lt;/p&gt;
 &lt;p&gt;MetaLab is dynamic: Meta-analysis can be updated, adding new relevant studies when they are published. Contributors can retain control on this for as long as they want to. Two options exists for the curation and review of data. Contributors can choose to be the curator. This means a contributor agrees to be the person responsible for identifying new relevant papers and signaling them to the MetaLab data manager, who will add them to the database. Curators are expected to check the data entered regularly. Curators are part of the MetaLab team and can choose to join discussions regarding e.g. site revamping. Alternatively, contributors can choose to step down completely, and it will be MetaLab’s job to assign a new curator for such a dataset.&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -53,9 +53,9 @@
     
     <item>
       <title>FAQ</title>
-      <link>https://langcog.github.io/metalab-site/documentation/faq/</link>
+      <link>https://langcog.github.io/metalab/documentation/faq/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab-site/documentation/faq/</guid>
+      <guid>https://langcog.github.io/metalab/documentation/faq/</guid>
       <description>
 
 
@@ -65,9 +65,9 @@
     
     <item>
       <title>Why Meta-Analysis?</title>
-      <link>https://langcog.github.io/metalab-site/documentation/why_do_a_ma/</link>
+      <link>https://langcog.github.io/metalab/documentation/why_do_a_ma/</link>
       <pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab-site/documentation/why_do_a_ma/</guid>
+      <guid>https://langcog.github.io/metalab/documentation/why_do_a_ma/</guid>
       <description>
 
 

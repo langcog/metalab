@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reports | MetaLab</title>
-    <link>https://langcog.github.io/metalab-site/report/</link>
-      <atom:link href="https://langcog.github.io/metalab-site/report/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://langcog.github.io/metalab/report/</link>
+      <atom:link href="https://langcog.github.io/metalab/report/index.xml" rel="self" type="application/rss+xml" />
     <description>Reports</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 27 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 29 Oct 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://langcog.github.io/metalab-site/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://langcog.github.io/metalab/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Reports</title>
-      <link>https://langcog.github.io/metalab-site/report/</link>
+      <link>https://langcog.github.io/metalab/report/</link>
     </image>
     
     <item>
       <title>Design Choice Analyses</title>
-      <link>https://langcog.github.io/metalab-site/report/method_choice/</link>
-      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab-site/report/method_choice/</guid>
+      <link>https://langcog.github.io/metalab/report/method_choice/</link>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://langcog.github.io/metalab/report/method_choice/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
 div.sourceCode { overflow-x: auto; }
@@ -91,7 +91,7 @@ method.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span cl
 &lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;N effect sizes&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guides&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;fill=&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guide_legend&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ncol=&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Response Mode&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;metalab_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;response_mode =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;as.factor&lt;/span&gt;(metalab_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;response_mode)
 
@@ -105,7 +105,7 @@ response.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span 
 &lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;N effect sizes&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guides&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;fill=&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guide_legend&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ncol=&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Dependent Measure&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;metalab_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;dependent_measure=&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;as.factor&lt;/span&gt;(metalab_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;dependent_measure)
 dm.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
@@ -118,7 +118,7 @@ dm.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=
 &lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;N effect sizes&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guides&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;fill=&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guide_legend&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ncol=&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Participant design&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;metalab_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;participant_design =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;as.factor&lt;/span&gt;(metalab_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;participant_design)
 participant_design.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
@@ -131,7 +131,7 @@ participant_design.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data
 &lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;N effect sizes&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guides&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;fill=&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guide_legend&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ncol=&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;design-choice-variables-by-age&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Design choice variables by age&lt;/h2&gt;
@@ -147,14 +147,14 @@ participant_design.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data
 &lt;span class=&#34;st&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Age (months)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Response Mode&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(age.response_mode.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; mean_age_months_rounded, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; n, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; response_mode)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; response_mode)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Age (months)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Response Mode&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-5-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-5-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;age.method.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;mean_age_months_rounded =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;cut_width&lt;/span&gt;(mean_age_months,  &lt;span class=&#34;dt&#34;&gt;width =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;boundary =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;0&lt;/span&gt;))  &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(mean_age_months_rounded, method) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
@@ -167,14 +167,14 @@ participant_design.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data
 &lt;span class=&#34;st&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Age (months)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Method&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-5-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-5-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(age.method.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; mean_age_months_rounded, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; n, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; method)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; method)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Age (months)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Method&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-5-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-5-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;age.dm.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;mean_age_months_rounded =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;cut_width&lt;/span&gt;(mean_age_months,  &lt;span class=&#34;dt&#34;&gt;width =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;boundary =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;0&lt;/span&gt;))  &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(mean_age_months_rounded, dependent_measure) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
@@ -187,14 +187,14 @@ participant_design.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data
 &lt;span class=&#34;st&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Age (months)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Dependent Measure&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-5-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-5-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(age.dm.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; mean_age_months_rounded, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; n, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; dependent_measure)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; dependent_measure)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Age (months)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Dependent Measure&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-5-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-5-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;age.pd.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;mean_age_months_rounded =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;cut_width&lt;/span&gt;(mean_age_months,  &lt;span class=&#34;dt&#34;&gt;width =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;boundary =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;0&lt;/span&gt;))  &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(mean_age_months_rounded, participant_design) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
@@ -207,14 +207,14 @@ participant_design.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Age (months)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Participant Design&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-5-7.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-5-7.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(age.pd.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; mean_age_months_rounded, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; n, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; participant_design)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; participant_design)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Age (months)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Participant Design&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-5-8.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-5-8.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;effect-size-by-design-choice-variables&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Effect size by design choice variables&lt;/h2&gt;
@@ -242,7 +242,7 @@ metalab_data =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Method&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guides&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;colour=&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guide_legend&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ncol=&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;response.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(response_mode, dataset) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;residual.d =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;mean&lt;/span&gt;(residual.d),
@@ -254,7 +254,7 @@ metalab_data =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Response Mode&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guides&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;colour=&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guide_legend&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ncol=&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-7-2.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-7-2.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;dm.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(dependent_measure, dataset) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;residual.d =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;mean&lt;/span&gt;(residual.d),
@@ -266,7 +266,7 @@ metalab_data =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Dependent Measure&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guides&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;colour=&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guide_legend&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ncol=&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-7-3.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-7-3.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;participant_design.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(participant_design, dataset) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;residual.d =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;mean&lt;/span&gt;(residual.d),
@@ -278,7 +278,7 @@ metalab_data =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Participant Design&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guides&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;colour=&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guide_legend&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ncol=&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-7-4.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-7-4.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;across-datasets&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Across datasets&lt;/h3&gt;
@@ -296,7 +296,7 @@ metalab_data =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;method&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;legend.position=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;response.pd.all =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(response_mode) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;multi_boot_standard&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;col =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;residual.d&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
@@ -311,7 +311,7 @@ metalab_data =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;response mode&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;legend.position =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-8-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-8-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;dm.pd.all =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(dependent_measure) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;multi_boot_standard&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;col =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;residual.d&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
@@ -326,7 +326,7 @@ metalab_data =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;dependent measure&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;legend.position=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-8-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-8-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;participant_design.pd.all =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(participant_design) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;multi_boot_standard&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;col =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;residual.d&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
@@ -342,7 +342,7 @@ metalab_data =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;participant design&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;legend.position=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/method_choice/index_files/figure-html/unnamed-chunk-8-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-8-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -350,9 +350,9 @@ metalab_data =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span
     
     <item>
       <title>Developmental curve comparison</title>
-      <link>https://langcog.github.io/metalab-site/report/developmental_curves/</link>
-      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab-site/report/developmental_curves/</guid>
+      <link>https://langcog.github.io/metalab/report/developmental_curves/</link>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://langcog.github.io/metalab/report/developmental_curves/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
 div.sourceCode { overflow-x: auto; }
@@ -419,7 +419,7 @@ code &gt; span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* 
 &lt;div id=&#34;simple-random-effects-structure&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Simple random effects structure&lt;/h1&gt;
 &lt;p&gt;Below is our data set separated by meta-analysis with four curve types: 1) linear, 2) logarithmic, 3) quadratic, and 4) both linear and logarithmic predictors.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/developmental_curves/index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We ran mixed effects regressions where meta-analysis (data set) was included as a random intercept for our four models. We then ran Chi-squared tests to compare the different models to one another. Model comparison found the quadratic model to be a better fit than the linear model and the logarithmic model, but no difference between the linear and logarithmic model. The two predictor model (linear and log) also outperformed both the single predictor linear model and the single predictor logarithmic model.&lt;/p&gt;
 &lt;div class=&#34;sourceCode&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;lin_lmer &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;lmer&lt;/span&gt;(d_calc &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;mean_age &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;                &lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;dataset), 
@@ -754,7 +754,7 @@ lin_log_lmer &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span clas
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;lin_pred =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;predict&lt;/span&gt;(lin_lmer)) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;log_pred =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;predict&lt;/span&gt;(log_lmer)) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;lin_log_pred =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;predict&lt;/span&gt;(lin_log_lmer))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/developmental_curves/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Overall this method looks pretty good. It seems like the linear predictor in the two predictor model is smoothing the logs at the edges, and the random effects are working to capture cross data set variability.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;complex-random-effects-structure-nested-paper-effects&#34; class=&#34;section level1&#34;&gt;
@@ -872,7 +872,7 @@ lin_log_lmer &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span clas
 
 metalab_data_preds &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data_preds &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;lin_log_paper_pred =&lt;/span&gt; lin_log_paper_preds)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/developmental_curves/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;complex-random-effects-structure-random-slope&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Complex random effects structure (random slope)&lt;/h1&gt;
@@ -1219,7 +1219,7 @@ lin_log_paper_slope_preds &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;
 metalab_data_preds &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data_preds &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;lin_log_slope_pred =&lt;/span&gt; lin_log_slope_preds) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;lin_log_paper_slope_pred =&lt;/span&gt; lin_log_paper_slope_preds)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/developmental_curves/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;subset-to-only-those-papers-with-multiple-ages&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Subset to only those papers with multiple ages&lt;/h1&gt;
@@ -1275,7 +1275,7 @@ multiage_data &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;multiage_dat
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;ungroup &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;select&lt;/span&gt;(dataset, short_name, study_ID, d_calc, mean_age, d_var_calc, lin_log_pred) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;lin_log_paper_slope_multiage_pred =&lt;/span&gt; lin_log_paper_slope_multiage_preds)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/developmental_curves/index_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;three-age-groups&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Three age groups&lt;/h3&gt;
@@ -1328,7 +1328,7 @@ multiage_&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;_data &amp;lt;-&lt;span cl
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;ungroup &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;select&lt;/span&gt;(dataset, short_name, study_ID, d_calc, mean_age, d_var_calc, lin_log_pred) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;
 &lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;lin_log_paper_slope_multiage_3_pred =&lt;/span&gt; lin_log_paper_slope_multiage_&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;_preds)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab-site/metalab-site/report/developmental_curves/index_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;conclusions&#34; class=&#34;section level1&#34;&gt;
@@ -1340,9 +1340,9 @@ multiage_&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;_data &amp;lt;-&lt;span cl
     
     <item>
       <title>Hierarchical Random Effects in Meta-Analyses: Do they change stuff?</title>
-      <link>https://langcog.github.io/metalab-site/report/hierarchicalrandomeffect/</link>
-      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab-site/report/hierarchicalrandomeffect/</guid>
+      <link>https://langcog.github.io/metalab/report/hierarchicalrandomeffect/</link>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://langcog.github.io/metalab/report/hierarchicalrandomeffect/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
 div.sourceCode { overflow-x: auto; }

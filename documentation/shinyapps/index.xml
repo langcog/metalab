@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Applications | MetaLab</title>
-    <link>https://langcog.github.io/metalab-site/documentation/shinyapps/</link>
-      <atom:link href="https://langcog.github.io/metalab-site/documentation/shinyapps/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://langcog.github.io/metalab/documentation/shinyapps/</link>
+      <atom:link href="https://langcog.github.io/metalab/documentation/shinyapps/index.xml" rel="self" type="application/rss+xml" />
     <description>Applications</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
     <image>
-      <url>https://langcog.github.io/metalab-site/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://langcog.github.io/metalab/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Applications</title>
-      <link>https://langcog.github.io/metalab-site/documentation/shinyapps/</link>
+      <link>https://langcog.github.io/metalab/documentation/shinyapps/</link>
     </image>
     
     <item>
       <title>Data Validator</title>
-      <link>https://langcog.github.io/metalab-site/documentation/shinyapps/data-validation/</link>
+      <link>https://langcog.github.io/metalab/documentation/shinyapps/data-validation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab-site/documentation/shinyapps/data-validation/</guid>
+      <guid>https://langcog.github.io/metalab/documentation/shinyapps/data-validation/</guid>
       <description>&lt;p&gt;install metalabr&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Power Analysis</title>
-      <link>https://langcog.github.io/metalab-site/documentation/shinyapps/power-analysis/</link>
+      <link>https://langcog.github.io/metalab/documentation/shinyapps/power-analysis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab-site/documentation/shinyapps/power-analysis/</guid>
+      <guid>https://langcog.github.io/metalab/documentation/shinyapps/power-analysis/</guid>
       <description>&lt;p&gt;install metalabr&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Power Simulation</title>
-      <link>https://langcog.github.io/metalab-site/documentation/shinyapps/power-simulation/</link>
+      <link>https://langcog.github.io/metalab/documentation/shinyapps/power-simulation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab-site/documentation/shinyapps/power-simulation/</guid>
+      <guid>https://langcog.github.io/metalab/documentation/shinyapps/power-simulation/</guid>
       <description>&lt;p&gt;install metalabr&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Visualization</title>
-      <link>https://langcog.github.io/metalab-site/documentation/shinyapps/viz/</link>
+      <link>https://langcog.github.io/metalab/documentation/shinyapps/viz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab-site/documentation/shinyapps/viz/</guid>
+      <guid>https://langcog.github.io/metalab/documentation/shinyapps/viz/</guid>
       <description>&lt;p&gt;install metalabr&lt;/p&gt;
 </description>
     </item>
