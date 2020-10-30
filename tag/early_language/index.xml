@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>early_language | MetaLab</title>
-    <link>https://langcog.github.io/metalab/tag/early_language/</link>
-      <atom:link href="https://langcog.github.io/metalab/tag/early_language/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://metalab.stanford.edu/tag/early_language/</link>
+      <atom:link href="http://metalab.stanford.edu/tag/early_language/index.xml" rel="self" type="application/rss+xml" />
     <description>early_language</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
     <image>
-      <url>https://langcog.github.io/metalab/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>http://metalab.stanford.edu/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>early_language</title>
-      <link>https://langcog.github.io/metalab/tag/early_language/</link>
+      <link>http://metalab.stanford.edu/tag/early_language/</link>
     </image>
     
     <item>
       <title>Abstract rule learning</title>
-      <link>https://langcog.github.io/metalab/dataset/rulelearning/</link>
+      <link>http://metalab.stanford.edu/dataset/rulelearning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/rulelearning/</guid>
+      <guid>http://metalab.stanford.edu/dataset/rulelearning/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;abstract-rule-learning&#34; class=&#34;section level1&#34;&gt;
@@ -71,28 +71,28 @@ yes
     
     <item>
       <title>Cross-situational word learning</title>
-      <link>https://langcog.github.io/metalab/dataset/crosssituational/</link>
+      <link>http://metalab.stanford.edu/dataset/crosssituational/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/crosssituational/</guid>
+      <guid>http://metalab.stanford.edu/dataset/crosssituational/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;cross-situational-word-learning&#34; class=&#34;section level1&#34;&gt;
@@ -126,28 +126,28 @@ yes
     
     <item>
       <title>Familiar word recognition</title>
-      <link>https://langcog.github.io/metalab/dataset/famword/</link>
+      <link>http://metalab.stanford.edu/dataset/famword/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/famword/</guid>
+      <guid>http://metalab.stanford.edu/dataset/famword/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;familiar-word-recognition&#34; class=&#34;section level1&#34;&gt;
@@ -181,28 +181,28 @@ yes
     
     <item>
       <title>Function word segmentation</title>
-      <link>https://langcog.github.io/metalab/dataset/inworddb_function/</link>
+      <link>http://metalab.stanford.edu/dataset/inworddb_function/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/inworddb_function/</guid>
+      <guid>http://metalab.stanford.edu/dataset/inworddb_function/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;function-word-segmentation&#34; class=&#34;section level1&#34;&gt;
@@ -238,28 +238,28 @@ yes
     
     <item>
       <title>Gaze following</title>
-      <link>https://langcog.github.io/metalab/dataset/gaze_following/</link>
+      <link>http://metalab.stanford.edu/dataset/gaze_following/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/gaze_following/</guid>
+      <guid>http://metalab.stanford.edu/dataset/gaze_following/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;gaze-following&#34; class=&#34;section level1&#34;&gt;
@@ -295,28 +295,28 @@ no
     
     <item>
       <title>Infant directed speech preference</title>
-      <link>https://langcog.github.io/metalab/dataset/idspref/</link>
+      <link>http://metalab.stanford.edu/dataset/idspref/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/idspref/</guid>
+      <guid>http://metalab.stanford.edu/dataset/idspref/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;infant-directed-speech-preference&#34; class=&#34;section level1&#34;&gt;
@@ -352,28 +352,28 @@ yes
     
     <item>
       <title>Label advantage in concept learning</title>
-      <link>https://langcog.github.io/metalab/dataset/labadv/</link>
+      <link>http://metalab.stanford.edu/dataset/labadv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/labadv/</guid>
+      <guid>http://metalab.stanford.edu/dataset/labadv/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;label-advantage-in-concept-learning&#34; class=&#34;section level1&#34;&gt;
@@ -407,28 +407,28 @@ no
     
     <item>
       <title>Mispronunciation sensitivity</title>
-      <link>https://langcog.github.io/metalab/dataset/mps/</link>
+      <link>http://metalab.stanford.edu/dataset/mps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/mps/</guid>
+      <guid>http://metalab.stanford.edu/dataset/mps/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;mispronunciation-sensitivity&#34; class=&#34;section level1&#34;&gt;
@@ -464,28 +464,28 @@ yes
     
     <item>
       <title>Mutual exclusivity</title>
-      <link>https://langcog.github.io/metalab/dataset/mutex/</link>
+      <link>http://metalab.stanford.edu/dataset/mutex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/mutex/</guid>
+      <guid>http://metalab.stanford.edu/dataset/mutex/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;mutual-exclusivity&#34; class=&#34;section level1&#34;&gt;
@@ -521,28 +521,28 @@ yes
     
     <item>
       <title>Natural speech preference</title>
-      <link>https://langcog.github.io/metalab/dataset/speechpref/</link>
+      <link>http://metalab.stanford.edu/dataset/speechpref/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/speechpref/</guid>
+      <guid>http://metalab.stanford.edu/dataset/speechpref/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;natural-speech-preference&#34; class=&#34;section level1&#34;&gt;
@@ -578,28 +578,28 @@ yes
     
     <item>
       <title>Online word recognition</title>
-      <link>https://langcog.github.io/metalab/dataset/word_recognition/</link>
+      <link>http://metalab.stanford.edu/dataset/word_recognition/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/word_recognition/</guid>
+      <guid>http://metalab.stanford.edu/dataset/word_recognition/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;online-word-recognition&#34; class=&#34;section level1&#34;&gt;
@@ -635,28 +635,28 @@ no
     
     <item>
       <title>Phonotactic learning</title>
-      <link>https://langcog.github.io/metalab/dataset/phonotactics/</link>
+      <link>http://metalab.stanford.edu/dataset/phonotactics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/phonotactics/</guid>
+      <guid>http://metalab.stanford.edu/dataset/phonotactics/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;phonotactic-learning&#34; class=&#34;section level1&#34;&gt;
@@ -690,28 +690,28 @@ yes
     
     <item>
       <title>Pointing and vocabulary (concurrent)</title>
-      <link>https://langcog.github.io/metalab/dataset/pointing_concurrent/</link>
+      <link>http://metalab.stanford.edu/dataset/pointing_concurrent/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/pointing_concurrent/</guid>
+      <guid>http://metalab.stanford.edu/dataset/pointing_concurrent/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;pointing-and-vocabulary-concurrent&#34; class=&#34;section level1&#34;&gt;
@@ -747,28 +747,28 @@ yes
     
     <item>
       <title>Pointing and vocabulary (longitudinal)</title>
-      <link>https://langcog.github.io/metalab/dataset/pointing_longitudinal/</link>
+      <link>http://metalab.stanford.edu/dataset/pointing_longitudinal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/pointing_longitudinal/</guid>
+      <guid>http://metalab.stanford.edu/dataset/pointing_longitudinal/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;pointing-and-vocabulary-longitudinal&#34; class=&#34;section level1&#34;&gt;
@@ -804,28 +804,28 @@ yes
     
     <item>
       <title>Sound symbolism</title>
-      <link>https://langcog.github.io/metalab/dataset/symbolism/</link>
+      <link>http://metalab.stanford.edu/dataset/symbolism/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/symbolism/</guid>
+      <guid>http://metalab.stanford.edu/dataset/symbolism/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;sound-symbolism&#34; class=&#34;section level1&#34;&gt;
@@ -861,28 +861,28 @@ yes
     
     <item>
       <title>Statistical sound category learning</title>
-      <link>https://langcog.github.io/metalab/dataset/sounds/</link>
+      <link>http://metalab.stanford.edu/dataset/sounds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/sounds/</guid>
+      <guid>http://metalab.stanford.edu/dataset/sounds/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;statistical-sound-category-learning&#34; class=&#34;section level1&#34;&gt;
@@ -916,28 +916,28 @@ yes
     
     <item>
       <title>Statistical word segmentation</title>
-      <link>https://langcog.github.io/metalab/dataset/statseg/</link>
+      <link>http://metalab.stanford.edu/dataset/statseg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/statseg/</guid>
+      <guid>http://metalab.stanford.edu/dataset/statseg/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;statistical-word-segmentation&#34; class=&#34;section level1&#34;&gt;
@@ -973,28 +973,28 @@ yes
     
     <item>
       <title>Switch Task</title>
-      <link>https://langcog.github.io/metalab/dataset/switchtask/</link>
+      <link>http://metalab.stanford.edu/dataset/switchtask/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/switchtask/</guid>
+      <guid>http://metalab.stanford.edu/dataset/switchtask/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;switch-task&#34; class=&#34;section level1&#34;&gt;
@@ -1030,28 +1030,28 @@ yes
     
     <item>
       <title>Symbolic play</title>
-      <link>https://langcog.github.io/metalab/dataset/play/</link>
+      <link>http://metalab.stanford.edu/dataset/play/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/play/</guid>
+      <guid>http://metalab.stanford.edu/dataset/play/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;symbolic-play&#34; class=&#34;section level1&#34;&gt;
@@ -1087,28 +1087,28 @@ yes
     
     <item>
       <title>Vowel discrimination (native)</title>
-      <link>https://langcog.github.io/metalab/dataset/inphondb-native/</link>
+      <link>http://metalab.stanford.edu/dataset/inphondb-native/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/inphondb-native/</guid>
+      <guid>http://metalab.stanford.edu/dataset/inphondb-native/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;vowel-discrimination-native&#34; class=&#34;section level1&#34;&gt;
@@ -1144,28 +1144,28 @@ yes
     
     <item>
       <title>Vowel discrimination (non-native)</title>
-      <link>https://langcog.github.io/metalab/dataset/inphondb-nonnative/</link>
+      <link>http://metalab.stanford.edu/dataset/inphondb-nonnative/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/inphondb-nonnative/</guid>
+      <guid>http://metalab.stanford.edu/dataset/inphondb-nonnative/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;vowel-discrimination-non-native&#34; class=&#34;section level1&#34;&gt;
@@ -1201,28 +1201,28 @@ yes
     
     <item>
       <title>Word segmentation</title>
-      <link>https://langcog.github.io/metalab/dataset/inworddb/</link>
+      <link>http://metalab.stanford.edu/dataset/inworddb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/dataset/inworddb/</guid>
+      <guid>http://metalab.stanford.edu/dataset/inworddb/</guid>
       <description>
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-core-bootstrap/js/dataTables.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/jszip/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/css/buttons.bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.flash.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/dt-ext-buttons-bootstrap/js/buttons.bootstrap.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;http://metalab.stanford.edu/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;word-segmentation&#34; class=&#34;section level1&#34;&gt;

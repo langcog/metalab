@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Using MetaLab Data | MetaLab</title>
-    <link>https://langcog.github.io/metalab/documentation/using_ma_data/</link>
-      <atom:link href="https://langcog.github.io/metalab/documentation/using_ma_data/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://metalab.stanford.edu/documentation/using_ma_data/</link>
+      <atom:link href="http://metalab.stanford.edu/documentation/using_ma_data/index.xml" rel="self" type="application/rss+xml" />
     <description>Using MetaLab Data</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
     <image>
-      <url>https://langcog.github.io/metalab/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>http://metalab.stanford.edu/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Using MetaLab Data</title>
-      <link>https://langcog.github.io/metalab/documentation/using_ma_data/</link>
+      <link>http://metalab.stanford.edu/documentation/using_ma_data/</link>
     </image>
     
     <item>
       <title>Conduct MA</title>
-      <link>https://langcog.github.io/metalab/documentation/using_ma_data/conduct_ma/</link>
+      <link>http://metalab.stanford.edu/documentation/using_ma_data/conduct_ma/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/documentation/using_ma_data/conduct_ma/</guid>
+      <guid>http://metalab.stanford.edu/documentation/using_ma_data/conduct_ma/</guid>
       <description>
 
 
@@ -39,19 +39,19 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
 &lt;p&gt;It is important that you build traceability of your work from the start, particularly since in larger MAs other people may finish up the work or you want to check later on why you decided to exclude a given paper. So to make sure that all of your decisions are recorded and clear, make a copy of this &lt;a href=&#34;https://docs.google.com/spreadsheets/d/1mtN4g6FddpBljQzrR-mS0y414M9wQNjK4Vz09nLOe2s/edit#gid=0&#34;&gt;&lt;em&gt;decision spreadsheet&lt;/em&gt;&lt;/a&gt;. Don’t forget to rename it, to give us a “viewing” link, and clean it up as follows.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 1&lt;/strong&gt;: Click on “File” and select the “Make a copy…” option&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://langcog.github.io/metalab/media/documentation/image04.jpg&#34; width=&#34;480&#34; /&gt;
+&lt;img src=&#34;http://metalab.stanford.edu/media/documentation/image04.jpg&#34; width=&#34;480&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Step 2&lt;/strong&gt;: In the window that appears, change the name to something like “MA_TOPIC&amp;quot;&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://langcog.github.io/metalab/media/documentation/image03.jpg&#34; width=&#34;480&#34; /&gt;
+&lt;img src=&#34;http://metalab.stanford.edu/media/documentation/image03.jpg&#34; width=&#34;480&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Step 3&lt;/strong&gt;: Click on the blue button “Share” on the top right.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 4&lt;/strong&gt;: In the menu, click on “Get shareable link” on the top right&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 5&lt;/strong&gt;: Copy the link and send it to us.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://langcog.github.io/metalab/media/documentation/image05.jpg&#34; width=&#34;480&#34; /&gt;
+&lt;img src=&#34;http://metalab.stanford.edu/media/documentation/image05.jpg&#34; width=&#34;480&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;Step 6: Clean up&lt;/p&gt;
@@ -110,22 +110,22 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
 &lt;iframe src=&#34;https://www.youtube.com/embed/W3LMs-XY21g&#34; width=&#34;420&#34; height=&#34;315&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;&#34;&gt;&lt;/iframe&gt;
 &lt;p&gt;The goal of this step is to put together a list of publications that you will look at and consider for inclusion. In a typical MA, you make the most comprehensive list possible in order to answer a specific research question and/or to cover a given phenomenon. This typically means going through 1,000 abstracts, and reading in full 100 papers. You can start with the seminal paper for your effect of interest, and then look for the studies citing your seminal one. Use &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/advanced&#34;&gt;pubmed’s search&lt;/a&gt; to find your pivot study’s entry, for instance by copy-pasting the full paper title in the builder:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://langcog.github.io/metalab/media/documentation/pubmed_advanced_search.jpg&#34; width=&#34;480&#34; /&gt;
+&lt;img src=&#34;http://metalab.stanford.edu/media/documentation/pubmed_advanced_search.jpg&#34; width=&#34;480&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;When you press “search”, usually you’ll find the entry for your seminal paper (or if the title was not unique, you might need to click on one of the entries found until you do come across the entry for your seminal paper). Notice on the right a section entitled “Cited by …” Scroll down to click on the link at the bottom of this section stating “See all..”&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://langcog.github.io/metalab/media/documentation/pubmed_citing_papers.jpg&#34; width=&#34;480&#34; /&gt;
+&lt;img src=&#34;http://metalab.stanford.edu/media/documentation/pubmed_citing_papers.jpg&#34; width=&#34;480&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;You will now see all studies citing your seminal one. Constrain it further by clicking on “Show additional filters” on the left, and checking the box for “Infant: birth to 23 months”:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://langcog.github.io/metalab/media/documentation/links_from_pubmed.jpg&#34; width=&#34;480&#34; /&gt;
+&lt;img src=&#34;http://metalab.stanford.edu/media/documentation/links_from_pubmed.jpg&#34; width=&#34;480&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;You now want to save all these papers in your reference management software. If you use Zotero: Click on the drawing of a folder in your status/search bar. When you do so, a window will pop up with all the results for that pubmed page:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://langcog.github.io/metalab/media/documentation/save2Zotero.jpg&#34; width=&#34;480&#34; /&gt;
+&lt;img src=&#34;http://metalab.stanford.edu/media/documentation/save2Zotero.jpg&#34; width=&#34;480&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;Click on “select all” and “OK”. Repeat for the other search pages. This will store the citation information, including abstract, in zotero.&lt;/p&gt;
@@ -146,7 +146,7 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
 &lt;/div&gt;
 &lt;div id=&#34;how-should-i-structure-the-data-for-my-ma&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;How should I structure the data for my MA?&lt;/h3&gt;
-&lt;p&gt;We are hoping that eventually all of these MAs may be included in &lt;a href=&#34;.&#34;&gt;&lt;em&gt;MetaLab&lt;/em&gt;&lt;/a&gt;, so we ask you to use the &lt;a href=&#34;https://docs.google.com/spreadsheets/d/12Y_2BcFSu48t0F8a_xrY1Ro2fJoCIV1h8O627WNcrjY/edit?usp=sharing&#34;&gt;&lt;em&gt;MA template&lt;/em&gt;&lt;/a&gt; (create a copy, as you did in step 1), and follow the &lt;a href=&#34;https://langcog.github.io/metalab/documentation.html#field_specs&#34;&gt;&lt;em&gt;field specifications&lt;/em&gt;&lt;/a&gt;. Ideally, you would code all potentially relevant moderator variables (e.g., experimental manipulations) in addition to the core characteristics (columns in red; e.g. means). However, in the interest of time, you can get started with the core characteristics only. Remember once more to give us viewing rights (see step 1 for instructions).&lt;/p&gt;
+&lt;p&gt;We are hoping that eventually all of these MAs may be included in &lt;a href=&#34;.&#34;&gt;&lt;em&gt;MetaLab&lt;/em&gt;&lt;/a&gt;, so we ask you to use the &lt;a href=&#34;https://docs.google.com/spreadsheets/d/12Y_2BcFSu48t0F8a_xrY1Ro2fJoCIV1h8O627WNcrjY/edit?usp=sharing&#34;&gt;&lt;em&gt;MA template&lt;/em&gt;&lt;/a&gt; (create a copy, as you did in step 1), and follow the &lt;a href=&#34;http://metalab.stanford.edu/documentation.html#field_specs&#34;&gt;&lt;em&gt;field specifications&lt;/em&gt;&lt;/a&gt;. Ideally, you would code all potentially relevant moderator variables (e.g., experimental manipulations) in addition to the core characteristics (columns in red; e.g. means). However, in the interest of time, you can get started with the core characteristics only. Remember once more to give us viewing rights (see step 1 for instructions).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-are-the-relevant-variables-for-a-ma-and-how-many-input-rowscolumns-should-i-make&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;What are the relevant variables for a MA, and how many input rows/columns should I make?&lt;/h3&gt;
@@ -249,7 +249,7 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
 &lt;h1&gt;Structure for MA&lt;/h1&gt;
 &lt;div id=&#34;how-should-i-structure-the-data-for-my-meta-analysis&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;How should I structure the data for my meta-analysis?&lt;/h3&gt;
-&lt;p&gt;We are hoping that eventually all of your MAs (meta-analyses) will be included in &lt;a href=&#34;.&#34;&gt;&lt;em&gt;MetaLab&lt;/em&gt;&lt;/a&gt;, so we ask you to use the &lt;a href=&#34;https://docs.google.com/spreadsheets/d/12Y_2BcFSu48t0F8a_xrY1Ro2fJoCIV1h8O627WNcrjY/edit?usp=sharing&#34;&gt;&lt;em&gt;MA template&lt;/em&gt;&lt;/a&gt; (create a copy), and follow the &lt;a href=&#34;https://langcog.github.io/metalab/documentation.html#field_specs&#34;&gt;&lt;em&gt;field specifications&lt;/em&gt;&lt;/a&gt; to ensure compatibility. (Note that right now, winter 2018, these specifications are biased towards language acquisition research. If you work on another topic, we would be thrilled if you helped us expand and adapt MetaLab).&lt;/p&gt;
+&lt;p&gt;We are hoping that eventually all of your MAs (meta-analyses) will be included in &lt;a href=&#34;.&#34;&gt;&lt;em&gt;MetaLab&lt;/em&gt;&lt;/a&gt;, so we ask you to use the &lt;a href=&#34;https://docs.google.com/spreadsheets/d/12Y_2BcFSu48t0F8a_xrY1Ro2fJoCIV1h8O627WNcrjY/edit?usp=sharing&#34;&gt;&lt;em&gt;MA template&lt;/em&gt;&lt;/a&gt; (create a copy), and follow the &lt;a href=&#34;http://metalab.stanford.edu/documentation.html#field_specs&#34;&gt;&lt;em&gt;field specifications&lt;/em&gt;&lt;/a&gt; to ensure compatibility. (Note that right now, winter 2018, these specifications are biased towards language acquisition research. If you work on another topic, we would be thrilled if you helped us expand and adapt MetaLab).&lt;/p&gt;
 &lt;p&gt;Ideally, you would code all potentially relevant moderator variables (e.g., experimental manipulations) in addition to the core characteristics (columns in red; e.g., number of participants). However, in the interest of time, you can get started with the core characteristics only. Remember once more to give us viewing rights.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-are-the-relevant-variables-for-a-ma-and-how-many-input-rowscolumns-should-i-make-1&#34; class=&#34;section level3&#34;&gt;
@@ -303,9 +303,9 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
     
     <item>
       <title>Contribute MA</title>
-      <link>https://langcog.github.io/metalab/documentation/using_ma_data/contribute_ma/</link>
+      <link>http://metalab.stanford.edu/documentation/using_ma_data/contribute_ma/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/documentation/using_ma_data/contribute_ma/</guid>
+      <guid>http://metalab.stanford.edu/documentation/using_ma_data/contribute_ma/</guid>
       <description>
 
 
@@ -345,7 +345,7 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
 &lt;/div&gt;
 &lt;div id=&#34;who-owns-the-data-contributed-to-metalab&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Who owns the data contributed to MetaLab?&lt;/h3&gt;
-&lt;p&gt;You remain the owner of your meta-analysis data: Users must cite your data by your preferred citation. If your data are previously unpublished then this doesn&#39;t count as publication. Learn more by reading our &lt;a href=&#34;https://langcog.github.io/metalab/publications.html&#34;&gt;full citation policy&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You remain the owner of your meta-analysis data: Users must cite your data by your preferred citation. If your data are previously unpublished then this doesn&#39;t count as publication. Learn more by reading our &lt;a href=&#34;http://metalab.stanford.edu/publications.html&#34;&gt;full citation policy&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;can-i-retain-control-on-my-data-must-i-forever-retain-control-of-my-data&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Can I retain control on my data? Must I forever retain control of my data?&lt;/h3&gt;
@@ -424,9 +424,9 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
     
     <item>
       <title>Update Existing MA</title>
-      <link>https://langcog.github.io/metalab/documentation/using_ma_data/update_existing_ma/</link>
+      <link>http://metalab.stanford.edu/documentation/using_ma_data/update_existing_ma/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/documentation/using_ma_data/update_existing_ma/</guid>
+      <guid>http://metalab.stanford.edu/documentation/using_ma_data/update_existing_ma/</guid>
       <description>
 
 
@@ -444,9 +444,9 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
     
     <item>
       <title>Planning Studies and Interpreting Results</title>
-      <link>https://langcog.github.io/metalab/documentation/using_ma_data/plan_studies_interpret_results/</link>
+      <link>http://metalab.stanford.edu/documentation/using_ma_data/plan_studies_interpret_results/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/documentation/using_ma_data/plan_studies_interpret_results/</guid>
+      <guid>http://metalab.stanford.edu/documentation/using_ma_data/plan_studies_interpret_results/</guid>
       <description>
 
 
