@@ -5,7 +5,7 @@
     <link>http://metalab.stanford.edu/</link>
       <atom:link href="http://metalab.stanford.edu/index.xml" rel="self" type="application/rss+xml" />
     <description>MetaLab</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 04 Nov 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://metalab.stanford.edu/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>MetaLab</title>
@@ -556,7 +556,11 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
       <link>http://metalab.stanford.edu/documentation/shinyapps/data-validation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/documentation/shinyapps/data-validation/</guid>
-      <description>&lt;p&gt;install metalabr&lt;/p&gt;
+      <description>&lt;p&gt;To ensure that new datasets being added to the MetaLab website are valid, run the Data Validation application. The application tests the new datasets on different criteria, such as the existence of necessary columns (ex. fields in the “long_cite” column are required), the appropriate length of a certain column (ex. fields in the “short_cite” column should be less than length of 60 characters), and the appropriate range of a certain column (ex. fields in the “corr” column should have a value between -1 and 1).&lt;/p&gt;
+&lt;p&gt;The data validation tool allows you to validate datasets from 3 different sources:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;MetaLab Data&lt;/strong&gt; - these datasets are already part of the MetaLab database&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;External URL&lt;/strong&gt; - this allows you to validate a Google sheet by providing the Google sheet URL&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Upload CSV&lt;/strong&gt; - this allows you to validate a csv file that is on your local computer&lt;/p&gt;
 </description>
     </item>
     
@@ -799,7 +803,7 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
     <item>
       <title>Design Choice Analyses</title>
       <link>http://metalab.stanford.edu/report/method_choice/</link>
-      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/report/method_choice/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
@@ -1135,7 +1139,7 @@ metalab_data =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span
     <item>
       <title>Developmental curve comparison</title>
       <link>http://metalab.stanford.edu/report/developmental_curves/</link>
-      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/report/developmental_curves/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
@@ -2125,7 +2129,7 @@ multiage_&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;_data &amp;lt;-&lt;span cl
     <item>
       <title>Hierarchical Random Effects in Meta-Analyses: Do they change stuff?</title>
       <link>http://metalab.stanford.edu/report/hierarchicalrandomeffect/</link>
-      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/report/hierarchicalrandomeffect/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
