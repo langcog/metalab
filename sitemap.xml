@@ -277,6 +277,10 @@
   </url>
   
   <url>
+    <loc>http://metalab.stanford.edu/dataset/langdiscrim/</loc>
+  </url>
+  
+  <url>
     <loc>http://metalab.stanford.edu/dataset/mps/</loc>
   </url>
   
