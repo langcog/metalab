@@ -1,10 +1,10 @@
 ---
-title: Infant directed speech preference
+title: Syntactic Bootstrapping
 layout: data
 type: dataset
 tags: 
 - early_language
-summary: Looking times as a function of whether infant-directed vs. adult-directed speech is presented as stimulation.<br>23 papers | 75 experiments | 1220 subjects
+summary: Whether infants can correctly identify the references of the novel verbs embedded in a syntactically informative context.<br>18 papers | 60 experiments | 832 subjects
 ---
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
@@ -12,8 +12,8 @@ library(here)
 library(dplyr)
 load(here("shinyapps", "site_data", "Rdata", "metalab.Rdata"))
 
-dataset_info <- dataset_info %>% filter(short_name == "idspref")
-dataset_raw <- metalab_data %>% filter(short_name == "idspref")
+dataset_info <- dataset_info %>% filter(short_name == "synboot")
+dataset_raw <- metalab_data %>% filter(short_name == "synboot")
 
 ```
 # `r dataset_info$name` 

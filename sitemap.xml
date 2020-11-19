@@ -349,7 +349,15 @@
   </url>
   
   <url>
+    <loc>http://metalab.stanford.edu/dataset/synboot/</loc>
+  </url>
+  
+  <url>
     <loc>http://metalab.stanford.edu/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>http://metalab.stanford.edu/dataset/videodef/</loc>
   </url>
   
   <url>

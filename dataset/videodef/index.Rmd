@@ -1,10 +1,10 @@
 ---
-title: Infant directed speech preference
+title: Video deficit
 layout: data
 type: dataset
 tags: 
-- early_language
-summary: Looking times as a function of whether infant-directed vs. adult-directed speech is presented as stimulation.<br>23 papers | 75 experiments | 1220 subjects
+- cognitive_development
+summary: Learning from video versus face to face presentation of similar content.<br>69 papers | 122 experiments | 3004 subjects
 ---
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
@@ -12,8 +12,8 @@ library(here)
 library(dplyr)
 load(here("shinyapps", "site_data", "Rdata", "metalab.Rdata"))
 
-dataset_info <- dataset_info %>% filter(short_name == "idspref")
-dataset_raw <- metalab_data %>% filter(short_name == "idspref")
+dataset_info <- dataset_info %>% filter(short_name == "videodef")
+dataset_raw <- metalab_data %>% filter(short_name == "videodef")
 
 ```
 # `r dataset_info$name` 
