@@ -5,7 +5,7 @@
     <link>http://metalab.stanford.edu/report/</link>
       <atom:link href="http://metalab.stanford.edu/report/index.xml" rel="self" type="application/rss+xml" />
     <description>Reports</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 20 Nov 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://metalab.stanford.edu/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Reports</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Design Choice Analyses</title>
       <link>http://metalab.stanford.edu/report/method_choice/</link>
-      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/report/method_choice/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
@@ -351,7 +351,7 @@ metalab_data =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span
     <item>
       <title>Developmental curve comparison</title>
       <link>http://metalab.stanford.edu/report/developmental_curves/</link>
-      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/report/developmental_curves/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
@@ -1341,7 +1341,7 @@ multiage_&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;_data &amp;lt;-&lt;span cl
     <item>
       <title>Hierarchical Random Effects in Meta-Analyses: Do they change stuff?</title>
       <link>http://metalab.stanford.edu/report/hierarchicalrandomeffect/</link>
-      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/report/hierarchicalrandomeffect/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
