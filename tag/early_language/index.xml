@@ -44,7 +44,7 @@
 &lt;div class=&#34;col-sm-12&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://drive.google.com/drive/folders/1dP91H5QlcT3PD9fKCndroMGcXEzP98xI&#34;&gt;Rabagliati et al. (2018)&lt;/a&gt;
+&lt;a href=&#34;https://onlinelibrary.wiley.com/doi/pdf/10.1111/desc.12704&#34;&gt;Rabagliati et al. (2018)&lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;N papers = 20, N experiments = 95, N participants = 1111&lt;/li&gt;
 &lt;li&gt;Can infants learn abstract repition rules from different types of stimuli?&lt;/li&gt;
@@ -155,7 +155,9 @@ yes
 &lt;div class=&#34;row&#34;&gt;
 &lt;div class=&#34;col-sm-12&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;Carbajal (2018)&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://psyarxiv.com/63wvm/&#34;&gt;Carbajal et al. (2020)&lt;/a&gt;
+&lt;/li&gt;
 &lt;li&gt;N papers = 16, N experiments = 34, N participants = 658&lt;/li&gt;
 &lt;li&gt;Do infants distingusih familiar words from novel/rare words in listening tasks?&lt;/li&gt;
 &lt;li&gt;Curator is Julia Carbajal&lt;/li&gt;
@@ -211,7 +213,7 @@ yes
 &lt;div class=&#34;col-sm-12&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://sites.google.com/site/inworddb/&#34;&gt;Bergmann &amp;amp; Cristia (2016)&lt;/a&gt;
+&lt;a href=&#34;https://onlinelibrary.wiley.com/doi/abs/10.1111/desc.12341&#34;&gt;Bergmann &amp;amp; Cristia (2016)&lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;N papers = 5, N experiments = 17, N participants = 290&lt;/li&gt;
 &lt;li&gt;Recognition of familiarized function words from natural speech using behavioral methods.&lt;/li&gt;
@@ -268,7 +270,7 @@ yes
 &lt;div class=&#34;col-sm-12&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;a href=&#34;http://langcog.stanford.edu/papers_new/frank-2016-underrev.pdf&#34;&gt;Frank, Lewis, &amp;amp; MacDonald (2016)&lt;/a&gt;
+&lt;a href=&#34;http://langcog.stanford.edu/papers_new/frank-2016-cogsci.pdf&#34;&gt;Frank, Lewis, &amp;amp; MacDonald (2016)&lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;N papers = 12, N experiments = 33, N participants = 491&lt;/li&gt;
 &lt;li&gt;Gaze following using standard multi-alternative forced-choice paradigms.&lt;/li&gt;
@@ -549,7 +551,7 @@ yes
 &lt;div class=&#34;col-sm-12&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://drive.google.com/drive/folders/1Z5ruOSPydAXYpqCygmixcXKUgqD0BDfD&#34;&gt;Von Holzen &amp;amp; Bergmann (2018)&lt;/a&gt;
+&lt;a href=&#34;https://psyarxiv.com/dze29/&#34;&gt;Von Holzen &amp;amp; Bergmann (2019)&lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;N papers = 32, N experiments = 251, N participants = 2047&lt;/li&gt;
 &lt;li&gt;Can infants distinguish correctly and mispronounced words, like dog and tog?&lt;/li&gt;
@@ -606,7 +608,7 @@ yes
 &lt;div class=&#34;col-sm-12&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://doi.org/10.31234/osf.io/wsx3a&#34;&gt;(Lewis, Cristiano, Lake, Kwan, &amp;amp; Frank, under review)&lt;/a&gt;
+&lt;a href=&#34;https://psyarxiv.com/wsx3a&#34;&gt;(Lewis, Cristiano, Lake, Kwan, &amp;amp; Frank, under review)&lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;N papers = 48, N experiments = 146, N participants = 2505&lt;/li&gt;
 &lt;li&gt;Bias to assume that a novel word refers to a novel object in forced-choice paradigms.&lt;/li&gt;
@@ -663,7 +665,7 @@ yes
 &lt;div class=&#34;col-sm-12&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://drive.google.com/open?id=1CNz2dV6T3hyfxd2m0GSe1TzERaqT151ELpMPpfcEdcI&#34;&gt;Issard &amp;amp; Cristia (in prep.)&lt;/a&gt;
+&lt;a href=&#34;https://osf.io/4stz9/&#34;&gt;Issard, Tsuji, &amp;amp; Cristia (in prep.)&lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;N papers = 18, N experiments = 54, N participants = 754&lt;/li&gt;
 &lt;li&gt;Do infants prefer natural speech over other types of sound?&lt;/li&gt;
@@ -776,7 +778,9 @@ no
 &lt;div class=&#34;row&#34;&gt;
 &lt;div class=&#34;col-sm-12&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;Cristia (2018)&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://osf.io/jffa5/&#34;&gt;Cristia (2018)&lt;/a&gt;
+&lt;/li&gt;
 &lt;li&gt;N papers = 15, N experiments = 47, N participants = 890&lt;/li&gt;
 &lt;li&gt;Infants&#39; ability to learn phonotactic generalizations from a short exposure.&lt;/li&gt;
 &lt;li&gt;Curator is Alex Cristia&lt;/li&gt;
@@ -946,7 +950,7 @@ yes
 &lt;div class=&#34;col-sm-12&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://pure.uva.nl/ws/files/22575657/Fort_et_al_2018_Developmental_Science.pdf&#34;&gt;Lammertink et al. (2016)&lt;/a&gt;
+&lt;a href=&#34;https://doi.org/10.1111/desc.12659&#34;&gt;Lammertink et al. (2016)&lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;N papers = 11, N experiments = 44, N participants = 425&lt;/li&gt;
 &lt;li&gt;Bias to assume a non-arbitrary relationship between form and meaning (&#34;bouba-kiki effect&#34;) in forced-choice paradigms.&lt;/li&gt;
@@ -1002,7 +1006,9 @@ yes
 &lt;div class=&#34;row&#34;&gt;
 &lt;div class=&#34;col-sm-12&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;Cristia (2018)&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://osf.io/jffa5/&#34;&gt;Cristia (2018)&lt;/a&gt;
+&lt;/li&gt;
 &lt;li&gt;N papers = 11, N experiments = 20, N participants = 634&lt;/li&gt;
 &lt;li&gt;Infants&#39; ability to learn sound categories from their acoustic distribution.&lt;/li&gt;
 &lt;li&gt;Curator is Alex Cristia&lt;/li&gt;
@@ -1058,7 +1064,7 @@ yes
 &lt;div class=&#34;col-sm-12&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://github.com/christinabergmann/StatLearnDB&#34;&gt;Black &amp;amp; Bergmann (2017)&lt;/a&gt;
+&lt;a href=&#34;https://pure.mpg.de/rest/items/item_2475527_3/component/file_2475525/content&#34;&gt;Black &amp;amp; Bergmann (2017)&lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;N papers = 31, N experiments = 103, N participants = 1546&lt;/li&gt;
 &lt;li&gt;Can infants segment words from artificial mini-languages based on syllable-level statistics?&lt;/li&gt;
@@ -1115,7 +1121,7 @@ yes
 &lt;div class=&#34;col-sm-12&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://drive.google.com/drive/folders/15-R_Nvm5sU2rakIH4s4U7ANue_bzm4Qu&#34;&gt;Tsui et al. (2019)&lt;/a&gt;
+&lt;a href=&#34;https://psycnet.apa.org/record/2019-06351-001&#34;&gt;Tsui et al. (2019)&lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;N papers = 47, N experiments = 143, N participants = 2764&lt;/li&gt;
 &lt;li&gt;Infant word learning in the switch task&lt;/li&gt;
@@ -1284,7 +1290,7 @@ yes
 &lt;div class=&#34;col-sm-12&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://sites.google.com/site/inphondb/&#34;&gt;Tsuji &amp;amp; Cristia (2014)&lt;/a&gt;
+&lt;a href=&#34;https://pure.mpg.de/rest/items/item_1836135/component/file_1945376/content&#34;&gt;Tsuji &amp;amp; Cristia (2014)&lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;N papers = 33, N experiments = 145, N participants = 2491&lt;/li&gt;
 &lt;li&gt;Discrimination of native-language vowels, including results from a variety of methods.&lt;/li&gt;
@@ -1341,7 +1347,7 @@ yes
 &lt;div class=&#34;col-sm-12&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://sites.google.com/site/inphondb/&#34;&gt;Tsuji &amp;amp; Cristia (2014)&lt;/a&gt;
+&lt;a href=&#34;https://pure.mpg.de/rest/items/item_1836135/component/file_1945376/content&#34;&gt;Tsuji &amp;amp; Cristia (2014)&lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;N papers = 15, N experiments = 49, N participants = 573&lt;/li&gt;
 &lt;li&gt;Discrimination of non-native vowels, including results from a variety of methods.&lt;/li&gt;
@@ -1398,7 +1404,7 @@ yes
 &lt;div class=&#34;col-sm-12&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://sites.google.com/site/inworddb/&#34;&gt;Bergmann &amp;amp; Cristia (2016)&lt;/a&gt;
+&lt;a href=&#34;https://onlinelibrary.wiley.com/doi/abs/10.1111/desc.12341&#34;&gt;Bergmann &amp;amp; Cristia (2016)&lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;N papers = 69, N experiments = 299, N participants = 5699&lt;/li&gt;
 &lt;li&gt;Recognition of familiarized content or non-words from running, natural speech using behavioral methods.&lt;/li&gt;
