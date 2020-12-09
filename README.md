@@ -29,15 +29,16 @@ renv::restore()
 
 ## Updating to latest data (optional)
 
-If the spreadsheets have been updated and you want to try the latest
-available data, you can run:
+If the spreadsheets containing the meta-analyses have been updated,
+you must update the data in the repository. The following command will
+download the datasets and commit any changes to the repository.
 
 ```
 source(here::here("build", "update-metalab-data.R"))
 ```
 
-If you do not run this command, your build will use the dataset that
-the current MetaLab site uses.
+If you do not run the command above, your build will use the datasets
+that the currently deployed version of MetaLab uses.
 
 ## Building MetaLab (each time you want to make changes)
 
@@ -56,3 +57,20 @@ blogdown::serve_site()
 
 You can now try editing existing content in the `content`
 directory. Your changes will automatically reload in your web browser.
+
+## Publishing Content
+
+Changes pushed to the `main` branch, either directly or via a pull
+request, will trigger a build of MetaLab in the Actions tab. When the
+build is complete, the new site will be deployed to the `gh-pages`
+branch, and the Shiny applications will be uploaded to the Shiny
+server.
+
+## Running Shiny Applications locally
+
+```
+## build and run, e.g., the visualization Shiny app
+## (substitute "visualization" with any shiny app directory in ./shinyapps)
+options(shiny.autoreload = TRUE)
+shiny::runApp(here::here("shinyapps", "visualization")) 
+```

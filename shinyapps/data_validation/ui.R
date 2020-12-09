@@ -53,6 +53,9 @@ ui <- shinyUI(
                    ),
           tabPanel("Fields Information",
                    dataTableOutput("fields_spec")
+                   ),
+          tabPanel("Validation Details",
+                   verbatimTextOutput("validation_details")
                    )
         )
       )

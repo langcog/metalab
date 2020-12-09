@@ -19,7 +19,7 @@ server <- function(input, output, session) {
 
     ret_df <- data.frame(Field = unlist(sapply(fields, "[[", "field")),
                          Valid = unlist(valid_fields)) %>%
-      mutate(Valid = ifelse(Valid, "\u2705", "No")) %>% 
+      mutate(Valid = ifelse(Valid, "\u2705", "\u274C")) %>% 
       arrange(Valid)
 
     return(datatable(ret_df, options = list(dom = 'tp', pageLength = 50)))
@@ -31,15 +31,21 @@ server <- function(input, output, session) {
                               name = "input url"))
     output$field_validation_g <-
       renderDT({
-        valid_fields <- validate_dataset(data.frame(name = 'from url'), df, fields)
+        valid_fields <- validate_dataset(data.frame(name = 'at URL'), df, fields)
 
         ret_df <- data.frame(Field = unlist(sapply(fields, "[[", "field")),
-                             Valid = unlist(valid_fields)) %>% arrange(Valid)
+                             Valid = unlist(valid_fields)) %>%
+          mutate(Valid = ifelse(Valid, "\u2705", "\U274C")) %>% 
+          arrange(desc(Valid))
 
         return(datatable(ret_df, options = list(dom = 'tp', pageLength = 50)))
       })
+
+    output$validation_details <- renderPrint(
+      capture.output(invisible(validate_dataset(data.frame(name = 'at URL'), df, fields)),
+                     type = "message"))
     ## shinyjs::toggle("dataset_spec")    
-    output$dataset_spec_m <- renderDT(data.frame(column = "Not available for datasets not included in Metalab",
+    output$dataset_spec <- renderDT(data.frame(column = "This dataset is not yet in datasets.yaml",
                                                  value = ""))
   })
 
