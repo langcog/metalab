@@ -5,7 +5,7 @@
     <link>http://metalab.stanford.edu/</link>
       <atom:link href="http://metalab.stanford.edu/index.xml" rel="self" type="application/rss+xml" />
     <description>MetaLab</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 08 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 09 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://metalab.stanford.edu/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>MetaLab</title>
@@ -819,9 +819,43 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
     </item>
     
     <item>
+      <title>Citation Policy</title>
+      <link>http://metalab.stanford.edu/documentation/using_ma_data/citation_policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://metalab.stanford.edu/documentation/using_ma_data/citation_policy/</guid>
+      <description>&lt;p&gt;MetaLab allows researchers to use data available on its website. This
+can be by citing meta-analytic results, or downloading dataset and
+conducting custom analyses. In both cases our citation policy is the
+following:&lt;/p&gt;
+&lt;p&gt;Researchers publishing or presenting work using data in MetaLab must
+cite the publications linked to that dataset, as listed in the
+Documentation. (If there is no citation, then no citation for the
+individual dataset is necessary).&lt;/p&gt;
+&lt;p&gt;For tracking use of MetaLab, please also cite at least one of the
+following:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bergmann, C., Tsuji, S., Piccinini, P.E., Lewis, M.L., Braginsky, M.,
+Frank, M.C., &amp;amp; Cristia, A. (2018).&lt;/strong&gt; Promoting replicability in
+developmental research through meta-analyses: Insights from language
+acquisition research. Child Development, 89, 1996-2009 . DOI:
+10.1111/cdev.13079 [Repository]&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lewis, M. L., Braginsky, M., Tsuji, S., Bergmann, C., Piccinini,
+P. E., Cristia, A., &amp;amp; Frank, M. C. (2017/under review).&lt;/strong&gt; A Quantitative
+Synthesis of Early Language Acquisition Using Meta-Analysis. DOI:
+10.17605/OSF.IO/HTSJM [Preprint]&lt;/p&gt;
+&lt;p&gt;If researchers use more than five datasets, we ask users as a courtesy
+to cite all data. But in case of severe space limitations, the
+database as a whole alone may be cited.&lt;/p&gt;
+&lt;p&gt;Since the MetaLab site is dynamic, we recommend that you list the date
+of download for your data in your manuscript. For example: “We analyze
+all data currently in MetaLab (Bergmann et al., 2017). Data were
+downloaded on 06/17/17.”&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Design Choice Analyses</title>
       <link>http://metalab.stanford.edu/report/method_choice/</link>
-      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/report/method_choice/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
@@ -1157,7 +1191,7 @@ metalab_data =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span
     <item>
       <title>Developmental curve comparison</title>
       <link>http://metalab.stanford.edu/report/developmental_curves/</link>
-      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/report/developmental_curves/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
@@ -2147,7 +2181,7 @@ multiage_&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;_data &amp;lt;-&lt;span cl
     <item>
       <title>Hierarchical Random Effects in Meta-Analyses: Do they change stuff?</title>
       <link>http://metalab.stanford.edu/report/hierarchicalrandomeffect/</link>
-      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/report/hierarchicalrandomeffect/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;

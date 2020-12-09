@@ -465,5 +465,39 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
 </description>
     </item>
     
+    <item>
+      <title>Citation Policy</title>
+      <link>http://metalab.stanford.edu/documentation/using_ma_data/citation_policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://metalab.stanford.edu/documentation/using_ma_data/citation_policy/</guid>
+      <description>&lt;p&gt;MetaLab allows researchers to use data available on its website. This
+can be by citing meta-analytic results, or downloading dataset and
+conducting custom analyses. In both cases our citation policy is the
+following:&lt;/p&gt;
+&lt;p&gt;Researchers publishing or presenting work using data in MetaLab must
+cite the publications linked to that dataset, as listed in the
+Documentation. (If there is no citation, then no citation for the
+individual dataset is necessary).&lt;/p&gt;
+&lt;p&gt;For tracking use of MetaLab, please also cite at least one of the
+following:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bergmann, C., Tsuji, S., Piccinini, P.E., Lewis, M.L., Braginsky, M.,
+Frank, M.C., &amp;amp; Cristia, A. (2018).&lt;/strong&gt; Promoting replicability in
+developmental research through meta-analyses: Insights from language
+acquisition research. Child Development, 89, 1996-2009 . DOI:
+10.1111/cdev.13079 [Repository]&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lewis, M. L., Braginsky, M., Tsuji, S., Bergmann, C., Piccinini,
+P. E., Cristia, A., &amp;amp; Frank, M. C. (2017/under review).&lt;/strong&gt; A Quantitative
+Synthesis of Early Language Acquisition Using Meta-Analysis. DOI:
+10.17605/OSF.IO/HTSJM [Preprint]&lt;/p&gt;
+&lt;p&gt;If researchers use more than five datasets, we ask users as a courtesy
+to cite all data. But in case of severe space limitations, the
+database as a whole alone may be cited.&lt;/p&gt;
+&lt;p&gt;Since the MetaLab site is dynamic, we recommend that you list the date
+of download for your data in your manuscript. For example: “We analyze
+all data currently in MetaLab (Bergmann et al., 2017). Data were
+downloaded on 06/17/17.”&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
