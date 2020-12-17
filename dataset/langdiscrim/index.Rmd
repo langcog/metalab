@@ -4,7 +4,7 @@ layout: data
 type: dataset
 tags: 
 - early_language
-summary: Discrimination of, or preference between, two language varieties, with results from various methods<br>37 papers | 164 experiments | 2359 subjects
+summary: Discrimination of, or preference between, two language varieties, with results from various methods<br>37 papers | 165 experiments | 2311 subjects
 ---
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
