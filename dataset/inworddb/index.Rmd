@@ -1,5 +1,5 @@
 ---
-title: Word segmentation
+title: Word segmentation (behavioral)
 layout: data
 type: dataset
 tags: 

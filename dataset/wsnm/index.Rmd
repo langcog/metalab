@@ -1,5 +1,5 @@
 ---
-title: Infants’ Word Segmentation tested with Brain Measures
+title: Word segmentation (neuro)
 layout: data
 type: dataset
 tags: 
