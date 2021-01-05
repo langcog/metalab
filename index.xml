@@ -5,7 +5,7 @@
     <link>http://metalab.stanford.edu/</link>
       <atom:link href="http://metalab.stanford.edu/index.xml" rel="self" type="application/rss+xml" />
     <description>MetaLab</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 17 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 05 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://metalab.stanford.edu/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>MetaLab</title>
@@ -68,7 +68,7 @@
       <link>http://metalab.stanford.edu/documentation/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/documentation/getting-started/</guid>
-      <description>&lt;p&gt;Getting started with MetaLab&lt;/p&gt;
+      <description>&lt;p&gt;This page is under revision, access the previous tutorial &lt;a href=&#34;https://langcog.github.io/metalab2/documentation.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -216,7 +216,7 @@
       <description>
 
 
-&lt;p&gt;FAQ&lt;/p&gt;
+&lt;p&gt;This page is under revision, access the previous tutorial &lt;a href=&#34;https://langcog.github.io/metalab2/documentation.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -605,7 +605,7 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
       <link>http://metalab.stanford.edu/documentation/shinyapps/power-analysis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/documentation/shinyapps/power-analysis/</guid>
-      <description>&lt;p&gt;install metalabr&lt;/p&gt;
+      <description>&lt;p&gt;This page is under revision, access the previous tutorial &lt;a href=&#34;https://langcog.github.io/metalab2/documentation.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -623,7 +623,7 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
       <link>http://metalab.stanford.edu/documentation/shinyapps/power-simulation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/documentation/shinyapps/power-simulation/</guid>
-      <description>&lt;p&gt;install metalabr&lt;/p&gt;
+      <description>&lt;p&gt;This page is under revision, access the previous tutorial &lt;a href=&#34;https://langcog.github.io/metalab2/documentation.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -641,7 +641,7 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
       <link>http://metalab.stanford.edu/documentation/shinyapps/viz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/documentation/shinyapps/viz/</guid>
-      <description>&lt;p&gt;install metalabr&lt;/p&gt;
+      <description>&lt;p&gt;This page is under revision, access the previous tutorial &lt;a href=&#34;https://langcog.github.io/metalab2/documentation.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -774,15 +774,12 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
       <description>
 
 
-&lt;div id=&#34;add-your-own-paper&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Add your own paper&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;add-a-datapoint-you-found&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Add a datapoint you found&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;correct-a-mistake-you-found&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Correct a mistake you found&lt;/h3&gt;
-&lt;/div&gt;
+&lt;p&gt;This page is under revision, access the previous tutorial &lt;a href=&#34;https://langcog.github.io/metalab2/documentation.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;!--
+Add your own paper
+Add a datapoint you found
+Correct a mistake you found 
+---&gt;
 </description>
     </item>
     
@@ -794,18 +791,13 @@ knitr::include_graphics(&#34;media/image04.jpg&#34;)
       <description>
 
 
-&lt;div id=&#34;calculate-power&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Calculate power&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;download-data&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Download data&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;run-your-own-regression&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Run your own regression&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;selecting-subsets-to-match-your-study&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Selecting subsets to match your study&lt;/h3&gt;
-&lt;/div&gt;
+&lt;p&gt;This page is under revision, access the previous tutorial &lt;a href=&#34;https://langcog.github.io/metalab2/documentation.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;!--
+### Calculate power
+### Download data
+### Run your own regression
+### Selecting subsets to match your study 
+--&gt;
 </description>
     </item>
     
@@ -855,7 +847,7 @@ downloaded on 06/17/17.”&lt;/p&gt;
     <item>
       <title>Design Choice Analyses</title>
       <link>http://metalab.stanford.edu/report/method_choice/</link>
-      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/report/method_choice/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
@@ -1191,7 +1183,7 @@ metalab_data =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span
     <item>
       <title>Developmental curve comparison</title>
       <link>http://metalab.stanford.edu/report/developmental_curves/</link>
-      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/report/developmental_curves/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
@@ -2181,7 +2173,7 @@ multiage_&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;_data &amp;lt;-&lt;span cl
     <item>
       <title>Hierarchical Random Effects in Meta-Analyses: Do they change stuff?</title>
       <link>http://metalab.stanford.edu/report/hierarchicalrandomeffect/</link>
-      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
       <guid>http://metalab.stanford.edu/report/hierarchicalrandomeffect/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
