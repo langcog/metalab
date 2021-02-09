@@ -1,10 +1,10 @@
 ---
-title: Gaze following (live)
+title: Gaze following (video)
 layout: data
 type: dataset
 tags: 
 - cognitive_development
-summary: Gaze following using standard multi-alternative forced-choice paradigms.<br>12 papers | 33 experiments | 491 subjects
+summary: Gaze following using video-based first look paradigms<br>15 papers | 52 experiments | 847 subjects
 ---
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
@@ -12,8 +12,8 @@ library(here)
 library(dplyr)
 load(here("shinyapps", "site_data", "Rdata", "metalab.Rdata"))
 
-dataset_info <- dataset_info %>% filter(short_name == "gaze_following")
-dataset_raw <- metalab_data %>% filter(short_name == "gaze_following")
+dataset_info <- dataset_info %>% filter(short_name == "vidgazefollow")
+dataset_raw <- metalab_data %>% filter(short_name == "vidgazefollow")
 
 ```
 # `r dataset_info$name` 
