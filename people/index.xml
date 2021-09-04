@@ -1,177 +1,177 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Peoples | MetaLab</title>
-    <link>http://metalab.stanford.edu/people/</link>
-      <atom:link href="http://metalab.stanford.edu/people/index.xml" rel="self" type="application/rss+xml" />
-    <description>Peoples</description>
+    <title>People | MetaLab</title>
+    <link>http://langcog.github.io/metalab/people/</link>
+      <atom:link href="http://langcog.github.io/metalab/people/index.xml" rel="self" type="application/rss+xml" />
+    <description>People</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
     <image>
-      <url>http://metalab.stanford.edu/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
-      <title>Peoples</title>
-      <link>http://metalab.stanford.edu/people/</link>
+      <url>http://langcog.github.io/metalab/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>People</title>
+      <link>http://langcog.github.io/metalab/people/</link>
     </image>
     
     <item>
       <title>Alejandrina Cristia</title>
-      <link>http://metalab.stanford.edu/people/alejandrina/</link>
+      <link>http://langcog.github.io/metalab/people/alejandrina/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/alejandrina/</guid>
+      <guid>http://langcog.github.io/metalab/people/alejandrina/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Angeline Tsui</title>
-      <link>http://metalab.stanford.edu/people/angeline/</link>
+      <link>http://langcog.github.io/metalab/people/angeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/angeline/</guid>
+      <guid>http://langcog.github.io/metalab/people/angeline/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Christina Bergmann</title>
-      <link>http://metalab.stanford.edu/people/christina/</link>
+      <link>http://langcog.github.io/metalab/people/christina/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/christina/</guid>
+      <guid>http://langcog.github.io/metalab/people/christina/</guid>
       <description>&lt;h3 id=&#34;chbergmagmailcom&#34;&gt;&lt;a href=&#34;mailto:chbergma@gmail.com&#34;&gt;chbergma@gmail.com&lt;/a&gt;&lt;/h3&gt;
-&lt;h3 id=&#34;httpssitesgooglecomsitechbergma&#34;&gt;&lt;a href=&#34;https://sites.google.com/site/chbergma/&#34;&gt;https://sites.google.com/site/chbergma/&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;httpssitesgooglecomsitechbergma&#34;&gt;&lt;a href=&#34;https://sites.google.com/site/chbergma/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://sites.google.com/site/chbergma/&lt;/a&gt;&lt;/h3&gt;
 &lt;h3 id=&#34;max-planck-institute-for-psycholinguistics&#34;&gt;Max Planck Institute for Psycholinguistics&lt;/h3&gt;
 </description>
     </item>
     
     <item>
       <title>Cécile Issard</title>
-      <link>http://metalab.stanford.edu/people/cecile/</link>
+      <link>http://langcog.github.io/metalab/people/cecile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/cecile/</guid>
+      <guid>http://langcog.github.io/metalab/people/cecile/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fleur Vissers</title>
-      <link>http://metalab.stanford.edu/people/fleur/</link>
+      <link>http://langcog.github.io/metalab/people/fleur/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/fleur/</guid>
+      <guid>http://langcog.github.io/metalab/people/fleur/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Francesco Margoni</title>
-      <link>http://metalab.stanford.edu/people/francesco/</link>
+      <link>http://langcog.github.io/metalab/people/francesco/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/francesco/</guid>
+      <guid>http://langcog.github.io/metalab/people/francesco/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugh Rabagliati</title>
-      <link>http://metalab.stanford.edu/people/hugh/</link>
+      <link>http://langcog.github.io/metalab/people/hugh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/hugh/</guid>
+      <guid>http://langcog.github.io/metalab/people/hugh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Julia Carbajal</title>
-      <link>http://metalab.stanford.edu/people/julia/</link>
+      <link>http://langcog.github.io/metalab/people/julia/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/julia/</guid>
+      <guid>http://langcog.github.io/metalab/people/julia/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Katie Von Holzen</title>
-      <link>http://metalab.stanford.edu/people/katie/</link>
+      <link>http://langcog.github.io/metalab/people/katie/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/katie/</guid>
+      <guid>http://langcog.github.io/metalab/people/katie/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Michael C. Frank</title>
-      <link>http://metalab.stanford.edu/people/michael/</link>
+      <link>http://langcog.github.io/metalab/people/michael/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/michael/</guid>
+      <guid>http://langcog.github.io/metalab/people/michael/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mika Braginsky</title>
-      <link>http://metalab.stanford.edu/people/mika/</link>
+      <link>http://langcog.github.io/metalab/people/mika/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/mika/</guid>
+      <guid>http://langcog.github.io/metalab/people/mika/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Molly Lewis</title>
-      <link>http://metalab.stanford.edu/people/molly/</link>
+      <link>http://langcog.github.io/metalab/people/molly/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/molly/</guid>
+      <guid>http://langcog.github.io/metalab/people/molly/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Page Piccinini</title>
-      <link>http://metalab.stanford.edu/people/page/</link>
+      <link>http://langcog.github.io/metalab/people/page/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/page/</guid>
+      <guid>http://langcog.github.io/metalab/people/page/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rodrigo Dal Ben</title>
-      <link>http://metalab.stanford.edu/people/rodrigo/</link>
+      <link>http://langcog.github.io/metalab/people/rodrigo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/rodrigo/</guid>
+      <guid>http://langcog.github.io/metalab/people/rodrigo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sara El-Shawa</title>
-      <link>http://metalab.stanford.edu/people/sara/</link>
+      <link>http://langcog.github.io/metalab/people/sara/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/sara/</guid>
+      <guid>http://langcog.github.io/metalab/people/sara/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sho Tsuji</title>
-      <link>http://metalab.stanford.edu/people/sho/</link>
+      <link>http://langcog.github.io/metalab/people/sho/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/sho/</guid>
+      <guid>http://langcog.github.io/metalab/people/sho/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Alessandro Sanchez</title>
-      <link>http://metalab.stanford.edu/people/alessandro/</link>
+      <link>http://langcog.github.io/metalab/people/alessandro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/alessandro/</guid>
+      <guid>http://langcog.github.io/metalab/people/alessandro/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Loretta Gasparini</title>
-      <link>http://metalab.stanford.edu/people/loretta/</link>
+      <link>http://langcog.github.io/metalab/people/loretta/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/loretta/</guid>
+      <guid>http://langcog.github.io/metalab/people/loretta/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Erik Iverson</title>
-      <link>http://metalab.stanford.edu/people/erik/</link>
+      <link>http://langcog.github.io/metalab/people/erik/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/erik/</guid>
+      <guid>http://langcog.github.io/metalab/people/erik/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Priya Silverstein</title>
-      <link>http://metalab.stanford.edu/people/priya/</link>
+      <link>http://langcog.github.io/metalab/people/priya/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://metalab.stanford.edu/people/priya/</guid>
+      <guid>http://langcog.github.io/metalab/people/priya/</guid>
       <description></description>
     </item>
     
