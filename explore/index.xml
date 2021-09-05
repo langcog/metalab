@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Explores | MetaLab</title>
-    <link>http://langcog.github.io/metalab/explore/</link>
-      <atom:link href="http://langcog.github.io/metalab/explore/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://langcog.github.io/metalab/explore/</link>
+      <atom:link href="https://langcog.github.io/metalab/explore/index.xml" rel="self" type="application/rss+xml" />
     <description>Explores</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://langcog.github.io/metalab/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>https://langcog.github.io/metalab/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Explores</title>
-      <link>http://langcog.github.io/metalab/explore/</link>
+      <link>https://langcog.github.io/metalab/explore/</link>
     </image>
     
     <item>
       <title>Applications</title>
-      <link>http://langcog.github.io/metalab/explore/apps/</link>
+      <link>https://langcog.github.io/metalab/explore/apps/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://langcog.github.io/metalab/explore/apps/</guid>
+      <guid>https://langcog.github.io/metalab/explore/apps/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Applications</title>
-      <link>http://langcog.github.io/metalab/explore/datasets/</link>
+      <link>https://langcog.github.io/metalab/explore/datasets/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://langcog.github.io/metalab/explore/datasets/</guid>
+      <guid>https://langcog.github.io/metalab/explore/datasets/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Applications</title>
-      <link>http://langcog.github.io/metalab/explore/domains/</link>
+      <link>https://langcog.github.io/metalab/explore/domains/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://langcog.github.io/metalab/explore/domains/</guid>
+      <guid>https://langcog.github.io/metalab/explore/domains/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Applications</title>
-      <link>http://langcog.github.io/metalab/explore/reports/</link>
+      <link>https://langcog.github.io/metalab/explore/reports/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://langcog.github.io/metalab/explore/reports/</guid>
+      <guid>https://langcog.github.io/metalab/explore/reports/</guid>
       <description></description>
     </item>
     

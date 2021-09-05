@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Documentations | MetaLab</title>
-    <link>http://langcog.github.io/metalab/documentation/</link>
-      <atom:link href="http://langcog.github.io/metalab/documentation/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://langcog.github.io/metalab/documentation/</link>
+      <atom:link href="https://langcog.github.io/metalab/documentation/index.xml" rel="self" type="application/rss+xml" />
     <description>Documentations</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
     <image>
-      <url>http://langcog.github.io/metalab/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>https://langcog.github.io/metalab/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Documentations</title>
-      <link>http://langcog.github.io/metalab/documentation/</link>
+      <link>https://langcog.github.io/metalab/documentation/</link>
     </image>
     
     <item>
       <title>Getting Started</title>
-      <link>http://langcog.github.io/metalab/documentation/getting-started/</link>
+      <link>https://langcog.github.io/metalab/documentation/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://langcog.github.io/metalab/documentation/getting-started/</guid>
+      <guid>https://langcog.github.io/metalab/documentation/getting-started/</guid>
       <description>&lt;p&gt;This page is under revision, access the previous tutorial &lt;a href=&#34;https://langcog.github.io/metalab2/documentation.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
