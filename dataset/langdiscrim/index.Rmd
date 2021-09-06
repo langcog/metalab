@@ -14,7 +14,6 @@ load(here("shinyapps", "site_data", "Rdata", "metalab.Rdata"))
 
 dataset_info <- dataset_info %>% filter(short_name == "langdiscrim")
 dataset_raw <- metalab_data %>% filter(short_name == "langdiscrim")
-
 ```
 # `r dataset_info$name` 
 

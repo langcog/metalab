@@ -40,11 +40,21 @@
   </url><url>
     <loc>https://langcog.github.io/metalab/people/loretta/</loc>
   </url><url>
+    <loc>https://langcog.github.io/metalab/documentation/challenge/</loc>
+    <lastmod>2020-07-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/documentation/faq/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/documentation/why_do_a_ma/</loc>
+    <lastmod>2020-07-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://langcog.github.io/metalab/people/erik/</loc>
   </url><url>
     <loc>https://langcog.github.io/metalab/people/priya/</loc>
   </url><url>
     <loc>https://langcog.github.io/metalab/app/visualization/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/documentation/using_ma_data/conduct_ma/</loc>
   </url><url>
     <loc>https://langcog.github.io/metalab/documentation/shinyapps/data-validation/</loc>
   </url><url>
@@ -64,15 +74,37 @@
   </url><url>
     <loc>https://langcog.github.io/metalab/documentation/shinyapps/viz/</loc>
   </url><url>
+    <loc>https://langcog.github.io/metalab/documentation/using_ma_data/contribute_ma/</loc>
+  </url><url>
     <loc>https://langcog.github.io/metalab/documentation/shinyapps/</loc>
   </url><url>
+    <loc>https://langcog.github.io/metalab/documentation/using_ma_data/update_existing_ma/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/documentation/using_ma_data/plan_studies_interpret_results/</loc>
+  </url><url>
     <loc>https://langcog.github.io/metalab/report/</loc>
+    <lastmod>2021-09-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://langcog.github.io/metalab/documentation/rpackage/</loc>
   </url><url>
     <loc>https://langcog.github.io/metalab/app/data-validation/</loc>
   </url><url>
     <loc>https://langcog.github.io/metalab/documentation/using_ma_data/citation_policy/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/report/method_choice/</loc>
+    <lastmod>2021-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/report/developmental_curves/</loc>
+    <lastmod>2021-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/report/hierarchicalrandomeffect/</loc>
+    <lastmod>2021-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/</loc>
+    <lastmod>2021-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/documentation/</loc>
+    <lastmod>2020-07-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://langcog.github.io/metalab/explore/apps/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
@@ -89,11 +121,10 @@
     <loc>https://langcog.github.io/metalab/explore/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://langcog.github.io/metalab/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://langcog.github.io/metalab/team/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/rulelearning/</loc>
   </url><url>
     <loc>https://langcog.github.io/metalab/app/</loc>
   </url><url>
@@ -101,14 +132,76 @@
   </url><url>
     <loc>https://langcog.github.io/metalab/categories/</loc>
   </url><url>
-    <loc>https://langcog.github.io/metalab/documentation/</loc>
+    <loc>https://langcog.github.io/metalab/dataset/catbias/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/tag/cognitive_development/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/crosssituational/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/tag/early_language/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/famword/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/inworddb_function/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/gaze_following/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/vidgazefollow/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/idspref/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/labadv/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/langdiscrim/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/mps/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/mutex/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/speechpref/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/word_recognition/</loc>
   </url><url>
     <loc>https://langcog.github.io/metalab/people/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/phonotactics/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/pointing_concurrent/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/pointing_longitudinal/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/prosocial/</loc>
   </url><url>
     <loc>https://langcog.github.io/metalab/publication_types/</loc>
   </url><url>
     <loc>https://langcog.github.io/metalab/publications/</loc>
   </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/arithmetic/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/symbolism/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/sounds/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/statseg/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/switchtask/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/play/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/synboot/</loc>
+  </url><url>
     <loc>https://langcog.github.io/metalab/tags/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/videodef/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/inphondb-native/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/inphondb-nonnative/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/inworddb/</loc>
+  </url><url>
+    <loc>https://langcog.github.io/metalab/dataset/wsnm/</loc>
   </url>
 </urlset>

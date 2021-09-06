@@ -14,7 +14,6 @@ load(here("shinyapps", "site_data", "Rdata", "metalab.Rdata"))
 
 dataset_info <- dataset_info %>% filter(short_name == "symbolism")
 dataset_raw <- metalab_data %>% filter(short_name == "symbolism")
-
 ```
 # `r dataset_info$name` 
 
