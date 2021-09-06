@@ -4,7 +4,7 @@ layout: data
 type: dataset
 tags: 
 - early_language
-summary: Looking times as a function of whether infant-directed vs. adult-directed speech is presented as stimulation.<br>NA papers | NA experiments | NA subjects
+summary: Looking times as a function of whether infant-directed vs. adult-directed speech is presented as stimulation.<br>23 papers | 75 experiments | 1220 subjects
 ---
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
