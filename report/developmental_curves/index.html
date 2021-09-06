@@ -28,10 +28,6 @@
   
   <meta name="description" content="The goal for this analysis was to better understand the shape of the developmental curve. To do this we used linear mixed effects models, so that the variance of individual meta-analyses could be accounted for.">
 
-  <link href="https://langcog.github.io/metalab/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet">
-  <link href="https://langcog.github.io/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.min.css" rel="stylesheet">
-  <link href="https://langcog.github.io/metalab/rmarkdown-libs/dt-core-bootstrap/css/dataTables.bootstrap.extra.css" rel="stylesheet">
-  <link href="https://langcog.github.io/metalab/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet">
   <link rel="shortcut icon" href=" /favicon.ico" />
   
   <link rel="alternate" hreflang="en-us" href="https://langcog.github.io/metalab/report/developmental_curves/">
@@ -740,15 +736,15 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.2833157</td>
-<td align="right">0.0499807</td>
-<td align="right">5.668505</td>
+<td align="right">0.2735452</td>
+<td align="right">0.0510863</td>
+<td align="right">5.354574</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0000972</td>
+<td align="right">0.0001028</td>
 <td align="right">0.0000293</td>
-<td align="right">3.316766</td>
+<td align="right">3.509070</td>
 </tr>
 </tbody>
 </table>
@@ -765,15 +761,15 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.2422937</td>
-<td align="right">0.0979846</td>
-<td align="right">2.472774</td>
+<td align="right">0.2005889</td>
+<td align="right">0.0998235</td>
+<td align="right">2.009436</td>
 </tr>
 <tr class="even">
 <td align="left">log(mean_age)</td>
-<td align="right">0.0154427</td>
-<td align="right">0.0144992</td>
-<td align="right">1.065078</td>
+<td align="right">0.0214568</td>
+<td align="right">0.0147072</td>
+<td align="right">1.458929</td>
 </tr>
 </tbody>
 </table>
@@ -790,15 +786,15 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.3299937</td>
-<td align="right">0.0495881</td>
-<td align="right">6.654697</td>
+<td align="right">0.324018</td>
+<td align="right">0.0509574</td>
+<td align="right">6.358606</td>
 </tr>
 <tr class="even">
 <td align="left">I(mean_age^2)</td>
+<td align="right">0.000000</td>
 <td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
-<td align="right">1.106790</td>
+<td align="right">1.126394</td>
 </tr>
 </tbody>
 </table>
@@ -815,21 +811,21 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.3238711</td>
-<td align="right">0.1007910</td>
-<td align="right">3.2132946</td>
+<td align="right">0.2830468</td>
+<td align="right">0.1025772</td>
+<td align="right">2.7593555</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0001040</td>
+<td align="right">0.0001043</td>
 <td align="right">0.0000328</td>
-<td align="right">3.1657841</td>
+<td align="right">3.1825517</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">-0.0074967</td>
-<td align="right">0.0162080</td>
-<td align="right">-0.4625266</td>
+<td align="right">-0.0017480</td>
+<td align="right">0.0164148</td>
+<td align="right">-0.1064909</td>
 </tr>
 </tbody>
 </table>
@@ -852,10 +848,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_lmer</td>
 <td align="right">4</td>
-<td align="right">4650.826</td>
-<td align="right">4674.111</td>
-<td align="right">-2321.413</td>
-<td align="right">4642.826</td>
+<td align="right">4483.579</td>
+<td align="right">4506.742</td>
+<td align="right">-2237.790</td>
+<td align="right">4475.579</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="left">NA</td>
@@ -863,10 +859,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">log_lmer</td>
 <td align="right">4</td>
-<td align="right">4660.594</td>
-<td align="right">4683.879</td>
-<td align="right">-2326.297</td>
-<td align="right">4652.594</td>
+<td align="right">4493.654</td>
+<td align="right">4516.817</td>
+<td align="right">-2242.827</td>
+<td align="right">4485.654</td>
 <td align="right">0</td>
 <td align="right">0</td>
 <td align="left">NA</td>
@@ -892,10 +888,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_lmer</td>
 <td align="right">4</td>
-<td align="right">4650.826</td>
-<td align="right">4674.111</td>
-<td align="right">-2321.413</td>
-<td align="right">4642.826</td>
+<td align="right">4483.579</td>
+<td align="right">4506.742</td>
+<td align="right">-2237.790</td>
+<td align="right">4475.579</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="left">NA</td>
@@ -903,10 +899,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">quad_lmer</td>
 <td align="right">4</td>
-<td align="right">4660.490</td>
-<td align="right">4683.775</td>
-<td align="right">-2326.245</td>
-<td align="right">4652.490</td>
+<td align="right">4494.484</td>
+<td align="right">4517.646</td>
+<td align="right">-2243.242</td>
+<td align="right">4486.484</td>
 <td align="right">0</td>
 <td align="right">0</td>
 <td align="left">NA</td>
@@ -932,10 +928,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">log_lmer</td>
 <td align="right">4</td>
-<td align="right">4660.594</td>
-<td align="right">4683.879</td>
-<td align="right">-2326.297</td>
-<td align="right">4652.594</td>
+<td align="right">4493.654</td>
+<td align="right">4516.817</td>
+<td align="right">-2242.827</td>
+<td align="right">4485.654</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="left">NA</td>
@@ -943,11 +939,11 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">quad_lmer</td>
 <td align="right">4</td>
-<td align="right">4660.490</td>
-<td align="right">4683.775</td>
-<td align="right">-2326.245</td>
-<td align="right">4652.490</td>
-<td align="right">0.1041449</td>
+<td align="right">4494.484</td>
+<td align="right">4517.646</td>
+<td align="right">-2243.242</td>
+<td align="right">4486.484</td>
+<td align="right">0</td>
 <td align="right">0</td>
 <td align="left">NA</td>
 </tr>
@@ -972,10 +968,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_lmer</td>
 <td align="right">4</td>
-<td align="right">4650.826</td>
-<td align="right">4674.111</td>
-<td align="right">-2321.413</td>
-<td align="right">4642.826</td>
+<td align="right">4483.579</td>
+<td align="right">4506.742</td>
+<td align="right">-2237.790</td>
+<td align="right">4475.579</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -983,13 +979,13 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">lin_log_lmer</td>
 <td align="right">5</td>
-<td align="right">4652.613</td>
-<td align="right">4681.719</td>
-<td align="right">-2321.306</td>
-<td align="right">4642.613</td>
-<td align="right">0.2130513</td>
+<td align="right">4485.568</td>
+<td align="right">4514.522</td>
+<td align="right">-2237.784</td>
+<td align="right">4475.568</td>
+<td align="right">0.0112859</td>
 <td align="right">1</td>
-<td align="right">0.6443863</td>
+<td align="right">0.9153958</td>
 </tr>
 </tbody>
 </table>
@@ -1012,10 +1008,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">log_lmer</td>
 <td align="right">4</td>
-<td align="right">4660.594</td>
-<td align="right">4683.879</td>
-<td align="right">-2326.297</td>
-<td align="right">4652.594</td>
+<td align="right">4493.654</td>
+<td align="right">4516.817</td>
+<td align="right">-2242.827</td>
+<td align="right">4485.654</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -1023,13 +1019,13 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">lin_log_lmer</td>
 <td align="right">5</td>
-<td align="right">4652.613</td>
-<td align="right">4681.719</td>
-<td align="right">-2321.306</td>
-<td align="right">4642.613</td>
-<td align="right">9.980985</td>
+<td align="right">4485.568</td>
+<td align="right">4514.522</td>
+<td align="right">-2237.784</td>
+<td align="right">4475.568</td>
+<td align="right">10.08574</td>
 <td align="right">1</td>
-<td align="right">0.0015817</td>
+<td align="right">0.0014942</td>
 </tr>
 </tbody>
 </table>
@@ -1064,21 +1060,21 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.2244774</td>
-<td align="right">0.1348939</td>
-<td align="right">1.6641038</td>
+<td align="right">0.1673865</td>
+<td align="right">0.1378105</td>
+<td align="right">1.2146137</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0000907</td>
-<td align="right">0.0000378</td>
-<td align="right">2.3989039</td>
+<td align="right">0.0000891</td>
+<td align="right">0.0000377</td>
+<td align="right">2.3635541</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">0.0151499</td>
-<td align="right">0.0228722</td>
-<td align="right">0.6623712</td>
+<td align="right">0.0232409</td>
+<td align="right">0.0232890</td>
+<td align="right">0.9979364</td>
 </tr>
 </tbody>
 </table>
@@ -1095,21 +1091,21 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.3238711</td>
-<td align="right">0.1007910</td>
-<td align="right">3.2132946</td>
+<td align="right">0.2830468</td>
+<td align="right">0.1025772</td>
+<td align="right">2.7593555</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0001040</td>
+<td align="right">0.0001043</td>
 <td align="right">0.0000328</td>
-<td align="right">3.1657841</td>
+<td align="right">3.1825517</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">-0.0074967</td>
-<td align="right">0.0162080</td>
-<td align="right">-0.4625266</td>
+<td align="right">-0.0017480</td>
+<td align="right">0.0164148</td>
+<td align="right">-0.1064909</td>
 </tr>
 </tbody>
 </table>
@@ -1132,10 +1128,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_log_lmer</td>
 <td align="right">5</td>
-<td align="right">4652.613</td>
-<td align="right">4681.719</td>
-<td align="right">-2321.306</td>
-<td align="right">4642.613</td>
+<td align="right">4485.568</td>
+<td align="right">4514.522</td>
+<td align="right">-2237.784</td>
+<td align="right">4475.568</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -1143,11 +1139,11 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">lin_log_paper_lmer</td>
 <td align="right">6</td>
-<td align="right">4499.627</td>
-<td align="right">4534.554</td>
-<td align="right">-2243.813</td>
-<td align="right">4487.627</td>
-<td align="right">154.9862</td>
+<td align="right">4340.057</td>
+<td align="right">4374.801</td>
+<td align="right">-2164.028</td>
+<td align="right">4328.057</td>
+<td align="right">147.5116</td>
 <td align="right">1</td>
 <td align="right">0</td>
 </tr>
@@ -1186,21 +1182,21 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">-0.2457575</td>
-<td align="right">0.4343467</td>
-<td align="right">-0.5658096</td>
+<td align="right">-0.3170771</td>
+<td align="right">0.4482974</td>
+<td align="right">-0.7072919</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0000677</td>
-<td align="right">0.0000612</td>
-<td align="right">1.1051503</td>
+<td align="right">0.0000709</td>
+<td align="right">0.0000614</td>
+<td align="right">1.1554585</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">0.0896325</td>
-<td align="right">0.0763592</td>
-<td align="right">1.1738269</td>
+<td align="right">0.1009695</td>
+<td align="right">0.0788656</td>
+<td align="right">1.2802735</td>
 </tr>
 </tbody>
 </table>
@@ -1217,21 +1213,21 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">-0.4439472</td>
-<td align="right">0.5127621</td>
-<td align="right">-0.8657956</td>
+<td align="right">-0.5386119</td>
+<td align="right">0.5235996</td>
+<td align="right">-1.028671</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0001299</td>
-<td align="right">0.0000872</td>
-<td align="right">1.4904633</td>
+<td align="right">0.0001278</td>
+<td align="right">0.0000869</td>
+<td align="right">1.471102</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">0.1231868</td>
-<td align="right">0.0911049</td>
-<td align="right">1.3521418</td>
+<td align="right">0.1381138</td>
+<td align="right">0.0933328</td>
+<td align="right">1.479799</td>
 </tr>
 </tbody>
 </table>
@@ -1248,21 +1244,21 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.3238711</td>
-<td align="right">0.1007910</td>
-<td align="right">3.2132946</td>
+<td align="right">0.2830468</td>
+<td align="right">0.1025772</td>
+<td align="right">2.7593555</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0001040</td>
+<td align="right">0.0001043</td>
 <td align="right">0.0000328</td>
-<td align="right">3.1657841</td>
+<td align="right">3.1825517</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">-0.0074967</td>
-<td align="right">0.0162080</td>
-<td align="right">-0.4625266</td>
+<td align="right">-0.0017480</td>
+<td align="right">0.0164148</td>
+<td align="right">-0.1064909</td>
 </tr>
 </tbody>
 </table>
@@ -1279,21 +1275,21 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.2244774</td>
-<td align="right">0.1348939</td>
-<td align="right">1.6641038</td>
+<td align="right">0.1673865</td>
+<td align="right">0.1378105</td>
+<td align="right">1.2146137</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0000907</td>
-<td align="right">0.0000378</td>
-<td align="right">2.3989039</td>
+<td align="right">0.0000891</td>
+<td align="right">0.0000377</td>
+<td align="right">2.3635541</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">0.0151499</td>
-<td align="right">0.0228722</td>
-<td align="right">0.6623712</td>
+<td align="right">0.0232409</td>
+<td align="right">0.0232890</td>
+<td align="right">0.9979364</td>
 </tr>
 </tbody>
 </table>
@@ -1316,10 +1312,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_log_lmer</td>
 <td align="right">5</td>
-<td align="right">4652.613</td>
-<td align="right">4681.719</td>
-<td align="right">-2321.306</td>
-<td align="right">4642.613</td>
+<td align="right">4485.568</td>
+<td align="right">4514.522</td>
+<td align="right">-2237.784</td>
+<td align="right">4475.568</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -1327,11 +1323,11 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">lin_log_slope_lmer</td>
 <td align="right">7</td>
-<td align="right">4583.334</td>
-<td align="right">4624.083</td>
-<td align="right">-2284.667</td>
-<td align="right">4569.334</td>
-<td align="right">73.27854</td>
+<td align="right">4416.477</td>
+<td align="right">4457.012</td>
+<td align="right">-2201.238</td>
+<td align="right">4402.477</td>
+<td align="right">73.09149</td>
 <td align="right">2</td>
 <td align="right">0</td>
 </tr>
@@ -1356,10 +1352,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_log_lmer</td>
 <td align="right">5</td>
-<td align="right">4652.613</td>
-<td align="right">4681.719</td>
-<td align="right">-2321.306</td>
-<td align="right">4642.613</td>
+<td align="right">4485.568</td>
+<td align="right">4514.522</td>
+<td align="right">-2237.784</td>
+<td align="right">4475.568</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -1367,11 +1363,11 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">lin_log_paper_slope_lmer</td>
 <td align="right">10</td>
-<td align="right">4419.642</td>
-<td align="right">4477.854</td>
-<td align="right">-2199.821</td>
-<td align="right">4399.642</td>
-<td align="right">242.971</td>
+<td align="right">4257.081</td>
+<td align="right">4314.988</td>
+<td align="right">-2118.541</td>
+<td align="right">4237.081</td>
+<td align="right">238.487</td>
 <td align="right">5</td>
 <td align="right">0</td>
 </tr>
@@ -1396,10 +1392,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_log_paper_lmer</td>
 <td align="right">6</td>
-<td align="right">4499.627</td>
-<td align="right">4534.554</td>
-<td align="right">-2243.813</td>
-<td align="right">4487.627</td>
+<td align="right">4340.057</td>
+<td align="right">4374.801</td>
+<td align="right">-2164.028</td>
+<td align="right">4328.057</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -1407,10 +1403,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">lin_log_slope_lmer</td>
 <td align="right">7</td>
-<td align="right">4583.334</td>
-<td align="right">4624.083</td>
-<td align="right">-2284.667</td>
-<td align="right">4569.334</td>
+<td align="right">4416.477</td>
+<td align="right">4457.012</td>
+<td align="right">-2201.238</td>
+<td align="right">4402.477</td>
 <td align="right">0</td>
 <td align="right">1</td>
 <td align="right">1</td>
@@ -1436,10 +1432,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_log_paper_lmer</td>
 <td align="right">6</td>
-<td align="right">4499.627</td>
-<td align="right">4534.554</td>
-<td align="right">-2243.813</td>
-<td align="right">4487.627</td>
+<td align="right">4340.057</td>
+<td align="right">4374.801</td>
+<td align="right">-2164.028</td>
+<td align="right">4328.057</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -1447,11 +1443,11 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">lin_log_paper_slope_lmer</td>
 <td align="right">10</td>
-<td align="right">4419.642</td>
-<td align="right">4477.854</td>
-<td align="right">-2199.821</td>
-<td align="right">4399.642</td>
-<td align="right">87.98474</td>
+<td align="right">4257.081</td>
+<td align="right">4314.988</td>
+<td align="right">-2118.541</td>
+<td align="right">4237.081</td>
+<td align="right">90.97536</td>
 <td align="right">4</td>
 <td align="right">0</td>
 </tr>
@@ -1476,10 +1472,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_log_slope_lmer</td>
 <td align="right">7</td>
-<td align="right">4583.334</td>
-<td align="right">4624.083</td>
-<td align="right">-2284.667</td>
-<td align="right">4569.334</td>
+<td align="right">4416.477</td>
+<td align="right">4457.012</td>
+<td align="right">-2201.238</td>
+<td align="right">4402.477</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -1487,11 +1483,11 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">lin_log_paper_slope_lmer</td>
 <td align="right">10</td>
-<td align="right">4419.642</td>
-<td align="right">4477.854</td>
-<td align="right">-2199.821</td>
-<td align="right">4399.642</td>
-<td align="right">169.6924</td>
+<td align="right">4257.081</td>
+<td align="right">4314.988</td>
+<td align="right">-2118.541</td>
+<td align="right">4237.081</td>
+<td align="right">165.3955</td>
 <td align="right">3</td>
 <td align="right">0</td>
 </tr>
@@ -1536,21 +1532,21 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">-0.4247794</td>
-<td align="right">0.5250981</td>
-<td align="right">-0.8089526</td>
+<td align="right">-0.5513631</td>
+<td align="right">0.5353188</td>
+<td align="right">-1.029972</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0001815</td>
+<td align="right">0.0001724</td>
 <td align="right">0.0001110</td>
-<td align="right">1.6344194</td>
+<td align="right">1.553464</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">0.1086581</td>
-<td align="right">0.0959349</td>
-<td align="right">1.1326233</td>
+<td align="right">0.1300519</td>
+<td align="right">0.0981468</td>
+<td align="right">1.325075</td>
 </tr>
 </tbody>
 </table>
@@ -1589,21 +1585,21 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">-0.3100080</td>
-<td align="right">0.5702491</td>
-<td align="right">-0.5436362</td>
+<td align="right">-0.4846650</td>
+<td align="right">0.5923522</td>
+<td align="right">-0.8182041</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0002397</td>
-<td align="right">0.0001301</td>
-<td align="right">1.8426903</td>
+<td align="right">0.0002203</td>
+<td align="right">0.0001298</td>
+<td align="right">1.6975218</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">0.0817051</td>
-<td align="right">0.1038616</td>
-<td align="right">0.7866726</td>
+<td align="right">0.1127293</td>
+<td align="right">0.1079272</td>
+<td align="right">1.0444941</td>
 </tr>
 </tbody>
 </table>
