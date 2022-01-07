@@ -394,8 +394,7 @@
     description: 'In a triad-task, bias to generalize to taxonomic as opposed to thematic alternative.'
     curator: 'Molly Lewis'
     src: media/datasets/catBias.png
-    
-    itudinal: no
+    longitudinal: no
     moderators: [label_present, instruction_code, object_stimulus, taxonomic_type]
     subset: []
     comment: ""
@@ -480,11 +479,11 @@
     short_name: MPs
     key: 1rg3u-b9unYd8f5U2w8yTjrPWOccq09HXeREp_xHf6yo
     filename: Mispron
-    citation: 'Von Holzen & Bergmann (2019)'
-    internal_citation: "(Von Holzen & Bergmann, 2019)"
+    citation: 'Von Holzen & Bergmann (2021)'
+    internal_citation: "(Von Holzen & Bergmann, 2021)"
     link: "https://psyarxiv.com/dze29/"
-    full_citation: "Von Holzen, K., & Bergmann, C. (2019, February 18). The development of infants’ responses to mispronunciations: A Meta-Analysis. https://doi.org/10.31234/osf.io/dze29"
-    doi: 10.31234/osf.io/dze29
+    full_citation: "Von Holzen, K., & Bergmann, C. (2021). The development of infants’ responses to mispronunciations: A meta-analysis. Developmental Psychology, 57(1), 1-18. doi:10.1037/dev0001141."
+    doi: 10.1037/dev0001141
     reliability: ""
     systematic: yes
     search_strategy: 'Seeded with Swingley & Aslin (2000) in Google Scholar'
