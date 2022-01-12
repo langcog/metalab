@@ -1,0 +1,1673 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reports | MetaLab</title>
+    <link>https://langcog.github.io/metalab/report/</link>
+      <atom:link href="https://langcog.github.io/metalab/report/index.xml" rel="self" type="application/rss+xml" />
+    <description>Reports</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://langcog.github.io/metalab/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Reports</title>
+      <link>https://langcog.github.io/metalab/report/</link>
+    </image>
+    
+    <item>
+      <title>Design Choice Analyses</title>
+      <link>https://langcog.github.io/metalab/report/method_choice/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://langcog.github.io/metalab/report/method_choice/</guid>
+      <description>
+&lt;style type=&#34;text/css&#34;&gt;
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { background-color: #f8f8f8; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+&lt;/style&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-available-for-each-design-choice-variable&#34;&gt;Data available for each design choice variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#design-choice-variables-by-age&#34;&gt;Design choice variables by age&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#effect-size-by-design-choice-variables&#34;&gt;Effect size by design choice variables&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#by-dataset&#34;&gt;By dataset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#across-datasets&#34;&gt;Across datasets&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The research question determines many design choices in developmental research – e.g., is the hypothesis related to the timecourse of various pressures, or merely the presence of a bias? Some methods are better suited than others for answering these different questions. But, design choices can also influence the &lt;em&gt;size&lt;/em&gt; of the effect: Some methods are less noisy than others, and therefore result in larger effects sizes. The size of the effect may further depend on the particular age of the child in a study, with some methods better suited to different age groups. Here we look across datasets in Metalab at four design choices – method, response mode, depenedent measure, and experimental design – and their relationship to effect sizes, and other variables of interest.&lt;/p&gt;
+&lt;p&gt;This report includes effect sizes for participants 60 months or younger.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-available-for-each-design-choice-variable&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data available for each design choice variable&lt;/h2&gt;
+&lt;p&gt;Method&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-1&#34; title=&#34;1&#34;&gt;metalab_data &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;            &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;filter&lt;/span&gt;(mean_age_months &lt;span class=&#34;op&#34;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;60&lt;/span&gt;)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-3&#34; title=&#34;3&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-4&#34; title=&#34;4&#34;&gt;metalab_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;method =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;as.factor&lt;/span&gt;(metalab_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;method)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-5&#34; title=&#34;5&#34;&gt;method.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(method, dataset) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;filter&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;n&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-8&#34; title=&#34;8&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;n =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;n&lt;/span&gt;())&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-9&#34; title=&#34;9&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-10&#34; title=&#34;10&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(method.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; n, &lt;span class=&#34;dt&#34;&gt;fill =&lt;/span&gt; dataset, &lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; method)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_bar&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;stat =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;identity&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-12&#34; title=&#34;12&#34;&gt;&lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;method&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-13&#34; title=&#34;13&#34;&gt;&lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;N effect sizes&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-14&#34; title=&#34;14&#34;&gt;&lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-15&#34; title=&#34;15&#34;&gt;&lt;span class=&#34;st&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guides&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;fill=&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guide_legend&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ncol=&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Response Mode&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb2&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb2-1&#34; title=&#34;1&#34;&gt;metalab_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;response_mode =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;as.factor&lt;/span&gt;(metalab_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;response_mode)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb2-2&#34; title=&#34;2&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb2-3&#34; title=&#34;3&#34;&gt;response.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb2-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(response_mode, dataset) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb2-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;n =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;n&lt;/span&gt;())&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb2-6&#34; title=&#34;6&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb2-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(response.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; n, &lt;span class=&#34;dt&#34;&gt;fill =&lt;/span&gt; dataset, &lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; response_mode)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb2-8&#34; title=&#34;8&#34;&gt;&lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_bar&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;stat =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;identity&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb2-9&#34; title=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;response mode&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb2-10&#34; title=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;N effect sizes&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb2-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb2-12&#34; title=&#34;12&#34;&gt;&lt;span class=&#34;st&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guides&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;fill=&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guide_legend&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ncol=&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Dependent Measure&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb3&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb3-1&#34; title=&#34;1&#34;&gt;metalab_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;dependent_measure=&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;as.factor&lt;/span&gt;(metalab_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;dependent_measure)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb3-2&#34; title=&#34;2&#34;&gt;dm.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb3-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(dependent_measure, dataset) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb3-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;n =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;n&lt;/span&gt;())&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb3-5&#34; title=&#34;5&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb3-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(dm.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; n, &lt;span class=&#34;dt&#34;&gt;fill =&lt;/span&gt; dataset, &lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; dependent_measure)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb3-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_bar&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;stat =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;identity&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb3-8&#34; title=&#34;8&#34;&gt;&lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;method&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb3-9&#34; title=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;N effect sizes&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb3-10&#34; title=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb3-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;st&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guides&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;fill=&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guide_legend&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ncol=&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Participant design&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb4&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb4-1&#34; title=&#34;1&#34;&gt;metalab_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;participant_design =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;as.factor&lt;/span&gt;(metalab_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;participant_design)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb4-2&#34; title=&#34;2&#34;&gt;participant_design.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb4-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(participant_design, dataset) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb4-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;n =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;n&lt;/span&gt;())&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb4-5&#34; title=&#34;5&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb4-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(participant_design.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; n, &lt;span class=&#34;dt&#34;&gt;fill =&lt;/span&gt; dataset, &lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; participant_design)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb4-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_bar&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;stat =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;identity&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb4-8&#34; title=&#34;8&#34;&gt;&lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;participant design&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb4-9&#34; title=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;N effect sizes&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb4-10&#34; title=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb4-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;st&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guides&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;fill=&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guide_legend&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ncol=&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;design-choice-variables-by-age&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Design choice variables by age&lt;/h2&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb5&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb5-1&#34; title=&#34;1&#34;&gt;age.response_mode.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb5-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;mean_age_months_rounded =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;cut_width&lt;/span&gt;(mean_age_months,  &lt;span class=&#34;dt&#34;&gt;width =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;boundary =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;0&lt;/span&gt;))  &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb5-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(mean_age_months_rounded, response_mode) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb5-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;n =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;n&lt;/span&gt;()) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb5-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;prop =&lt;/span&gt; n &lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;sum&lt;/span&gt;(n))&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb5-6&#34; title=&#34;6&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb5-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(age.response_mode.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; mean_age_months_rounded, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; prop, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; response_mode)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb5-8&#34; title=&#34;8&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb5-9&#34; title=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; response_mode)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb5-10&#34; title=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Age (months)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb5-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb5-12&#34; title=&#34;12&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Response Mode&amp;quot;&lt;/span&gt;)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb6&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb6-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(age.response_mode.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; mean_age_months_rounded, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; n, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; response_mode)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb6-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb6-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; response_mode)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb6-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Age (months)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb6-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb6-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Response Mode&amp;quot;&lt;/span&gt;)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-5-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb7&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-1&#34; title=&#34;1&#34;&gt;age.method.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;mean_age_months_rounded =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;cut_width&lt;/span&gt;(mean_age_months,  &lt;span class=&#34;dt&#34;&gt;width =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;boundary =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;0&lt;/span&gt;))  &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(mean_age_months_rounded, method) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;n =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;n&lt;/span&gt;()) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;prop =&lt;/span&gt; n &lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;sum&lt;/span&gt;(n))&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-6&#34; title=&#34;6&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(age.method.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; mean_age_months_rounded, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; prop, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; method)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-8&#34; title=&#34;8&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-9&#34; title=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; method)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-10&#34; title=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Age (months)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-12&#34; title=&#34;12&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Method&amp;quot;&lt;/span&gt;)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-5-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb8&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb8-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(age.method.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; mean_age_months_rounded, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; n, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; method)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb8-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb8-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; method)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb8-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Age (months)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb8-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb8-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Method&amp;quot;&lt;/span&gt;)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-5-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb9&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb9-1&#34; title=&#34;1&#34;&gt;age.dm.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb9-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;mean_age_months_rounded =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;cut_width&lt;/span&gt;(mean_age_months,  &lt;span class=&#34;dt&#34;&gt;width =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;boundary =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;0&lt;/span&gt;))  &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb9-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(mean_age_months_rounded, dependent_measure) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb9-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;n =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;n&lt;/span&gt;()) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb9-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;prop =&lt;/span&gt; n &lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;sum&lt;/span&gt;(n))&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb9-6&#34; title=&#34;6&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb9-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(age.dm.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; mean_age_months_rounded, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; prop, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; dependent_measure)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb9-8&#34; title=&#34;8&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb9-9&#34; title=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; dependent_measure)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb9-10&#34; title=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Age (months)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb9-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb9-12&#34; title=&#34;12&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Dependent Measure&amp;quot;&lt;/span&gt;)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-5-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb10&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb10-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(age.dm.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; mean_age_months_rounded, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; n, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; dependent_measure)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb10-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb10-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; dependent_measure)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb10-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Age (months)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb10-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb10-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Dependent Measure&amp;quot;&lt;/span&gt;)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-5-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb11&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-1&#34; title=&#34;1&#34;&gt;age.pd.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;mean_age_months_rounded =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;cut_width&lt;/span&gt;(mean_age_months,  &lt;span class=&#34;dt&#34;&gt;width =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;boundary =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;0&lt;/span&gt;))  &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(mean_age_months_rounded, participant_design) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;n =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;n&lt;/span&gt;()) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;prop =&lt;/span&gt; n &lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;sum&lt;/span&gt;(n))&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-6&#34; title=&#34;6&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(age.pd.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; mean_age_months_rounded, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; prop, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; participant_design)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-8&#34; title=&#34;8&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-9&#34; title=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; participant_design)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-10&#34; title=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Age (months)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-12&#34; title=&#34;12&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Participant Design&amp;quot;&lt;/span&gt;)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-5-7.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb12&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb12-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(age.pd.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; mean_age_months_rounded, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; n, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; participant_design)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb12-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb12-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; participant_design)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb12-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Age (months)&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb12-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb12-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Participant Design&amp;quot;&lt;/span&gt;)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-5-8.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;effect-size-by-design-choice-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Effect size by design choice variables&lt;/h2&gt;
+&lt;div id=&#34;by-dataset&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;By dataset&lt;/h3&gt;
+&lt;p&gt;Get residual effect size, controling for age and phenonmenon&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb13&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb13-1&#34; title=&#34;1&#34;&gt;full.model =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;rma&lt;/span&gt;(d_calc &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;dataset &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;mean_age_&lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb13-2&#34; title=&#34;2&#34;&gt;        &lt;span class=&#34;dt&#34;&gt;vi =&lt;/span&gt; d_var_calc, &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; metalab_data, &lt;span class=&#34;dt&#34;&gt;method =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;REML&amp;quot;&lt;/span&gt;)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb13-3&#34; title=&#34;3&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb13-4&#34; title=&#34;4&#34;&gt;residuals =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;rstandard&lt;/span&gt;(full.model)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb13-5&#34; title=&#34;5&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb13-6&#34; title=&#34;6&#34;&gt;metalab_data =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb13-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;st&#34;&gt;            &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;bind_cols&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;as.data.frame&lt;/span&gt;(residuals&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;resid),&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb13-8&#34; title=&#34;8&#34;&gt;                      &lt;span class=&#34;kw&#34;&gt;as.data.frame&lt;/span&gt;(residuals&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;z)) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb13-9&#34; title=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;            &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;rename&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;residual.d =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;dt&#34;&gt;residuals$resid&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;`&lt;/span&gt;, &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb13-10&#34; title=&#34;10&#34;&gt;                   &lt;span class=&#34;dt&#34;&gt;residual.d.s =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;dt&#34;&gt;residuals$z&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;`&lt;/span&gt;) &lt;span class=&#34;co&#34;&gt;# standardized&lt;/span&gt;&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb14&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb14-1&#34; title=&#34;1&#34;&gt;method.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb14-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(method, dataset) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb14-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;residual.d =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;mean&lt;/span&gt;(residual.d),&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb14-4&#34; title=&#34;4&#34;&gt;            &lt;span class=&#34;dt&#34;&gt;n =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;n&lt;/span&gt;())&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb14-5&#34; title=&#34;5&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb14-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(method.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; method, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; residual.d, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; dataset)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb14-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; n)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb14-8&#34; title=&#34;8&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; dataset)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb14-9&#34; title=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb14-10&#34; title=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Method&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb14-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guides&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;colour=&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guide_legend&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ncol=&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb15&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-1&#34; title=&#34;1&#34;&gt;response.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(response_mode, dataset) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;residual.d =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;mean&lt;/span&gt;(residual.d),&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-4&#34; title=&#34;4&#34;&gt;            &lt;span class=&#34;dt&#34;&gt;n =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;n&lt;/span&gt;())&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-5&#34; title=&#34;5&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(response.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; response_mode, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; residual.d, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; dataset)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; n)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-8&#34; title=&#34;8&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; dataset)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-9&#34; title=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-10&#34; title=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Response Mode&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guides&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;colour=&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guide_legend&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ncol=&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-7-2.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb16&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb16-1&#34; title=&#34;1&#34;&gt;dm.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb16-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(dependent_measure, dataset) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb16-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;residual.d =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;mean&lt;/span&gt;(residual.d),&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb16-4&#34; title=&#34;4&#34;&gt;            &lt;span class=&#34;dt&#34;&gt;n =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;n&lt;/span&gt;())&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb16-5&#34; title=&#34;5&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb16-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(dm.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; dependent_measure, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; residual.d, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; dataset)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb16-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; n)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb16-8&#34; title=&#34;8&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; dataset)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb16-9&#34; title=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb16-10&#34; title=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Dependent Measure&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb16-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guides&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;colour=&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guide_legend&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ncol=&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-7-3.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb17&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb17-1&#34; title=&#34;1&#34;&gt;participant_design.pd =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb17-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(participant_design, dataset) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb17-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;summarise&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;residual.d =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;mean&lt;/span&gt;(residual.d),&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb17-4&#34; title=&#34;4&#34;&gt;            &lt;span class=&#34;dt&#34;&gt;n =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;n&lt;/span&gt;())&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb17-5&#34; title=&#34;5&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb17-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(participant_design.pd, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; participant_design, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; residual.d, &lt;span class=&#34;dt&#34;&gt;color =&lt;/span&gt; dataset)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb17-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_point&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;size =&lt;/span&gt; n)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb17-8&#34; title=&#34;8&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_line&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;group =&lt;/span&gt; dataset)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb17-9&#34; title=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb17-10&#34; title=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ggtitle&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;Participant Design&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb17-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guides&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;colour=&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;guide_legend&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ncol=&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-7-4.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;across-datasets&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Across datasets&lt;/h3&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb18&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb18-1&#34; title=&#34;1&#34;&gt;method.pd.all =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb18-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(method) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb18-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;multi_boot_standard&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;col =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;residual.d&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb18-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ungroup&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb18-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;method =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;reorder&lt;/span&gt;(method, mean))&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb18-6&#34; title=&#34;6&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb18-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(method.pd.all, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; method, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; mean, &lt;span class=&#34;dt&#34;&gt;fill =&lt;/span&gt; method)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb18-8&#34; title=&#34;8&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_bar&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;position=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;dodge&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;stat=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;identity&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb18-9&#34; title=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_errorbar&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ymin =&lt;/span&gt; ci_lower, &lt;span class=&#34;dt&#34;&gt;ymax=&lt;/span&gt; ci_upper), &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb18-10&#34; title=&#34;10&#34;&gt;                &lt;span class=&#34;dt&#34;&gt;width=&lt;/span&gt;&lt;span class=&#34;fl&#34;&gt;0.2&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;position=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;dodge&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb18-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;residual effect size&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb18-12&#34; title=&#34;12&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;method&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb18-13&#34; title=&#34;13&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;legend.position=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb18-14&#34; title=&#34;14&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb19&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb19-1&#34; title=&#34;1&#34;&gt;response.pd.all =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb19-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(response_mode) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb19-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;multi_boot_standard&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;col =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;residual.d&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb19-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ungroup&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb19-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;response_mode =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;reorder&lt;/span&gt;(response_mode, mean)) &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb19-6&#34; title=&#34;6&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb19-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(response.pd.all, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; response_mode, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; mean, &lt;span class=&#34;dt&#34;&gt;fill =&lt;/span&gt; response_mode)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb19-8&#34; title=&#34;8&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_bar&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;position=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;dodge&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;stat=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;identity&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb19-9&#34; title=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_errorbar&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ymin =&lt;/span&gt; ci_lower, &lt;span class=&#34;dt&#34;&gt;ymax=&lt;/span&gt; ci_upper), &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb19-10&#34; title=&#34;10&#34;&gt;                &lt;span class=&#34;dt&#34;&gt;width=&lt;/span&gt;&lt;span class=&#34;fl&#34;&gt;0.2&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;position=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;dodge&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb19-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;residual effect size&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb19-12&#34; title=&#34;12&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;response mode&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb19-13&#34; title=&#34;13&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;legend.position =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb19-14&#34; title=&#34;14&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-8-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb20&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb20-1&#34; title=&#34;1&#34;&gt;dm.pd.all =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb20-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(dependent_measure) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb20-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;multi_boot_standard&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;col =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;residual.d&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb20-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ungroup&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb20-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;dependent_measure =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;reorder&lt;/span&gt;(dependent_measure, mean))&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb20-6&#34; title=&#34;6&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb20-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(dm.pd.all, &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt;dependent_measure, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; mean, &lt;span class=&#34;dt&#34;&gt;fill =&lt;/span&gt; dependent_measure)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb20-8&#34; title=&#34;8&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_bar&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;position=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;dodge&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;stat=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;identity&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb20-9&#34; title=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_errorbar&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ymin =&lt;/span&gt; ci_lower, &lt;span class=&#34;dt&#34;&gt;ymax=&lt;/span&gt; ci_upper), &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb20-10&#34; title=&#34;10&#34;&gt;                &lt;span class=&#34;dt&#34;&gt;width=&lt;/span&gt;&lt;span class=&#34;fl&#34;&gt;0.2&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;position=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;dodge&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb20-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;residual effect size&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb20-12&#34; title=&#34;12&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;dependent measure&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb20-13&#34; title=&#34;13&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;legend.position=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb20-14&#34; title=&#34;14&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-8-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb21&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb21-1&#34; title=&#34;1&#34;&gt;participant_design.pd.all =&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb21-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(participant_design) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb21-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;multi_boot_standard&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;col =&lt;/span&gt; &lt;span class=&#34;st&#34;&gt;&amp;quot;residual.d&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb21-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ungroup&lt;/span&gt;() &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb21-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;participant_design =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;reorder&lt;/span&gt;(participant_design, mean))&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb21-6&#34; title=&#34;6&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb21-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;kw&#34;&gt;ggplot&lt;/span&gt;(participant_design.pd.all, &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb21-8&#34; title=&#34;8&#34;&gt;       &lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;x =&lt;/span&gt; participant_design, &lt;span class=&#34;dt&#34;&gt;y =&lt;/span&gt; mean, &lt;span class=&#34;dt&#34;&gt;fill =&lt;/span&gt; participant_design)) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb21-9&#34; title=&#34;9&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_bar&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;position=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;dodge&amp;quot;&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;stat=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;identity&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb21-10&#34; title=&#34;10&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;geom_errorbar&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;aes&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;ymin =&lt;/span&gt; ci_lower, &lt;span class=&#34;dt&#34;&gt;ymax =&lt;/span&gt; ci_upper), &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb21-11&#34; title=&#34;11&#34;&gt;                &lt;span class=&#34;dt&#34;&gt;width=&lt;/span&gt;&lt;span class=&#34;fl&#34;&gt;0.2&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;position=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;dodge&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb21-12&#34; title=&#34;12&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;ylab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;residual effect size&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb21-13&#34; title=&#34;13&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;xlab&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;participant design&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb21-14&#34; title=&#34;14&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;legend.position=&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb21-15&#34; title=&#34;15&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;theme&lt;/span&gt; (&lt;span class=&#34;dt&#34;&gt;axis.text.x =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;element_text&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;angle =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;90&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;hjust =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;dt&#34;&gt;vjust =&lt;/span&gt; &lt;span class=&#34;fl&#34;&gt;.5&lt;/span&gt;)) &lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/method_choice/index_files/figure-html/unnamed-chunk-8-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Developmental curve comparison</title>
+      <link>https://langcog.github.io/metalab/report/developmental_curves/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://langcog.github.io/metalab/report/developmental_curves/</guid>
+      <description>
+&lt;style type=&#34;text/css&#34;&gt;
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { background-color: #f8f8f8; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+&lt;/style&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#simple-random-effects-structure&#34;&gt;Simple random effects structure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#complex-random-effects-structure-nested-paper-effects&#34;&gt;Complex random effects structure (nested paper effects)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#complex-random-effects-structure-random-slope&#34;&gt;Complex random effects structure (random slope)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#subset-to-only-those-papers-with-multiple-ages&#34;&gt;Subset to only those papers with multiple ages&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#two-age-groups&#34;&gt;Two age groups&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#three-age-groups&#34;&gt;Three age groups&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#conclusions&#34;&gt;Conclusions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;The goal for this analysis was to better understand the shape of the developmental curve. To do this we used linear mixed effects models, so that the variance of individual meta-analyses could be accounted for.&lt;/p&gt;
+&lt;p&gt;Summary of investigations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Meta-analytic mixed-effects are promising, but…&lt;/li&gt;
+&lt;li&gt;The random effects structure (specifically if we nest paper effects within meta-analysis) makes a big difference to the implied curve shape.&lt;/li&gt;
+&lt;li&gt;Subsetting to only studies with multiple age groups improves performance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;simple-random-effects-structure&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Simple random effects structure&lt;/h1&gt;
+&lt;p&gt;Below is our data set separated by meta-analysis with four curve types: 1) linear, 2) logarithmic, 3) quadratic, and 4) both linear and logarithmic predictors.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We ran mixed effects regressions where meta-analysis (data set) was included as a random intercept for our four models. We then ran Chi-squared tests to compare the different models to one another. Model comparison found the quadratic model to be a better fit than the linear model and the logarithmic model, but no difference between the linear and logarithmic model. The two predictor model (linear and log) also outperformed both the single predictor linear model and the single predictor logarithmic model.&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-1&#34; title=&#34;1&#34;&gt;lin_lmer &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;lmer&lt;/span&gt;(d_calc &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;mean_age &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;                &lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;dataset), &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-3&#34; title=&#34;3&#34;&gt;                &lt;span class=&#34;dt&#34;&gt;weights =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;d_var_calc, &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-4&#34; title=&#34;4&#34;&gt;                &lt;span class=&#34;dt&#34;&gt;REML =&lt;/span&gt; F, &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; metalab_data)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-5&#34; title=&#34;5&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-6&#34; title=&#34;6&#34;&gt;log_lmer &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;lmer&lt;/span&gt;(d_calc &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;log&lt;/span&gt;(mean_age) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;st&#34;&gt;                &lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;dataset), &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-8&#34; title=&#34;8&#34;&gt;                &lt;span class=&#34;dt&#34;&gt;weights =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;d_var_calc, &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-9&#34; title=&#34;9&#34;&gt;                &lt;span class=&#34;dt&#34;&gt;REML =&lt;/span&gt; F, &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; metalab_data)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-10&#34; title=&#34;10&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-11&#34; title=&#34;11&#34;&gt;quad_lmer &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;lmer&lt;/span&gt;(d_calc &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;I&lt;/span&gt;(mean_age&lt;span class=&#34;op&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-12&#34; title=&#34;12&#34;&gt;&lt;span class=&#34;st&#34;&gt;                 &lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;dataset), &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-13&#34; title=&#34;13&#34;&gt;                 &lt;span class=&#34;dt&#34;&gt;weights =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;d_var_calc, &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-14&#34; title=&#34;14&#34;&gt;                 &lt;span class=&#34;dt&#34;&gt;REML =&lt;/span&gt; F, &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; metalab_data)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-15&#34; title=&#34;15&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-16&#34; title=&#34;16&#34;&gt;lin_log_lmer &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;lmer&lt;/span&gt;(d_calc &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;mean_age &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;log&lt;/span&gt;(mean_age) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-17&#34; title=&#34;17&#34;&gt;&lt;span class=&#34;st&#34;&gt;                    &lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;dataset), &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-18&#34; title=&#34;18&#34;&gt;                    &lt;span class=&#34;dt&#34;&gt;weights =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;d_var_calc, &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-19&#34; title=&#34;19&#34;&gt;                    &lt;span class=&#34;dt&#34;&gt;REML =&lt;/span&gt; F, &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; metalab_data)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-20&#34; title=&#34;20&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-21&#34; title=&#34;21&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;coef&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(lin_lmer)))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Estimate&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Std. Error&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;t value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;(Intercept)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.2833157&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0499807&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.668505&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;mean_age&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000972&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000293&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.316766&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb2&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb2-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;coef&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(log_lmer)))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Estimate&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Std. Error&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;t value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;(Intercept)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.2422937&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0979846&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.472774&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;log(mean_age)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0154427&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0144992&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.065078&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb3&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb3-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;coef&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(quad_lmer)))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Estimate&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Std. Error&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;t value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;(Intercept)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.3299937&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0495881&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6.654697&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;I(mean_age^2)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.106790&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb4&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb4-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;coef&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(lin_log_lmer)))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Estimate&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Std. Error&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;t value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;(Intercept)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.3238711&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.1007910&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.2132946&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;mean_age&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0001040&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000328&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.1657841&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;log(mean_age)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0074967&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0162080&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.4625266&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb5&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb5-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;anova&lt;/span&gt;(lin_lmer, log_lmer))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;npar&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;AIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;BIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;logLik&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;deviance&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Chisq&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Df&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Pr(&amp;gt;Chisq)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4650.826&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4674.111&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2321.413&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4642.826&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;log_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4660.594&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4683.879&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2326.297&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4652.594&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb6&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb6-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;anova&lt;/span&gt;(lin_lmer, quad_lmer))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;npar&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;AIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;BIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;logLik&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;deviance&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Chisq&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Df&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Pr(&amp;gt;Chisq)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4650.826&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4674.111&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2321.413&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4642.826&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;quad_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4660.490&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4683.775&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2326.245&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4652.490&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb7&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;anova&lt;/span&gt;(log_lmer, quad_lmer))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;npar&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;AIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;BIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;logLik&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;deviance&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Chisq&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Df&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Pr(&amp;gt;Chisq)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;log_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4660.594&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4683.879&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2326.297&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4652.594&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;quad_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4660.490&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4683.775&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2326.245&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4652.490&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.1041449&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb8&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb8-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;anova&lt;/span&gt;(lin_lmer, lin_log_lmer))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;npar&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;AIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;BIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;logLik&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;deviance&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Chisq&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Df&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Pr(&amp;gt;Chisq)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4650.826&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4674.111&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2321.413&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4642.826&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_log_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4652.613&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4681.719&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2321.306&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4642.613&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.2130513&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.6443863&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb9&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb9-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;anova&lt;/span&gt;(log_lmer, lin_log_lmer))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;npar&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;AIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;BIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;logLik&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;deviance&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Chisq&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Df&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Pr(&amp;gt;Chisq)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;log_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4660.594&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4683.879&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2326.297&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4652.594&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_log_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4652.613&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4681.719&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2321.306&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4642.613&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.980985&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0015817&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Focusing on the linear, log, and two predictor (linear and log) models, we built predictions for all complete meta-analyses. The plot separated by meta-analysis is presented below. The linear and two predictor models are pretty similar, mainly being different at very early ages.&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb10&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb10-1&#34; title=&#34;1&#34;&gt;metalab_data_preds &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb10-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;select&lt;/span&gt;(dataset, short_name, d_calc, d_var_calc, mean_age, study_ID) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb10-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;filter&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;complete.cases&lt;/span&gt;(.)) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb10-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;lin_pred =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;predict&lt;/span&gt;(lin_lmer)) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb10-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;log_pred =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;predict&lt;/span&gt;(log_lmer)) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb10-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;lin_log_pred =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;predict&lt;/span&gt;(lin_log_lmer))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Overall this method looks pretty good. It seems like the linear predictor in the two predictor model is smoothing the logs at the edges, and the random effects are working to capture cross data set variability.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;complex-random-effects-structure-nested-paper-effects&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Complex random effects structure (nested paper effects)&lt;/h1&gt;
+&lt;p&gt;We decided to expand our random effects structure to include paper (study_ID) nested in meta-analysis (data set) to capture the fact that a given meta-analysis has a specific set of papers, and may have multiple entries from the same paper. Here we focused on the two predictor model. The simpler random effects model from above is repeated here for easy comparison. A Chi-squared test finds a significant difference between the models, with the model with the more complex random effects structure having a lower AIC.&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb11&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-1&#34; title=&#34;1&#34;&gt;lin_log_paper_lmer &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;lmer&lt;/span&gt;(d_calc &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;mean_age &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;log&lt;/span&gt;(mean_age) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;                          &lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;dataset &lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;study_ID),&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-3&#34; title=&#34;3&#34;&gt;                          &lt;span class=&#34;dt&#34;&gt;weights =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;d_var_calc, &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-4&#34; title=&#34;4&#34;&gt;                          &lt;span class=&#34;dt&#34;&gt;REML =&lt;/span&gt; F, &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; metalab_data)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-5&#34; title=&#34;5&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;coef&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(lin_log_paper_lmer)))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Estimate&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Std. Error&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;t value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;(Intercept)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.2244774&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.1348939&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.6641038&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;mean_age&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000907&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000378&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.3989039&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;log(mean_age)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0151499&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0228722&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.6623712&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb12&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb12-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;coef&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(lin_log_lmer)))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Estimate&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Std. Error&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;t value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;(Intercept)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.3238711&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.1007910&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.2132946&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;mean_age&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0001040&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000328&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.1657841&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;log(mean_age)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0074967&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0162080&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.4625266&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb13&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb13-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;anova&lt;/span&gt;(lin_log_lmer, lin_log_paper_lmer))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;npar&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;AIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;BIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;logLik&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;deviance&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Chisq&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Df&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Pr(&amp;gt;Chisq)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_log_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4652.613&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4681.719&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2321.306&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4642.613&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_log_paper_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4499.627&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4534.554&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2243.813&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4487.627&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;154.9862&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;We then predicted from this new, more complex model and compare it to the model without the nested paper random effects structure. Initial testing found that including the nested random effect in the predict algorithm led to massive overfitting, so just the simple random effects structure was used to compute predictions. Below is the figure comparing the two curves. The curves are very similar, suggesting that while adding the nesting of paper does significantly improve the model, visually the difference is very small.&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb14&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb14-1&#34; title=&#34;1&#34;&gt;lin_log_paper_preds &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;predict&lt;/span&gt;(lin_log_paper_lmer, &lt;span class=&#34;dt&#34;&gt;re.form =&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;(&lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;dataset))&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb14-2&#34; title=&#34;2&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb14-3&#34; title=&#34;3&#34;&gt;metalab_data_preds &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data_preds &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb14-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;lin_log_paper_pred =&lt;/span&gt; lin_log_paper_preds)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;complex-random-effects-structure-random-slope&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Complex random effects structure (random slope)&lt;/h1&gt;
+&lt;p&gt;Another way to make the random effects structure more complex is to add a random slope to the model. Two more models were built with a random slope by mean age log transformed, one without the nesting of paper, and one with the nesting of paper. Summaries of the new models with the random slope and the previous models without the random slope are below. Model comparison found that the model with nested structure and the slope was better than the simplest model (no nesting, no slope). The model with both the nested structure and the slope was also better than than the model with only the slope. Based on this it appears that the best model is one that includes both the nested random effects structure and a random slope of mean age log transformed.&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb15&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-1&#34; title=&#34;1&#34;&gt;lin_log_slope_lmer &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;lmer&lt;/span&gt;(d_calc &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;mean_age &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;log&lt;/span&gt;(mean_age) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;                          &lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;log&lt;/span&gt;(mean_age)&lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;dataset),&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-3&#34; title=&#34;3&#34;&gt;                          &lt;span class=&#34;dt&#34;&gt;weights =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;d_var_calc, &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-4&#34; title=&#34;4&#34;&gt;                          &lt;span class=&#34;dt&#34;&gt;REML =&lt;/span&gt; F, &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; metalab_data)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-5&#34; title=&#34;5&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-6&#34; title=&#34;6&#34;&gt;lin_log_paper_slope_lmer &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;lmer&lt;/span&gt;(d_calc &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;mean_age &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;log&lt;/span&gt;(mean_age) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;st&#34;&gt;                          &lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;log&lt;/span&gt;(mean_age)&lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;dataset &lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;study_ID),&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-8&#34; title=&#34;8&#34;&gt;                          &lt;span class=&#34;dt&#34;&gt;weights =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;d_var_calc, &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-9&#34; title=&#34;9&#34;&gt;                          &lt;span class=&#34;dt&#34;&gt;REML =&lt;/span&gt; F, &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; metalab_data)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-10&#34; title=&#34;10&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb15-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;coef&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(lin_log_slope_lmer)))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Estimate&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Std. Error&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;t value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;(Intercept)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.2457575&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.4343467&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.5658096&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;mean_age&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000677&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000612&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.1051503&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;log(mean_age)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0896325&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0763592&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.1738269&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb16&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb16-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;coef&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(lin_log_paper_slope_lmer)))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Estimate&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Std. Error&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;t value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;(Intercept)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.4439472&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.5127621&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.8657956&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;mean_age&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0001299&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000872&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.4904633&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;log(mean_age)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.1231868&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0911049&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.3521418&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb17&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb17-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;coef&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(lin_log_lmer)))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Estimate&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Std. Error&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;t value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;(Intercept)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.3238711&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.1007910&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.2132946&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;mean_age&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0001040&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000328&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.1657841&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;log(mean_age)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0074967&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0162080&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.4625266&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb18&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb18-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;coef&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(lin_log_paper_lmer)))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Estimate&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Std. Error&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;t value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;(Intercept)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.2244774&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.1348939&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.6641038&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;mean_age&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000907&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0000378&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.3989039&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;log(mean_age)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0151499&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0228722&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.6623712&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb19&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb19-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;anova&lt;/span&gt;(lin_log_lmer, lin_log_slope_lmer))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;npar&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;AIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;BIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;logLik&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;deviance&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Chisq&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Df&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Pr(&amp;gt;Chisq)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_log_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4652.613&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4681.719&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2321.306&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4642.613&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_log_slope_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4583.334&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4624.083&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2284.667&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4569.334&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;73.27854&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb20&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb20-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;anova&lt;/span&gt;(lin_log_lmer, lin_log_paper_slope_lmer))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;npar&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;AIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;BIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;logLik&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;deviance&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Chisq&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Df&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Pr(&amp;gt;Chisq)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_log_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4652.613&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4681.719&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2321.306&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4642.613&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_log_paper_slope_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4419.642&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4477.854&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2199.821&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4399.642&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;242.971&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb21&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb21-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;anova&lt;/span&gt;(lin_log_paper_lmer, lin_log_slope_lmer))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;npar&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;AIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;BIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;logLik&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;deviance&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Chisq&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Df&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Pr(&amp;gt;Chisq)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_log_paper_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4499.627&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4534.554&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2243.813&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4487.627&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_log_slope_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4583.334&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4624.083&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2284.667&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4569.334&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb22&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb22-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;anova&lt;/span&gt;(lin_log_paper_lmer, lin_log_paper_slope_lmer))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;npar&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;AIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;BIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;logLik&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;deviance&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Chisq&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Df&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Pr(&amp;gt;Chisq)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_log_paper_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4499.627&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4534.554&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2243.813&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4487.627&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_log_paper_slope_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4419.642&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4477.854&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2199.821&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4399.642&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;87.98474&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb23&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb23-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;anova&lt;/span&gt;(lin_log_slope_lmer, lin_log_paper_slope_lmer))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;npar&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;AIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;BIC&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;logLik&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;deviance&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Chisq&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Df&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Pr(&amp;gt;Chisq)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_log_slope_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4583.334&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4624.083&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2284.667&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4569.334&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;lin_log_paper_slope_lmer&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4419.642&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4477.854&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2199.821&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4399.642&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;169.6924&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;As before, predictions were built for the new models and plotted on the data. Overall the models do look pretty similar in terms of their predicted fit of the data.&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb24&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb24-1&#34; title=&#34;1&#34;&gt;lin_log_slope_preds &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;predict&lt;/span&gt;(lin_log_slope_lmer, &lt;span class=&#34;dt&#34;&gt;re.form =&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;log&lt;/span&gt;(mean_age) &lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;dataset))&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb24-2&#34; title=&#34;2&#34;&gt;lin_log_paper_slope_preds &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;predict&lt;/span&gt;(lin_log_paper_slope_lmer, &lt;span class=&#34;dt&#34;&gt;re.form =&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;log&lt;/span&gt;(mean_age) &lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;dataset))&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb24-3&#34; title=&#34;3&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb24-4&#34; title=&#34;4&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb24-5&#34; title=&#34;5&#34;&gt;metalab_data_preds &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data_preds &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb24-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;lin_log_slope_pred =&lt;/span&gt; lin_log_slope_preds) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb24-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;lin_log_paper_slope_pred =&lt;/span&gt; lin_log_paper_slope_preds)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;subset-to-only-those-papers-with-multiple-ages&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Subset to only those papers with multiple ages&lt;/h1&gt;
+&lt;p&gt;One concern with using a random slope with meta-analysis nested by paper is that not all studies included more than one age group. To be sure that our random slope is really appropriate, here we look at only papers where more than one age group was tested.&lt;/p&gt;
+&lt;div id=&#34;two-age-groups&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Two age groups&lt;/h3&gt;
+&lt;p&gt;To start we arbitrarily decided on two age groups, at least more than two months apart. Below we build a new model only looking at data where papers had at least two age groups. The structure of the model is the same as the model with papers nested in meta-analysis and a random slope of mean age log transformed.&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb25&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb25-1&#34; title=&#34;1&#34;&gt;multiage_data &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data_preds &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb25-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(dataset, study_ID) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb25-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;count_ages =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;length&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;unique&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;floor&lt;/span&gt;(mean_age&lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;)))) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb25-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;filter&lt;/span&gt;(count_ages &lt;span class=&#34;op&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb25-5&#34; title=&#34;5&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb25-6&#34; title=&#34;6&#34;&gt;lin_log_paper_slope_multiage_lmer &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;lmer&lt;/span&gt;(d_calc &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;mean_age &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;log&lt;/span&gt;(mean_age) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb25-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;st&#34;&gt;                                     &lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;log&lt;/span&gt;(mean_age) &lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;dataset &lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;study_ID),&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb25-8&#34; title=&#34;8&#34;&gt;                                     &lt;span class=&#34;dt&#34;&gt;weights =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;d_var_calc, &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb25-9&#34; title=&#34;9&#34;&gt;                                     &lt;span class=&#34;dt&#34;&gt;REML =&lt;/span&gt; F, &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; multiage_data)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb25-10&#34; title=&#34;10&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb25-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;coef&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(lin_log_paper_slope_multiage_lmer)))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Estimate&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Std. Error&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;t value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;(Intercept)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.4247794&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.5250981&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.8089526&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;mean_age&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0001815&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0001110&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.6344194&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;log(mean_age)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.1086581&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0959349&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.1326233&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Predictions were calculated for the new model and visually compared to the simple model on the full data set with no nested random effects and no random slope. The plot below suggests that for this reduced data set, the addition of the nested random effects and random slope does differ greatly from the simpler model.&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb26&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb26-1&#34; title=&#34;1&#34;&gt;lin_log_paper_slope_multiage_preds &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;predict&lt;/span&gt;(lin_log_paper_slope_multiage_lmer, &lt;span class=&#34;dt&#34;&gt;re.form =&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;log&lt;/span&gt;(mean_age)&lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;dataset))&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb26-2&#34; title=&#34;2&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb26-3&#34; title=&#34;3&#34;&gt;multiage_data &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;multiage_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb26-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;ungroup &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb26-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;select&lt;/span&gt;(dataset, short_name, study_ID, d_calc, mean_age, d_var_calc, lin_log_pred) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb26-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;lin_log_paper_slope_multiage_pred =&lt;/span&gt; lin_log_paper_slope_multiage_preds)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;three-age-groups&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Three age groups&lt;/h3&gt;
+&lt;p&gt;We also did the same analysis, but further reducing the data set to only papers that included at least three different age groups.&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb27&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb27-1&#34; title=&#34;1&#34;&gt;multiage_&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;_data &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;metalab_data_preds &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb27-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;group_by&lt;/span&gt;(dataset, study_ID) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb27-3&#34; title=&#34;3&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;count_ages =&lt;/span&gt; &lt;span class=&#34;kw&#34;&gt;length&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;unique&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;floor&lt;/span&gt;(mean_age&lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;)))) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb27-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;filter&lt;/span&gt;(count_ages &lt;span class=&#34;op&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;2&lt;/span&gt;)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb27-5&#34; title=&#34;5&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb27-6&#34; title=&#34;6&#34;&gt;lin_log_paper_slope_multiage_&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;_lmer &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;lmer&lt;/span&gt;(d_calc &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;mean_age &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;log&lt;/span&gt;(mean_age) &lt;span class=&#34;op&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb27-7&#34; title=&#34;7&#34;&gt;&lt;span class=&#34;st&#34;&gt;                                     &lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;log&lt;/span&gt;(mean_age) &lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;dataset &lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;study_ID),&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb27-8&#34; title=&#34;8&#34;&gt;                                     &lt;span class=&#34;dt&#34;&gt;weights =&lt;/span&gt; &lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;op&#34;&gt;/&lt;/span&gt;d_var_calc, &lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb27-9&#34; title=&#34;9&#34;&gt;                                     &lt;span class=&#34;dt&#34;&gt;REML =&lt;/span&gt; F, &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; multiage_&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;_data)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb27-10&#34; title=&#34;10&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb27-11&#34; title=&#34;11&#34;&gt;&lt;span class=&#34;kw&#34;&gt;kable&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;coef&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(lin_log_paper_slope_multiage_&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;_lmer)))&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Estimate&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Std. Error&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;t value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;(Intercept)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.3100080&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.5702491&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.5436362&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;mean_age&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0002397&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0001301&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.8426903&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;log(mean_age)&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0817051&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.1038616&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.7866726&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Predictions were calculated for the new model and visually compared to the simple model on the full data set with no nested random effects and no random slope. The plot below suggests that for this further reduced data set, the difference becomes the two models becomes even more apparent.&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb28&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb28-1&#34; title=&#34;1&#34;&gt;lin_log_paper_slope_multiage_&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;_preds &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;predict&lt;/span&gt;(lin_log_paper_slope_multiage_&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;_lmer, &lt;span class=&#34;dt&#34;&gt;re.form =&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;log&lt;/span&gt;(mean_age)&lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;dataset))&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb28-2&#34; title=&#34;2&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb28-3&#34; title=&#34;3&#34;&gt;multiage_&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;_data &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;multiage_&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;_data &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb28-4&#34; title=&#34;4&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;ungroup &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb28-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;select&lt;/span&gt;(dataset, short_name, study_ID, d_calc, mean_age, d_var_calc, lin_log_pred) &lt;span class=&#34;op&#34;&gt;%&amp;gt;%&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb28-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mutate&lt;/span&gt;(&lt;span class=&#34;dt&#34;&gt;lin_log_paper_slope_multiage_3_pred =&lt;/span&gt; lin_log_paper_slope_multiage_&lt;span class=&#34;dv&#34;&gt;3&lt;/span&gt;_preds)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://langcog.github.io/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Conclusions&lt;/h1&gt;
+&lt;p&gt;In this report we sought to find the best curve to describe developmental data. We found that, regarding predictors, the best fit of the data appears to be a model that includes both mean age and mean age log transformed as predictors. We further improved the curve by using complex random effects structures in our regressions. We found that a more complicated random effects structure was best by: 1) nesting paper in meta-analysis, and 2) including a random slope by mean age log transformed. This structure was most appropriate when we only looked at papers that had at least two or three age groups, to ensure the random slope applied to all data analyzed.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hierarchical Random Effects in Meta-Analyses: Do they change stuff?</title>
+      <link>https://langcog.github.io/metalab/report/hierarchicalrandomeffect/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://langcog.github.io/metalab/report/hierarchicalrandomeffect/</guid>
+      <description>
+&lt;style type=&#34;text/css&#34;&gt;
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { background-color: #f8f8f8; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+&lt;/style&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#base-model&#34;&gt;Base Model&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#two-level-model-paper&#34;&gt;Two Level Model: Paper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#three-level-model-paper-and-experiment&#34;&gt;Three Level Model: Paper and Experiment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#moderator-model-from-the-paper&#34;&gt;Moderator Model from the Paper&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#two-level-model-paper-1&#34;&gt;Two Level Model: Paper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#three-level-model-paper-and-experiment-1&#34;&gt;Three Level Model: Paper and Experiment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Each effect size is nested within an experiment which is in turn nested within a paper (this includes unpublished reports, theses, and the likes). It can be assumed that effect sizes within these nested structures are not independent. Here we explore whether and how accounting for this possible correlation affects both a random effects base model and a moderator analysis. As example we chose InWordDB.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;base-model&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Base Model&lt;/h1&gt;
+&lt;p&gt;Standard random effects model, no moderators. First we run the model without accounting for any hierarchical structure (as reported in the publication by Bergmann &amp;amp; Cristia 2015; note that differences in effect size estimation are due to an updated dataset here that also includes nonnative studies, as compared to the paper).&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb1&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;kw&#34;&gt;library&lt;/span&gt;(here)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;kw&#34;&gt;load&lt;/span&gt;(&lt;span class=&#34;kw&#34;&gt;here&lt;/span&gt;(&lt;span class=&#34;st&#34;&gt;&amp;quot;shinyapps&amp;quot;&lt;/span&gt;, &lt;span class=&#34;st&#34;&gt;&amp;quot;site_data&amp;quot;&lt;/span&gt;, &lt;span class=&#34;st&#34;&gt;&amp;quot;Rdata&amp;quot;&lt;/span&gt;, &lt;span class=&#34;st&#34;&gt;&amp;quot;metalab.Rdata&amp;quot;&lt;/span&gt;))&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-3&#34; title=&#34;3&#34;&gt;inworddb &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;droplevels&lt;/span&gt;(metalab_data[metalab_data&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;short_name&lt;span class=&#34;op&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;&amp;quot;inworddb&amp;quot;&lt;/span&gt;, ])&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-4&#34; title=&#34;4&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-5&#34; title=&#34;5&#34;&gt;StandardMod &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;rma&lt;/span&gt;(g_calc, g_var_calc, &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; inworddb)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb1-6&#34; title=&#34;6&#34;&gt;&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(StandardMod)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Random-Effects Model (k = 299; tau^2 estimator: REML)
+## 
+##    logLik   deviance        AIC        BIC       AICc  
+## -144.6900   289.3799   293.3799   300.7741   293.4206  
+## 
+## tau^2 (estimated amount of total heterogeneity): 0.1023 (SE = 0.0115)
+## tau (square root of estimated tau^2 value):      0.3199
+## I^2 (total heterogeneity / total variability):   76.99%
+## H^2 (total variability / sampling variability):  4.35
+## 
+## Test for Heterogeneity: 
+## Q(df = 298) = 1143.3988, p-val &amp;lt; .0001
+## 
+## Model Results:
+## 
+## estimate      se    zval    pval   ci.lb   ci.ub     
+##   0.2099  0.0218  9.6275  &amp;lt;.0001  0.1672  0.2526  ***
+## 
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;two-level-model-paper&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Two Level Model: Paper&lt;/h2&gt;
+&lt;p&gt;We first add a level for the paper a given effect size was reported in. These effect sizes presumably stem from a batch of studies that were conducted in the same lab in a very similar fashion and by the same set of experimenters, introducing possible correlations.&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb3&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb3-1&#34; title=&#34;1&#34;&gt;PerPaperMod &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;rma.mv&lt;/span&gt;(g_calc, g_var_calc, &lt;span class=&#34;dt&#34;&gt;random =&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;short_cite, &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; inworddb)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb3-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(PerPaperMod)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Multivariate Meta-Analysis Model (k = 299; method: REML)
+## 
+##    logLik   Deviance        AIC        BIC       AICc  
+## -268.1654   536.3308   540.3308   547.7250   540.3715  
+## 
+## Variance Components: 
+## 
+##             estim    sqrt  nlvls  fixed      factor
+## sigma^2    0.0367  0.1916     68     no  short_cite
+## 
+## Test for Heterogeneity: 
+## Q(df = 298) = 1143.3988, p-val &amp;lt; .0001
+## 
+## Model Results:
+## 
+## estimate      se    zval    pval   ci.lb   ci.ub     
+##   0.1832  0.0264  6.9494  &amp;lt;.0001  0.1315  0.2349  ***
+## 
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;three-level-model-paper-and-experiment&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Three Level Model: Paper and Experiment&lt;/h2&gt;
+&lt;p&gt;Nested within paper, we introduce a level for experiment number. Experiments can report several effect sizes, for example when infants are run in conditions; slight variations of the same study which are presumed to be even more similar than effect sizes within a paper.
+A caveat is that conventions on what counts as experiment and what counts as conditions within an experiment might differ across papers.&lt;/p&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb5&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb5-1&#34; title=&#34;1&#34;&gt;PerExpPaperMod &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;rma.mv&lt;/span&gt;(g_calc, g_var_calc, &lt;span class=&#34;dt&#34;&gt;random =&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;factor&lt;/span&gt;(expt_num) &lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;short_cite, &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; inworddb)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb5-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(PerExpPaperMod)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Multivariate Meta-Analysis Model (k = 299; method: REML)
+## 
+##    logLik   Deviance        AIC        BIC       AICc  
+## -211.2785   422.5570   428.5570   439.6483   428.6386  
+## 
+## Variance Components: 
+## 
+## outer factor: short_cite       (nlvls = 68)
+## inner factor: factor(expt_num) (nlvls = 15)
+## 
+##             estim    sqrt  fixed
+## tau^2      0.0635  0.2521     no
+## rho        0.2483             no
+## 
+## Test for Heterogeneity: 
+## Q(df = 298) = 1143.3988, p-val &amp;lt; .0001
+## 
+## Model Results:
+## 
+## estimate      se    zval    pval   ci.lb   ci.ub     
+##   0.1837  0.0265  6.9291  &amp;lt;.0001  0.1318  0.2357  ***
+## 
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To summarize, all these models differ in their effect size estimates, but do not change the statistical outcome. The effect remains small but significantly above 0. Adding the level of experiment number did not dramatically change the result.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;moderator-model-from-the-paper&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Moderator Model from the Paper&lt;/h1&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb7&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-1&#34; title=&#34;1&#34;&gt;&lt;span class=&#34;co&#34;&gt;#Centering mean age&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-2&#34; title=&#34;2&#34;&gt;inworddb&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;ageC &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;inworddb&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;mean_age&lt;span class=&#34;op&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;mean&lt;/span&gt;(inworddb&lt;span class=&#34;op&#34;&gt;$&lt;/span&gt;mean_age)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-3&#34; title=&#34;3&#34;&gt;&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-4&#34; title=&#34;4&#34;&gt;StandardMod &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;rma&lt;/span&gt;(g_calc, g_var_calc, &lt;span class=&#34;dt&#34;&gt;mod =&lt;/span&gt; ageC, &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; inworddb)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb7-5&#34; title=&#34;5&#34;&gt;&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(StandardMod)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Mixed-Effects Model (k = 299; tau^2 estimator: REML)
+## 
+##    logLik   deviance        AIC        BIC       AICc  
+## -144.5660   289.1320   295.1320   306.2132   295.2139  
+## 
+## tau^2 (estimated amount of residual heterogeneity):     0.1027 (SE = 0.0116)
+## tau (square root of estimated tau^2 value):             0.3205
+## I^2 (residual heterogeneity / unaccounted variability): 77.04%
+## H^2 (unaccounted variability / sampling variability):   4.36
+## R^2 (amount of heterogeneity accounted for):            0.00%
+## 
+## Test for Residual Heterogeneity: 
+## QE(df = 297) = 1141.6702, p-val &amp;lt; .0001
+## 
+## Test of Moderators (coefficient(s) 2): 
+## QM(df = 1) = 0.3885, p-val = 0.5331
+## 
+## Model Results:
+## 
+##          estimate      se    zval    pval    ci.lb   ci.ub     
+## intrcpt    0.2099  0.0218  9.6125  &amp;lt;.0001   0.1671  0.2527  ***
+## mods       0.0002  0.0003  0.6233  0.5331  -0.0004  0.0007     
+## 
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;two-level-model-paper-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Two Level Model: Paper&lt;/h2&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb9&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb9-1&#34; title=&#34;1&#34;&gt;PerPaperMod &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;rma.mv&lt;/span&gt;(g_calc, g_var_calc, &lt;span class=&#34;dt&#34;&gt;mod =&lt;/span&gt; ageC, &lt;span class=&#34;dt&#34;&gt;random =&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;dv&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;short_cite, &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; inworddb)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb9-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(PerPaperMod)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Multivariate Meta-Analysis Model (k = 299; method: REML)
+## 
+##    logLik   Deviance        AIC        BIC       AICc  
+## -263.7595   527.5190   533.5190   544.6002   533.6009  
+## 
+## Variance Components: 
+## 
+##             estim    sqrt  nlvls  fixed      factor
+## sigma^2    0.0414  0.2035     68     no  short_cite
+## 
+## Test for Residual Heterogeneity: 
+## QE(df = 297) = 1141.6702, p-val &amp;lt; .0001
+## 
+## Test of Moderators (coefficient(s) 2): 
+## QM(df = 1) = 9.6131, p-val = 0.0019
+## 
+## Model Results:
+## 
+##          estimate      se    zval    pval   ci.lb   ci.ub     
+## intrcpt    0.1806  0.0277  6.5200  &amp;lt;.0001  0.1263  0.2349  ***
+## mods       0.0007  0.0002  3.1005  0.0019  0.0002  0.0011   **
+## 
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;three-level-model-paper-and-experiment-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Three Level Model: Paper and Experiment&lt;/h2&gt;
+&lt;div class=&#34;sourceCode&#34; id=&#34;cb11&#34;&gt;&lt;pre class=&#34;sourceCode r&#34;&gt;&lt;code class=&#34;sourceCode r&#34;&gt;&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-1&#34; title=&#34;1&#34;&gt;PerExpPaperMod &amp;lt;-&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;rma.mv&lt;/span&gt;(g_calc, g_var_calc, &lt;span class=&#34;dt&#34;&gt;mod =&lt;/span&gt; ageC, &lt;span class=&#34;dt&#34;&gt;random =&lt;/span&gt; &lt;span class=&#34;op&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;st&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kw&#34;&gt;factor&lt;/span&gt;(expt_num) &lt;span class=&#34;op&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;st&#34;&gt;  &lt;/span&gt;short_cite, &lt;span class=&#34;dt&#34;&gt;data =&lt;/span&gt; inworddb)&lt;/a&gt;
+&lt;a class=&#34;sourceLine&#34; id=&#34;cb11-2&#34; title=&#34;2&#34;&gt;&lt;span class=&#34;kw&#34;&gt;summary&lt;/span&gt;(PerExpPaperMod)&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Multivariate Meta-Analysis Model (k = 299; method: REML)
+## 
+##    logLik   Deviance        AIC        BIC       AICc  
+## -209.1634   418.3268   426.3268   441.1017   426.4638  
+## 
+## Variance Components: 
+## 
+## outer factor: short_cite       (nlvls = 68)
+## inner factor: factor(expt_num) (nlvls = 15)
+## 
+##             estim    sqrt  fixed
+## tau^2      0.0663  0.2575     no
+## rho        0.2952             no
+## 
+## Test for Residual Heterogeneity: 
+## QE(df = 297) = 1141.6702, p-val &amp;lt; .0001
+## 
+## Test of Moderators (coefficient(s) 2): 
+## QM(df = 1) = 4.6265, p-val = 0.0315
+## 
+## Model Results:
+## 
+##          estimate      se    zval    pval   ci.lb   ci.ub     
+## intrcpt    0.1819  0.0276  6.5924  &amp;lt;.0001  0.1279  0.2360  ***
+## mods       0.0005  0.0003  2.1509  0.0315  0.0000  0.0010    *
+## 
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To summarize, introducing hierarchical structure changed the outcome for the moderator test. Age (centered) now has a small, but significant, effect on effect sizes. This is not the case when ignoring the nested structure of effect sizes.
+This result mirrors the reported analyses in Bergmann &amp;amp; Cristia (2015) that there is a small, positive effect of age when only considering papers which test at least two age groups in the same set-up.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

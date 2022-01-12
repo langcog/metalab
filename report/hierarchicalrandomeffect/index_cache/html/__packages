@@ -1,0 +1,10 @@
+base
+Matrix
+metafor
+dplyr
+tidyr
+ggplot2
+stringr
+purrr
+langcog
+here
