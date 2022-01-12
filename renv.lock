@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.1.1",
+    "Version": "4.1.2",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -9,7 +9,7 @@
       {
         "Name": "src",
         "URL": "https://cloud.r-project.org"
-      }      
+      }
     ]
   },
   "Packages": {
@@ -123,7 +123,7 @@
       "Version": "1.7",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "6bd14b113999113c89ee250590011a5b"
+      "Hash": "a59150d0098908724e1c0dc9d2a3ab5b"
     },
     "bookdown": {
       "Package": "bookdown",
@@ -515,19 +515,12 @@
       "Repository": "CRAN",
       "Hash": "61e4a10781dd00d7d81dd06ca9b94e95"
     },
-    "mathjaxr": {
-      "Package": "mathjaxr",
-      "Version": "1.4-0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "21ec862477d3845843994019cadc4629"
-    },
     "metafor": {
       "Package": "metafor",
       "Version": "2.0-0",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "b598da1155b3f86b380c1a32f6f3b224"
+      "Repository": "RSPM",
+      "Hash": "9a5536b1a51cda461f79233cd25f21f8"
     },
     "metalabr": {
       "Package": "metalabr",
@@ -595,14 +588,7 @@
       "Version": "1.4.4",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "5406fd37ef0bf9b88c8a4f264d6ec220"
-    },
-    "pbapply": {
-      "Package": "pbapply",
-      "Version": "1.4-3",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "52f8028b028076bc3b7ee5d6251abf0d"
+      "Hash": "f4dbc5a47fd93d3415249884d31d6791"
     },
     "pillar": {
       "Package": "pillar",
@@ -783,7 +769,7 @@
       "Package": "stringi",
       "Version": "1.7.4",
       "Source": "Repository",
-      "Repository": "src",
+      "Repository": "CRAN",
       "Hash": "ebaccb577da50829a3bb1b8296f318a5"
     },
     "stringr": {
@@ -893,10 +879,10 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.25",
+      "Version": "0.29",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "853d45ffff0a9af1e0af017cd359f75e"
+      "Hash": "e2e5fb1a74fbb68b27d6efc5372635dc"
     },
     "xtable": {
       "Package": "xtable",
