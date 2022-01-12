@@ -44,7 +44,7 @@ the current MetaLab site uses.
 You are now ready to build MetaLab. The commands below will serve the
 site locally on your computer. The build script may take a few minutes
 to run. When completed, it will be serving a local copy of the MetaLab
-site at http://localhost:4321
+site at http://localhost:4321/metalab
 
 
 ```
