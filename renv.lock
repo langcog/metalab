@@ -120,7 +120,7 @@
     },
     "blogdown": {
       "Package": "blogdown",
-      "Version": "1.4",
+      "Version": "1.7",
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "6bd14b113999113c89ee250590011a5b"
