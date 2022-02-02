@@ -13,7 +13,7 @@ server <- function(input, output, session) {
   output$check_fetch_m <- renderText(fetch_dataset(dataset_info %>% filter(name == input$dataset)))
   
   output$field_validation_m <- renderDT({
-    valid_fields <- validate_dataset(dataset_info %>% filter(name == input$dataset),
+    valid_fields <- metalabr:::validate_metalab_data(dataset_info %>% filter(name == input$dataset),
                                      get_data(dataset_info %>% filter(name == input$dataset)),
                                      fields)
 
@@ -31,7 +31,7 @@ server <- function(input, output, session) {
                               name = "input url"))
     output$field_validation_g <-
       renderDT({
-        valid_fields <- validate_dataset(data.frame(name = 'from url'), df, fields)
+        valid_fields <- metalabr:::validate_metalab_data(data.frame(name = 'from url'), df, fields)
 
         ret_df <- data.frame(Field = unlist(sapply(fields, "[[", "field")),
                              Valid = unlist(valid_fields)) %>% arrange(Valid)
@@ -49,7 +49,7 @@ server <- function(input, output, session) {
     df <- read.csv(input$csv_file$datapath,
                    header = TRUE)
     
-    valid_fields <- validate_dataset(data.frame(name = 'from csv'), df, fields)
+    valid_fields <- metalabr:::validate_metalab_data(data.frame(name = 'from csv'), df, fields)
 
     ret_df <- data.frame(Field = unlist(sapply(fields, "[[", "field")),
                          Valid = unlist(valid_fields)) %>% arrange(Valid)
