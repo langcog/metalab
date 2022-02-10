@@ -748,3 +748,29 @@
     moderators: [preceding]
     subset: []
     comment: ""
+
+-
+    name: "Native phonotactics sensitivity"
+    domain: early_language
+    short_name: natphonsens
+    key: 1M1bRE2f3QYXtP6Etmj6jbDQOQ4ATSp3C8onhkDLDuYE
+    filename: native_phonotactic_sens
+    citation: "Sundara et al. (2022)"
+    internal_citation: "(Sundara et al., 2022)"
+    link: ""
+    full_citation: "Sundara, M., Zhou, Z. L., Breiss, C., Katsuda, H., & Steffman, J. (2022). Infants' developing sensitivity to native language phonotactics: A meta-analysis. Cognition, 221, 104993."
+    doi: "10.1016/j.cognition.2021.104993"
+    systematic: yes
+    search_strategy: "'A preliminary list of studies was gathered in in Fall of 2018 by consulting scientists in our lab who were familiar with the literature. We then added to our list relevant studies found in the references of those initial studies as well as relevant studies that cited the initial ones. We repeated backwards- and forwards-searching multiple times. In some cases, studies were added under advisement from authors of these papers. We then narrowed down the list to 39 studies."
+    reliability: no
+    source: "coded by author"
+    last_update: 2022-02-10
+    link_fields: ""
+    short_desc: "Infants' sensitivity to native language phonotactics"
+    description: "Sensitivity to native language phonotactics in infants aged  5 - 28 months"
+    curator: "Z.L. Zhou"
+    src: images/datasets/gaze.png
+    longitudinal: no
+    moderators: []
+    subset: []
+    comment: ""
