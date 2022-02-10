@@ -6,7 +6,7 @@ weight: 10
 ---
 
 
-Why meta-analysis (MA)?
+Why conduct a meta-analysis (MA)?
 =======================
 
 For a quick overview on what are meta-analysis (MA), please watch this 3-minute video:
