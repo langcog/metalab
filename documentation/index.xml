@@ -17,7 +17,8 @@
       <link>https://langcog.github.io/metalab/documentation/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://langcog.github.io/metalab/documentation/getting-started/</guid>
-      <description>&lt;p&gt;This page is under revision, access the previous tutorial &lt;a href=&#34;https://langcog.github.io/metalab2/documentation.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;MetaLab has many features and ways to access information and even contribute. The menu on the left lets you navigate the existing documentation, if questions remain, please &lt;a href=&#34;https://langcog.github.io/metalab/team/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;get in touch&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; This page is under revision, access the previous tutorial &lt;a href=&#34;https://langcog.github.io/metalab2/documentation.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -84,8 +85,8 @@ Unpublished meta-analyses shared on MetaLab do not count as publication.&lt;/p&g
 &lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/vembedr/css/vembedr.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 
-&lt;div id=&#34;why-meta-analysis-ma&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Why meta-analysis (MA)?&lt;/h1&gt;
+&lt;div id=&#34;why-conduct-a-meta-analysis-ma&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Why conduct a meta-analysis (MA)?&lt;/h1&gt;
 &lt;p&gt;For a quick overview on what are meta-analysis (MA), please watch this 3-minute video:&lt;/p&gt;
 &lt;div class=&#34;vembedr&#34;&gt;
 &lt;div&gt;
@@ -96,14 +97,12 @@ Unpublished meta-analyses shared on MetaLab do not count as publication.&lt;/p&g
 &lt;div id=&#34;why-are-single-studies-not-enough&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Why are single studies not enough?&lt;/h4&gt;
 &lt;p&gt;When thinking about development, we often look at published experiments testing whether infants have specific abilities, for example whether infants treat native vowels differently from non-native ones, and how those abilities change with age (for more details on this specific topic see [here] (/dataset/inphondb-native.html).&lt;/p&gt;
-&lt;p&gt;The results of a single experiment cannot answer those questions once and for all: Each experiment measures behavior of a set of infants in a very specific situation, which might not be generalizable to other situations. Moreover, there might be a measurement error in this one-time snapshot of reality. Finally, the literature likely contains some false positives and false negatives.&lt;/p&gt;
-&lt;p&gt;With a significance threshold alpha set to .05, every study we run has a 5% chance of telling us that infants can do something when this is not true - this is a &lt;em&gt;false positive&lt;/em&gt;. This likelihood becomes bigger when researchers engage in seemingly innocent and possibly common practices that increase the chance of a false positive, such as running multiple analyses until one is significant. Some people even propose that most published literature consists of false positives!&lt;/p&gt;
-&lt;p&gt;With a beta set to .2, every study we run has a 20% chance of telling us that infants cannot do something when they actually can - this is a &lt;em&gt;false negative&lt;/em&gt;. In fact, many studies are underpowered, so that a non-significant result is not due to a true lack of effect, but rather to lack of power to detect it.&lt;/p&gt;
-&lt;p&gt;None of these necessarily are due to bad intentions, wrongdoing, or even poor research practices. Reality is complex and thus any one study can only give us a single, noisy estimate.&lt;/p&gt;
+&lt;p&gt;The results of a single experiment cannot answer those questions once and for all: Each experiment measures behavior of a set of infants in a very specific situation, which might not be generalizable to other situations. Moreover, there might be a measurement error in this one-time snapshot of reality. Finally, the literature likely contains some false positives and false negatives, simply due to the way we conduct statistics. With a significance threshold alpha set to .05, every study we run has a 5% chance of telling us that infants can do something when this is not true - this is a &lt;em&gt;false positive&lt;/em&gt;. This likelihood becomes bigger when researchers engage in seemingly innocent and possibly common practices that increase the chance of a false positive, such as running multiple analyses until one is significant. Some people even propose that most published literature consists of false positives! With a beta set to .2, every study we run has a 20% chance of telling us that infants cannot do something when they actually can - this is a &lt;em&gt;false negative&lt;/em&gt;. In fact, many studies are underpowered, meaning they test too few participants, so that a non-significant result is not due to a true lack of effect, but rather to lack of power to detect it. None of these necessarily are due to bad intentions, wrongdoing, or even poor research practices. Reality is complex and thus any one study can only give us a single, noisy estimate.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;how-can-mas-help-with-heterogeneity&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;How can MAs help with heterogeneity?&lt;/h4&gt;
+&lt;div id=&#34;how-can-mas-help&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;How can MAs help?&lt;/h4&gt;
 &lt;p&gt;MAs may be the cheapest way to assess generalizability and test whether a certain factor matters. Instead of running 10 experiments, 1 on each vowel contrast, we collect 10 studies in the literature into a single analysis! If effects for e.g. native versus non-native vowels differ significantly in the literature as a whole, then we can be more confident that results will generalize to unobserved vowel contrasts.&lt;/p&gt;
+&lt;p&gt;MAs are therefore a tool to collaborate across space and time, instead of having one lab invest a lot of resources. This has the automatic benefit that MAs often also cover more varied participant populations than a single study usually can (for notable exceptions, see for example the &lt;a href=&#34;manybabies.github.io&#34;&gt;ManyBabies Studies&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;how-can-mas-help-with-false-positives&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;How can MAs help with false positives?&lt;/h4&gt;
@@ -111,13 +110,13 @@ Unpublished meta-analyses shared on MetaLab do not count as publication.&lt;/p&g
 &lt;/div&gt;
 &lt;div id=&#34;how-can-mas-help-with-false-negatives&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;How can MAs help with false negatives?&lt;/h4&gt;
-&lt;p&gt;MAs help in 3 ways. By pooling data together, we may be able to &lt;em&gt;bring out a small effect&lt;/em&gt; that was too difficult to detect.&lt;/p&gt;
-&lt;p&gt;Additionally, we often do not know about these non-significant findings because it is quite difficult to publish them. &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/26186116&#34;&gt;Community-augmented MAs&lt;/a&gt; like those in MetaLab provide a home for &lt;em&gt;non-sexy results&lt;/em&gt;, and allow researchers to benefit from the experience of others.&lt;/p&gt;
+&lt;p&gt;MAs help in three ways. By pooling data together, we may be able to &lt;em&gt;bring out a small effect&lt;/em&gt; that was too difficult to detect.&lt;/p&gt;
+&lt;p&gt;Additionally, we often do not know about these non-significant findings because it is quite difficult to publish them. &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/26186116&#34;&gt;Community-augmented MAs&lt;/a&gt; like those in MetaLab provide a home for &lt;em&gt;unpublished results&lt;/em&gt;, and allow researchers to benefit from the experience of others.&lt;/p&gt;
 &lt;p&gt;Finally, MAs help us in experiment design so we can &lt;em&gt;avoid false negatives due to low power&lt;/em&gt;. When the size of an effect is known and with a fixed significance threshold, calculating power is straightforward. Here is a simulation of how all ingredients fit together: &amp;lt;rpsychologist.com/d3/NHST/&amp;gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;can-mas-help-in-other-ways&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Can MAs help in other ways?&lt;/h4&gt;
-&lt;p&gt;The MAs in MetaLab can also help with &lt;em&gt;study design&lt;/em&gt;, becodes often many design variables have been coded. Examples include the words or sounds used, how long trials were, etc. Instead of doing a tiresome literature review, you can find out what is the most common procedure or which is associated with the biggest effect.&lt;/p&gt;
+&lt;p&gt;The MAs in MetaLab can also help with &lt;em&gt;study design&lt;/em&gt;, because often many design variables have been coded. Examples include the stimuli used, how long trials were, etc. Instead of doing a tiresome literature review, you can find out what is the most common procedure or which is associated with the biggest effect.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

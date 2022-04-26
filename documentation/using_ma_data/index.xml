@@ -510,20 +510,9 @@ paper you read and made a decision on.&lt;/p&gt;
       <description>
 
 
-&lt;p&gt;We welcome researchers interested in contributing to Metalab. Please contact us at &lt;a href=&#34;mailto:metalab-project@googlegroups.com&#34; class=&#34;email&#34;&gt;metalab-project@googlegroups.com&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Contributions can take various forms:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Adding unpublished data. Ideally we can link to a report on the data, for example on &lt;a href=&#34;http://osf.io&#34;&gt;OSF&lt;/a&gt;. Then contact the curator
-with a link and if possible all necessary data.&lt;/li&gt;
-&lt;li&gt;Suggesting and/or adding published papers not yet included. Simply email the curator, ideally with a pdf. If you are the author, try to make sure that all necessary data is either included or provided in your email.&lt;/li&gt;
-&lt;li&gt;Creating new meta-analyses. You can either collaborate on current in-progress projects (see below) or create your own meta-analyses. In the latter case see the section listing resources further down.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;New meta-analyses looking for contributors&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Currently, the following topics are in the process of becoming a meta-analysis and we are looking for contributors:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Segmenting words from an artificial stream of speech, an extension of &lt;a href=&#34;http://inworddb.acristia.org&#34;&gt;&lt;em&gt;InWordDB&lt;/em&gt;&lt;/a&gt;; contact: &lt;a href=&#34;http://sites.google.com/site/chbergma/home/contact&#34;&gt;&lt;em&gt;Christina Bergmann&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Detecting mispronunciations of known words, without a learning phase in the lab; contact: &lt;a href=&#34;http://sites.google.com/site/chbergma/home/contact&#34;&gt;&lt;em&gt;Christina Bergmann&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div id=&#34;how-to-contribute-a-meta-analysis-ma-to-metalab&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;How to contribute a meta-analysis (MA) to MetaLab?&lt;/h1&gt;
+&lt;p&gt;We welcome researchers interested in contributing to MetaLab. Please contact us at &lt;a href=&#34;mailto:metalab-project@googlegroups.com&#34; class=&#34;email&#34;&gt;metalab-project@googlegroups.com&lt;/a&gt; or any of our &lt;a href=&#34;https://langcog.github.io/metalab/team/&#34;&gt;Team Members&lt;/a&gt; if you have questions.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Resources&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Here are a few resources on creating meta-analyses compatible with Metalab:&lt;/p&gt;
 &lt;ul&gt;
@@ -538,6 +527,7 @@ inclusion&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
 community-augmented meta-analysis&lt;/em&gt;&lt;/a&gt;
 (including further resources)&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
 &lt;div id=&#34;contribute-your-meta-analysis&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Contribute your meta-analysis&lt;/h1&gt;
 &lt;p&gt;If you have already done a meta-analysis, you can easily add it to MetaLab. This tutorial explains how. But first, we go over why this is good for you and the community.&lt;/p&gt;
@@ -599,34 +589,6 @@ Fill the other columns as usual.&lt;/p&gt;
 &lt;div id=&#34;what-types-of-communications-are-considered-as-peer-reviewed&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;What types of communications are considered as peer-reviewed ?&lt;/h3&gt;
 &lt;p&gt;Most journal articles are peer-reviewed; some conference proceedings (e.g., Cognitive Science) are peer-reviewed. Typically, book chapters, posters, and conference abstract are not considered peer-reviewed because no reviewer has seen the full details of the methods.&lt;/p&gt;
-&lt;p&gt;We welcome researchers interested in contributing to Metalab. Please contact us at &lt;a href=&#34;mailto:metalab-project@googlegroups.com&#34; class=&#34;email&#34;&gt;metalab-project@googlegroups.com&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Contributions can take various forms:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Adding unpublished data. Ideally we can link to a report on the data, for example on &lt;a href=&#34;http://osf.io&#34;&gt;OSF&lt;/a&gt;. Then contact the curator
-with a link and if possible all necessary data.&lt;/li&gt;
-&lt;li&gt;Suggesting and/or adding published papers not yet included. Simply email the curator, ideally with a pdf. If you are the author, try to make sure that all necessary data is either included or provided in your email.&lt;/li&gt;
-&lt;li&gt;Creating new meta-analyses. You can either collaborate on current in-progress projects (see below) or create your own meta-analyses. In the latter case see the section listing resources further down.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;New meta-analyses looking for contributors&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Currently, the following topics are in the process of becoming a meta-analysis and we are looking for contributors:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Segmenting words from an artificial stream of speech, an extension of &lt;a href=&#34;http://inworddb.acristia.org&#34;&gt;&lt;em&gt;InWordDB&lt;/em&gt;&lt;/a&gt;; contact: &lt;a href=&#34;http://sites.google.com/site/chbergma/home/contact&#34;&gt;&lt;em&gt;Christina Bergmann&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Detecting mispronunciations of known words, without a learning phase in the lab; contact: &lt;a href=&#34;http://sites.google.com/site/chbergma/home/contact&#34;&gt;&lt;em&gt;Christina Bergmann&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Resources&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Here are a few resources on creating meta-analyses compatible with Metalab:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/12Y_2BcFSu48t0F8a_xrY1Ro2fJoCIV1h8O627WNcrjY/edit?usp=sharing&#34;&gt;&lt;em&gt;Metalab MA template&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.google.com/document/d/1szXxrv75qTVx-4adlLrwmjWSDIBJfMH09dzh9733mog/edit?usp=sharing&#34;&gt;&lt;em&gt;Code book&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gist.github.com/mcfrank/c1ec74df1427278cbe53&#34;&gt;&lt;em&gt;Interrogating PubMed via a script&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.getdatajoy.com/project/561388dfb485274e40055563&#34;&gt;&lt;em&gt;Selecting studies for
-inclusion&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.google.com/document/d/1_7mgeaARlYK6TecyUqzk9SSr0pLAkV3pQZE4qYT7CMA/edit?usp=sharing&#34;&gt;&lt;em&gt;FAQ&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/1XN6VaYRs7CStrINct_rr2d6rh6WN28xFiIGB5T1vkzY/edit?usp=sharing&#34;&gt;&lt;em&gt;InWordDB, a well-fleshed out MA&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://sites.google.com/site/infantdbs/create-your-own-cama&#34;&gt;&lt;em&gt;Instructions for creating a
-community-augmented meta-analysis&lt;/em&gt;&lt;/a&gt;
-(including further resources)&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

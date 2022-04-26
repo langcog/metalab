@@ -5,7 +5,7 @@
     <link>https://langcog.github.io/metalab/</link>
       <atom:link href="https://langcog.github.io/metalab/index.xml" rel="self" type="application/rss+xml" />
     <description>MetaLab</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 02 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 26 Apr 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://langcog.github.io/metalab/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>MetaLab</title>
@@ -29,6 +29,14 @@
     </item>
     
     <item>
+      <title>Cécile Issard</title>
+      <link>https://langcog.github.io/metalab/people/cecile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://langcog.github.io/metalab/people/cecile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Christina Bergmann</title>
       <link>https://langcog.github.io/metalab/people/christina/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -37,14 +45,6 @@
 &lt;h3 id=&#34;httpssitesgooglecomsitechbergma&#34;&gt;&lt;a href=&#34;https://sites.google.com/site/chbergma/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://sites.google.com/site/chbergma/&lt;/a&gt;&lt;/h3&gt;
 &lt;h3 id=&#34;max-planck-institute-for-psycholinguistics&#34;&gt;Max Planck Institute for Psycholinguistics&lt;/h3&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Cécile Issard</title>
-      <link>https://langcog.github.io/metalab/people/cecile/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langcog.github.io/metalab/people/cecile/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -68,7 +68,8 @@
       <link>https://langcog.github.io/metalab/documentation/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://langcog.github.io/metalab/documentation/getting-started/</guid>
-      <description>&lt;p&gt;This page is under revision, access the previous tutorial &lt;a href=&#34;https://langcog.github.io/metalab2/documentation.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;MetaLab has many features and ways to access information and even contribute. The menu on the left lets you navigate the existing documentation, if questions remain, please &lt;a href=&#34;https://langcog.github.io/metalab/team/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;get in touch&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; This page is under revision, access the previous tutorial &lt;a href=&#34;https://langcog.github.io/metalab2/documentation.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -231,8 +232,8 @@ Unpublished meta-analyses shared on MetaLab do not count as publication.&lt;/p&g
 &lt;link href=&#34;https://langcog.github.io/metalab/metalab/rmarkdown-libs/vembedr/css/vembedr.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 
-&lt;div id=&#34;why-meta-analysis-ma&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Why meta-analysis (MA)?&lt;/h1&gt;
+&lt;div id=&#34;why-conduct-a-meta-analysis-ma&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Why conduct a meta-analysis (MA)?&lt;/h1&gt;
 &lt;p&gt;For a quick overview on what are meta-analysis (MA), please watch this 3-minute video:&lt;/p&gt;
 &lt;div class=&#34;vembedr&#34;&gt;
 &lt;div&gt;
@@ -243,14 +244,12 @@ Unpublished meta-analyses shared on MetaLab do not count as publication.&lt;/p&g
 &lt;div id=&#34;why-are-single-studies-not-enough&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Why are single studies not enough?&lt;/h4&gt;
 &lt;p&gt;When thinking about development, we often look at published experiments testing whether infants have specific abilities, for example whether infants treat native vowels differently from non-native ones, and how those abilities change with age (for more details on this specific topic see [here] (/dataset/inphondb-native.html).&lt;/p&gt;
-&lt;p&gt;The results of a single experiment cannot answer those questions once and for all: Each experiment measures behavior of a set of infants in a very specific situation, which might not be generalizable to other situations. Moreover, there might be a measurement error in this one-time snapshot of reality. Finally, the literature likely contains some false positives and false negatives.&lt;/p&gt;
-&lt;p&gt;With a significance threshold alpha set to .05, every study we run has a 5% chance of telling us that infants can do something when this is not true - this is a &lt;em&gt;false positive&lt;/em&gt;. This likelihood becomes bigger when researchers engage in seemingly innocent and possibly common practices that increase the chance of a false positive, such as running multiple analyses until one is significant. Some people even propose that most published literature consists of false positives!&lt;/p&gt;
-&lt;p&gt;With a beta set to .2, every study we run has a 20% chance of telling us that infants cannot do something when they actually can - this is a &lt;em&gt;false negative&lt;/em&gt;. In fact, many studies are underpowered, so that a non-significant result is not due to a true lack of effect, but rather to lack of power to detect it.&lt;/p&gt;
-&lt;p&gt;None of these necessarily are due to bad intentions, wrongdoing, or even poor research practices. Reality is complex and thus any one study can only give us a single, noisy estimate.&lt;/p&gt;
+&lt;p&gt;The results of a single experiment cannot answer those questions once and for all: Each experiment measures behavior of a set of infants in a very specific situation, which might not be generalizable to other situations. Moreover, there might be a measurement error in this one-time snapshot of reality. Finally, the literature likely contains some false positives and false negatives, simply due to the way we conduct statistics. With a significance threshold alpha set to .05, every study we run has a 5% chance of telling us that infants can do something when this is not true - this is a &lt;em&gt;false positive&lt;/em&gt;. This likelihood becomes bigger when researchers engage in seemingly innocent and possibly common practices that increase the chance of a false positive, such as running multiple analyses until one is significant. Some people even propose that most published literature consists of false positives! With a beta set to .2, every study we run has a 20% chance of telling us that infants cannot do something when they actually can - this is a &lt;em&gt;false negative&lt;/em&gt;. In fact, many studies are underpowered, meaning they test too few participants, so that a non-significant result is not due to a true lack of effect, but rather to lack of power to detect it. None of these necessarily are due to bad intentions, wrongdoing, or even poor research practices. Reality is complex and thus any one study can only give us a single, noisy estimate.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;how-can-mas-help-with-heterogeneity&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;How can MAs help with heterogeneity?&lt;/h4&gt;
+&lt;div id=&#34;how-can-mas-help&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;How can MAs help?&lt;/h4&gt;
 &lt;p&gt;MAs may be the cheapest way to assess generalizability and test whether a certain factor matters. Instead of running 10 experiments, 1 on each vowel contrast, we collect 10 studies in the literature into a single analysis! If effects for e.g. native versus non-native vowels differ significantly in the literature as a whole, then we can be more confident that results will generalize to unobserved vowel contrasts.&lt;/p&gt;
+&lt;p&gt;MAs are therefore a tool to collaborate across space and time, instead of having one lab invest a lot of resources. This has the automatic benefit that MAs often also cover more varied participant populations than a single study usually can (for notable exceptions, see for example the &lt;a href=&#34;manybabies.github.io&#34;&gt;ManyBabies Studies&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;how-can-mas-help-with-false-positives&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;How can MAs help with false positives?&lt;/h4&gt;
@@ -258,13 +257,13 @@ Unpublished meta-analyses shared on MetaLab do not count as publication.&lt;/p&g
 &lt;/div&gt;
 &lt;div id=&#34;how-can-mas-help-with-false-negatives&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;How can MAs help with false negatives?&lt;/h4&gt;
-&lt;p&gt;MAs help in 3 ways. By pooling data together, we may be able to &lt;em&gt;bring out a small effect&lt;/em&gt; that was too difficult to detect.&lt;/p&gt;
-&lt;p&gt;Additionally, we often do not know about these non-significant findings because it is quite difficult to publish them. &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/26186116&#34;&gt;Community-augmented MAs&lt;/a&gt; like those in MetaLab provide a home for &lt;em&gt;non-sexy results&lt;/em&gt;, and allow researchers to benefit from the experience of others.&lt;/p&gt;
+&lt;p&gt;MAs help in three ways. By pooling data together, we may be able to &lt;em&gt;bring out a small effect&lt;/em&gt; that was too difficult to detect.&lt;/p&gt;
+&lt;p&gt;Additionally, we often do not know about these non-significant findings because it is quite difficult to publish them. &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/26186116&#34;&gt;Community-augmented MAs&lt;/a&gt; like those in MetaLab provide a home for &lt;em&gt;unpublished results&lt;/em&gt;, and allow researchers to benefit from the experience of others.&lt;/p&gt;
 &lt;p&gt;Finally, MAs help us in experiment design so we can &lt;em&gt;avoid false negatives due to low power&lt;/em&gt;. When the size of an effect is known and with a fixed significance threshold, calculating power is straightforward. Here is a simulation of how all ingredients fit together: &amp;lt;rpsychologist.com/d3/NHST/&amp;gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;can-mas-help-in-other-ways&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Can MAs help in other ways?&lt;/h4&gt;
-&lt;p&gt;The MAs in MetaLab can also help with &lt;em&gt;study design&lt;/em&gt;, becodes often many design variables have been coded. Examples include the words or sounds used, how long trials were, etc. Instead of doing a tiresome literature review, you can find out what is the most common procedure or which is associated with the biggest effect.&lt;/p&gt;
+&lt;p&gt;The MAs in MetaLab can also help with &lt;em&gt;study design&lt;/em&gt;, because often many design variables have been coded. Examples include the stimuli used, how long trials were, etc. Instead of doing a tiresome literature review, you can find out what is the most common procedure or which is associated with the biggest effect.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -869,20 +868,9 @@ paper you read and made a decision on.&lt;/p&gt;
       <description>
 
 
-&lt;p&gt;We welcome researchers interested in contributing to Metalab. Please contact us at &lt;a href=&#34;mailto:metalab-project@googlegroups.com&#34; class=&#34;email&#34;&gt;metalab-project@googlegroups.com&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Contributions can take various forms:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Adding unpublished data. Ideally we can link to a report on the data, for example on &lt;a href=&#34;http://osf.io&#34;&gt;OSF&lt;/a&gt;. Then contact the curator
-with a link and if possible all necessary data.&lt;/li&gt;
-&lt;li&gt;Suggesting and/or adding published papers not yet included. Simply email the curator, ideally with a pdf. If you are the author, try to make sure that all necessary data is either included or provided in your email.&lt;/li&gt;
-&lt;li&gt;Creating new meta-analyses. You can either collaborate on current in-progress projects (see below) or create your own meta-analyses. In the latter case see the section listing resources further down.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;New meta-analyses looking for contributors&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Currently, the following topics are in the process of becoming a meta-analysis and we are looking for contributors:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Segmenting words from an artificial stream of speech, an extension of &lt;a href=&#34;http://inworddb.acristia.org&#34;&gt;&lt;em&gt;InWordDB&lt;/em&gt;&lt;/a&gt;; contact: &lt;a href=&#34;http://sites.google.com/site/chbergma/home/contact&#34;&gt;&lt;em&gt;Christina Bergmann&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Detecting mispronunciations of known words, without a learning phase in the lab; contact: &lt;a href=&#34;http://sites.google.com/site/chbergma/home/contact&#34;&gt;&lt;em&gt;Christina Bergmann&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div id=&#34;how-to-contribute-a-meta-analysis-ma-to-metalab&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;How to contribute a meta-analysis (MA) to MetaLab?&lt;/h1&gt;
+&lt;p&gt;We welcome researchers interested in contributing to MetaLab. Please contact us at &lt;a href=&#34;mailto:metalab-project@googlegroups.com&#34; class=&#34;email&#34;&gt;metalab-project@googlegroups.com&lt;/a&gt; or any of our &lt;a href=&#34;https://langcog.github.io/metalab/team/&#34;&gt;Team Members&lt;/a&gt; if you have questions.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Resources&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Here are a few resources on creating meta-analyses compatible with Metalab:&lt;/p&gt;
 &lt;ul&gt;
@@ -897,6 +885,7 @@ inclusion&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
 community-augmented meta-analysis&lt;/em&gt;&lt;/a&gt;
 (including further resources)&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
 &lt;div id=&#34;contribute-your-meta-analysis&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Contribute your meta-analysis&lt;/h1&gt;
 &lt;p&gt;If you have already done a meta-analysis, you can easily add it to MetaLab. This tutorial explains how. But first, we go over why this is good for you and the community.&lt;/p&gt;
@@ -958,34 +947,6 @@ Fill the other columns as usual.&lt;/p&gt;
 &lt;div id=&#34;what-types-of-communications-are-considered-as-peer-reviewed&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;What types of communications are considered as peer-reviewed ?&lt;/h3&gt;
 &lt;p&gt;Most journal articles are peer-reviewed; some conference proceedings (e.g., Cognitive Science) are peer-reviewed. Typically, book chapters, posters, and conference abstract are not considered peer-reviewed because no reviewer has seen the full details of the methods.&lt;/p&gt;
-&lt;p&gt;We welcome researchers interested in contributing to Metalab. Please contact us at &lt;a href=&#34;mailto:metalab-project@googlegroups.com&#34; class=&#34;email&#34;&gt;metalab-project@googlegroups.com&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Contributions can take various forms:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Adding unpublished data. Ideally we can link to a report on the data, for example on &lt;a href=&#34;http://osf.io&#34;&gt;OSF&lt;/a&gt;. Then contact the curator
-with a link and if possible all necessary data.&lt;/li&gt;
-&lt;li&gt;Suggesting and/or adding published papers not yet included. Simply email the curator, ideally with a pdf. If you are the author, try to make sure that all necessary data is either included or provided in your email.&lt;/li&gt;
-&lt;li&gt;Creating new meta-analyses. You can either collaborate on current in-progress projects (see below) or create your own meta-analyses. In the latter case see the section listing resources further down.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;New meta-analyses looking for contributors&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Currently, the following topics are in the process of becoming a meta-analysis and we are looking for contributors:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Segmenting words from an artificial stream of speech, an extension of &lt;a href=&#34;http://inworddb.acristia.org&#34;&gt;&lt;em&gt;InWordDB&lt;/em&gt;&lt;/a&gt;; contact: &lt;a href=&#34;http://sites.google.com/site/chbergma/home/contact&#34;&gt;&lt;em&gt;Christina Bergmann&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Detecting mispronunciations of known words, without a learning phase in the lab; contact: &lt;a href=&#34;http://sites.google.com/site/chbergma/home/contact&#34;&gt;&lt;em&gt;Christina Bergmann&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Resources&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Here are a few resources on creating meta-analyses compatible with Metalab:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/12Y_2BcFSu48t0F8a_xrY1Ro2fJoCIV1h8O627WNcrjY/edit?usp=sharing&#34;&gt;&lt;em&gt;Metalab MA template&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.google.com/document/d/1szXxrv75qTVx-4adlLrwmjWSDIBJfMH09dzh9733mog/edit?usp=sharing&#34;&gt;&lt;em&gt;Code book&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gist.github.com/mcfrank/c1ec74df1427278cbe53&#34;&gt;&lt;em&gt;Interrogating PubMed via a script&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.getdatajoy.com/project/561388dfb485274e40055563&#34;&gt;&lt;em&gt;Selecting studies for
-inclusion&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.google.com/document/d/1_7mgeaARlYK6TecyUqzk9SSr0pLAkV3pQZE4qYT7CMA/edit?usp=sharing&#34;&gt;&lt;em&gt;FAQ&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/1XN6VaYRs7CStrINct_rr2d6rh6WN28xFiIGB5T1vkzY/edit?usp=sharing&#34;&gt;&lt;em&gt;InWordDB, a well-fleshed out MA&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://sites.google.com/site/infantdbs/create-your-own-cama&#34;&gt;&lt;em&gt;Instructions for creating a
-community-augmented meta-analysis&lt;/em&gt;&lt;/a&gt;
-(including further resources)&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -1072,7 +1033,7 @@ downloaded on 06/17/17.”&lt;/p&gt;
     <item>
       <title>Design Choice Analyses</title>
       <link>https://langcog.github.io/metalab/report/method_choice/</link>
-      <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate>
       <guid>https://langcog.github.io/metalab/report/method_choice/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
@@ -1433,7 +1394,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
     <item>
       <title>Developmental curve comparison</title>
       <link>https://langcog.github.io/metalab/report/developmental_curves/</link>
-      <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate>
       <guid>https://langcog.github.io/metalab/report/developmental_curves/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
@@ -2448,7 +2409,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
     <item>
       <title>Hierarchical Random Effects in Meta-Analyses: Do they change stuff?</title>
       <link>https://langcog.github.io/metalab/report/hierarchicalrandomeffect/</link>
-      <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate>
       <guid>https://langcog.github.io/metalab/report/hierarchicalrandomeffect/</guid>
       <description>
 &lt;style type=&#34;text/css&#34;&gt;
