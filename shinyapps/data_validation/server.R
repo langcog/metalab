@@ -46,8 +46,7 @@ server <- function(input, output, session) {
   output$field_validation_csv <- renderDT({
     req(input$csv_file)
 
-    df <- read.csv(input$csv_file$datapath,
-                   header = TRUE)
+    df <- read.csv(input$csv_file$datapath, header = TRUE, stringsAsFactors = FALSE)
     
     valid_fields <- metalabr:::validate_metalab_data(data.frame(name = 'from csv'), df, fields)
 
