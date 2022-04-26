@@ -5,7 +5,7 @@ layout: app
 summary:
     chbergma@gmail.com <br />
      https://sites.google.com/site/chbergma/ <br>
-     Max Planck Institute for Psycholinguistics
+     Osnabrück University of Applied Sciences and Max Planck Institute for Psycholinguistics
 weight: 1
 ---
 
