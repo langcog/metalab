@@ -82,6 +82,7 @@
       - habituation
       - familiarization
       - test_only
+      - null
   required:     yes
 
 - field:        method
