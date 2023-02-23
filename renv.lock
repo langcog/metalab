@@ -29,7 +29,7 @@
     },
     "Hmisc": {
       "Package": "Hmisc",
-      "Version": "4.5-0",
+      "Version": "4.8-0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "6d0e5aada1900c1bc778c00573aefd53"
