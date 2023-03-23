@@ -400,7 +400,7 @@
     },
     "htmltools": {
       "Package": "htmltools",
-      "Version": "0.5.5",
+      "Version": "0.5.4",
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "ba0240784ad50a62165058a27459304a"
