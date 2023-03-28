@@ -144,6 +144,8 @@ Overall this method looks pretty good. It seems like the linear predictor in the
 We decided to expand our random effects structure to include paper (study_ID) nested in meta-analysis (data set) to capture the fact that a given meta-analysis has a specific set of papers, and may have multiple entries from the same paper. Here we focused on the two predictor model. The simpler random effects model from above is repeated here for easy comparison. A Chi-squared test finds a significant difference between the models, with the model with the more complex random effects structure having a lower AIC.
 
 ```{r}
+metalab_data <- metalab_data %>% select(d_calc, d_var_calc, mean_age, dataset, study_ID) %>% filter(complete.cases(.))
+
 lin_log_paper_lmer <- lmer(d_calc ~ mean_age + log(mean_age) + 
                           (1 | dataset / study_ID),
                           weights = 1/d_var_calc, 

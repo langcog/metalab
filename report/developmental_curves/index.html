@@ -271,9 +271,9 @@
   <meta property="twitter:image" content="https://langcog.github.io/metalab/report/developmental_curves/featured.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2022-04-26T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2023-03-28T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2022-04-26T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2023-03-28T00:00:00&#43;00:00">
   
 
   
@@ -563,7 +563,7 @@
     
       
     
-    Apr 26, 2022
+    Mar 28, 2023
   </span>
   
 
@@ -611,27 +611,29 @@
 
     <div class="article-style">
       
+<script src="https://langcog.github.io/metalab/report/developmental_curves/index_files/accessible-code-block/empty-anchor.js"></script>
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -640,9 +642,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  { background-color: #f8f8f8; }
+  {  background-color: #f8f8f8; }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ef2929; } /* Alert */
 code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
@@ -680,7 +682,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="#simple-random-effects-structure">Simple random effects structure</a></li>
 <li><a href="#complex-random-effects-structure-nested-paper-effects">Complex random effects structure (nested paper effects)</a></li>
 <li><a href="#complex-random-effects-structure-random-slope">Complex random effects structure (random slope)</a></li>
-<li><a href="#subset-to-only-those-papers-with-multiple-ages">Subset to only those papers with multiple ages</a><ul>
+<li><a href="#subset-to-only-those-papers-with-multiple-ages">Subset to only those papers with multiple ages</a>
+<ul>
 <li><a href="#two-age-groups">Two age groups</a></li>
 <li><a href="#three-age-groups">Three age groups</a></li>
 </ul></li>
@@ -703,27 +706,27 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>Below is our data set separated by meta-analysis with four curve types: 1) linear, 2) logarithmic, 3) quadratic, and 4) both linear and logarithmic predictors.</p>
 <p><img src="https://langcog.github.io/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>We ran mixed effects regressions where meta-analysis (data set) was included as a random intercept for our four models. We then ran Chi-squared tests to compare the different models to one another. Model comparison found the quadratic model to be a better fit than the linear model and the logarithmic model, but no difference between the linear and logarithmic model. The two predictor model (linear and log) also outperformed both the single predictor linear model and the single predictor logarithmic model.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">lin_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span>mean_age <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="st">                </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>dataset), </a>
-<a class="sourceLine" id="cb1-3" title="3">                <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </a>
-<a class="sourceLine" id="cb1-4" title="4">                <span class="dt">REML =</span> F, <span class="dt">data =</span> metalab_data)</a>
-<a class="sourceLine" id="cb1-5" title="5"></a>
-<a class="sourceLine" id="cb1-6" title="6">log_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span><span class="kw">log</span>(mean_age) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb1-7" title="7"><span class="st">                </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>dataset), </a>
-<a class="sourceLine" id="cb1-8" title="8">                <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </a>
-<a class="sourceLine" id="cb1-9" title="9">                <span class="dt">REML =</span> F, <span class="dt">data =</span> metalab_data)</a>
-<a class="sourceLine" id="cb1-10" title="10"></a>
-<a class="sourceLine" id="cb1-11" title="11">quad_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span><span class="kw">I</span>(mean_age<span class="op">^</span><span class="dv">2</span>) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb1-12" title="12"><span class="st">                 </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>dataset), </a>
-<a class="sourceLine" id="cb1-13" title="13">                 <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </a>
-<a class="sourceLine" id="cb1-14" title="14">                 <span class="dt">REML =</span> F, <span class="dt">data =</span> metalab_data)</a>
-<a class="sourceLine" id="cb1-15" title="15"></a>
-<a class="sourceLine" id="cb1-16" title="16">lin_log_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span>mean_age <span class="op">+</span><span class="st"> </span><span class="kw">log</span>(mean_age) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb1-17" title="17"><span class="st">                    </span>(<span class="dv">1</span><span class="op">|</span><span class="st"> </span>dataset), </a>
-<a class="sourceLine" id="cb1-18" title="18">                    <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </a>
-<a class="sourceLine" id="cb1-19" title="19">                    <span class="dt">REML =</span> F, <span class="dt">data =</span> metalab_data)</a>
-<a class="sourceLine" id="cb1-20" title="20"></a>
-<a class="sourceLine" id="cb1-21" title="21"><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_lmer)))</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a>lin_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span>mean_age <span class="op">+</span><span class="st"> </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="st">                </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>dataset), </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>                <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>                <span class="dt">REML =</span> F, <span class="dt">data =</span> metalab_data)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>log_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span><span class="kw">log</span>(mean_age) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a><span class="st">                </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>dataset), </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>                <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>                <span class="dt">REML =</span> F, <span class="dt">data =</span> metalab_data)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>quad_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span><span class="kw">I</span>(mean_age<span class="op">^</span><span class="dv">2</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a><span class="st">                 </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>dataset), </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>                 <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>                 <span class="dt">REML =</span> F, <span class="dt">data =</span> metalab_data)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a>lin_log_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span>mean_age <span class="op">+</span><span class="st"> </span><span class="kw">log</span>(mean_age) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a><span class="st">                    </span>(<span class="dv">1</span><span class="op">|</span><span class="st"> </span>dataset), </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>                    <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a>                    <span class="dt">REML =</span> F, <span class="dt">data =</span> metalab_data)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_lmer)))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -736,19 +739,19 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.2833157</td>
-<td align="right">0.0499807</td>
-<td align="right">5.668505</td>
+<td align="right">0.2784135</td>
+<td align="right">0.0482765</td>
+<td align="right">5.767060</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0000972</td>
-<td align="right">0.0000293</td>
-<td align="right">3.316766</td>
+<td align="right">0.0000973</td>
+<td align="right">0.0000286</td>
+<td align="right">3.397804</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(log_lmer)))</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(log_lmer)))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -761,19 +764,19 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.2422937</td>
-<td align="right">0.0979846</td>
-<td align="right">2.472774</td>
+<td align="right">0.3698874</td>
+<td align="right">0.0826728</td>
+<td align="right">4.4741129</td>
 </tr>
 <tr class="even">
 <td align="left">log(mean_age)</td>
-<td align="right">0.0154427</td>
-<td align="right">0.0144992</td>
-<td align="right">1.065078</td>
+<td align="right">-0.0075003</td>
+<td align="right">0.0116184</td>
+<td align="right">-0.6455566</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(quad_lmer)))</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(quad_lmer)))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -786,19 +789,19 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.3299937</td>
-<td align="right">0.0495881</td>
-<td align="right">6.654697</td>
+<td align="right">0.3236169</td>
+<td align="right">0.0481653</td>
+<td align="right">6.718884</td>
 </tr>
 <tr class="even">
 <td align="left">I(mean_age^2)</td>
 <td align="right">0.0000000</td>
 <td align="right">0.0000000</td>
-<td align="right">1.106790</td>
+<td align="right">1.136252</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_lmer)))</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_lmer)))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -811,25 +814,25 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.3238711</td>
-<td align="right">0.1007910</td>
-<td align="right">3.2132946</td>
+<td align="right">0.4169815</td>
+<td align="right">0.0824793</td>
+<td align="right">5.055593</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0001040</td>
-<td align="right">0.0000328</td>
-<td align="right">3.1657841</td>
+<td align="right">0.0001219</td>
+<td align="right">0.0000310</td>
+<td align="right">3.925937</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">-0.0074967</td>
-<td align="right">0.0162080</td>
-<td align="right">-0.4625266</td>
+<td align="right">-0.0261250</td>
+<td align="right">0.0125438</td>
+<td align="right">-2.082702</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">kable</span>(<span class="kw">anova</span>(lin_lmer, log_lmer))</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">anova</span>(lin_lmer, log_lmer))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -848,10 +851,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_lmer</td>
 <td align="right">4</td>
-<td align="right">4650.826</td>
-<td align="right">4674.111</td>
-<td align="right">-2321.413</td>
-<td align="right">4642.826</td>
+<td align="right">4947.015</td>
+<td align="right">4970.806</td>
+<td align="right">-2469.508</td>
+<td align="right">4939.015</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="left">NA</td>
@@ -859,17 +862,17 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">log_lmer</td>
 <td align="right">4</td>
-<td align="right">4660.594</td>
-<td align="right">4683.879</td>
-<td align="right">-2326.297</td>
-<td align="right">4652.594</td>
+<td align="right">4958.016</td>
+<td align="right">4981.806</td>
+<td align="right">-2475.008</td>
+<td align="right">4950.016</td>
 <td align="right">0</td>
 <td align="right">0</td>
 <td align="left">NA</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">kable</span>(<span class="kw">anova</span>(lin_lmer, quad_lmer))</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">anova</span>(lin_lmer, quad_lmer))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -888,10 +891,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_lmer</td>
 <td align="right">4</td>
-<td align="right">4650.826</td>
-<td align="right">4674.111</td>
-<td align="right">-2321.413</td>
-<td align="right">4642.826</td>
+<td align="right">4947.015</td>
+<td align="right">4970.806</td>
+<td align="right">-2469.508</td>
+<td align="right">4939.015</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="left">NA</td>
@@ -899,17 +902,17 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">quad_lmer</td>
 <td align="right">4</td>
-<td align="right">4660.490</td>
-<td align="right">4683.775</td>
-<td align="right">-2326.245</td>
-<td align="right">4652.490</td>
+<td align="right">4957.136</td>
+<td align="right">4980.927</td>
+<td align="right">-2474.568</td>
+<td align="right">4949.136</td>
 <td align="right">0</td>
 <td align="right">0</td>
 <td align="left">NA</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">kable</span>(<span class="kw">anova</span>(log_lmer, quad_lmer))</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">anova</span>(log_lmer, quad_lmer))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -928,10 +931,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">log_lmer</td>
 <td align="right">4</td>
-<td align="right">4660.594</td>
-<td align="right">4683.879</td>
-<td align="right">-2326.297</td>
-<td align="right">4652.594</td>
+<td align="right">4958.016</td>
+<td align="right">4981.806</td>
+<td align="right">-2475.008</td>
+<td align="right">4950.016</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="left">NA</td>
@@ -939,17 +942,17 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">quad_lmer</td>
 <td align="right">4</td>
-<td align="right">4660.490</td>
-<td align="right">4683.775</td>
-<td align="right">-2326.245</td>
-<td align="right">4652.490</td>
-<td align="right">0.1041449</td>
+<td align="right">4957.136</td>
+<td align="right">4980.927</td>
+<td align="right">-2474.568</td>
+<td align="right">4949.136</td>
+<td align="right">0.879472</td>
 <td align="right">0</td>
 <td align="left">NA</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">kable</span>(<span class="kw">anova</span>(lin_lmer, lin_log_lmer))</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">anova</span>(lin_lmer, lin_log_lmer))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -968,10 +971,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_lmer</td>
 <td align="right">4</td>
-<td align="right">4650.826</td>
-<td align="right">4674.111</td>
-<td align="right">-2321.413</td>
-<td align="right">4642.826</td>
+<td align="right">4947.015</td>
+<td align="right">4970.806</td>
+<td align="right">-2469.508</td>
+<td align="right">4939.015</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -979,17 +982,17 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">lin_log_lmer</td>
 <td align="right">5</td>
-<td align="right">4652.613</td>
-<td align="right">4681.719</td>
-<td align="right">-2321.306</td>
-<td align="right">4642.613</td>
-<td align="right">0.2130513</td>
+<td align="right">4944.706</td>
+<td align="right">4974.445</td>
+<td align="right">-2467.353</td>
+<td align="right">4934.706</td>
+<td align="right">4.309157</td>
 <td align="right">1</td>
-<td align="right">0.6443863</td>
+<td align="right">0.0379077</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">kable</span>(<span class="kw">anova</span>(log_lmer, lin_log_lmer))</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">anova</span>(log_lmer, lin_log_lmer))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1008,10 +1011,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">log_lmer</td>
 <td align="right">4</td>
-<td align="right">4660.594</td>
-<td align="right">4683.879</td>
-<td align="right">-2326.297</td>
-<td align="right">4652.594</td>
+<td align="right">4958.016</td>
+<td align="right">4981.806</td>
+<td align="right">-2475.008</td>
+<td align="right">4950.016</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -1019,35 +1022,37 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">lin_log_lmer</td>
 <td align="right">5</td>
-<td align="right">4652.613</td>
-<td align="right">4681.719</td>
-<td align="right">-2321.306</td>
-<td align="right">4642.613</td>
-<td align="right">9.980985</td>
+<td align="right">4944.706</td>
+<td align="right">4974.445</td>
+<td align="right">-2467.353</td>
+<td align="right">4934.706</td>
+<td align="right">15.30931</td>
 <td align="right">1</td>
-<td align="right">0.0015817</td>
+<td align="right">9.13e-05</td>
 </tr>
 </tbody>
 </table>
 <p>Focusing on the linear, log, and two predictor (linear and log) models, we built predictions for all complete meta-analyses. The plot separated by meta-analysis is presented below. The linear and two predictor models are pretty similar, mainly being different at very early ages.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1">metalab_data_preds &lt;-<span class="st"> </span>metalab_data <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb10-2" title="2"><span class="st">  </span><span class="kw">select</span>(dataset, short_name, d_calc, d_var_calc, mean_age, study_ID) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb10-3" title="3"><span class="st">  </span><span class="kw">filter</span>(<span class="kw">complete.cases</span>(.)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb10-4" title="4"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">lin_pred =</span> <span class="kw">predict</span>(lin_lmer)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb10-5" title="5"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">log_pred =</span> <span class="kw">predict</span>(log_lmer)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb10-6" title="6"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">lin_log_pred =</span> <span class="kw">predict</span>(lin_log_lmer))</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a>metalab_data_preds &lt;-<span class="st"> </span>metalab_data <span class="op">%&gt;%</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">select</span>(dataset, short_name, d_calc, d_var_calc, mean_age, study_ID) <span class="op">%&gt;%</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(<span class="kw">complete.cases</span>(.)) <span class="op">%&gt;%</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">lin_pred =</span> <span class="kw">predict</span>(lin_lmer)) <span class="op">%&gt;%</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">log_pred =</span> <span class="kw">predict</span>(log_lmer)) <span class="op">%&gt;%</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">lin_log_pred =</span> <span class="kw">predict</span>(lin_log_lmer))</span></code></pre></div>
 <p><img src="https://langcog.github.io/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p>Overall this method looks pretty good. It seems like the linear predictor in the two predictor model is smoothing the logs at the edges, and the random effects are working to capture cross data set variability.</p>
 </div>
 <div id="complex-random-effects-structure-nested-paper-effects" class="section level1">
 <h1>Complex random effects structure (nested paper effects)</h1>
 <p>We decided to expand our random effects structure to include paper (study_ID) nested in meta-analysis (data set) to capture the fact that a given meta-analysis has a specific set of papers, and may have multiple entries from the same paper. Here we focused on the two predictor model. The simpler random effects model from above is repeated here for easy comparison. A Chi-squared test finds a significant difference between the models, with the model with the more complex random effects structure having a lower AIC.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1">lin_log_paper_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span>mean_age <span class="op">+</span><span class="st"> </span><span class="kw">log</span>(mean_age) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb11-2" title="2"><span class="st">                          </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>dataset <span class="op">/</span><span class="st"> </span>study_ID),</a>
-<a class="sourceLine" id="cb11-3" title="3">                          <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </a>
-<a class="sourceLine" id="cb11-4" title="4">                          <span class="dt">REML =</span> F, <span class="dt">data =</span> metalab_data)</a>
-<a class="sourceLine" id="cb11-5" title="5"></a>
-<a class="sourceLine" id="cb11-6" title="6"><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_paper_lmer)))</a></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a>metalab_data &lt;-<span class="st"> </span>metalab_data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(d_calc, d_var_calc, mean_age, dataset, study_ID) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(<span class="kw">complete.cases</span>(.))</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true"></a>lin_log_paper_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span>mean_age <span class="op">+</span><span class="st"> </span><span class="kw">log</span>(mean_age) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true"></a><span class="st">                          </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>dataset <span class="op">/</span><span class="st"> </span>study_ID),</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true"></a>                          <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true"></a>                          <span class="dt">REML =</span> F, <span class="dt">data =</span> metalab_data)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_paper_lmer)))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1060,25 +1065,25 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.2244774</td>
-<td align="right">0.1348939</td>
-<td align="right">1.6641038</td>
+<td align="right">0.2456559</td>
+<td align="right">0.1024755</td>
+<td align="right">2.397216</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0000907</td>
-<td align="right">0.0000378</td>
-<td align="right">2.3989039</td>
+<td align="right">0.0000957</td>
+<td align="right">0.0000358</td>
+<td align="right">2.674617</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">0.0151499</td>
-<td align="right">0.0228722</td>
-<td align="right">0.6623712</td>
+<td align="right">0.0137233</td>
+<td align="right">0.0166513</td>
+<td align="right">0.824153</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1"><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_lmer)))</a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_lmer)))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1091,25 +1096,25 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.3238711</td>
-<td align="right">0.1007910</td>
-<td align="right">3.2132946</td>
+<td align="right">0.4169815</td>
+<td align="right">0.0824793</td>
+<td align="right">5.055593</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0001040</td>
-<td align="right">0.0000328</td>
-<td align="right">3.1657841</td>
+<td align="right">0.0001219</td>
+<td align="right">0.0000310</td>
+<td align="right">3.925937</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">-0.0074967</td>
-<td align="right">0.0162080</td>
-<td align="right">-0.4625266</td>
+<td align="right">-0.0261250</td>
+<td align="right">0.0125438</td>
+<td align="right">-2.082702</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="kw">kable</span>(<span class="kw">anova</span>(lin_log_lmer, lin_log_paper_lmer))</a></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">anova</span>(lin_log_lmer, lin_log_paper_lmer))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1128,10 +1133,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_log_lmer</td>
 <td align="right">5</td>
-<td align="right">4652.613</td>
-<td align="right">4681.719</td>
-<td align="right">-2321.306</td>
-<td align="right">4642.613</td>
+<td align="right">4944.706</td>
+<td align="right">4974.445</td>
+<td align="right">-2467.353</td>
+<td align="right">4934.706</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -1139,37 +1144,37 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">lin_log_paper_lmer</td>
 <td align="right">6</td>
-<td align="right">4499.627</td>
-<td align="right">4534.554</td>
-<td align="right">-2243.813</td>
-<td align="right">4487.627</td>
-<td align="right">154.9862</td>
+<td align="right">4693.179</td>
+<td align="right">4728.865</td>
+<td align="right">-2340.590</td>
+<td align="right">4681.179</td>
+<td align="right">253.5272</td>
 <td align="right">1</td>
 <td align="right">0</td>
 </tr>
 </tbody>
 </table>
 <p>We then predicted from this new, more complex model and compare it to the model without the nested paper random effects structure. Initial testing found that including the nested random effect in the predict algorithm led to massive overfitting, so just the simple random effects structure was used to compute predictions. Below is the figure comparing the two curves. The curves are very similar, suggesting that while adding the nesting of paper does significantly improve the model, visually the difference is very small.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1">lin_log_paper_preds &lt;-<span class="st"> </span><span class="kw">predict</span>(lin_log_paper_lmer, <span class="dt">re.form =</span> <span class="op">~</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>dataset))</a>
-<a class="sourceLine" id="cb14-2" title="2"></a>
-<a class="sourceLine" id="cb14-3" title="3">metalab_data_preds &lt;-<span class="st"> </span>metalab_data_preds <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb14-4" title="4"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">lin_log_paper_pred =</span> lin_log_paper_preds)</a></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a>lin_log_paper_preds &lt;-<span class="st"> </span><span class="kw">predict</span>(lin_log_paper_lmer, <span class="dt">re.form =</span> <span class="op">~</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>dataset))</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true"></a>metalab_data_preds &lt;-<span class="st"> </span>metalab_data_preds <span class="op">%&gt;%</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">lin_log_paper_pred =</span> lin_log_paper_preds)</span></code></pre></div>
 <p><img src="https://langcog.github.io/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 </div>
 <div id="complex-random-effects-structure-random-slope" class="section level1">
 <h1>Complex random effects structure (random slope)</h1>
 <p>Another way to make the random effects structure more complex is to add a random slope to the model. Two more models were built with a random slope by mean age log transformed, one without the nesting of paper, and one with the nesting of paper. Summaries of the new models with the random slope and the previous models without the random slope are below. Model comparison found that the model with nested structure and the slope was better than the simplest model (no nesting, no slope). The model with both the nested structure and the slope was also better than than the model with only the slope. Based on this it appears that the best model is one that includes both the nested random effects structure and a random slope of mean age log transformed.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1">lin_log_slope_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span>mean_age <span class="op">+</span><span class="st"> </span><span class="kw">log</span>(mean_age) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb15-2" title="2"><span class="st">                          </span>(<span class="kw">log</span>(mean_age)<span class="op">|</span><span class="st"> </span>dataset),</a>
-<a class="sourceLine" id="cb15-3" title="3">                          <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </a>
-<a class="sourceLine" id="cb15-4" title="4">                          <span class="dt">REML =</span> F, <span class="dt">data =</span> metalab_data)</a>
-<a class="sourceLine" id="cb15-5" title="5"></a>
-<a class="sourceLine" id="cb15-6" title="6">lin_log_paper_slope_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span>mean_age <span class="op">+</span><span class="st"> </span><span class="kw">log</span>(mean_age) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb15-7" title="7"><span class="st">                          </span>(<span class="kw">log</span>(mean_age)<span class="op">|</span><span class="st"> </span>dataset <span class="op">/</span><span class="st"> </span>study_ID),</a>
-<a class="sourceLine" id="cb15-8" title="8">                          <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </a>
-<a class="sourceLine" id="cb15-9" title="9">                          <span class="dt">REML =</span> F, <span class="dt">data =</span> metalab_data)</a>
-<a class="sourceLine" id="cb15-10" title="10"></a>
-<a class="sourceLine" id="cb15-11" title="11"><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_slope_lmer)))</a></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true"></a>lin_log_slope_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span>mean_age <span class="op">+</span><span class="st"> </span><span class="kw">log</span>(mean_age) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true"></a><span class="st">                          </span>(<span class="kw">log</span>(mean_age)<span class="op">|</span><span class="st"> </span>dataset),</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true"></a>                          <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true"></a>                          <span class="dt">REML =</span> F, <span class="dt">data =</span> metalab_data)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true"></a>lin_log_paper_slope_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span>mean_age <span class="op">+</span><span class="st"> </span><span class="kw">log</span>(mean_age) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true"></a><span class="st">                          </span>(<span class="kw">log</span>(mean_age)<span class="op">|</span><span class="st"> </span>dataset <span class="op">/</span><span class="st"> </span>study_ID),</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true"></a>                          <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true"></a>                          <span class="dt">REML =</span> F, <span class="dt">data =</span> metalab_data)</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_slope_lmer)))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1182,25 +1187,25 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">-0.2457575</td>
-<td align="right">0.4343467</td>
-<td align="right">-0.5658096</td>
+<td align="right">-0.2126769</td>
+<td align="right">0.4494816</td>
+<td align="right">-0.4731605</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0000677</td>
-<td align="right">0.0000612</td>
-<td align="right">1.1051503</td>
+<td align="right">0.0000831</td>
+<td align="right">0.0000610</td>
+<td align="right">1.3623639</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">0.0896325</td>
-<td align="right">0.0763592</td>
-<td align="right">1.1738269</td>
+<td align="right">0.0814694</td>
+<td align="right">0.0787443</td>
+<td align="right">1.0346076</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1"><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_paper_slope_lmer)))</a></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_paper_slope_lmer)))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1213,25 +1218,25 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">-0.4439472</td>
-<td align="right">0.5127621</td>
-<td align="right">-0.8657956</td>
+<td align="right">-0.3992312</td>
+<td align="right">0.4852576</td>
+<td align="right">-0.8227202</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0001299</td>
-<td align="right">0.0000872</td>
-<td align="right">1.4904633</td>
+<td align="right">0.0001365</td>
+<td align="right">0.0000836</td>
+<td align="right">1.6330611</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">0.1231868</td>
-<td align="right">0.0911049</td>
-<td align="right">1.3521418</td>
+<td align="right">0.1156815</td>
+<td align="right">0.0862121</td>
+<td align="right">1.3418246</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1"><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_lmer)))</a></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_lmer)))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1244,25 +1249,25 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.3238711</td>
-<td align="right">0.1007910</td>
-<td align="right">3.2132946</td>
+<td align="right">0.4169815</td>
+<td align="right">0.0824793</td>
+<td align="right">5.055593</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0001040</td>
-<td align="right">0.0000328</td>
-<td align="right">3.1657841</td>
+<td align="right">0.0001219</td>
+<td align="right">0.0000310</td>
+<td align="right">3.925937</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">-0.0074967</td>
-<td align="right">0.0162080</td>
-<td align="right">-0.4625266</td>
+<td align="right">-0.0261250</td>
+<td align="right">0.0125438</td>
+<td align="right">-2.082702</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1"><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_paper_lmer)))</a></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_paper_lmer)))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1275,25 +1280,25 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.2244774</td>
-<td align="right">0.1348939</td>
-<td align="right">1.6641038</td>
+<td align="right">0.2456559</td>
+<td align="right">0.1024755</td>
+<td align="right">2.397216</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0000907</td>
-<td align="right">0.0000378</td>
-<td align="right">2.3989039</td>
+<td align="right">0.0000957</td>
+<td align="right">0.0000358</td>
+<td align="right">2.674617</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">0.0151499</td>
-<td align="right">0.0228722</td>
-<td align="right">0.6623712</td>
+<td align="right">0.0137233</td>
+<td align="right">0.0166513</td>
+<td align="right">0.824153</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" title="1"><span class="kw">kable</span>(<span class="kw">anova</span>(lin_log_lmer, lin_log_slope_lmer))</a></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">anova</span>(lin_log_lmer, lin_log_slope_lmer))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1312,10 +1317,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_log_lmer</td>
 <td align="right">5</td>
-<td align="right">4652.613</td>
-<td align="right">4681.719</td>
-<td align="right">-2321.306</td>
-<td align="right">4642.613</td>
+<td align="right">4944.706</td>
+<td align="right">4974.445</td>
+<td align="right">-2467.353</td>
+<td align="right">4934.706</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -1323,17 +1328,17 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">lin_log_slope_lmer</td>
 <td align="right">7</td>
-<td align="right">4583.334</td>
-<td align="right">4624.083</td>
-<td align="right">-2284.667</td>
-<td align="right">4569.334</td>
-<td align="right">73.27854</td>
+<td align="right">4872.157</td>
+<td align="right">4913.790</td>
+<td align="right">-2429.078</td>
+<td align="right">4858.157</td>
+<td align="right">76.54962</td>
 <td align="right">2</td>
 <td align="right">0</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1"><span class="kw">kable</span>(<span class="kw">anova</span>(lin_log_lmer, lin_log_paper_slope_lmer))</a></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">anova</span>(lin_log_lmer, lin_log_paper_slope_lmer))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1352,10 +1357,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_log_lmer</td>
 <td align="right">5</td>
-<td align="right">4652.613</td>
-<td align="right">4681.719</td>
-<td align="right">-2321.306</td>
-<td align="right">4642.613</td>
+<td align="right">4944.706</td>
+<td align="right">4974.445</td>
+<td align="right">-2467.353</td>
+<td align="right">4934.706</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -1363,17 +1368,17 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">lin_log_paper_slope_lmer</td>
 <td align="right">10</td>
-<td align="right">4419.642</td>
-<td align="right">4477.854</td>
-<td align="right">-2199.821</td>
-<td align="right">4399.642</td>
-<td align="right">242.971</td>
+<td align="right">4596.389</td>
+<td align="right">4655.866</td>
+<td align="right">-2288.194</td>
+<td align="right">4576.389</td>
+<td align="right">358.3172</td>
 <td align="right">5</td>
 <td align="right">0</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" title="1"><span class="kw">kable</span>(<span class="kw">anova</span>(lin_log_paper_lmer, lin_log_slope_lmer))</a></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">anova</span>(lin_log_paper_lmer, lin_log_slope_lmer))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1392,10 +1397,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_log_paper_lmer</td>
 <td align="right">6</td>
-<td align="right">4499.627</td>
-<td align="right">4534.554</td>
-<td align="right">-2243.813</td>
-<td align="right">4487.627</td>
+<td align="right">4693.179</td>
+<td align="right">4728.865</td>
+<td align="right">-2340.590</td>
+<td align="right">4681.179</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -1403,17 +1408,17 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">lin_log_slope_lmer</td>
 <td align="right">7</td>
-<td align="right">4583.334</td>
-<td align="right">4624.083</td>
-<td align="right">-2284.667</td>
-<td align="right">4569.334</td>
+<td align="right">4872.157</td>
+<td align="right">4913.790</td>
+<td align="right">-2429.078</td>
+<td align="right">4858.157</td>
 <td align="right">0</td>
 <td align="right">1</td>
 <td align="right">1</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1"><span class="kw">kable</span>(<span class="kw">anova</span>(lin_log_paper_lmer, lin_log_paper_slope_lmer))</a></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">anova</span>(lin_log_paper_lmer, lin_log_paper_slope_lmer))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1432,10 +1437,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_log_paper_lmer</td>
 <td align="right">6</td>
-<td align="right">4499.627</td>
-<td align="right">4534.554</td>
-<td align="right">-2243.813</td>
-<td align="right">4487.627</td>
+<td align="right">4693.179</td>
+<td align="right">4728.865</td>
+<td align="right">-2340.590</td>
+<td align="right">4681.179</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -1443,17 +1448,17 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">lin_log_paper_slope_lmer</td>
 <td align="right">10</td>
-<td align="right">4419.642</td>
-<td align="right">4477.854</td>
-<td align="right">-2199.821</td>
-<td align="right">4399.642</td>
-<td align="right">87.98474</td>
+<td align="right">4596.389</td>
+<td align="right">4655.866</td>
+<td align="right">-2288.194</td>
+<td align="right">4576.389</td>
+<td align="right">104.7901</td>
 <td align="right">4</td>
 <td align="right">0</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" title="1"><span class="kw">kable</span>(<span class="kw">anova</span>(lin_log_slope_lmer, lin_log_paper_slope_lmer))</a></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">anova</span>(lin_log_slope_lmer, lin_log_paper_slope_lmer))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1472,10 +1477,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td align="left">lin_log_slope_lmer</td>
 <td align="right">7</td>
-<td align="right">4583.334</td>
-<td align="right">4624.083</td>
-<td align="right">-2284.667</td>
-<td align="right">4569.334</td>
+<td align="right">4872.157</td>
+<td align="right">4913.790</td>
+<td align="right">-2429.078</td>
+<td align="right">4858.157</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
 <td align="right">NA</td>
@@ -1483,24 +1488,24 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td align="left">lin_log_paper_slope_lmer</td>
 <td align="right">10</td>
-<td align="right">4419.642</td>
-<td align="right">4477.854</td>
-<td align="right">-2199.821</td>
-<td align="right">4399.642</td>
-<td align="right">169.6924</td>
+<td align="right">4596.389</td>
+<td align="right">4655.866</td>
+<td align="right">-2288.194</td>
+<td align="right">4576.389</td>
+<td align="right">281.7676</td>
 <td align="right">3</td>
 <td align="right">0</td>
 </tr>
 </tbody>
 </table>
 <p>As before, predictions were built for the new models and plotted on the data. Overall the models do look pretty similar in terms of their predicted fit of the data.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1">lin_log_slope_preds &lt;-<span class="st"> </span><span class="kw">predict</span>(lin_log_slope_lmer, <span class="dt">re.form =</span> <span class="op">~</span><span class="st"> </span>(<span class="kw">log</span>(mean_age) <span class="op">|</span><span class="st"> </span>dataset))</a>
-<a class="sourceLine" id="cb24-2" title="2">lin_log_paper_slope_preds &lt;-<span class="st"> </span><span class="kw">predict</span>(lin_log_paper_slope_lmer, <span class="dt">re.form =</span> <span class="op">~</span><span class="st"> </span>(<span class="kw">log</span>(mean_age) <span class="op">|</span><span class="st"> </span>dataset))</a>
-<a class="sourceLine" id="cb24-3" title="3"></a>
-<a class="sourceLine" id="cb24-4" title="4"></a>
-<a class="sourceLine" id="cb24-5" title="5">metalab_data_preds &lt;-<span class="st"> </span>metalab_data_preds <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb24-6" title="6"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">lin_log_slope_pred =</span> lin_log_slope_preds) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb24-7" title="7"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">lin_log_paper_slope_pred =</span> lin_log_paper_slope_preds)</a></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true"></a>lin_log_slope_preds &lt;-<span class="st"> </span><span class="kw">predict</span>(lin_log_slope_lmer, <span class="dt">re.form =</span> <span class="op">~</span><span class="st"> </span>(<span class="kw">log</span>(mean_age) <span class="op">|</span><span class="st"> </span>dataset))</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true"></a>lin_log_paper_slope_preds &lt;-<span class="st"> </span><span class="kw">predict</span>(lin_log_paper_slope_lmer, <span class="dt">re.form =</span> <span class="op">~</span><span class="st"> </span>(<span class="kw">log</span>(mean_age) <span class="op">|</span><span class="st"> </span>dataset))</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true"></a></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true"></a></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true"></a>metalab_data_preds &lt;-<span class="st"> </span>metalab_data_preds <span class="op">%&gt;%</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">lin_log_slope_pred =</span> lin_log_slope_preds) <span class="op">%&gt;%</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">lin_log_paper_slope_pred =</span> lin_log_paper_slope_preds)</span></code></pre></div>
 <p><img src="https://langcog.github.io/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 <div id="subset-to-only-those-papers-with-multiple-ages" class="section level1">
@@ -1509,17 +1514,17 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="two-age-groups" class="section level3">
 <h3>Two age groups</h3>
 <p>To start we arbitrarily decided on two age groups, at least more than two months apart. Below we build a new model only looking at data where papers had at least two age groups. The structure of the model is the same as the model with papers nested in meta-analysis and a random slope of mean age log transformed.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" title="1">multiage_data &lt;-<span class="st"> </span>metalab_data_preds <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb25-2" title="2"><span class="st">  </span><span class="kw">group_by</span>(dataset, study_ID) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb25-3" title="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">count_ages =</span> <span class="kw">length</span>(<span class="kw">unique</span>(<span class="kw">floor</span>(mean_age<span class="op">/</span><span class="dv">2</span>)))) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb25-4" title="4"><span class="st">  </span><span class="kw">filter</span>(count_ages <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb25-5" title="5"></a>
-<a class="sourceLine" id="cb25-6" title="6">lin_log_paper_slope_multiage_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span>mean_age <span class="op">+</span><span class="st"> </span><span class="kw">log</span>(mean_age) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb25-7" title="7"><span class="st">                                     </span>(<span class="kw">log</span>(mean_age) <span class="op">|</span><span class="st"> </span>dataset <span class="op">/</span><span class="st"> </span>study_ID),</a>
-<a class="sourceLine" id="cb25-8" title="8">                                     <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </a>
-<a class="sourceLine" id="cb25-9" title="9">                                     <span class="dt">REML =</span> F, <span class="dt">data =</span> multiage_data)</a>
-<a class="sourceLine" id="cb25-10" title="10"></a>
-<a class="sourceLine" id="cb25-11" title="11"><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_paper_slope_multiage_lmer)))</a></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true"></a>multiage_data &lt;-<span class="st"> </span>metalab_data_preds <span class="op">%&gt;%</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">group_by</span>(dataset, study_ID) <span class="op">%&gt;%</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">count_ages =</span> <span class="kw">length</span>(<span class="kw">unique</span>(<span class="kw">floor</span>(mean_age<span class="op">/</span><span class="dv">2</span>)))) <span class="op">%&gt;%</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(count_ages <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>)</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true"></a></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true"></a>lin_log_paper_slope_multiage_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span>mean_age <span class="op">+</span><span class="st"> </span><span class="kw">log</span>(mean_age) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true"></a><span class="st">                                     </span>(<span class="kw">log</span>(mean_age) <span class="op">|</span><span class="st"> </span>dataset <span class="op">/</span><span class="st"> </span>study_ID),</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true"></a>                                     <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true"></a>                                     <span class="dt">REML =</span> F, <span class="dt">data =</span> multiage_data)</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true"></a></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_paper_slope_multiage_lmer)))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1532,47 +1537,47 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">-0.4247794</td>
-<td align="right">0.5250981</td>
-<td align="right">-0.8089526</td>
+<td align="right">-0.3879021</td>
+<td align="right">0.5115286</td>
+<td align="right">-0.7583195</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0001815</td>
-<td align="right">0.0001110</td>
-<td align="right">1.6344194</td>
+<td align="right">0.0001990</td>
+<td align="right">0.0001070</td>
+<td align="right">1.8599054</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">0.1086581</td>
-<td align="right">0.0959349</td>
-<td align="right">1.1326233</td>
+<td align="right">0.1013376</td>
+<td align="right">0.0932368</td>
+<td align="right">1.0868835</td>
 </tr>
 </tbody>
 </table>
 <p>Predictions were calculated for the new model and visually compared to the simple model on the full data set with no nested random effects and no random slope. The plot below suggests that for this reduced data set, the addition of the nested random effects and random slope does differ greatly from the simpler model.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" title="1">lin_log_paper_slope_multiage_preds &lt;-<span class="st"> </span><span class="kw">predict</span>(lin_log_paper_slope_multiage_lmer, <span class="dt">re.form =</span> <span class="op">~</span><span class="st"> </span>(<span class="kw">log</span>(mean_age)<span class="op">|</span><span class="st"> </span>dataset))</a>
-<a class="sourceLine" id="cb26-2" title="2"></a>
-<a class="sourceLine" id="cb26-3" title="3">multiage_data &lt;-<span class="st"> </span>multiage_data <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb26-4" title="4"><span class="st">  </span>ungroup <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb26-5" title="5"><span class="st">  </span><span class="kw">select</span>(dataset, short_name, study_ID, d_calc, mean_age, d_var_calc, lin_log_pred) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb26-6" title="6"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">lin_log_paper_slope_multiage_pred =</span> lin_log_paper_slope_multiage_preds)</a></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true"></a>lin_log_paper_slope_multiage_preds &lt;-<span class="st"> </span><span class="kw">predict</span>(lin_log_paper_slope_multiage_lmer, <span class="dt">re.form =</span> <span class="op">~</span><span class="st"> </span>(<span class="kw">log</span>(mean_age)<span class="op">|</span><span class="st"> </span>dataset))</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true"></a>multiage_data &lt;-<span class="st"> </span>multiage_data <span class="op">%&gt;%</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true"></a><span class="st">  </span>ungroup <span class="op">%&gt;%</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">select</span>(dataset, short_name, study_ID, d_calc, mean_age, d_var_calc, lin_log_pred) <span class="op">%&gt;%</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">lin_log_paper_slope_multiage_pred =</span> lin_log_paper_slope_multiage_preds)</span></code></pre></div>
 <p><img src="https://langcog.github.io/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 </div>
 <div id="three-age-groups" class="section level3">
 <h3>Three age groups</h3>
 <p>We also did the same analysis, but further reducing the data set to only papers that included at least three different age groups.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" title="1">multiage_<span class="dv">3</span>_data &lt;-<span class="st"> </span>metalab_data_preds <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb27-2" title="2"><span class="st">  </span><span class="kw">group_by</span>(dataset, study_ID) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb27-3" title="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">count_ages =</span> <span class="kw">length</span>(<span class="kw">unique</span>(<span class="kw">floor</span>(mean_age<span class="op">/</span><span class="dv">2</span>)))) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb27-4" title="4"><span class="st">  </span><span class="kw">filter</span>(count_ages <span class="op">&gt;</span><span class="st"> </span><span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb27-5" title="5"></a>
-<a class="sourceLine" id="cb27-6" title="6">lin_log_paper_slope_multiage_<span class="dv">3</span>_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span>mean_age <span class="op">+</span><span class="st"> </span><span class="kw">log</span>(mean_age) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb27-7" title="7"><span class="st">                                     </span>(<span class="kw">log</span>(mean_age) <span class="op">|</span><span class="st"> </span>dataset <span class="op">/</span><span class="st"> </span>study_ID),</a>
-<a class="sourceLine" id="cb27-8" title="8">                                     <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </a>
-<a class="sourceLine" id="cb27-9" title="9">                                     <span class="dt">REML =</span> F, <span class="dt">data =</span> multiage_<span class="dv">3</span>_data)</a>
-<a class="sourceLine" id="cb27-10" title="10"></a>
-<a class="sourceLine" id="cb27-11" title="11"><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_paper_slope_multiage_<span class="dv">3</span>_lmer)))</a></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true"></a>multiage_<span class="dv">3</span>_data &lt;-<span class="st"> </span>metalab_data_preds <span class="op">%&gt;%</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">group_by</span>(dataset, study_ID) <span class="op">%&gt;%</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">count_ages =</span> <span class="kw">length</span>(<span class="kw">unique</span>(<span class="kw">floor</span>(mean_age<span class="op">/</span><span class="dv">2</span>)))) <span class="op">%&gt;%</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(count_ages <span class="op">&gt;</span><span class="st"> </span><span class="dv">2</span>)</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true"></a></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true"></a>lin_log_paper_slope_multiage_<span class="dv">3</span>_lmer &lt;-<span class="st"> </span><span class="kw">lmer</span>(d_calc <span class="op">~</span><span class="st"> </span>mean_age <span class="op">+</span><span class="st"> </span><span class="kw">log</span>(mean_age) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true"></a><span class="st">                                     </span>(<span class="kw">log</span>(mean_age) <span class="op">|</span><span class="st"> </span>dataset <span class="op">/</span><span class="st"> </span>study_ID),</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true"></a>                                     <span class="dt">weights =</span> <span class="dv">1</span><span class="op">/</span>d_var_calc, </span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true"></a>                                     <span class="dt">REML =</span> F, <span class="dt">data =</span> multiage_<span class="dv">3</span>_data)</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true"></a></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true"></a><span class="kw">kable</span>(<span class="kw">coef</span>(<span class="kw">summary</span>(lin_log_paper_slope_multiage_<span class="dv">3</span>_lmer)))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1585,31 +1590,31 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">-0.3100080</td>
-<td align="right">0.5702491</td>
-<td align="right">-0.5436362</td>
+<td align="right">-0.3433391</td>
+<td align="right">0.5740860</td>
+<td align="right">-0.5980621</td>
 </tr>
 <tr class="even">
 <td align="left">mean_age</td>
-<td align="right">0.0002397</td>
-<td align="right">0.0001301</td>
-<td align="right">1.8426903</td>
+<td align="right">0.0002651</td>
+<td align="right">0.0001236</td>
+<td align="right">2.1445929</td>
 </tr>
 <tr class="odd">
 <td align="left">log(mean_age)</td>
-<td align="right">0.0817051</td>
-<td align="right">0.1038616</td>
-<td align="right">0.7866726</td>
+<td align="right">0.0860655</td>
+<td align="right">0.1037649</td>
+<td align="right">0.8294272</td>
 </tr>
 </tbody>
 </table>
 <p>Predictions were calculated for the new model and visually compared to the simple model on the full data set with no nested random effects and no random slope. The plot below suggests that for this further reduced data set, the difference becomes the two models becomes even more apparent.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1">lin_log_paper_slope_multiage_<span class="dv">3</span>_preds &lt;-<span class="st"> </span><span class="kw">predict</span>(lin_log_paper_slope_multiage_<span class="dv">3</span>_lmer, <span class="dt">re.form =</span> <span class="op">~</span><span class="st"> </span>(<span class="kw">log</span>(mean_age)<span class="op">|</span><span class="st"> </span>dataset))</a>
-<a class="sourceLine" id="cb28-2" title="2"></a>
-<a class="sourceLine" id="cb28-3" title="3">multiage_<span class="dv">3</span>_data &lt;-<span class="st"> </span>multiage_<span class="dv">3</span>_data <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb28-4" title="4"><span class="st">  </span>ungroup <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb28-5" title="5"><span class="st">  </span><span class="kw">select</span>(dataset, short_name, study_ID, d_calc, mean_age, d_var_calc, lin_log_pred) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb28-6" title="6"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">lin_log_paper_slope_multiage_3_pred =</span> lin_log_paper_slope_multiage_<span class="dv">3</span>_preds)</a></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true"></a>lin_log_paper_slope_multiage_<span class="dv">3</span>_preds &lt;-<span class="st"> </span><span class="kw">predict</span>(lin_log_paper_slope_multiage_<span class="dv">3</span>_lmer, <span class="dt">re.form =</span> <span class="op">~</span><span class="st"> </span>(<span class="kw">log</span>(mean_age)<span class="op">|</span><span class="st"> </span>dataset))</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true"></a>multiage_<span class="dv">3</span>_data &lt;-<span class="st"> </span>multiage_<span class="dv">3</span>_data <span class="op">%&gt;%</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true"></a><span class="st">  </span>ungroup <span class="op">%&gt;%</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">select</span>(dataset, short_name, study_ID, d_calc, mean_age, d_var_calc, lin_log_pred) <span class="op">%&gt;%</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">lin_log_paper_slope_multiage_3_pred =</span> lin_log_paper_slope_multiage_<span class="dv">3</span>_preds)</span></code></pre></div>
 <p><img src="https://langcog.github.io/metalab/report/developmental_curves/index_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 </div>
 </div>
@@ -1845,7 +1850,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
     
     
     
-    <script src="https://langcog.github.io/metalab/js/wowchemy.min.cd29c13e3da221a8d10c6eec88b953cb.js"></script>
+    <script src="https://langcog.github.io/metalab/js/wowchemy.min.ee9dd1b51c1cbfc9adeb51e02586011c.js"></script>
 
       <script src="https://langcog.github.io/metalab/rmarkdown-libs/jquery/jquery.min.js"></script>
   <script src="https://langcog.github.io/metalab/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
