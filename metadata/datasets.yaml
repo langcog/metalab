@@ -748,3 +748,29 @@
     moderators: [preceding]
     subset: []
     comment: ""
+-
+    name: "Neonatal Imitation"
+    domain: cognitive_development
+    short_name: neonatal_imitation
+    key: 1k1dQXqYLkwnjN1KtHMlrl1LIPDeLlSBaEBsn6G9Dk68
+    filename: neonatal_imitation
+    citation: "Davis et al., (2021) "
+    internal_citation: "Davis et al. (2021)"
+    link: "https://journals.sagepub.com/doi/pdf/10.1177/1745691620959834"
+    full_citation: "Davis, J., Redshaw, J., Suddendorf, T., Nielsen, M., Kennedy-Costantini, S., Oostenbroek, J., & Slaughter, V. (2021). Does neonatal imitation exist? Insights from a meta-analysis of 336 effect sizes. Perspectives on Psychological Science, 16(6), 1373-1397."
+    doi: "10.1177/1745691620959834"
+    systematic: yes
+    search_strategy: "The search keywords included terms relevant to the predictor, the outcome, and the population. Both general outcome terms (e.g., “imitation”) and specific gestures (e.g., “tongue protrusion”) were used. Thus, each search query contained elements of both (a) “imitation” or “tongue protrusion” or “mouth opening” or “lip smacking” and (b) “neonates” or “infants” or “children.” We also searched the reference sections of previous reviews on neonatal imitation and the reference sections of included studies, and we requested unpublished datasets via a developmental psychology email list. All searches were limited to abstracts when this option was available. We selected electronic databases that included relevant journals in the fields of child development, infant psychology, and related fields and on the basis of source overlap and usability. In addition, we searched sources of unpublished literature, such as dissertations and theses, that may include null or negative results. The data sources selected were ProQuest (including ProQuest Dissertations and Theses), Scopus, PsycInfo (including PsycArticles), and Cambridge University Library and Dependent Libraries Catalogue. In addition, we searched Google Scholar using a more stringent set of search keywords."
+    reliability: no
+    source: "coded by authors"
+    last_update: 2023-02-09
+    link_fields: ""
+    short_desc: "Does neonatal imitation exist? Insights from a meta-analysis of 336 effect sizes"
+    description: "Does neonatal imitation exist? Insights from a meta-analysis of 336 effect sizes and numerous moderators, with data from infants aged 0-6 weeks"
+    curator: "Jacqueline Davis"
+    src: media/datasets/neonatal_imitation.png
+    longitudinal: no
+    moderators: [Gesture, Comparison, Presentation_time_seconds, Response_time_seconds, Who_Delivers_the_Modelling,Exposure_Quantity, Exposure_Duration_Per_Slice, Response_Quantity, Response_Duration_Per_Slice, Total_Exposure_Duration, Total_Response_Duration, Trials_to_criterion, Infant_Alertness_Measured, How_was_Infant_Alertness_Measured, AlertM, Measure_of_Alertness_or_Attention_by_Infants, Reports_How_Sample_Size_Was_Determined, Reports_Statistical_Power, Analysis_Method, Analysis_Method_category, Analysis_Method_Appropriate_for_Correlated_Data, Analysis_Method_Appropriate_for_Counts, Initial_Sample_Size, Number_of_Dropouts, Reported_Participant_Flow, Reason_for_Dropouts, Final_Sample_Size, Proportion_of_Sample_Dropped, Infant_position, Infant_seat, Number_of_models, Total_active_experiment_time]
+    subset: []
+    comment: ""
+-    
