@@ -150,6 +150,7 @@
     - target_selection:       binary if selected target (forced choice)
     - looking_time:           in seconds
     - looking_time_pc:        in percent 
+    - first-look_duration:    in seconds
     - reaction_time:          in seconds
     - exploration_time:       in seconds
     - looking_time_change:    in seconds
