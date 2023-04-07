@@ -773,4 +773,28 @@
     moderators: [Gesture, Comparison, Presentation_time_seconds, Response_time_seconds, Who_Delivers_the_Modelling,Exposure_Quantity, Exposure_Duration_Per_Slice, Response_Quantity, Response_Duration_Per_Slice, Total_Exposure_Duration, Total_Response_Duration, Trials_to_criterion, Infant_Alertness_Measured, How_was_Infant_Alertness_Measured, AlertM, Measure_of_Alertness_or_Attention_by_Infants, Reports_How_Sample_Size_Was_Determined, Reports_Statistical_Power, Analysis_Method, Analysis_Method_category, Analysis_Method_Appropriate_for_Correlated_Data, Analysis_Method_Appropriate_for_Counts, Initial_Sample_Size, Number_of_Dropouts, Reported_Participant_Flow, Reason_for_Dropouts, Final_Sample_Size, Proportion_of_Sample_Dropped, Infant_position, Infant_seat, Number_of_models, Total_active_experiment_time]
     subset: []
     comment: ""
--    
+-   
+    name: "Audio-Visual Congruence"
+    domain: early_language
+    short_name: audiovisual_congruence
+    key: 1iJLVn3RFJxypdH8TgYdee8lMSKInLys_J4fEteD3MOs
+    filename: audiovisual_congruence
+    citation: "Cox, Keren‐Portnoy, Roepstorff, & Fusaroli (2022) "
+    internal_citation: "Cox et al. (2022)"
+    link: "https://onlinelibrary.wiley.com/doi/10.1111/infa.12436"
+    full_citation: "Cox, C. M. M., Keren‐Portnoy, T., Roepstorff, A., & Fusaroli, R. (2022). A Bayesian meta‐analysis of infants’ ability to perceive audio–visual congruence for speech. Infancy, 27(1), 67-96."
+    doi: "10.1111/infa.12436"
+    systematic: yes
+    search_strategy: "Systematic literature search on PubMed, Web of Science, and Google Scholar using the following combination of search terms: (cross-modal OR audio-visual OR intermodal OR multimodal) AND (matching OR congruence or concordance) AND (speech perception OR perception) AND (infant* OR toddler* OR infancy)."
+    reliability: no
+    source: "coded by authors"
+    last_update: 2023-04-06
+    link_fields: ""
+    short_desc: "This project quantifies the extent to which infants can perceive audio–visual congruence for speech information and assesses whether this ability changes with native language exposure."
+    description: "This project quantifies the extent to which infants can perceive audio–visual congruence for speech information and assesses whether this ability changes with native language exposure. "
+    curator: "Christopher Cox"
+    src: media/datasets/audiovisual_congruence.png
+    longitudinal: no
+    moderators: [trial_control]
+    subset: []
+    comment: ""
