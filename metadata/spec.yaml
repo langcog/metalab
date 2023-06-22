@@ -10,6 +10,14 @@
   format:       last name of first author, year, and letter if necessary
   example:      smith2015a
   required:     yes
+  
+- field:        doi
+  description:  digital object identifier of the study
+  type:         string
+  format:       doi-format
+  example:      10.1002/0470841559.ch1
+  nullable:     yes
+  required:     yes
 
 - field:        long_cite
   description:  long citation
