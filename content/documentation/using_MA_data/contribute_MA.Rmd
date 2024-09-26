@@ -41,6 +41,35 @@ Contributing to MetaLab can have several advantages both for you and the communi
 * **Increase the impact of your MA.** As an author, you probably want your results to be fully understood by readers, and you want your readers to use your data as efficiently as possible. The interactive interface of the MetaLab website allows readers to better navigate in your meta-analysis results than the paper version, and to play with the results to better use them when planning experiments. MetaLab is an opportunity for your meta-analysis to make a stronger impact.  
 * **Contribute to drawing the broader developmental picture.** You made a meta-analysis to help the community draw a clearer picture about an effect of interest and contribute to theory assessment. MetaLab is a central platform that includes over 1040 effect sizes. Incorporating your meta-analysis in this larger dataset helps the community to have a better idea of cognitive development and language acquisition.
 
+### Adding a new meta-analysis to MetaLab
+
+The following steps are needed to have your meta-analysis appear on the MetaLab website. We always recommend getting in touch with us at metalab-project@googlegroups.com or any of our [Team Members](https://langcog.github.io/metalab/team/) if you plan to add your data to MetaLab.
+
+**Step 1** 
+
+Ensure that your meta-analysis is compatible with MetaLab by using our [Validator](http://52.24.141.166:3838/data_validation/). It's possible to upload a csv or link a google spreadsheet -- the latter is more convenient because we will use a google spreadsheet for the next steps anyhow. 
+
+**Step 1b** 
+
+If your meta-analysis is not compatible due to legitimate reasons, e.g. you coded a new method that we have not yet encountered, then we need to add this information to our specifications at (spec.yaml)[https://github.com/langcog/metalab/blob/main/metadata/spec.yaml]. You can create a `pull request` and add your categories, but wait with the next steps until this change has been approved.
+
+**Step 2**
+
+Once your spreadsheet passes validation, you can add it to the site by creating a `pull request` for an updated version of our [datasets.yaml](https://github.com/langcog/metalab/blob/main/metadata/datasets.yaml) file. Make sure you follow the format of this file as to not break it. Here are a few [yaml editors](https://www.w3schools.io/file/yaml-editors/), but in principle you can use any text editor. 
+If you have questions about the fields, consult the [metadata ReadMe](https://github.com/langcog/metalab/blob/main/metadata/README.md). 
+
+Add a picture of your MA and submit your pull request. 
+
+**Step 3**
+
+Either email or ask for review from specific team members, so that your submission can be merged into the main website. Once this happens, you should see your data go live!
+
+
+
+#### FAQ
+
+Here are some frequently asked questions about contributing to MetaLab.
+
 ### Who owns the data contributed to MetaLab? 
 
 You remain the owner of your meta-analysis data: Users must cite your data by your preferred citation. If your data are previously unpublished then this doesn't count as publication. Learn more by reading our [full citation policy](/publications.html). 
