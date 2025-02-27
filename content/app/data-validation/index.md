@@ -5,4 +5,4 @@ layout: app
 weight: 200
 summary: Validate that new datasets are ready for inclusion in the MetaLab database
 ---
-<iframe src="https://metalab-shiny.com/data_validation"></iframe>
+<iframe src="//metalab-shiny.com/data_validation"></iframe>
