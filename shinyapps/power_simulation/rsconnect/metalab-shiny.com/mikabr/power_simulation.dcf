@@ -1,0 +1,12 @@
+name: power_simulation
+title: power_simulation
+username: mikabr
+account: mikabr
+server: metalab-shiny.com
+hostUrl: https://metalab-shiny.com/__api__
+appId: 2
+bundleId: 8
+url: https://metalab-shiny.com/power_simulation/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

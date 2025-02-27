@@ -2,7 +2,7 @@ ui <- shinyUI(
   fluidPage(
     sidebarLayout(
       sidebarPanel(
-        includeCSS("../common/www/custom.css"),
+        includeCSS("common/www/custom.css"),
 
         tags$style(type = "text/css",
                    ".shiny-output-error { visibility: hidden; }",

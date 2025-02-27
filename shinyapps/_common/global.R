@@ -13,10 +13,9 @@ library(DT)
 library(stringr)
 library(metalabr)
 
-metalabr:::get_cached_metalab_data(here("shinyapps", "site_data", "Rdata", "metalab.Rdata"))
+# metalabr:::get_cached_metalab_data(here("shinyapps", "site_data", "Rdata", "metalab.Rdata"))
+metalabr:::get_current_metalab_data()
 
-fields <-
-  metalabr:::get_metalab_specs()
+fields <- metalabr:::get_metalab_specs()
 
-fields_derived <-
-  metalabr:::get_metalab_derived_specs()
+fields_derived <- metalabr:::get_metalab_derived_specs()

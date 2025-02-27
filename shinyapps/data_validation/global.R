@@ -1,7 +1,7 @@
 library(here)
 ## library(googledrive)
 ## library(gargle)
-source(here("shinyapps", "common", "global.R"))
+source(here::here("common", "global.R"))
 
 get_google_sheet_id <- function(url) {
   str_match(url, "/spreadsheets/d/([a-zA-Z0-9-_]+)")[2]

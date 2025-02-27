@@ -1,0 +1,12 @@
+name: visualization
+title: visualization
+username: mikabr
+account: mikabr
+server: metalab-shiny.com
+hostUrl: https://metalab-shiny.com/__api__
+appId: 3
+bundleId: 9
+url: https://metalab-shiny.com/content/e1f3a761-0244-4a41-b656-4fe0a972a972/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

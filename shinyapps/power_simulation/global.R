@@ -1,2 +1,1 @@
-library(here)
-source(here("shinyapps", "common", "global.R"))
+source(here::here("common", "global.R"))
