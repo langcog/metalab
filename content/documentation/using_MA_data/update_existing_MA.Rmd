@@ -4,7 +4,53 @@ type: book
 weight: 150
 ---
 
-This page is under revision, access the previous tutorial [here](https://langcog.github.io/metalab2/documentation.html).
+How to update a meta-analysis (MA) already in MetaLab?
+=======================
+
+MetaLab houses *Community-Augmented Meta-Analyses* (see [here](https://journals.sagepub.com/doi/full/10.1177/1745691614552498) for the paper explaining the concept). A key feature is, in addition to all data being open and (hopefully) easy to download, that the community can 
+
+Contributions to existing MAs can take various forms:
+
+1. Adding unpublished data. Ideally we can link to a report on the data, for example on [OSF](http://osf.io). 
+2. Suggesting and/or adding published papers not yet included. 
+3. Adding moderator columns that have not yet been coded. 
+
+The process for adding this additional information -- for now -- includes vetting by the curator, but you can also contribute somewhat independently. We also provide instructions for curators below.
+
+
+**Step 1** 
+
+Download the data spreadsheet in question. You can find download links for example on top of the visualization app. 
+
+**Step 2** 
+
+Input your additional information, for example adding specific rows for new papers or unpublished data, new columns for as yet uncoded moderators, or correcting values in the spreadsheet. You can do this either by creating a google sheet based on the data you downloaded or by opening the spreadsheet with your favorite software, such as open office. 
+
+**Step 3**
+
+Run your spreadsheet through our validator, either by uploading a csv or linking a google spreadsheet. The validator checks that there are numbers where we expect numbers and specific values (e.g. "yes" or "no") where those should be. This ensures that we can automatically compute effect sizes and generate the visualization on MetaLab.
+
+**Step 4**
+
+Contact the curator. They will review your submission and take the necessary steps to upload them to MetaLab.
+
+
+### Instructions for curators
+
+If you have access to the google sheets that feed into MetaLab, you can update them yourself. The process is as follows:
+
+**Step A** 
+
+Open the correct source spreadsheet and enter the new values.
+
+**Step B** 
+
+Check that this latest version works via the [Validator](http://52.24.141.166:3838/data_validation/)
+If all checks out, you're good, otherwise revert the changes / fix the issues highlighted. 
+
+Note that we are planning version control, if you want to work on this, please get in touch, we would very much appreciate working on this together.
+
+
 
 <!--
 Add your own paper
