@@ -4,11 +4,12 @@ type: book
 weight: 100
 ---
 
-Build a MA
+
+How to conduct a meta-analysis
 =====================  
 
-## Choosing the right MA question 
-### How do I define my MA question?
+## Choosing the right question 
+### How do I define my question?
 
 ```{r exclude, include = FALSE}
 #this is your old code
@@ -32,19 +33,19 @@ embed_url("https://www.youtube.com/watch?feature=player_embedded&v=0TVSjaRsfGU")
 knitr::include_graphics("media/image04.jpg")
 ``` -->
 
-Choose the appropriate level of detail for your MA topic. The topic of your meta-analysis should be broader than the one of a single experiment (e.g. "How do babies segment words of different stress patterns? "), but narrower than a whole research field (e.g. "How do babies learn language? "). The goal is to be able to gather comparable papers, measuring consistant dependant variables, to allow you to compute a common statistical metric (i.e. effect size) from them.
+Choose the appropriate level of detail: The topic of your meta-analysis should be broader than the one of a single experiment (e.g. "How do babies segment words of different stress patterns? "), but narrower than a whole research field (e.g. "How do babies learn language? "). The goal is to be able to gather comparable papers, measuring consistant dependant variables, to allow you to compute a common statistical metric (i.e. effect size) from them.
 
-Define your population of interest precisely. Homogeneous can mean many things; age, language, typical versus atypical. You may run a meta-analysis where you accept many different levels for some of the variables and see how it affects results, defining them as MA moderators, for example seeing if effects are consistent across ages. There should still be some unifying element in your studies though so you have one broad result of your meta-analysis. 
+Define your population of interest precisely. Homogeneous can mean many things; age, language, developmental characteristics. You may run a meta-analysis where you accept many different levels for some of the variables and see how it affects results, defining them as moderators, for example seeing if effects are consistent across ages. There should still be some unifying element in your studies though so you have one broad result of your meta-analysis. 
 
-Consider the number of available studies on your topic. Your MA topic also depends on how many studies have been done on it. If you want to run a simple comparative MA, as few as two studies could be okay. But if you want to run an analysis with a lot of moderators, 5 studies probably isn't enough to warrant a meta-analysis.
+Consider the number of available studies on your topic. Your topic also depends on how many studies have been done on it. If you want to run a simple comparative meta-analysis, as few as two studies could be okay. But if you want to run an analysis with a lot of moderators, 5 studies probably isn't enough to warrant a meta-analysis.
 
-### Why should I bother keeping track of the MA creation process?
+### Why should I bother keeping track of the meta-analysis process?
 ```{r video 23, echo = FALSE}
 embed_url("https://www.youtube.com/watch?feature=player_embedded&v=FPlKC2feqNo")
 ```
 
 It is important that you build traceability of your work from the start,
-particularly since in larger MAs other people may finish up the
+particularly since in larger meta-analyses other people may finish up the
 work or you want to check later on why you decided to exclude a given
 paper. So to make sure that all of your decisions are recorded and
 clear, make a copy of this [*decision
@@ -65,7 +66,7 @@ as follows.
 ![](/media/documentation/image03.jpg){width="5in"}
 
 
-**Step 3**: Click on the blue button “Share” on the top right.
+<!--**Step 3**: Click on the blue button “Share” on the top right.
 
 **Step 4**: In the menu, click on “Get shareable link” on the top
 right
@@ -73,10 +74,10 @@ right
 **Step 5**: Copy the link and send it to us.
 
 
-![](/media/documentation/image05.jpg){width="5in"}
+![](/media/documentation/image05.jpg){width="5in"}-->
 
 
-Step 6: Clean up
+**Step 3:** Clean up
 
 The model spreadsheet contains some fake entries and notes. Our
 recommendation is, so as not to get confused, to remove the instructions
@@ -93,7 +94,7 @@ flowchart*](https://docs.google.com/presentation/d/1DKY8BTZZ82bGyGwpGsyyzsilOqE1
 rename and share as you did for your spreadsheet above. This figure
 gives you an overview of the process, and you will be filling in the
 boxes with the right numbers as you go along so that people who continue
-this MA and/or those interested in assessing this work can make sure
+this meta-analysis and/or those interested in assessing this work can make sure
 that you followed the procedure.
 
 ### Now that I have my list of related studies, how do I set my inclusion criteria?
@@ -101,10 +102,8 @@ that you followed the procedure.
 embed_url("https://www.youtube.com/watch?feature=player_embedded&v=gk3GHT_eEI8")
 ```
 
-Probably not. In this step, you will go through the initial list you put together in
-step 2, and make decisions to include/exclude papers, mostly based on
-the abstract. In addition to creating your sample for data entry (step
-4) you will start honing your *inclusion criteria*. Typically, these
+In this step, you will go through the initial list you put together based on your research question, and make decisions to include/exclude papers, mostly based on the title and
+the abstract. In addition to creating your sample for data entry you will start refining your *inclusion criteria*. Typically, these
 will include:
 
 -   **a homogeneous scientific question**: 
@@ -115,7 +114,6 @@ will include:
     > wordforms with the goal of studying word-form image association,
     > but crucially multiple images are shown at once (unlike e.g. the
     > switch procedure)”)
-
 -   **a homogeneous infant population**: 
     > Typically-developing children,
     > between the ages of XX and YY (the precise ages may stem from your
@@ -123,7 +121,13 @@ will include:
     > 36 months, the minimum to 0 months); consider whether you also
     > need to restrict the sample based on infants’ native language *on
     > theoretical reasons*
-
+-   **a homogeneous procedure**: 
+    > Only studies using behaviroal / looking time measures 
+    > You could for example limit the studies to use comparable methods
+    > to your seminal paper. 
+    > You might also want to define the types of stimuli that are relevant 
+    > to your question (e.g. artificial versus natural speech or speech
+    > versus non-speech.
 The last one is perhaps the trickiest. Staying close to your seminal
 paper will allow you to reduce the amount of variation in your sample
 due to methodological “details”, and to make it easier for yourself to
@@ -165,7 +169,7 @@ embed_url("https://www.youtube.com/watch?feature=player_embedded&v=W3LMs-XY21g")
 ```
 
 The goal of this step is to put together a list of publications that you
-will look at and consider for inclusion. In a typical MA, you make the
+will look at and consider for inclusion. In a typical meta-analysis, you make the
 most comprehensive list possible in order to answer a specific research
 question and/or to cover a given phenomenon. This typically means going
 through 1,000 abstracts, and reading in full 100 papers.
@@ -213,9 +217,9 @@ Ideally, you would enter everything: published or unpublished, proceedings or jo
 In this case, how large should your sample be? Mika and Molly have done some [simulations](https://rawgit.com/langcog/metalab/master/resampling/resampling.html) to help you decide. By and large, it looks like the more, the better -- clearly estimates get more precise (confidence intervals narrow) as more papers are entered. Based on this information, we are proposing _a minimum of 10 included experiments_ as a pragmatic first step, knowing that your estimate is not very precise.
 
 
-### How should I structure the data for my MA?
+### How should I structure the data for my meta-analysis?
 
-We are hoping that eventually all of these MAs may be included in
+We are hoping that eventually your meta-analysis may be included in
 [*MetaLab*](.), so we ask you to use the [*MA
 template*](https://docs.google.com/spreadsheets/d/12Y_2BcFSu48t0F8a_xrY1Ro2fJoCIV1h8O627WNcrjY/edit?usp=sharing)
 (create a copy, as you did in step 1), and follow the [*field specifications*](/documentation.html#field_specs).
@@ -226,7 +230,7 @@ of time, you can get started with the core characteristics only.
 Remember once more to give us viewing rights (see step 1 for
 instructions).
 
-### What are the relevant variables for a MA, and how many input rows/columns should I make?
+### What are the relevant variables for a meta-analysis, and how many input rows/columns should I make?
 ```{r video 6, echo = FALSE}
 embed_url("https://www.youtube.com/watch?feature=player_embedded&v=spge3nZqCng")
 ```
@@ -241,9 +245,9 @@ How many rows you make depends on how the results are reported. In this case, th
 
 How many rows you make depends on how the results are reported. In this case, the authors report an average outcome over both age groups, since they did not find a significant difference between the two groups. Therefore, please enter only one row and calculate the average age. If the results were reported separately per age group, make a 
 
-### How do I retrieve studies?
+### How do I enter studies?
 
-In a typical full MA, you go through the whole list and only then start
+In a typical full meta-analysis, you go through the whole results list of your search, select papers, and only then start
 entering. The procedure is as follows. Go back to your spreadsheet, and
 for each study that has been decided as a “yes” during screening, try to
 retrieve the full text for the paper as you normally would (e.g., search
@@ -282,7 +286,6 @@ designs, since most of our MAs are experimental):
     > Finally, **t or F values for the *main* effect in combination with
     > sample sizes** can be used to calculate Cohen's d. Note them
     > when available.
-
 -   **within-participant studies**: 
     > Effect sizes for this type of
     > study are calculated the **same way as in between-participant
@@ -292,12 +295,11 @@ designs, since most of our MAs are experimental):
     > within-participant variation). Since this measure is usually not
     > reported, we provide below median and range for correlations found
     > in existing MAs.
-
     -   Infant word segmentation from native speech: 0.641 (range: 0.140 to 0.921)
 
     -   Infant vowel discrimination (native and nonnative): 0.496 (range: -0.413 to 0.855)
 
-en entering papers, please remember a key thing: all analyses are done
+When entering papers, please remember a key thing: all analyses are done
 by machines, and machines cannot read text! So if a column is “numeric”,
 please do ***not*** enter things that aren’t numbers (such as text,
 spaces, \~, etc). This is particularly important for the dependent
@@ -434,128 +436,3 @@ Example MAs:
 [*Instructions for creating a
 CAMA*](https://sites.google.com/site/infantdbs/create-your-own-cama)
 (including further resources)
-
-
-
-
-
-
-
-
-
-
-
-
-
-Structure for MA  
-===============================
-### How should I structure the data for my meta-analysis?
-
-
-We are hoping that eventually all of your MAs (meta-analyses) will be included in
-[*MetaLab*](.), so we ask you to use the [*MA
-template*](https://docs.google.com/spreadsheets/d/12Y_2BcFSu48t0F8a_xrY1Ro2fJoCIV1h8O627WNcrjY/edit?usp=sharing)
-(create a copy), and follow the [*field specifications*](/documentation.html#field_specs) to ensure compatibility. (Note that right now, winter 2018, these specifications are biased towards language acquisition research. If you work on another topic, we would be thrilled if you helped us expand and adapt MetaLab).
-
-Ideally, you would code all potentially relevant moderator variables
-(e.g., experimental manipulations) in addition to the core
-characteristics (columns in red; e.g., number of participants). However, in the interest
-of time, you can get started with the core characteristics only.
-Remember once more to give us viewing rights.
-
-### What are the relevant variables for a MA, and how many input rows/columns should I make?
-
-
-```{r video 13, echo = FALSE}
-embed_url("https://www.youtube.com/watch?feature=player_embedded&v=spge3nZqCng")
-```
-
-***One of my papers has a single experiment but involves both Spanish and English speakers who are tested on a native and a nonnative speech sound contrast. Should that count as 4 experiments (2 languages x 2 contrasts)?***
-
-How many rows you make depends on how the results are reported. In this case, the authors report the outcome separately for all four groups. Therefore, please enter the four groups separately; each into their own row. You can copy over descriptions of the experiment. 
-
-***In Experiment 1, there are two age groups. Do I have to report the age for both groups or do I average both groups into one? If I have to report both groups, how do I report this in the input form?***
-
-How many rows you make depends on how the results are reported. In this case, the authors report an average outcome over both age groups, since they did not find a significant difference between the two groups. Therefore, please enter only one row and calculate the average age. If the results were reported separately per age group, make a 
-
-### How do I retrieve studies?
-
-In a typical full MA, you go through the whole list and only then start
-entering. The procedure is as follows. Go back to your spreadsheet, and
-for each study that has been decided as a “yes” during screening, try to
-retrieve the full text for the paper as you normally would (e.g., search
-through scholar.google.com; regular google; your institution’s library,
-etc.) If you cannot retrieve it, update your spreadsheet sheet
-Relevant\_studies\_search to mark this paper as “no” in column F
-entitled “Fulltext\_retrieved”. If you want, you can contact the authors
-to try to get the full text from them, in which case you can note this
-on column G.
-
-If you do find the full text, go through the paper to find the first
-experiment reported. You will enter all experiments and conditions one
-at a time, and fill in their information in the MA spreadsheet you
-created in step 4.
-
-### How do I enter and code relevant studies?
-```{r video 21, echo = FALSE}
-embed_url("https://www.youtube.com/watch?feature=player_embedded&v=OQ5m5YZE57M")
-```
-
-IMPORTANT: You should work backwards from the **results** section: look
-at what dependent measures are reported fully enough that you will be
-able to extract an effect size from them. 
-
-The following information
-allows one to calculate an effect size (we are sticking to experimental
-designs, since most of our MAs are experimental):
-
--   **between-participant studies**:   
-    > Means and SDs (not SEs!) of the dependent variable for each infant group are all that is required for the calculation of Cohen's *d*. Sometimes, means and SDs are not available as numbers. If there are clear figures, you can try to estimate means and SDs using [**this online app**](http://arohatgi.info/WebPlotDigitizer/) or [**the R package metaDigitise**](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13118). If you decide to estimate values from figures, add a column to keep track of this. Finally, **t or F values for the *main* effect in combination with sample sizes** can be used to calculate Cohen's *d*. Note them when available.
-
--   **within-participant studies**:    
-    > Effect sizes for this type of study are calculated the **same way as in between-participant studies**, but in order to calculate the weight of these studies the **correlation** between the first and second measurements is required (to account for the amount of within-participant variation). Since this measure is usually not reported, we provide below median and range for correlations found in existing MAs.
-
-    -   Infant word segmentation from native speech: 0.641 (range: 0.140 to 0.921)
-
-    -   Infant vowel discrimination (native and nonnative): 0.496 (range: -0.413 to 0.855)
-
-When entering papers, please remember a key thing: all analyses are done
-by machines, and machines cannot read text! So if a column is “numeric”,
-please do ***not*** enter things that aren’t numbers (such as text,
-spaces, \~, etc). This is particularly important for the dependent
-measures!
-
-At this stage, you might find that a given paper does not contain the
-right information for being included. In this case, you can and should
-exclude it. If you have already started entering it, you can leave the
-information you entered and put in “comments” that the entry is
-incomplete (although if you followed our advice above, you won’t have
-wasted time entering it!). Remember to update your spreadsheet with each
-paper you read and made a decision on.
-
-
-***The article I enter has 3 experiments, and the first is with adult participants. Do I need to enter this experiment?***
-
-No, please only enter the infant/child experiments
-
-### What level of detail should I report?
-***The sound stimuli differ approx. 6 ms in length, but the experiment is not about length differences. Do I have to report this difference although it is very small?***
-
-In case there’s a column for stimulus length, please report it. You are right that this experiment is not about length differences, but having the information cannot hurt, and eventual analyses will reflect that the difference is very small.
-
-***The article reports a table with the lengths of each individual stimulus. Should I calculate and report the average value?***
-
-Yes, please report the averaged value in the appropriate column. 
-
-***I am entering an article with the HAS method. The authors report results for both the 2 and 4 minutes after the test phase has started. Your example only reports the results after 2 minutes, but would you still want me to report both?***
-
-It is often the case that articles report more than one type of result. Please just report the ones that we also provide in the example file!
-
-
-
-
-
-
-
-Regression and moderator analysis  
-===============================
