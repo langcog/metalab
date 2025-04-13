@@ -38,12 +38,12 @@ jobs:
     - run: tar -zcvf metalab-shinyapps.tar.gz shinyapps
     - run: tar -zcvf metalab-site.tar.gz public
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v4
       with:
         name: metalab-shiny-apps
         path: ./metalab-shinyapps.tar.gz
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v4
       with:
         name: metalab-site
         path: ./metalab-site.tar.gz
