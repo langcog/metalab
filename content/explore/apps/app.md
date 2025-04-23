@@ -65,21 +65,21 @@ subtitle = ""
 +++
 
 <h3>
-<a href="http://52.24.141.166:3838/power_analysis/" target="_blank">Power Analysis</a>
+<a href="//metalab-shiny.com/power_analysis/" target="_blank">Power Analysis</a>
 </h3>
 Analyzes power of your experiment under a variety of conditions
 
 <h3>
-<a href="http://52.24.141.166:3838/power_simulation/" target="_blank">Power Simulation</a>
+<a href="//metalab-shiny.com/power_simulation/" target="_blank">Power Simulation</a>
 </h3>
 Simulate power of meta-analyses under a variety of conditions
 
 <h3>
-<a href="http://52.24.141.166:3838/visualization/" target="_blank">Visualization</a>
+<a href="//metalab-shiny.com/visualization/" target="_blank">Visualization</a>
 </h3>
 Explore a variety of interactive charts driven by the MetaLab database by your datasets and moderators
 
 <h3>
-<a href="http://52.24.141.166:3838/data_validation/" target="_blank">Validation</a>
+<a href="//metalab-shiny.com/data_validation/" target="_blank">Validation</a>
 </h3>
 Validate that new datasets are ready for inclusion in the MetaLab database
