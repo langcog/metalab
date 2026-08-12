@@ -1,0 +1,168 @@
+---
+title: "Power Simulation"
+toc: false
+---
+
+What does an infant looking-time experiment look like when the true effect is
+known? Simulate an experiment: pick a sample size and a true effect size,
+then see whether the simulated study comes out significant. Resample to feel
+how much results vary — especially at small N.
+
+{{< include components/_stats.qmd >}}
+{{< include components/_style.qmd >}}
+
+```{ojs sim-constants}
+//| output: false
+sim_mu = 10
+sim_sd = 5
+sim_colors = ({ "Longer looking predicted": "#cb4b16", "Shorter looking predicted": "#268bd2" })
+```
+
+:::: {.viz-layout}
+
+::: {.viz-sidebar}
+
+```{ojs sim-inputs}
+viewof sim_n = Inputs.range([4, 120], { label: "Infants per group (N)", step: 2, value: 16 })
+
+viewof sim_d = Inputs.range([0, 2], { label: "Effect size (Cohen's d)", step: 0.1, value: 0.5 })
+
+viewof sim_control = Inputs.radio(
+  new Map([["Experimental only", false], ["Experimental & control", true]]),
+  { label: "Conditions", value: false })
+
+viewof sim_interval = Inputs.radio(
+  new Map([["95% confidence interval", "ci"], ["Standard error of the mean", "sem"]]),
+  { label: "Error bars", value: "ci" })
+
+viewof sim_plot_type = Inputs.radio(["Bar graph", "Scatter plot"], {
+  label: "Plot type", value: "Bar graph" })
+
+viewof sim_go = Inputs.button("Sample again")
+```
+
+:::
+
+::: {.viz-main}
+
+```{ojs sim-data}
+//| output: false
+sim_cells = {
+  sim_go;  // re-run on button press
+  const groups = sim_control ? ["Experimental", "Control"] : ["Experimental"];
+  const conds = ["Longer looking predicted", "Shorter looking predicted"];
+  const cells = [];
+  for (const g of groups) {
+    for (const c of conds) {
+      // true effect only in the experimental group's "longer" condition,
+      // matching the legacy app (which, however, accidentally duplicated
+      // every draw when the control group was on -- fixed here)
+      const mu = g === "Experimental" && c === "Longer looking predicted"
+        ? sim_mu + (sim_d * sim_sd) / 2
+        : sim_mu - (sim_d * sim_sd) / 2;
+      cells.push({ group: g, condition: c, values: rnorm(sim_n, mu, sim_sd) });
+    }
+  }
+  return cells;
+}
+
+sim_points = sim_cells.flatMap((c) =>
+  c.values.map((v) => ({ group: c.group, condition: c.condition, looking_time: v })))
+
+sim_summary = sim_cells.map((c) => {
+  const m = mean_(c.values);
+  const sem = sd_(c.values) / Math.sqrt(c.values.length);
+  const half = sim_interval === "sem" ? sem : qt975(c.values.length - 1) * sem;
+  return { group: c.group, condition: c.condition, mean: m,
+           lo: m - half, hi: m + half };
+})
+```
+
+#### Simulated data
+
+```{ojs sim-plot}
+sim_plot = {
+  // dodged layout on a continuous x: group centers at 1, 2; conditions
+  // offset ±0.22 within group (band scales in Plot don't dodge)
+  const groups = sim_control ? ["Experimental", "Control"] : ["Experimental"];
+  const conds = Object.keys(sim_colors);
+  const xpos = (g, c) => groups.indexOf(g) + 1 + (conds.indexOf(c) === 0 ? -0.22 : 0.22);
+  const summary = sim_summary.map((d) => ({ ...d, x: xpos(d.group, d.condition) }));
+  const points = sim_points.map((d) => ({
+    ...d, x: xpos(d.group, d.condition) + (Math.random() - 0.5) * 0.12 }));
+  const ymax = Math.max(20, d3.max(summary, (d) => d.hi),
+    sim_plot_type === "Bar graph" ? 0 : d3.max(points, (d) => d.looking_time));
+  const ymin = sim_plot_type === "Bar graph" ? 0 :
+    Math.min(0, d3.min(points, (d) => d.looking_time));
+  return Plot.plot({
+    width: 720, height: 420,
+    marginLeft: 55,
+    x: { label: null, domain: [0.4, groups.length + 0.6],
+         ticks: groups.map((g, i) => i + 1),
+         tickFormat: (t) => groups[t - 1] ?? "" },
+    y: { label: "Simulated looking time (s)", domain: [ymin, ymax] },
+    color: { domain: conds, range: Object.values(sim_colors), legend: true },
+    marks: [
+      sim_plot_type === "Bar graph"
+        ? Plot.rect(summary, { x1: (d) => d.x - 0.18, x2: (d) => d.x + 0.18,
+            y1: 0, y2: "mean", fill: "condition" })
+        : Plot.dot(points, { x: "x", y: "looking_time", fill: "condition",
+            fillOpacity: 0.45, r: 3.5 }),
+      Plot.ruleX(summary, { x: "x", y1: "lo", y2: "hi", stroke: "black",
+        strokeWidth: 1.5 }),
+      sim_plot_type === "Bar graph" ? null :
+        Plot.ruleY(summary, { y: "mean", x1: (d) => d.x - 0.15,
+          x2: (d) => d.x + 0.15, stroke: "black", strokeWidth: 2 })
+    ].filter(Boolean)
+  });
+}
+```
+
+```{ojs sim-stats-text}
+sim_stats = {
+  const cell = (g, c) => sim_cells.find((x) => x.group === g && x.condition === c).values;
+  const p_exp = paired_t_p(cell("Experimental", "Longer looking predicted"),
+                           cell("Experimental", "Shorter looking predicted"));
+  const fmt = (p) => p < 0.001 ? p.toExponential(2) : p.toFixed(3);
+  let out = `A paired t test of the experimental condition is
+    <b>${p_exp < 0.05 ? "significant" : "non-significant"}</b> at p = ${fmt(p_exp)}.`;
+  if (sim_control) {
+    const p_ctl = paired_t_p(cell("Control", "Longer looking predicted"),
+                             cell("Control", "Shorter looking predicted"));
+    out += ` The control condition is ${p_ctl < 0.05 ? "significant" : "non-significant"}
+      at p = ${fmt(p_ctl)}.`;
+    // 2x2 ANOVA interaction (equal cell sizes)
+    const cells = sim_cells;
+    const all = cells.flatMap((c) => c.values);
+    const gm = mean_(all);
+    const n = sim_n;
+    const cellMeans = cells.map((c) => mean_(c.values));
+    const gMeans = ["Experimental", "Control"].map((g) =>
+      mean_(cells.filter((c) => c.group === g).flatMap((c) => c.values)));
+    const cMeans = ["Longer looking predicted", "Shorter looking predicted"].map((cc) =>
+      mean_(cells.filter((c) => c.condition === cc).flatMap((c) => c.values)));
+    let ss_int = 0;
+    cells.forEach((c) => {
+      const gi = c.group === "Experimental" ? 0 : 1;
+      const ci = c.condition === "Longer looking predicted" ? 0 : 1;
+      const dev = mean_(c.values) - gMeans[gi] - cMeans[ci] + gm;
+      ss_int += n * dev * dev;
+    });
+    let ss_w = 0;
+    cells.forEach((c) => {
+      const m = mean_(c.values);
+      c.values.forEach((v) => ss_w += (v - m) * (v - m));
+    });
+    const df_w = 4 * n - 4;
+    const F = (ss_int / 1) / (ss_w / df_w);
+    const p_int = f_pvalue(F, 1, df_w);
+    out += ` A group × condition ANOVA ${p_int < 0.05 ? "shows" : "does not show"}
+      a significant interaction at p = ${fmt(p_int)}.`;
+  }
+  return html`<p style="font-size: 1.05rem;">${html([out])}</p>`;
+}
+```
+
+:::
+
+::::

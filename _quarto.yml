@@ -19,12 +19,23 @@ website:
         text: Datasets
       - href: explorer.qmd
         text: Visualizations
+      - text: Tools
+        menu:
+          - href: power-analysis.qmd
+            text: Power Analysis
+          - href: power-simulation.qmd
+            text: Power Simulation
+          - href: validator.qmd
+            text: Dataset Validator
       - href: publications.qmd
         text: Publications
       - href: team.qmd
         text: Team
       - href: about.qmd
         text: About
+    right:
+      - href: news.qmd
+        text: Changelog
   page-footer:
     center: |
       [![Creative Commons Attribution 4.0 license](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)<br>

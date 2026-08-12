@@ -3,9 +3,9 @@ title: "Visualizations"
 toc: false
 ---
 
-Explore any MetaLab dataset interactively: effect sizes across age, and a
-funnel plot for publication-bias diagnostics. Pick a dataset and an
-effect-size measure; data loads in your browser.
+Explore any MetaLab dataset interactively: effect sizes across age, moderator
+analyses, funnel and forest plots, and the underlying multilevel meta-analytic
+model — all computed from the released data.
 
 {{< include components/_spinner.qmd >}}
 {{< include components/_loess.qmd >}}
@@ -14,8 +14,6 @@ effect-size measure; data loads in your browser.
 
 ```{ojs setup}
 //| output: false
-// Plot, d3, Inputs, htl all come bundled with Quarto's OJS runtime -- no
-// external CDN imports (they hang in CSP-restricted environments)
 registry = d3.json("slices/datasets.json")
 
 es_choices = new Map([
@@ -24,15 +22,23 @@ es_choices = new Map([
 
 es_labels = ({ g: "Hedges' g", d: "Cohen's d", r: "Pearson's r", log_odds: "Log odds" })
 
-solar_blue = "#268bd2"
+solarized = ["#268bd2", "#cb4b16", "#859900", "#6c71c4", "#2aa198", "#b58900",
+  "#d33682", "#dc322f"]
 
 domain_titles = new Map([
   ["early_language", "Early language"],
   ["cognitive_development", "Cognitive development"]
 ])
 
+standard_mods = ["mean_age", "response_mode", "exposure_phase"]
+
+mod_labels = ({ mean_age: "Age", response_mode: "Response mode",
+  exposure_phase: "Exposure phase" })
+
 url_dataset = new URLSearchParams(location.search).get("dataset")
 ```
+
+{{< include components/_model.qmd >}}
 
 :::: {.viz-layout}
 
@@ -68,10 +74,66 @@ viewof subset_choice = {
     value: "All data"
   });
 }
+```
+
+```{ojs load-slice}
+//| output: false
+slice_all = d3.json(`slices/es/${dataset_meta.short_name}.json`)
+
+models_all = d3.json(`slices/models/${dataset_meta.short_name}.json`)
+
+slice = subset_choice === "All data"
+  ? slice_all
+  : slice_all.filter((d) => d[subset_choice] === true)
+
+es_col = `${es_type}_calc`
+es_var_col = `${es_type}_var_calc`
+
+// legacy app filters: age < 4000 days; ES + variance defined for this type
+plot_data = slice.filter((d) =>
+  (d.mean_age_months === null || +d.mean_age_months < 4000 / 30.44) &&
+  Number.isFinite(+d[es_col]) && Number.isFinite(+d[es_var_col]))
+
+// moderator pool mirrors the precompute: standard + dataset-specific
+// moderators with >1 observed value in the current subset
+mod_pool = {
+  const custom = (dataset_meta.moderators ?? []).map(String);
+  const pool = [...new Set([...standard_mods, ...custom])];
+  return pool.filter((m) => {
+    const vals = new Set(plot_data.map((d) => d[m]).filter((v) => v !== null && v !== undefined && v !== ""));
+    return vals.size > 1;
+  });
+}
+```
+
+```{ojs inputs-mods}
+viewof moderators_raw = Inputs.checkbox(mod_pool, {
+  label: "Moderators (up to 3)",
+  format: (m) => mod_labels[m] ?? m.replace(/_/g, " ")
+})
+
+moderators = moderators_raw.slice(0, 3)
+
+mod_warning = moderators_raw.length > 3
+  ? html`<div style="color:#a15c00; font-size:0.8rem;">Only the first three
+      selected moderators are used — precomputed models cover up to three.</div>`
+  : html``
+```
+
+```{ojs inputs-curve}
+categorical_mods = {
+  // a moderator is categorical unless its values are numeric (mirrors the
+  // legacy spec-type test; mean_age and num_trials-style mods are numeric)
+  return moderators.filter((m) => {
+    const vals = plot_data.map((d) => d[m]).filter((v) => v !== null && v !== "");
+    return !vals.every((v) => Number.isFinite(+v));
+  });
+}
 
 viewof curve_type = Inputs.radio(new Map([["LOESS", "loess"], ["Linear", "lm"]]), {
   label: "Smoothing curve",
-  value: "loess"
+  value: categorical_mods.length > 0 ? "lm" : "loess",
+  disabled: categorical_mods.length > 0
 })
 ```
 
@@ -89,35 +151,56 @@ html`<div style="font-size: 0.82rem; color: #555; margin-top: 0.75rem;">
 
 ::: {.viz-main}
 
-```{ojs load-slice}
+```{ojs model-lookup}
 //| output: false
-slice_all = d3.json(`slices/es/${dataset_meta.short_name}.json`)
+// rows for the moderated analyses drop missing values on selected moderators
+// (legacy mod_data()); the no-moderator model drives the summary boxes
+mod_data = plot_data.filter((d) => moderators.every((m) =>
+  d[m] !== null && d[m] !== undefined && d[m] !== ""))
 
-slice = subset_choice === "All data"
-  ? slice_all
-  : slice_all.filter((d) => d[subset_choice] === true)
+mods_key = mod_pool.filter((m) => moderators.includes(m)).join(",")
 
-es_col = `${es_type}_calc`
-es_var_col = `${es_type}_var_calc`
+combo = models_all[`${subset_choice}|${es_type}|${mods_key}`]
 
-// rows with a defined ES of the selected type and (for the scatter) age;
-// mean_age < 4000 days ~ 131.4 months, matching the legacy app's filter
-plot_data = slice.filter((d) =>
-  Number.isFinite(+d[es_col]) && Number.isFinite(+d[es_var_col]))
-age_data = plot_data.filter((d) =>
-  Number.isFinite(+d.mean_age_months) && +d.mean_age_months < 4000 / 30.44)
+combo_nomod = models_all[`${subset_choice}|${es_type}|`]
+
+// group column for coloring: combined categorical moderators
+mod_group_of = (d) => categorical_mods.length === 0 ? "all"
+  : categorical_mods.map((m) => d[m]).join(" / ")
+
+mod_groups = [...new Set(mod_data.map(mod_group_of))].sort()
+
+group_color = new Map(mod_groups.map((g, i) => [g, mod_groups.length === 1 ? "#268bd2" : solarized[i % solarized.length]]))
+
+// fitted value + CI per row from the precomputed coefficients
+row_predictions = {
+  if (!combo || !combo.converged) return null;
+  const V = unpack_vcov(combo.vcov_lower, combo.coefs.length);
+  const est = combo.coefs.map((c) => c.est);
+  return mod_data.map((d) => {
+    const X = design_row(d, combo, moderators);
+    const fit = dot(X, est);
+    const se = Math.sqrt(Math.max(quad_form(X, V), 0));
+    return { fit, ci_lb: fit - 1.959964 * se, ci_ub: fit + 1.959964 * se };
+  });
+}
 ```
 
 ```{ojs value-boxes}
-model_note = {
+value_boxes = {
   clear_loading();
-  const wmean = d3.sum(plot_data, (d) => +d[es_col] / +d[es_var_col]) /
-    d3.sum(plot_data, (d) => 1 / +d[es_var_col]);
+  const est = combo_nomod?.coefs?.[0];
+  const k_note = combo && combo.k !== mod_data.length
+    ? html`<div style="color:#c62828; font-size:0.75rem;">row-count mismatch vs precompute (${combo.k} vs ${mod_data.length})</div>`
+    : "";
   return html`<div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
     <div class="value-box"><div class="vb-value">${plot_data.length}</div>
       <div class="vb-label">Conditions</div></div>
-    <div class="value-box"><div class="vb-value">${wmean.toFixed(2)}</div>
-      <div class="vb-label">Weighted mean ${es_labels[es_type]}<br>(multilevel model: coming soon)</div></div>
+    <div class="value-box"><div class="vb-value">${est ? est.est.toFixed(2) : "—"}</div>
+      <div class="vb-label">Meta-analytic effect size<br>(multilevel REML)</div></div>
+    <div class="value-box"><div class="vb-value">${est ? est.se.toFixed(2) : "—"}</div>
+      <div class="vb-label">Effect size SE</div></div>
+    ${k_note}
   </div>`;
 }
 ```
@@ -134,24 +217,33 @@ scatter_plot = {
     return html`<p style="color:#777;"><em>This is a longitudinal dataset;
       effect sizes do not correspond to single test ages, so the age scatter
       is not shown.</em></p>`;
+  const data = mod_data.filter((d) => Number.isFinite(+d.mean_age_months));
   const inv_var = (d) => 1 / Math.max(+d[es_var_col], 1e-9);
-  const curve = curve_type === "loess"
-    ? loess_points(age_data, { x: "mean_age_months", y: es_col, w: inv_var, span: 1 })
-    : wls_points(age_data, { x: "mean_age_months", y: es_col, w: inv_var });
+  const groups = categorical_mods.length === 0 ? ["all"] : mod_groups;
+  const curves = groups.flatMap((g) => {
+    const rows = g === "all" ? data : data.filter((d) => mod_group_of(d) === g);
+    const pts = curve_type === "loess"
+      ? loess_points(rows, { x: "mean_age_months", y: es_col, w: inv_var, span: 1 })
+      : wls_points(rows, { x: "mean_age_months", y: es_col, w: inv_var });
+    return pts.map((p) => ({ ...p, group: g }));
+  });
   return Plot.plot({
-    width: 750, height: 420,
+    width: 780, height: 430,
     marginLeft: 55,
     x: { label: "Mean subject age (months)" },
     y: { label: `Effect size (${es_labels[es_type]})` },
+    color: { legend: categorical_mods.length > 0,
+             domain: groups, range: groups.map((g) => group_color.get(g)) },
     marks: [
       Plot.ruleY([0], { strokeDasharray: "4,3", stroke: "#999" }),
-      Plot.dot(age_data, {
+      Plot.dot(data, {
         x: "mean_age_months", y: es_col, r: (d) => Math.sqrt(+d.n || 1),
-        fill: solar_blue, fillOpacity: 0.5,
+        fill: (d) => mod_group_of(d), fillOpacity: 0.5,
         title: (d) => `${d.short_cite}\nexpt ${d.expt_num ?? ""} · n=${d.n}\n${es_labels[es_type]} = ${(+d[es_col]).toFixed(2)}`,
         tip: true
       }),
-      Plot.line(curve, { x: "mean_age_months", y: es_col, stroke: solar_blue, strokeWidth: 2 })
+      Plot.line(curves, { x: "mean_age_months", y: es_col, z: "group",
+        stroke: "group", strokeWidth: 2 })
     ]
   });
 }
@@ -160,16 +252,228 @@ scatter_plot = {
 ## Table
 
 ```{ojs scatter-table}
-Inputs.table(plot_data.map((d) => ({
+Inputs.table(mod_data.map((d) => ({
   study: d.short_cite, expt: d.expt_num, n: d.n,
-  age_months: +(+d.mean_age_months).toFixed(1),
+  age_months: d.mean_age_months === null ? null : +(+d.mean_age_months).toFixed(1),
   es: +(+d[es_col]).toFixed(3), es_var: +(+d[es_var_col]).toFixed(4),
-  method: d.method, exposure: d.exposure_phase
+  ...Object.fromEntries(moderators.map((m) => [m, d[m]]))
 })), { rows: 18 })
 ```
 
 ```{ojs scatter-download}
-download_csv(plot_data, `${dataset_meta.short_name}_${es_type}.csv`)
+download_csv(mod_data, `${dataset_meta.short_name}_${es_type}.csv`)
+```
+
+:::
+
+#### Violin plot of effect-size density
+
+::: {.panel-tabset}
+
+## Plot
+
+```{ojs violin}
+violin_plot = {
+  const groups = categorical_mods.length === 0 ? ["all"] : mod_groups;
+  const centers = new Map(groups.map((g, i) => [g, i + 1]));
+  // gaussian KDE per group over the ES values
+  const violins = [];
+  for (const g of groups) {
+    const vals = (g === "all" ? mod_data : mod_data.filter((d) => mod_group_of(d) === g))
+      .map((d) => +d[es_col]).filter(Number.isFinite).sort(d3.ascending);
+    if (vals.length < 2) continue;
+    const sd = d3.deviation(vals) || 0.1;
+    const iqr = (d3.quantile(vals, 0.75) - d3.quantile(vals, 0.25)) / 1.349 || sd;
+    const bw = 0.9 * Math.min(sd, iqr) * Math.pow(vals.length, -0.2) || 0.1;
+    const lo = vals[0] - 3 * bw, hi = vals[vals.length - 1] + 3 * bw;
+    const grid = d3.range(lo, hi, (hi - lo) / 80);
+    let dens = grid.map((x) => ({
+      x, d: d3.mean(vals, (v) => Math.exp(-0.5 * ((x - v) / bw) ** 2)) / (bw * Math.sqrt(2 * Math.PI))
+    }));
+    const dmax = d3.max(dens, (p) => p.d) || 1;
+    dens.forEach((p) => violins.push({ group: g, es: p.x, off: 0.42 * p.d / dmax }));
+  }
+  const jittered = mod_data.map((d) => ({
+    es: +d[es_col], group: mod_group_of(d),
+    y: centers.get(mod_group_of(d)) + (Math.random() - 0.5) * 0.25,
+    cite: d.short_cite, expt: d.expt_num
+  }));
+  return Plot.plot({
+    width: 780, height: Math.max(200, groups.length * 130 + 70),
+    marginLeft: 120,
+    x: { label: `Effect size (${es_labels[es_type]})` },
+    y: { domain: [0.4, groups.length + 0.6],
+         ticks: groups.map((g, i) => i + 1),
+         tickFormat: (t) => {
+           const g = groups[t - 1] ?? "";
+           return g === "all" ? "all data" : g;
+         },
+         label: null },
+    color: { domain: groups, range: groups.map((g) => group_color.get(g)) },
+    marks: [
+      Plot.ruleX([0], { strokeDasharray: "4,3", stroke: "#999" }),
+      Plot.areaY(violins, { x: "es",
+        y1: (d) => centers.get(d.group) - d.off,
+        y2: (d) => centers.get(d.group) + d.off,
+        z: "group", fill: "group", fillOpacity: 0.4, curve: "basis" }),
+      Plot.dot(jittered, { x: "es", y: "y", fill: "group", r: 2.5,
+        fillOpacity: 0.6,
+        title: (d) => `${d.cite}\nexpt ${d.expt ?? ""}`, tip: true })
+    ]
+  });
+}
+```
+
+## Table
+
+```{ojs violin-table}
+Inputs.table(mod_groups.length === 0 ? [] :
+  [...d3.rollup(mod_data,
+    (v) => ({
+      n: v.length,
+      median: d3.median(v, (d) => +d[es_col]),
+      mean: d3.mean(v, (d) => +d[es_col]),
+      sd: d3.deviation(v, (d) => +d[es_col])
+    }),
+    mod_group_of)].map(([g, s]) => ({
+      group: g === "all" ? "all data" : g, n: s.n,
+      median: +s.median.toFixed(3), mean: +s.mean.toFixed(3),
+      sd: s.sd === undefined ? null : +s.sd.toFixed(3)
+    })), { rows: 12 })
+```
+
+:::
+
+#### Forest plot
+
+::: {.panel-tabset}
+
+## Plot
+
+```{ojs forest-controls}
+viewof forest_sort = Inputs.select(
+  new Map([["weight (1/variance)", "variances"], ["effect size", "effects"],
+    ["model estimate", "estimate"], ["alphabetical", "study_ID"],
+    ["chronological", "year"]]),
+  { label: "Sort by", value: "variances" })
+```
+
+```{ojs forest}
+forest_plot = {
+  if (!combo || !combo.converged || !row_predictions)
+    return html`<p style="color:#777;"><em>No converged model for this
+      selection${combo?.error ? ` (${combo.error})` : ""}.</em></p>`;
+  const labels = make_unique(mod_data.map((d) => d.short_cite ?? d.study_ID));
+  let rows = mod_data.map((d, i) => ({
+    label: labels[i],
+    effect: +d[es_col],
+    var: +d[es_var_col],
+    se: Math.sqrt(+d[es_var_col]),
+    weight: 1 / Math.max(+d[es_var_col], 1e-9),
+    estimate: row_predictions[i].fit,
+    est_lb: row_predictions[i].ci_lb,
+    est_ub: row_predictions[i].ci_ub,
+    group: mod_group_of(d),
+    study_ID: d.study_ID, year: d.year === "Inf" ? Infinity : +d.year,
+    expt: d.expt_num
+  }));
+  const keys = ({ variances: (d) => -d.weight, effects: (d) => -d.effect,
+    estimate: (d) => -d.estimate, study_ID: (d) => d.study_ID,
+    year: (d) => d.year });
+  rows = d3.sort(rows, keys[forest_sort]);
+  return Plot.plot({
+    width: 780, height: Math.max(220, rows.length * 13 + 90),
+    marginLeft: 210,
+    x: { label: `Effect size (${es_labels[es_type]})` },
+    y: { domain: rows.map((d) => d.label), label: null,
+         tickSize: 0 },
+    color: { domain: mod_groups.length ? mod_groups : ["all"],
+             range: (mod_groups.length ? mod_groups : ["all"]).map((g) => group_color.get(g)) },
+    marks: [
+      Plot.ruleX([0], { strokeDasharray: "4,3", stroke: "#999" }),
+      Plot.ruleY(rows, { y: "label", x1: (d) => d.effect - 1.959964 * d.se,
+        x2: (d) => d.effect + 1.959964 * d.se, stroke: "#333" }),
+      Plot.dot(rows, { y: "label", x: "effect",
+        r: (d) => 1 + 2 * Math.sqrt(d.weight / d3.max(rows, (r) => r.weight)),
+        fill: "#333",
+        title: (d) => `${d.label}\nexpt ${d.expt ?? ""}\nes = ${d.effect.toFixed(2)} [${(d.effect - 1.959964 * d.se).toFixed(2)}, ${(d.effect + 1.959964 * d.se).toFixed(2)}]`,
+        tip: true }),
+      Plot.ruleY(rows, { y: "label", x1: "est_lb", x2: "est_ub",
+        stroke: "group", strokeOpacity: 0.85 }),
+      Plot.dot(rows, { y: "label", x: "estimate", symbol: "triangle",
+        fill: "group", r: 3.5 })
+    ]
+  });
+}
+```
+
+## Table
+
+```{ojs forest-table}
+!combo || !combo.converged || !row_predictions ? html`` : Inputs.table(
+  mod_data.map((d, i) => ({
+    study: d.short_cite, expt: d.expt_num,
+    es: +(+d[es_col]).toFixed(3),
+    se: +Math.sqrt(+d[es_var_col]).toFixed(3),
+    model_estimate: +row_predictions[i].fit.toFixed(3)
+  })), { rows: 18 })
+```
+
+:::
+
+#### Meta-analytic model summary
+
+::: {.panel-tabset}
+
+## Plot
+
+```{ojs model-summary-plot}
+model_summary_plot = {
+  if (!combo || !combo.converged)
+    return html`<p style="color:#777;"><em>No converged model for this selection.</em></p>`;
+  const pretty = (name) => {
+    if (name === "intrcpt") return "intercept";
+    for (const m of Object.keys(combo.levels ?? {}))
+      if (name.startsWith(m)) return `${m.replace(/_/g, " ")}: ${name.slice(m.length)}`;
+    return name.replace(/_/g, " ");
+  };
+  const rows = combo.coefs.map((c) => ({ ...c, label: pretty(c.name) }));
+  return Plot.plot({
+    width: 780, height: Math.max(140, rows.length * 34 + 70),
+    marginLeft: 210,
+    x: { label: `Coefficient (${es_labels[es_type]})` },
+    y: { domain: rows.map((d) => d.label), label: null },
+    marks: [
+      Plot.ruleX([0], { strokeDasharray: "4,3", stroke: "#999" }),
+      Plot.ruleY(rows, { y: "label", x1: "ci_lb", x2: "ci_ub", stroke: "#333" }),
+      Plot.dot(rows, { y: "label", x: "est", fill: "#333", r: 4,
+        title: (d) => `${d.label}\n${d.est.toFixed(3)} [${d.ci_lb.toFixed(3)}, ${d.ci_ub.toFixed(3)}]\np ${fmt_p(d.pval)}`,
+        tip: true })
+    ]
+  });
+}
+```
+
+## Model
+
+```{ojs model-summary-table}
+model_summary_table = {
+  if (!combo || !combo.converged) return html``;
+  const tab = Inputs.table(combo.coefs.map((c) => ({
+    coefficient: c.name === "intrcpt" ? "intercept" : c.name,
+    estimate: +c.est.toFixed(4), se: +c.se.toFixed(4),
+    z: +c.zval.toFixed(3), p: +c.pval.toFixed(4),
+    ci_lower: +c.ci_lb.toFixed(4), ci_upper: +c.ci_ub.toFixed(4)
+  })), { rows: 12 });
+  return html`<div>
+    <p style="font-size:0.85rem; color:#555;">Multilevel random-effects model
+    (REML) with effect sizes nested in infant groups nested in papers:
+    <code>rma.mv(yi, vi, random = ~1 | paper / infant group / row)</code>,
+    k = ${combo.k}. Variance components σ²:
+    ${combo.sigma2.map((s) => s.toFixed(3)).join(" (paper), ") }
+    ${combo.sigma2.length === 3 ? "(paper, infant group, row)" : ""}.</p>
+    ${tab}</div>`;
+}
 ```
 
 :::
@@ -182,35 +486,52 @@ download_csv(plot_data, `${dataset_meta.short_name}_${es_type}.csv`)
 
 ```{ojs funnel}
 funnel_plot = {
-  const pts = plot_data.map((d) => ({
-    es: +d[es_col], se: Math.sqrt(+d[es_var_col]),
-    cite: d.short_cite, expt: d.expt_num
-  }));
-  const center = d3.mean(pts, (d) => d.es);
+  const residual = moderators.length > 0 && combo && combo.converged && row_predictions;
+  const pts = residual
+    ? mod_data.map((d, i) => ({
+        es: +d[es_col] - row_predictions[i].fit,
+        se: Math.sqrt(+d[es_var_col] + d3.sum(combo.sigma2)),
+        cite: d.short_cite, expt: d.expt_num, group: mod_group_of(d) }))
+    : plot_data.map((d) => ({
+        es: +d[es_col], se: Math.sqrt(+d[es_var_col]),
+        cite: d.short_cite, expt: d.expt_num, group: "all" }));
+  const center = residual ? 0 : d3.mean(pts, (d) => d.es);
   const L = 1.05 * d3.max(pts, (d) => d.se);
-  // funnel triangles: at depth se, the z% region spans center ± z*se
   const grid = d3.range(0, L * 1.0001, L / 60);
-  const tri95 = grid.map((s) => ({ se: s, x1: center - 1.96 * s, x2: center + 1.96 * s }));
-  const tri99 = grid.map((s) => ({ se: s, x1: center - 2.58 * s, x2: center + 2.58 * s }));
-  const xmin = Math.min(center - 2.58 * L, d3.min(pts, (d) => d.es));
-  const xmax = Math.max(center + 2.58 * L, d3.max(pts, (d) => d.es));
+  const tri95 = grid.map((s) => ({ se: s, x1: center - 1.959964 * s, x2: center + 1.959964 * s }));
+  const tri99 = grid.map((s) => ({ se: s, x1: center - 2.575829 * s, x2: center + 2.575829 * s }));
+  const xmin = Math.min(center - 2.575829 * L, d3.min(pts, (d) => d.es));
+  const xmax = Math.max(center + 2.575829 * L, d3.max(pts, (d) => d.es));
+  const groups = residual && mod_groups.length ? mod_groups : ["all"];
   return Plot.plot({
-    width: 750, height: 420,
+    width: 780, height: 430,
     marginLeft: 55,
-    x: { label: `Effect size (${es_labels[es_type]})`, domain: [xmin, xmax] },
-    y: { label: "Standard error", domain: [0, L], reverse: true },
+    x: { label: residual ? "Residual effect size" : `Effect size (${es_labels[es_type]})`,
+         domain: [xmin, xmax] },
+    y: { label: residual ? "Residual standard error" : "Standard error",
+         domain: [0, L], reverse: true },
+    color: { domain: groups, range: groups.map((g) => group_color.get(g)) },
     marks: [
       Plot.rect([{}], { x1: xmin, x2: xmax, y1: 0, y2: L, fill: "#e6e6e6" }),
       Plot.areaX(tri99, { y: "se", x1: "x1", x2: "x2", fill: "#fff", fillOpacity: 0.5 }),
       Plot.areaX(tri95, { y: "se", x1: "x1", x2: "x2", fill: "#fff", fillOpacity: 0.5 }),
       Plot.ruleX([center], { strokeDasharray: "2,2", stroke: "#333" }),
-      Plot.dot(pts, {
-        x: "es", y: "se", fill: solar_blue, fillOpacity: 0.7,
-        title: (d) => `${d.cite}\nexpt ${d.expt ?? ""}\nes = ${d.es.toFixed(2)}, se = ${d.se.toFixed(2)}`,
-        tip: true
-      })
+      Plot.dot(pts, { x: "es", y: "se", fill: "group", fillOpacity: 0.7,
+        title: (d) => `${d.cite}\nexpt ${d.expt ?? ""}\n${d.es.toFixed(2)} (se ${d.se.toFixed(2)})`,
+        tip: true })
     ]
   });
+}
+```
+
+```{ojs funnel-egger}
+egger_note = {
+  const e = combo?.egger;
+  if (!e) return html``;
+  return html`<p style="font-size: 0.9rem; color: #444;">Egger-style test for
+    funnel-plot asymmetry (√v<sub>i</sub> added as a moderator to the
+    multilevel model): z = ${e.z.toFixed(2)}, p ${fmt_p(e.p)}.
+    ${e.p < 0.05 ? "Interpret with caution: asymmetry may also reflect confounding moderators." : ""}</p>`;
 }
 ```
 

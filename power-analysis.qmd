@@ -1,7 +1,197 @@
 ---
 title: "Power Analysis"
+toc: false
 ---
 
-*Coming soon in this preview: meta-analytically grounded power analysis —
-the estimated effect size for your phenomenon (optionally conditioned on age,
-method, and exposure phase) and the sample size needed to detect it.*
+How many infants does your study need? Ground your planning in everything the
+literature already knows: pick a phenomenon, optionally condition on age and
+method variables, and get the meta-analytically estimated effect size with
+the sample size needed to detect it at 80% power (α = .05, two-sided,
+within-subjects normal approximation).
+
+{{< include components/_spinner.qmd >}}
+{{< include components/_stats.qmd >}}
+{{< include components/_style.qmd >}}
+{{< include components/_model.qmd >}}
+
+```{ojs setup}
+//| output: false
+registry = d3.json("slices/datasets.json")
+
+domain_titles = new Map([
+  ["early_language", "Early language"],
+  ["cognitive_development", "Cognitive development"]
+])
+
+standard_mods = ["mean_age", "response_mode", "exposure_phase"]
+mod_labels = ({ mean_age: "Age", response_mode: "Response mode",
+  exposure_phase: "Exposure phase" })
+```
+
+:::: {.viz-layout}
+
+::: {.viz-sidebar}
+
+```{ojs inputs-dataset}
+viewof domain = Inputs.select([...domain_titles.keys()], {
+  label: "Domain", format: (d) => domain_titles.get(d)
+})
+
+viewof dataset_name = Inputs.select(
+  registry.filter((d) => d.domain === domain).map((d) => d.name),
+  { label: "Meta-analysis" })
+```
+
+```{ojs inputs-subset}
+dataset_meta = registry.find((d) => d.name === dataset_name)
+
+viewof subset_choice = {
+  const subsets = dataset_meta.subset ?? [];
+  return Inputs.radio(["All data", ...subsets], {
+    label: subsets.length ? "Subset" : "",
+    value: "All data"
+  });
+}
+```
+
+```{ojs load-data}
+//| output: false
+slice_all = d3.json(`slices/es/${dataset_meta.short_name}.json`)
+
+models_all = d3.json(`slices/models/${dataset_meta.short_name}.json`)
+
+slice = subset_choice === "All data"
+  ? slice_all
+  : slice_all.filter((d) => d[subset_choice] === true)
+
+pwr_rows = slice.filter((d) =>
+  Number.isFinite(+d.d_calc) && Number.isFinite(+d.d_var_calc))
+
+// standard moderators available for this dataset (>1 observed value; age
+// hidden for longitudinal datasets, as in the legacy app)
+pwr_pool = standard_mods.filter((m) => {
+  if (m === "mean_age" && dataset_meta.longitudinal) return false;
+  const vals = new Set(pwr_rows.map((d) => d[m]).filter((v) => v !== null && v !== undefined && v !== ""));
+  return vals.size > 1;
+})
+```
+
+```{ojs inputs-mods}
+viewof pwr_mods = Inputs.checkbox(pwr_pool, {
+  label: "Condition on",
+  format: (m) => mod_labels[m] ?? m
+})
+
+viewof age_months = {
+  if (!pwr_mods.includes("mean_age"))
+    return Inputs.input(null);
+  const ages = pwr_rows.map((d) => +d.mean_age_months).filter(Number.isFinite);
+  return Inputs.range([0, Math.ceil(d3.max(ages))], {
+    label: "Age (months)", step: 1, value: Math.round(d3.mean(ages))
+  });
+}
+
+viewof response_mode_choice = pwr_mods.includes("response_mode")
+  ? Inputs.select([...new Set(pwr_rows.map((d) => d.response_mode).filter(Boolean))],
+      { label: "Response mode" })
+  : Inputs.input(null)
+
+viewof exposure_phase_choice = pwr_mods.includes("exposure_phase")
+  ? Inputs.select([...new Set(pwr_rows.map((d) => d.exposure_phase).filter(Boolean))],
+      { label: "Exposure phase" })
+  : Inputs.input(null)
+```
+
+The estimate comes from the same multilevel random-effects model as the
+[visualization page](explorer.qmd) (the legacy app used a single-level model
+here; see the [changelog](news.qmd)).
+
+:::
+
+::: {.viz-main}
+
+```{ojs predict-d}
+//| output: false
+mods_key = standard_mods.filter((m) => pwr_mods.includes(m)).join(",")
+
+combo = models_all[`${subset_choice}|d|${mods_key}`]
+
+d_pwr = {
+  if (!combo || !combo.converged) return null;
+  const synth = ({
+    mean_age: (age_months ?? 0) * days_per_month,
+    response_mode: response_mode_choice,
+    exposure_phase: exposure_phase_choice
+  });
+  const X = design_row(synth, combo, pwr_mods);
+  return dot(X, combo.coefs.map((c) => c.est));
+}
+
+n80 = d_pwr === null ? null : n_for_power(d_pwr, 0.8)
+```
+
+```{ojs power-boxes}
+power_boxes = {
+  clear_loading();
+  if (d_pwr === null)
+    return html`<p style="color:#777;"><em>No converged model for this selection.</em></p>`;
+  return html`<div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+    <div class="value-box" style="background:#dd4b39;">
+      <div class="vb-value">${d_pwr.toFixed(2)}</div>
+      <div class="vb-label">Effect size (d)</div></div>
+    <div class="value-box" style="background:#dd4b39;">
+      <div class="vb-value">${!Number.isFinite(n80) || n80 >= 200 ? "> 200" : Math.ceil(n80)}</div>
+      <div class="vb-label">N for 80% power</div></div>
+  </div>`;
+}
+```
+
+#### Power as a function of sample size
+
+::: {.panel-tabset}
+
+## Plot
+
+```{ojs power-plot}
+power_plot = {
+  if (d_pwr === null) return html``;
+  const n90 = n_for_power(d_pwr, 0.9);
+  const max_n = Math.min(Math.max(60, Number.isFinite(n90) ? Math.ceil(n90) : 200), 200);
+  const ns = d3.range(5, max_n + 1, 5);
+  const curve = ns.map((n) => ({ n, power: power_z(d_pwr, n) }));
+  return Plot.plot({
+    width: 780, height: 430,
+    marginLeft: 55,
+    x: { label: "Number of participants (N)", domain: [0, max_n] },
+    y: { label: "Power to reject the null at p < .05", domain: [0, 1] },
+    marks: [
+      Plot.ruleY([0.8], { strokeDasharray: "5,4", stroke: "#666" }),
+      Number.isFinite(n80) && n80 <= max_n
+        ? Plot.ruleX([n80], { strokeDasharray: "2,3", stroke: "#666" }) : null,
+      Plot.line(curve, { x: "n", y: "power", stroke: "#333" }),
+      Plot.dot(curve, { x: "n", y: "power", fill: "#333", r: 2.5,
+        title: (d) => `N = ${d.n}: power = ${d.power.toFixed(2)}`, tip: true })
+    ].filter(Boolean)
+  });
+}
+```
+
+## Table
+
+```{ojs power-table}
+d_pwr === null ? html`` : Inputs.table(
+  d3.range(5, 205, 5).map((n) => ({
+    N: n, power: +power_z(d_pwr, n).toFixed(3)
+  })), { rows: 15 })
+```
+
+:::
+
+*Power is computed for a two-sided test at α = .05 using the normal
+approximation (the same formula as `pwr::pwr.p.test` with h = d, as in the
+legacy application): a reasonable approximation for a within-subjects design.
+For between-subjects designs, required samples are substantially larger.*
+
+:::
+
+::::

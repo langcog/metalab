@@ -1,0 +1,19 @@
+{
+  "dataset": "datapages.metalab",
+  "reference_id": "81tq",
+  "current": "2026.1",
+  "releases": {
+    "2023.1": {
+      "redivis_version": "v1.0",
+      "date": "2026-08-11",
+      "data_as_of": "2023-04-06",
+      "notes": "Verbatim export of the final legacy-pipeline snapshot (langcog/metalab@6cf0ed5 metalab.Rdata); rule.type renamed rule_type."
+    },
+    "2026.1": {
+      "redivis_version": "v1.1",
+      "date": "2026-08-11",
+      "data_as_of": "2026-08-11",
+      "notes": "Fresh fetch of 25 live sheets (effect sizes identical to 2023.1); 7 datasets frozen at 2023 (upstream sheets deleted, HTTP 410): MPs, SpeechPref, arithmetic, famWord, play, ruleLearning, switchTask. Adds datasets.sheet_status/data_as_of and complete fields_derived."
+    }
+  }
+}

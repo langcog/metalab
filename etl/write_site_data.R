@@ -49,10 +49,17 @@ registry <- datasets %>%
 write_json(registry, "slices/datasets.json", auto_unbox = TRUE, pretty = FALSE,
            null = "null", na = "null")
 
+## ---- spec.json (drives the client-side validator + field documentation) ----
+fields <- read_parquet(file.path(stage_dir, "fields.parquet")) %>%
+  mutate(options = map(options, \(j) if (is.na(j)) NULL else fromJSON(j)))
+write_json(fields, "slices/spec.json", auto_unbox = TRUE, na = "null")
+fields_derived <- read_parquet(file.path(stage_dir, "fields_derived.parquet"))
+write_json(fields_derived, "slices/spec_derived.json", auto_unbox = TRUE, na = "null")
+
 ## ---- per-dataset slices + full CSVs ----
 core_cols <- c("unique_row", "study_ID", "short_cite", "expt_num",
                "expt_condition", "same_infant_calc", "peer_reviewed", "year",
-               "n", "mean_age_months", "response_mode", "exposure_phase",
+               "n", "mean_age", "mean_age_months", "response_mode", "exposure_phase",
                "method", "dependent_measure", "participant_design",
                "native_lang", "infant_type", "coder", "es_method",
                "d_calc", "d_var_calc", "g_calc", "g_var_calc",
@@ -72,7 +79,21 @@ for (i in seq_len(nrow(registry))) {
             row.names = FALSE, quote = TRUE, na = "")
 }
 
-cat(sprintf("wrote %d dataset slices (%s total), %d csvs, stats + registry\n",
+## ---- artifacts served for metalabr ----
+## get_current_metalab_data() loads this Rdata (same object contract as the
+## legacy blob: metalab_data + dataset_info, plus metalab_release for the
+## version message); versions.json maps source releases to Redivis tags
+env <- new.env()
+load(file.path(stage_dir, "metalab_2026.Rdata"), envir = env)
+metalab_data <- env$metalab_data
+dataset_info <- env$dataset_info
+metalab_release <- fromJSON("etl/versions.json")$current
+save(metalab_data, dataset_info, metalab_release,
+     file = file.path("resources", "metalab.Rdata"), version = 2)
+file.copy("etl/versions.json", file.path("resources", "versions.json"),
+          overwrite = TRUE)
+
+cat(sprintf("wrote %d dataset slices (%s total), %d csvs, stats + registry + Rdata\n",
             nrow(registry),
             format(structure(sum(file.size(list.files("slices/es", full.names = TRUE))),
                              class = "object_size"), units = "MB"),

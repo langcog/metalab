@@ -1,6 +1,143 @@
 ---
 title: "Dataset Validator"
+toc: false
 ---
 
-*Coming soon in this preview: validate a candidate MetaLab dataset (CSV
-upload) against the field specification, entirely in your browser.*
+Check a candidate MetaLab dataset against the [field
+specification](https://github.com/langcog/metalab/blob/main/metadata/spec.yaml)
+before contributing it. Everything runs in your browser — your data is not
+uploaded anywhere. Upload a CSV export of your coding spreadsheet (in Google
+Sheets: File → Download → Comma Separated Values), or paste CSV text.
+
+{{< include components/_style.qmd >}}
+
+```{ojs validator-setup}
+//| output: false
+spec = d3.json("slices/spec.json")
+
+// validation rules ported from metalabr validate_metalab_dataset_field.R:
+// - required fields must be present as columns
+// - short_cite additionally: no missing values, max 60 characters
+// - options fields: all non-missing values within the allowed options
+//   (nullable fields excuse missing values)
+// - numeric fields: numeric or entirely missing
+// - r and corr additionally: within [-1, 1]
+validate_rows = (rows) => {
+  if (!rows || !rows.length) return [];
+  const cols = new Set(Object.keys(rows[0]));
+  const isMissing = (v) => v === null || v === undefined || String(v).trim() === "" ||
+    String(v).trim().toUpperCase() === "NA";
+  const results = [];
+  for (const f of spec) {
+    if (!f.required) continue;
+    let ok = true, notes = [];
+    if (!cols.has(f.field)) {
+      ok = false; notes.push("column missing");
+    } else {
+      const vals = rows.map((r) => r[f.field]);
+      const present = vals.filter((v) => !isMissing(v));
+      if (f.field === "short_cite") {
+        const nMissing = vals.length - present.length;
+        if (nMissing > 0) { ok = false; notes.push(`${nMissing} missing value(s)`); }
+        const tooLong = present.filter((v) => String(v).length > 60).length;
+        if (tooLong > 0) { ok = false; notes.push(`${tooLong} value(s) over 60 characters`); }
+      }
+      if (f.type === "options") {
+        const allowed = new Set(
+          (Array.isArray(f.options) ? f.options : Object.keys(f.options ?? {}))
+            .map((o) => typeof o === "object" ? Object.keys(o)[0] : String(o)));
+        const bad = [...new Set(present.map(String))].filter((v) => !allowed.has(v));
+        if (bad.length > 0) {
+          ok = false;
+          notes.push(`invalid value(s): ${bad.slice(0, 5).join(", ")}${bad.length > 5 ? ", …" : ""}`);
+        }
+      }
+      if (f.type === "numeric") {
+        const nonNum = present.filter((v) => !Number.isFinite(+String(v).replace(/,/g, ""))).length;
+        if (nonNum > 0) { ok = false; notes.push(`${nonNum} non-numeric value(s)`); }
+        if (["r", "corr"].includes(f.field)) {
+          const bad = present
+            .map((v, idx) => ({ v: +v, row: idx + 2 }))
+            .filter((d) => Number.isFinite(d.v) && (d.v < -1 || d.v > 1));
+          if (bad.length > 0) {
+            ok = false;
+            notes.push(`out of [-1, 1] at sheet row(s) ${bad.slice(0, 5).map((d) => d.row).join(", ")}`);
+          }
+        }
+      }
+    }
+    results.push({ field: f.field, valid: ok, notes: notes.join("; ") });
+  }
+  return results;
+}
+```
+
+:::: {.viz-layout}
+
+::: {.viz-sidebar}
+
+```{ojs validator-inputs}
+viewof csv_file = Inputs.file({ label: "Upload CSV", accept: ".csv" })
+
+viewof csv_text = Inputs.textarea({
+  label: "…or paste CSV text",
+  placeholder: "study_ID,long_cite,short_cite,…",
+  rows: 6
+})
+```
+
+Validation runs against the **required** fields of the current spec
+(`metadata/spec.yaml`). Non-required fields are not checked.
+
+:::
+
+::: {.viz-main}
+
+```{ojs validator-run}
+candidate_rows = {
+  if (csv_file) {
+    const text = await csv_file.text();
+    return d3.csvParse(text);
+  }
+  if (csv_text && csv_text.trim().length > 0) return d3.csvParse(csv_text);
+  return null;
+}
+
+validation = candidate_rows ? validate_rows(candidate_rows) : null
+```
+
+```{ojs validator-summary}
+validation === null
+  ? html`<p style="color:#777;"><em>Upload or paste a dataset to see results.</em></p>`
+  : html`<div style="display:flex; gap:0.75rem; margin-bottom: 0.75rem;">
+      <div class="value-box"><div class="vb-value">${candidate_rows.length}</div>
+        <div class="vb-label">Rows</div></div>
+      <div class="value-box" style="background:${validation.every((d) => d.valid) ? "#2e7d32" : "#c62828"}">
+        <div class="vb-value">${validation.filter((d) => !d.valid).length}</div>
+        <div class="vb-label">Failing fields</div></div>
+    </div>`
+```
+
+```{ojs validator-table}
+validation === null ? html`` : Inputs.table(
+  validation.map((d) => ({ Field: d.field, Valid: d.valid ? "✅" : "❌", Notes: d.notes })),
+  { rows: 60, width: { Field: 220, Valid: 60 } })
+```
+
+### Field reference
+
+```{ojs field-reference}
+Inputs.table(spec.map((f) => ({
+  field: f.field,
+  type: f.type ?? "",
+  required: f.required ? "yes" : "",
+  description: f.description ?? "",
+  options: Array.isArray(f.options)
+    ? f.options.map((o) => typeof o === "object" ? Object.keys(o)[0] : o).join(", ")
+    : (f.options ? Object.keys(f.options).join(", ") : "")
+})), { rows: 20 })
+```
+
+:::
+
+::::
