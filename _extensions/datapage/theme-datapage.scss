@@ -1,0 +1,14 @@
+/*-- scss:functions --*/
+
+/*-- scss:defaults --*/
+
+/*-- scss:rules --*/
+
+iframe { border: none; }
+
+#title-block-header a {
+  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+  text-decoration: underline;
+}
+
+.figure-caption { text-align: center; }

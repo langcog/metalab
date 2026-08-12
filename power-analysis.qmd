@@ -1,0 +1,7 @@
+---
+title: "Power Analysis"
+---
+
+*Coming soon in this preview: meta-analytically grounded power analysis —
+the estimated effect size for your phenomenon (optionally conditioned on age,
+method, and exposure phase) and the sample size needed to detect it.*

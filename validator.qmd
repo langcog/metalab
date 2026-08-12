@@ -1,0 +1,6 @@
+---
+title: "Dataset Validator"
+---
+
+*Coming soon in this preview: validate a candidate MetaLab dataset (CSV
+upload) against the field specification, entirely in your browser.*

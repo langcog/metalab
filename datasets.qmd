@@ -1,0 +1,37 @@
+---
+title: "Datasets"
+toc: false
+---
+
+Each MetaLab dataset is a curated meta-analysis of a phenomenon in early
+language or cognitive development. Click a dataset to explore it
+interactively; full data for every dataset can be downloaded on its page or
+from the [versioned archive on Redivis](https://redivis.com/datasets/81tq-9ewzpdvz0).
+
+```{ojs registry}
+//| output: false
+registry = d3.json("slices/datasets.json")
+domains = ([
+  { id: "early_language", title: "Early language",
+    desc: "How do children learn their native language?" },
+  { id: "cognitive_development", title: "Cognitive development",
+    desc: "What is the nature of children's understanding?" }
+])
+```
+
+```{ojs dataset-cards}
+html`${domains.map((dom) => html`
+  <h2>${dom.title}</h2>
+  <p>${dom.desc}</p>
+  <div class="dataset-grid">
+    ${registry.filter((d) => d.domain === dom.id).map((d) => html`
+      <div class="dataset-card">
+        <h3><a href="explorer.html?dataset=${encodeURIComponent(d.short_name)}">${d.name}</a></h3>
+        <div class="card-desc">${d.short_desc ?? ""}</div>
+        <div class="card-stats">${d.num_papers} papers · ${d.num_experiments} effect sizes · ${d.num_subjects.toLocaleString()} subjects</div>
+        ${d.sheet_status === "unavailable_upstream"
+          ? html`<div class="card-frozen">frozen at ${d.data_as_of} (source sheet unavailable)</div>`
+          : ""}
+      </div>`)}
+  </div>`)}`
+```

@@ -6,3 +6,5 @@ _site/
 data/
 *.log
 etl/staging/
+
+**/*.quarto_ipynb

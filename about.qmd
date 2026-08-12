@@ -1,0 +1,50 @@
+---
+title: "About MetaLab"
+---
+
+MetaLab is a collection of **community-augmented meta-analyses** (Tsuji,
+Bergmann, & Cristia, 2014) of phenomena in early language acquisition and
+cognitive development. Each dataset codes the published (and sometimes
+unpublished) literature on one phenomenon into a standardized effect-size
+format, so that anyone can explore the evidence, plan well-powered studies,
+and contribute new data as the literature grows.
+
+## The data
+
+- Every effect size is standardized to Cohen's *d* (with Hedges' *g*,
+  Pearson's *r*, and log odds conversions) with variances, following the
+  formulas documented in the [metalabr](https://github.com/langcog/metalabr)
+  package.
+- Datasets are curated in spreadsheets by their curators, validated against
+  the MetaLab [field specification](https://github.com/langcog/metalab/blob/main/metadata/spec.yaml),
+  and released as **versioned snapshots** on Redivis:
+  [datapages.metalab](https://redivis.com/datasets/81tq-9ewzpdvz0). Analyses
+  on this site run from the released data, so results are citable and
+  reproducible against a specific release.
+- The current release is shown on the [home page](index.qmd); release notes
+  document exactly what changed in each version.
+
+## Using MetaLab data
+
+You can use MetaLab data in three ways:
+
+1. **This site** — every visualization has a data table and CSV download.
+2. **Redivis** — query or download any table from the
+   [versioned archive](https://redivis.com/datasets/81tq-9ewzpdvz0).
+3. **R** — the [metalabr](https://github.com/langcog/metalabr) package
+   provides `get_metalab_data()` against released versions.
+
+Before using MetaLab data in a publication, please cite the dataset(s) you
+use (citations appear on each dataset's page) and the platform papers listed
+under [Publications](publications.qmd).
+
+## Contributing
+
+New datasets and updates to existing datasets are welcome! The
+[validator](validator.qmd) checks a candidate dataset against the MetaLab
+field specification. Contact the [team](team.qmd) to get started.
+
+## License
+
+Unless otherwise noted, MetaLab and its datasets are licensed under a
+[Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).

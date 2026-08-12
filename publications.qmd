@@ -1,0 +1,33 @@
+---
+title: "Publications"
+---
+
+## Citation policy
+
+MetaLab encourages researchers to use data available on its website. For
+example, you can cite meta-analytic results, or download datasets and conduct
+custom analyses. Before using MetaLab data in your publication, please cite
+the dataset(s) you use (each dataset's citation appears on its page) and the
+MetaLab platform papers below.
+
+## Papers about MetaLab
+
+**Bergmann, C., Tsuji, S., Piccinini, P.E., Lewis, M.L., Braginsky, M., Frank, M.C., & Cristia, A. (2018).** Promoting replicability in developmental research through meta-analyses: Insights from language acquisition research. *Child Development, 89*, 1996-2009. DOI: [10.1111/cdev.13079](https://doi.org/10.1111/cdev.13079) [[Repository]](https://osf.io/uhv3d/)
+
+**Cao, A., Lewis, M., Tsuji, S., Bergmann, C., Cristia, A., & Frank, M.C. (2025).** Estimating age-related change in infants' linguistic and cognitive development using (meta-)meta-analysis. *Developmental Science, 28*(4), e70028. DOI: [10.1111/desc.70028](https://doi.org/10.1111/desc.70028) [[Repository]](https://github.com/anjiecao/metalabr_exp)
+
+**Tsuji, S., Bergmann, C., & Cristia, A. (2014).** Community-augmented meta-analyses: Toward cumulative data assessment. *Perspectives on Psychological Science, 9*(6), 661-665. DOI: [10.1177/1745691614552498](https://doi.org/10.1177/1745691614552498)
+
+## Papers that use MetaLab data
+
+**Bergmann, C., Tsuji, S., & Cristia, A. (2017).** Top-down versus bottom-up theories of phonological acquisition: A big data approach. In: *Proceedings of Interspeech 2017*, pp. 2013–2016. DOI: [10.21437/Interspeech.2017-1443](https://doi.org/10.21437/Interspeech.2017-1443)
+
+**Lewis, M. L., Braginsky, M., Tsuji, S., Bergmann, C., Piccinini, P. E., Cristia, A., & Frank, M. C. (2017).** A quantitative synthesis of early language acquisition using meta-analysis. DOI: [10.17605/OSF.IO/HTSJM](https://doi.org/10.17605/OSF.IO/HTSJM) [[Preprint]](http://psyarxiv.com/htsjm)
+
+**Mathur, M. B., & VanderWeele, T. J. (2020).** Estimating publication bias in meta‐analyses of peer‐reviewed studies: A meta‐meta‐analysis across disciplines and journal tiers. *Research Synthesis Methods.* DOI: [10.1002/jrsm.1464](https://doi.org/10.1002/jrsm.1464)
+
+**Mathur, M. B., & VanderWeele, T. J. (2020).** Sensitivity analysis for publication bias in meta‐analyses. *Journal of the Royal Statistical Society. Series C, Applied Statistics, 69*(5), 1091. DOI: [10.1111/rssc.12440](https://doi.org/10.1111/rssc.12440)
+
+**Tsuji, S. & Cristia, A. (2017).** Which acoustic and phonological factors shape infants' vowel discrimination? Exploiting natural variation in InPhonDB. In: *Proceedings of Interspeech 2017*, pp. 2108-2112. DOI: [10.21437/Interspeech.2017-1468](https://doi.org/10.21437/Interspeech.2017-1468)
+
+**Tsuji, S., Cristia, A., Frank, M. C., & Bergmann, C. (2020).** Addressing publication bias in meta-analysis. *Zeitschrift für Psychologie, 228*, 50-61. DOI: [10.1027/2151-2604/a000393](https://doi.org/10.1027/2151-2604/a000393)

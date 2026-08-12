@@ -1,0 +1,32 @@
+```{ojs input-style}
+//| output: false
+// input styling adapted from levante-datapage: pill labels, borderless
+// rounded selects (scoped to the ojs namespace class)
+ojs_ns = Inputs.text().classList[0]
+```
+
+```{ojs input-style-css}
+html`<style>
+  .${ojs_ns} div label {
+    background-color: #eef2f6;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.4rem;
+    margin-bottom: 0.25rem;
+    width: auto;
+  }
+
+  .${ojs_ns} select,
+  .${ojs_ns} input[type="text"],
+  .${ojs_ns} input[type="file"] {
+    background-color: #fff;
+    border: 1px solid #d8dee4;
+    border-radius: 0.4rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .${ojs_ns} input[type="checkbox"] {
+    accent-color: #2780e3;
+    margin-bottom: 0;
+  }
+</style>`
+```

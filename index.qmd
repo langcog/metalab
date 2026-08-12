@@ -1,0 +1,64 @@
+---
+pagetitle: "MetaLab"
+toc: false
+---
+
+::: {.metalab-hero}
+::: {.hero-left}
+
+# MetaLab
+
+[Interactive, community-augmented meta-analysis tools for cognitive development research]{.tagline}
+
+<p style="margin-top: 1rem;">
+<a class="btn btn-primary" href="explorer.qmd">Explore the data</a>
+<a class="btn btn-outline-primary" href="datasets.qmd">Browse datasets</a>
+</p>
+
+:::
+::: {.hero-right}
+
+```{ojs hero-stats}
+stats = d3.json("slices/stats.json")
+
+html`<p>The MetaLab database contains
+<span class="stat-strong">${stats.n_effect_sizes.toLocaleString()} effect sizes</span>
+from <span class="stat-strong">${stats.n_datasets} meta-analyses</span> across
+two domains of cognitive development, based on data from
+<span class="stat-strong">${stats.n_papers.toLocaleString()} papers</span> and
+<span class="stat-strong">${stats.n_subjects.toLocaleString()} subjects</span>.</p>
+<p style="font-size: 0.85rem; color: #777;">Data release ${stats.source_release}
+· <a href="https://redivis.com/datasets/81tq-9ewzpdvz0">versioned archive on Redivis</a></p>`
+```
+
+:::
+:::
+
+## What is MetaLab?
+
+MetaLab is a collection of community-augmented meta-analyses of language
+acquisition and cognitive development. Anyone can use the data to explore
+phenomena in early development, plan a study with meta-analytically grounded
+power analyses, or contribute new effect sizes to a growing, curated database.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+### Explore
+Interactive [visualizations](explorer.qmd) of every dataset: effect sizes
+across age, funnel plots, forest plots, and moderator analyses.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### Plan
+Meta-analytic [power analysis](power-analysis.qmd): how many participants do
+you need, given everything the literature already knows about your effect?
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### Contribute
+Add new effect sizes or datasets — see the [contribution
+documentation](about.qmd) and the dataset [validator](validator.qmd).
+:::
+
+:::

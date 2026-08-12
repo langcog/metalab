@@ -1,0 +1,230 @@
+---
+title: "Visualizations"
+toc: false
+---
+
+Explore any MetaLab dataset interactively: effect sizes across age, and a
+funnel plot for publication-bias diagnostics. Pick a dataset and an
+effect-size measure; data loads in your browser.
+
+{{< include components/_spinner.qmd >}}
+{{< include components/_loess.qmd >}}
+{{< include components/_style.qmd >}}
+{{< include components/_download.qmd >}}
+
+```{ojs setup}
+//| output: false
+// Plot, d3, Inputs, htl all come bundled with Quarto's OJS runtime -- no
+// external CDN imports (they hang in CSP-restricted environments)
+registry = d3.json("slices/datasets.json")
+
+es_choices = new Map([
+  ["Hedges' g", "g"], ["Cohen's d", "d"], ["Pearson's r", "r"], ["Log odds", "log_odds"]
+])
+
+es_labels = ({ g: "Hedges' g", d: "Cohen's d", r: "Pearson's r", log_odds: "Log odds" })
+
+solar_blue = "#268bd2"
+
+domain_titles = new Map([
+  ["early_language", "Early language"],
+  ["cognitive_development", "Cognitive development"]
+])
+
+url_dataset = new URLSearchParams(location.search).get("dataset")
+```
+
+:::: {.viz-layout}
+
+::: {.viz-sidebar}
+
+```{ojs inputs-dataset}
+viewof domain = Inputs.select([...domain_titles.keys()], {
+  label: "Domain",
+  format: (d) => domain_titles.get(d),
+  value: url_dataset
+    ? registry.find((d) => d.short_name === url_dataset)?.domain
+    : "early_language"
+})
+
+viewof dataset_name = Inputs.select(
+  registry.filter((d) => d.domain === domain).map((d) => d.name),
+  { label: "Dataset",
+    value: url_dataset
+      ? registry.find((d) => d.short_name === url_dataset)?.name
+      : undefined }
+)
+```
+
+```{ojs inputs-es}
+dataset_meta = registry.find((d) => d.name === dataset_name)
+
+viewof es_type = Inputs.select(es_choices, { label: "Effect size type", value: "g" })
+
+viewof subset_choice = {
+  const subsets = dataset_meta.subset ?? [];
+  return Inputs.radio(["All data", ...subsets], {
+    label: subsets.length ? "Subset" : "",
+    value: "All data"
+  });
+}
+
+viewof curve_type = Inputs.radio(new Map([["LOESS", "loess"], ["Linear", "lm"]]), {
+  label: "Smoothing curve",
+  value: "loess"
+})
+```
+
+```{ojs dataset-blurb}
+html`<div style="font-size: 0.82rem; color: #555; margin-top: 0.75rem;">
+  <p>${dataset_meta.short_desc ?? ""}</p>
+  <p><em>Citation:</em> ${dataset_meta.full_citation ?? dataset_meta.citation ?? ""}</p>
+  ${dataset_meta.sheet_status === "unavailable_upstream"
+    ? html`<p class="card-frozen">This dataset is frozen at its ${dataset_meta.data_as_of} state (source sheet unavailable).</p>` : ""}
+  <p><a href="resources/csv/${dataset_meta.filename}.csv" download>Download full dataset (CSV)</a></p>
+</div>`
+```
+
+:::
+
+::: {.viz-main}
+
+```{ojs load-slice}
+//| output: false
+slice_all = d3.json(`slices/es/${dataset_meta.short_name}.json`)
+
+slice = subset_choice === "All data"
+  ? slice_all
+  : slice_all.filter((d) => d[subset_choice] === true)
+
+es_col = `${es_type}_calc`
+es_var_col = `${es_type}_var_calc`
+
+// rows with a defined ES of the selected type and (for the scatter) age;
+// mean_age < 4000 days ~ 131.4 months, matching the legacy app's filter
+plot_data = slice.filter((d) =>
+  Number.isFinite(+d[es_col]) && Number.isFinite(+d[es_var_col]))
+age_data = plot_data.filter((d) =>
+  Number.isFinite(+d.mean_age_months) && +d.mean_age_months < 4000 / 30.44)
+```
+
+```{ojs value-boxes}
+model_note = {
+  clear_loading();
+  const wmean = d3.sum(plot_data, (d) => +d[es_col] / +d[es_var_col]) /
+    d3.sum(plot_data, (d) => 1 / +d[es_var_col]);
+  return html`<div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+    <div class="value-box"><div class="vb-value">${plot_data.length}</div>
+      <div class="vb-label">Conditions</div></div>
+    <div class="value-box"><div class="vb-value">${wmean.toFixed(2)}</div>
+      <div class="vb-label">Weighted mean ${es_labels[es_type]}<br>(multilevel model: coming soon)</div></div>
+  </div>`;
+}
+```
+
+#### Effect sizes across age
+
+::: {.panel-tabset}
+
+## Plot
+
+```{ojs scatter}
+scatter_plot = {
+  if (dataset_meta.longitudinal)
+    return html`<p style="color:#777;"><em>This is a longitudinal dataset;
+      effect sizes do not correspond to single test ages, so the age scatter
+      is not shown.</em></p>`;
+  const inv_var = (d) => 1 / Math.max(+d[es_var_col], 1e-9);
+  const curve = curve_type === "loess"
+    ? loess_points(age_data, { x: "mean_age_months", y: es_col, w: inv_var, span: 1 })
+    : wls_points(age_data, { x: "mean_age_months", y: es_col, w: inv_var });
+  return Plot.plot({
+    width: 750, height: 420,
+    marginLeft: 55,
+    x: { label: "Mean subject age (months)" },
+    y: { label: `Effect size (${es_labels[es_type]})` },
+    marks: [
+      Plot.ruleY([0], { strokeDasharray: "4,3", stroke: "#999" }),
+      Plot.dot(age_data, {
+        x: "mean_age_months", y: es_col, r: (d) => Math.sqrt(+d.n || 1),
+        fill: solar_blue, fillOpacity: 0.5,
+        title: (d) => `${d.short_cite}\nexpt ${d.expt_num ?? ""} · n=${d.n}\n${es_labels[es_type]} = ${(+d[es_col]).toFixed(2)}`,
+        tip: true
+      }),
+      Plot.line(curve, { x: "mean_age_months", y: es_col, stroke: solar_blue, strokeWidth: 2 })
+    ]
+  });
+}
+```
+
+## Table
+
+```{ojs scatter-table}
+Inputs.table(plot_data.map((d) => ({
+  study: d.short_cite, expt: d.expt_num, n: d.n,
+  age_months: +(+d.mean_age_months).toFixed(1),
+  es: +(+d[es_col]).toFixed(3), es_var: +(+d[es_var_col]).toFixed(4),
+  method: d.method, exposure: d.exposure_phase
+})), { rows: 18 })
+```
+
+```{ojs scatter-download}
+download_csv(plot_data, `${dataset_meta.short_name}_${es_type}.csv`)
+```
+
+:::
+
+#### Funnel plot of bias in effect sizes
+
+::: {.panel-tabset}
+
+## Plot
+
+```{ojs funnel}
+funnel_plot = {
+  const pts = plot_data.map((d) => ({
+    es: +d[es_col], se: Math.sqrt(+d[es_var_col]),
+    cite: d.short_cite, expt: d.expt_num
+  }));
+  const center = d3.mean(pts, (d) => d.es);
+  const L = 1.05 * d3.max(pts, (d) => d.se);
+  // funnel triangles: at depth se, the z% region spans center ± z*se
+  const grid = d3.range(0, L * 1.0001, L / 60);
+  const tri95 = grid.map((s) => ({ se: s, x1: center - 1.96 * s, x2: center + 1.96 * s }));
+  const tri99 = grid.map((s) => ({ se: s, x1: center - 2.58 * s, x2: center + 2.58 * s }));
+  const xmin = Math.min(center - 2.58 * L, d3.min(pts, (d) => d.es));
+  const xmax = Math.max(center + 2.58 * L, d3.max(pts, (d) => d.es));
+  return Plot.plot({
+    width: 750, height: 420,
+    marginLeft: 55,
+    x: { label: `Effect size (${es_labels[es_type]})`, domain: [xmin, xmax] },
+    y: { label: "Standard error", domain: [0, L], reverse: true },
+    marks: [
+      Plot.rect([{}], { x1: xmin, x2: xmax, y1: 0, y2: L, fill: "#e6e6e6" }),
+      Plot.areaX(tri99, { y: "se", x1: "x1", x2: "x2", fill: "#fff", fillOpacity: 0.5 }),
+      Plot.areaX(tri95, { y: "se", x1: "x1", x2: "x2", fill: "#fff", fillOpacity: 0.5 }),
+      Plot.ruleX([center], { strokeDasharray: "2,2", stroke: "#333" }),
+      Plot.dot(pts, {
+        x: "es", y: "se", fill: solar_blue, fillOpacity: 0.7,
+        title: (d) => `${d.cite}\nexpt ${d.expt ?? ""}\nes = ${d.es.toFixed(2)}, se = ${d.se.toFixed(2)}`,
+        tip: true
+      })
+    ]
+  });
+}
+```
+
+## Table
+
+```{ojs funnel-table}
+Inputs.table(plot_data.map((d) => ({
+  study: d.short_cite, expt: d.expt_num,
+  es: +(+d[es_col]).toFixed(3), se: +Math.sqrt(+d[es_var_col]).toFixed(3)
+})), { rows: 18 })
+```
+
+:::
+
+:::
+
+::::
