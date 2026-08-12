@@ -17,16 +17,14 @@ website:
     left:
       - href: datasets.qmd
         text: Datasets
-      - href: explorer.qmd
-        text: Visualizations
       - text: Analyses
         menu:
+          - href: explorer.qmd
+            text: Visualizations
           - href: age-curves.qmd
             text: Age Curves
           - href: replicability.qmd
             text: Replicability
-      - text: Tools
-        menu:
           - href: power-analysis.qmd
             text: Power Analysis
           - href: power-simulation.qmd
@@ -35,19 +33,14 @@ website:
             text: Dataset Validator
       - href: publications.qmd
         text: Publications
-      - href: team.qmd
-        text: Team
       - href: about.qmd
         text: About
-    right:
-      - href: news.qmd
-        text: Changelog
   page-footer:
     center: |
       [![Creative Commons Attribution 4.0 license](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)<br>
       Unless otherwise noted, MetaLab and its datasets are licensed under a
       [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).<br>
-      Data hosted on [Redivis](https://redivis.com/datasets/81tq-9ewzpdvz0) ·
+      Data hosted on [Redivis](https://stanford.redivis.com/datasets/81tq-8dp5ge6b9) ·
       [GitHub](https://github.com/langcog/metalab)
 
 format:

@@ -1,7 +1,7 @@
 # MetaLab datapage
 
 A static rebuild of [metalab.stanford.edu](https://metalab.stanford.edu) on the
-datapages pattern: data hosted on [Redivis](https://redivis.com/datasets/81tq-9ewzpdvz0)
+datapages pattern: data hosted on [Redivis](https://stanford.redivis.com/datasets/81tq-8dp5ge6b9)
 (versioned, citable), site built with Quarto, visualization in-browser with
 Observable Plot. Supersedes the Hugo site + Posit Connect Shiny apps (which
 went offline when the `metalab-shiny.com` server died).

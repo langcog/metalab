@@ -6,7 +6,7 @@ toc: false
 Each MetaLab dataset is a curated meta-analysis of a phenomenon in early
 language or cognitive development. Click a dataset to explore it
 interactively; full data for every dataset can be downloaded on its page or
-from the [versioned archive on Redivis](https://redivis.com/datasets/81tq-9ewzpdvz0).
+from the [versioned archive on Redivis](https://stanford.redivis.com/datasets/81tq-8dp5ge6b9).
 
 ```{ojs registry}
 //| output: false

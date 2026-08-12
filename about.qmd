@@ -1,6 +1,11 @@
 ---
 title: "About MetaLab"
+toc: false
 ---
+
+::: {.panel-tabset}
+
+## About
 
 MetaLab is a collection of **community-augmented meta-analyses** (Tsuji,
 Bergmann, & Cristia, 2014) of phenomena in early language acquisition and
@@ -9,7 +14,7 @@ unpublished) literature on one phenomenon into a standardized effect-size
 format, so that anyone can explore the evidence, plan well-powered studies,
 and contribute new data as the literature grows.
 
-## The data
+### The data
 
 - Every effect size is standardized to Cohen's *d* (with Hedges' *g*,
   Pearson's *r*, and log odds conversions) with variances, following the
@@ -18,19 +23,19 @@ and contribute new data as the literature grows.
 - Datasets are curated in spreadsheets by their curators, validated against
   the MetaLab [field specification](https://github.com/langcog/metalab/blob/main/metadata/spec.yaml),
   and released as **versioned snapshots** on Redivis:
-  [datapages.metalab](https://redivis.com/datasets/81tq-9ewzpdvz0). Analyses
+  [datapages.metalab](https://stanford.redivis.com/datasets/81tq-8dp5ge6b9). Analyses
   on this site run from the released data, so results are citable and
   reproducible against a specific release.
 - The current release is shown on the [home page](index.qmd); release notes
   document exactly what changed in each version.
 
-## Using MetaLab data
+### Using MetaLab data
 
 You can use MetaLab data in three ways:
 
 1. **This site** — every visualization has a data table and CSV download.
 2. **Redivis** — query or download any table from the
-   [versioned archive](https://redivis.com/datasets/81tq-9ewzpdvz0).
+   [versioned archive](https://stanford.redivis.com/datasets/81tq-8dp5ge6b9).
 3. **R** — the [metalabr](https://github.com/langcog/metalabr) package
    provides `get_metalab_data()` against released versions.
 
@@ -38,13 +43,127 @@ Before using MetaLab data in a publication, please cite the dataset(s) you
 use (citations appear on each dataset's page) and the platform papers listed
 under [Publications](publications.qmd).
 
-## Contributing
+### Contributing
 
 New datasets and updates to existing datasets are welcome! The
 [validator](validator.qmd) checks a candidate dataset against the MetaLab
-field specification. Contact the [team](team.qmd) to get started.
+field specification. Contact the team (see the Team tab) to get started.
 
-## License
+### License
 
 Unless otherwise noted, MetaLab and its datasets are licensed under a
 [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+
+## Team
+
+MetaLab is a community project: datasets are contributed and maintained by
+researchers across many labs, coordinated by the team below. Interested in
+contributing? See [About](about.qmd) or write to any of the leaders.
+
+### Leaders
+
+- **Christina Bergmann** — Osnabrück University of Applied Sciences & MPI for Psycholinguistics · <chbergma@gmail.com>
+- **Sho Tsuji** — The University of Tokyo · <tsujish@gmail.com>
+
+### Governing board
+
+- **Alejandrina Cristia** — École Normale Supérieure · <alecristia@gmail.com>
+- **Michael C. Frank** — Stanford University · <mcfrank@stanford.edu>
+- **Molly Lewis** · <mollyllewis@gmail.com>
+
+### Team
+
+- **Sara El-Shawa** · <selshawa96@gmail.com>
+- **Loretta Gasparini** — Murdoch Children's Research Institute · <gasparini.lorett@gmail.com>
+- **Erik Iverson** · <erikriverson@gmail.com>
+
+### Curators
+
+- **Angeline Tsui** — University of Ottawa · <atsui029@uottawa.ca>
+- **Cécile Issard** — École Normale Supérieure · <cecile.issard@gmail.com>
+- **Fleur Vissers** — Tilburg University · <f.m.h.g.vissers@gmail.com>
+- **Francesco Margoni** — Università di Trento · <francesco.margoni@unitn.it>
+- **Hugh Rabagliati** — University of Edinburgh · <hugh.rabagliati@ed.ac.uk>
+- **Katie Von Holzen** — Technical University of Dortmund · <katie.m.vonholzen@gmail.com>
+- **Rodrigo Dal Ben** — Concordia University · <dalbenwork@gmail.com>
+- **Priya Silverstein** · <priyasilverstein@gmail.com>
+
+### Alumni
+
+Julia Carbajal, Mika Braginsky, Page Piccinini, Alessandro Sanchez
+
+## Changelog
+
+### 2026 — the datapage rebuild
+
+The MetaLab site was rebuilt as a static Quarto + Observable site backed by
+versioned data releases on
+[Redivis](https://stanford.redivis.com/datasets/81tq-8dp5ge6b9), replacing the Hugo
+site and the Shiny applications (whose hosting server had gone offline). The
+analyses now run in your browser from released data, so every number on the
+site is tied to a citable data version.
+
+#### Data releases
+
+- **2023.1** (Redivis v1.0) — verbatim snapshot of the final legacy pipeline
+  output (April 2023), exactly as previously served by the site and apps.
+- **2026.1** (Redivis v1.1) — fresh fetch of all live curator spreadsheets
+  (August 2026). Effect sizes are identical to 2023.1 — the sheets had not
+  changed. Seven datasets' source spreadsheets no longer exist upstream
+  (Mispronunciation sensitivity, Natural speech preference, Simple arithmetic
+  competences, Familiar word recognition, Symbolic play, Abstract rule
+  learning, Switch task); their data are carried forward unchanged from
+  2023.1 and marked in the `datasets` table (`sheet_status`,
+  `data_as_of`).
+
+#### Deliberate changes from the legacy applications
+
+Fixes (behavior the legacy apps got wrong):
+
+1. **Funnel-plot asymmetry test.** The legacy visualization called
+   `metafor::regtest()` on a multilevel (`rma.mv`) model, which always
+   errored — the error was hidden by CSS, so no test was actually shown. The
+   rebuilt funnel reports a proper Egger-style test: √v~i~ added as a
+   fixed-effect moderator to the same multilevel model.
+2. **Power simulation with a control group.** The legacy simulation
+   accidentally duplicated every simulated observation when the control
+   group was enabled (a `factor()` construction bug), inflating the
+   apparent significance of all tests. Each cell now contains exactly N
+   independent draws.
+3. **Power-analysis model.** The legacy power app fit a *single-level*
+   random-effects model, inconsistent with the visualization app's
+   multilevel model on the same data (and with how the datasets are
+   analyzed in publications). Both now use the same multilevel model
+   (effect sizes nested in infant groups nested in papers). Estimated
+   effect sizes — and therefore recommended sample sizes — can differ
+   slightly from the legacy app.
+4. **Broken PDF download** in the legacy power app (saved an empty file) is
+   replaced by data downloads on every visualization.
+5. **Violin plot** now works for every effect-size type (legacy silently
+   supported only Hedges' g).
+
+Documented approximations and constraints:
+
+6. **Residual funnel plots** (funnel with moderators selected) standardize
+   residuals by the marginal standard error √(v~i~ + Σσ²) rather than
+   metafor's `rstandard()` internals; positions can differ very slightly
+   from the legacy plot.
+7. **Moderator analyses cover up to three simultaneous moderators** (the
+   models are precomputed offline for every dataset × subset × effect-size
+   type × moderator combination; the legacy app allowed unbounded
+   combinations by fitting on a live server).
+8. **Age filter.** All analyses exclude effect sizes with mean age ≥ 4000
+   days (~131 months), as the legacy visualization did; the legacy *power*
+   app did not apply this filter, so its estimates could differ trivially
+   for datasets with very old samples.
+9. **Column rename**: `rule.type` → `rule_type` (Abstract rule learning) —
+   Redivis does not allow dots in column names.
+
+#### metalabr
+
+The R package is being updated to read released data versions from Redivis
+(`get_metalab_data(version = "current")`), with the Google-Sheets path
+retained for curators. See the
+[package repository](https://github.com/langcog/metalabr).
+
+:::

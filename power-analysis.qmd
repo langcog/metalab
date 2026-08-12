@@ -104,7 +104,7 @@ viewof exposure_phase_choice = pwr_mods.includes("exposure_phase")
 
 The estimate comes from the same multilevel random-effects model as the
 [visualization page](explorer.qmd) (the legacy app used a single-level model
-here; see the [changelog](news.qmd)).
+here; see the [changelog](about.qmd)).
 
 :::
 
