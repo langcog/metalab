@@ -141,8 +141,6 @@ viewof curve_type = Inputs.radio(new Map([["LOESS", "loess"], ["Linear", "lm"]])
 html`<div style="font-size: 0.82rem; color: #555; margin-top: 0.75rem;">
   <p>${dataset_meta.short_desc ?? ""}</p>
   <p><em>Citation:</em> ${dataset_meta.full_citation ?? dataset_meta.citation ?? ""}</p>
-  ${dataset_meta.sheet_status === "unavailable_upstream"
-    ? html`<p class="card-frozen">This dataset is frozen at its ${dataset_meta.data_as_of} state (source sheet unavailable).</p>` : ""}
   <p><a href="resources/csv/${dataset_meta.filename}.csv" download>Download full dataset (CSV)</a></p>
 </div>`
 ```

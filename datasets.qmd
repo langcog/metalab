@@ -29,9 +29,6 @@ html`${domains.map((dom) => html`
         <h3><a href="explorer.html?dataset=${encodeURIComponent(d.short_name)}">${d.name}</a></h3>
         <div class="card-desc">${d.short_desc ?? ""}</div>
         <div class="card-stats">${d.num_papers} papers · ${d.num_experiments} effect sizes · ${d.num_subjects.toLocaleString()} subjects</div>
-        ${d.sheet_status === "unavailable_upstream"
-          ? html`<div class="card-frozen">frozen at ${d.data_as_of} (source sheet unavailable)</div>`
-          : ""}
       </div>`)}
   </div>`)}`
 ```
