@@ -1,0 +1,214 @@
+---
+title: "Replicability"
+toc: false
+---
+
+Is the field running studies that can find the effects it studies?
+[Bergmann, Tsuji, Piccinini, Lewis, Braginsky, Frank, & Cristia
+(2018)](https://doi.org/10.1111/cdev.13079) used MetaLab to diagnose
+replicability across language acquisition research: typical sample sizes,
+statistical power, method sensitivity, and small-study effects. This page
+recomputes those analyses **live from the current data release** for every
+dataset — the 2018 paper's snapshot covered 12 meta-analyses; the numbers
+below update as MetaLab grows.
+
+{{< include components/_spinner.qmd >}}
+{{< include components/_stats.qmd >}}
+{{< include components/_style.qmd >}}
+
+```{ojs setup}
+//| output: false
+registry = d3.json("slices/datasets.json")
+
+// field-wide page: load every dataset's effect sizes and model file
+all_data = Promise.all(registry.map(async (r) => {
+  const rows = await d3.json(`slices/es/${r.short_name}.json`);
+  const models = await d3.json(`slices/models/${r.short_name}.json`)
+    .catch(() => null);
+  return { meta: r, rows, models };
+}))
+
+solar_blue = "#268bd2"
+```
+
+## Power of typical studies, dataset by dataset
+
+For each dataset: the multilevel meta-analytic effect size (Cohen's d), the
+median per-study sample size, and the power of that median-sized study to
+detect that effect (two-sided α = .05, within-subjects normal
+approximation). The 2018 paper's headline — a median power of 44% — reflected
+a field standard of n ≈ 15–20 regardless of effect size.
+
+```{ojs power-table}
+power_rows = {
+  clear_loading();
+  return all_data.map(({ meta, rows, models }) => {
+    const ns = rows.map((r) => +r.n).filter(Number.isFinite).sort(d3.ascending);
+    const median_n = d3.median(ns);
+    const combo = models?.["All data|d|"];
+    const d_hat = combo?.converged ? combo.coefs[0].est : null;
+    const power = d_hat === null ? null : power_z(d_hat, median_n);
+    return {
+      dataset: meta.name,
+      es_n: rows.length,
+      papers: meta.num_papers,
+      median_n,
+      d: d_hat,
+      power
+    };
+  });
+}
+
+median_power = d3.median(power_rows.filter((d) => d.power !== null), (d) => d.power)
+
+html`<div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:0.75rem;">
+  <div class="value-box"><div class="vb-value">${(100 * median_power).toFixed(0)}%</div>
+    <div class="vb-label">Median power across datasets<br>(at each dataset's median n and d̂)</div></div>
+  <div class="value-box"><div class="vb-value">${d3.median(power_rows, (d) => d.median_n)}</div>
+    <div class="vb-label">Median sample size</div></div>
+</div>`
+```
+
+::: {.panel-tabset}
+
+## Plot
+
+```{ojs power-scatter}
+power_scatter = Plot.plot({
+  width: 780, height: 460,
+  marginLeft: 55,
+  x: { label: "Meta-analytic effect size (d)" },
+  y: { label: "Power at median n", domain: [0, 1] },
+  marks: [
+    Plot.ruleY([0.8], { strokeDasharray: "5,4", stroke: "#666" }),
+    Plot.dot(power_rows.filter((d) => d.power !== null), {
+      x: "d", y: "power", r: (d) => Math.sqrt(d.es_n) / 2,
+      fill: solar_blue, fillOpacity: 0.6,
+      title: (d) => `${d.dataset}\nd = ${d.d.toFixed(2)}, median n = ${d.median_n}\npower = ${(100 * d.power).toFixed(0)}%`,
+      tip: true
+    }),
+    Plot.text(power_rows.filter((d) => d.power !== null && (d.power > 0.8 || d.d > 1)), {
+      x: "d", y: "power", text: (d) => d.dataset.slice(0, 18),
+      dy: -10, fontSize: 9, fill: "#555"
+    })
+  ]
+})
+```
+
+## Table
+
+```{ojs power-table-tab}
+Inputs.table(d3.sort(power_rows, (d) => -(d.power ?? -1)).map((d) => ({
+  dataset: d.dataset, "effect sizes": d.es_n, papers: d.papers,
+  "median n": d.median_n,
+  "d (multilevel)": d.d === null ? null : +d.d.toFixed(2),
+  "power at median n": d.power === null ? null : +d.power.toFixed(2)
+})), { rows: 32 })
+```
+
+:::
+
+## Do methods differ in the effects they yield?
+
+Effect sizes by experimental method, pooled across datasets (methods with at
+least 10 effect sizes). The 2018 paper found conditioned head-turn yields
+d > 1 while several passive-looking methods hover near d ≈ 0.2 — method
+choice is a first-order design decision.
+
+```{ojs method-box}
+method_box = {
+  const rows = all_data.flatMap(({ meta, rows }) =>
+    rows.map((r) => ({ method: r.method, g: +r.g_calc }))
+      .filter((r) => r.method && Number.isFinite(r.g)));
+  const counts = d3.rollup(rows, (v) => v.length, (d) => d.method);
+  const keep = [...counts].filter(([, n]) => n >= 10).map(([m]) => m);
+  const dat = rows.filter((r) => keep.includes(r.method));
+  const order = d3.sort(keep, (m) => d3.median(dat.filter((r) => r.method === m), (r) => r.g));
+  return Plot.plot({
+    width: 780, height: order.length * 34 + 80,
+    marginLeft: 230,
+    x: { label: "Effect size (Hedges' g)", domain: [-2, 4] },
+    y: { domain: order, label: null },
+    marks: [
+      Plot.ruleX([0], { strokeDasharray: "3,3", stroke: "#999" }),
+      Plot.boxX(dat, { x: "g", y: "method", fill: "#e3ecf5", stroke: "#268bd2" })
+    ]
+  });
+}
+```
+
+## Small-study effects: sample size vs effect size
+
+If studies with smaller samples report systematically larger effects —
+because small studies only reach significance (and publication) with big
+effects — the literature overestimates. Kendall's τ between n and effect
+size per dataset (the 2018 paper's Table 5 found significant negative
+correlations in 4 of 12 meta-analyses).
+
+```{ojs tau-setup}
+//| output: false
+kendall_tau = (xs, ys) => {
+  // tau-b with normal approximation p-value
+  const n = xs.length;
+  let concordant = 0, discordant = 0, tx = 0, ty = 0;
+  for (let i = 0; i < n; i++)
+    for (let j = i + 1; j < n; j++) {
+      const dx = Math.sign(xs[i] - xs[j]), dy = Math.sign(ys[i] - ys[j]);
+      if (dx === 0 && dy === 0) { tx++; ty++; }
+      else if (dx === 0) tx++;
+      else if (dy === 0) ty++;
+      else if (dx === dy) concordant++;
+      else discordant++;
+    }
+  const n0 = n * (n - 1) / 2;
+  const tau = (concordant - discordant) /
+    Math.sqrt((n0 - tx) * (n0 - ty) || 1);
+  const z = 3 * (concordant - discordant) /
+    Math.sqrt(n * (n - 1) * (2 * n + 5) / 2);
+  const p = 2 * (1 - pnorm(Math.abs(z)));
+  return { tau, p };
+}
+
+tau_rows = all_data.map(({ meta, rows }) => {
+  const pts = rows
+    .map((r) => ({ n: +r.n, g: +r.g_calc }))
+    .filter((r) => Number.isFinite(r.n) && Number.isFinite(r.g));
+  if (pts.length < 10) return null;
+  const { tau, p } = kendall_tau(pts.map((r) => r.n), pts.map((r) => r.g));
+  return { dataset: meta.name, k: pts.length, tau, p, significant: p < 0.05 && tau < 0 };
+}).filter(Boolean)
+```
+
+```{ojs tau-plot}
+tau_plot = {
+  const rows = d3.sort(tau_rows, (d) => d.tau);
+  return Plot.plot({
+    width: 780, height: rows.length * 22 + 60,
+    marginLeft: 240,
+    x: { label: "Kendall's τ (sample size vs effect size)" },
+    y: { domain: rows.map((d) => d.dataset), label: null },
+    marks: [
+      Plot.ruleX([0], { strokeDasharray: "3,3", stroke: "#999" }),
+      Plot.dot(rows, { y: "dataset", x: "tau",
+        fill: (d) => d.significant ? "#dc322f" : "#333", r: 4,
+        title: (d) => `${d.dataset}\nτ = ${d.tau.toFixed(2)}, p = ${d.p.toFixed(3)} (k = ${d.k})`,
+        tip: true })
+    ]
+  });
+}
+
+html`<p style="font-size:0.9rem; color:#444;">Red: significantly negative
+(bias-consistent) at p < .05 — currently
+${tau_rows.filter((d) => d.significant).length} of ${tau_rows.length}
+datasets. A negative τ can also arise from accurate prospective power
+analysis for subtler effects; the pervasively low power above argues
+against that explanation.</p>`
+```
+
+---
+
+*Analyses follow [Bergmann et al. (2018)](https://doi.org/10.1111/cdev.13079)
+([scripts](https://osf.io/uhv3d/)), recomputed in the browser from the
+current MetaLab release. Power uses the same normal approximation as the
+[power analysis tool](power-analysis.qmd); the multilevel effect-size
+estimates match the [visualization page](explorer.qmd).*

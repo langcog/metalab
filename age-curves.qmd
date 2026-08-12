@@ -1,0 +1,234 @@
+---
+title: "Age curves"
+toc: false
+---
+
+How do effect sizes change over development? [Cao, Lewis, Tsuji, Bergmann,
+Cristia, & Frank (2025)](https://doi.org/10.1111/desc.70028) fit developmental
+trajectories across 25 MetaLab datasets, comparing constant, linear,
+logarithmic, and quadratic functional forms with multilevel meta-regressions.
+The headline: **most phenomena show no detectable age-related growth in
+effect size** — and where growth exists, it is not linear. The figures below
+are interactive versions of the paper's key analyses, drawn from the
+published model fits ([repository](https://github.com/anjiecao/metalabr_exp)).
+
+{{< include components/_spinner.qmd >}}
+{{< include components/_style.qmd >}}
+
+```{ojs setup}
+//| output: false
+curves = d3.json("slices/cao/curves.json")
+aic = d3.json("slices/cao/aic.json")
+slopes = d3.json("slices/cao/slopes.json")
+
+form_colors = ({ Constant: "#dc322f", Linear: "#859900", Log: "#2aa198",
+  Quadratic: "#6c71c4" })
+
+cao_datasets = [...new Set(curves.map((d) => d.dataset))].sort()
+```
+
+## Which functional form fits development?
+
+Each panel shows the fitted trajectory of effect size across age (with 95%
+CI) under each functional form, for one meta-analytic dataset. In 19 of 25
+datasets the forms are statistically indistinguishable — mostly because
+there is little age-related change to describe.
+
+```{ojs curve-controls}
+viewof forms_shown = Inputs.checkbox(Object.keys(form_colors), {
+  label: "Functional forms",
+  value: Object.keys(form_colors)
+})
+
+viewof show_ribbons = Inputs.toggle({ label: "95% CI ribbons", value: false })
+```
+
+```{ojs curve-panels}
+trajectory_panels = {
+  clear_loading();
+  const panels = cao_datasets.map((ds) => {
+    // start at 1 month: the log model's predictions diverge as age -> 0,
+    // outside every dataset's observed range
+    const cd = curves.filter((d) => d.dataset === ds &&
+      forms_shown.includes(d.form) && d.age_months >= 1);
+    const ymin = d3.min(cd, (d) => show_ribbons ? d.ci_lb : d.pred);
+    const ymax = d3.max(cd, (d) => show_ribbons ? d.ci_ub : d.pred);
+    const pad = (ymax - ymin) * 0.08 || 0.1;
+    const plot = Plot.plot({
+      width: 235, height: 160,
+      marginLeft: 38, marginBottom: 28,
+      x: { label: "age (mo)", ticks: 4, domain: [1, 36] },
+      y: { label: "d", ticks: 4,
+           domain: [Math.min(ymin - pad, 0), ymax + pad] },
+      marks: [
+        Plot.ruleY([0], { strokeDasharray: "3,3", stroke: "#999" }),
+        ...(show_ribbons ? [Plot.areaY(cd, { x: "age_months", y1: "ci_lb",
+          y2: "ci_ub", z: "form", fill: (d) => form_colors[d.form],
+          fillOpacity: 0.12 })] : []),
+        Plot.line(cd, { x: "age_months", y: "pred", z: "form",
+          stroke: (d) => form_colors[d.form], strokeWidth: 1.8 })
+      ]
+    });
+    return html`<div style="flex: 0 0 auto;">
+      <div style="font-size: 0.78rem; font-weight: 600; max-width: 235px;
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
+        title="${ds}">${ds}</div>
+      ${plot}</div>`;
+  });
+  return html`<div style="display:flex; flex-wrap:wrap; gap:0.6rem;">
+    <div style="flex-basis:100%; display:flex; gap:1rem; font-size:0.85rem; margin-bottom:0.25rem;">
+      ${Object.entries(form_colors).map(([f, c]) =>
+        html`<span><span style="display:inline-block;width:0.8rem;height:0.8rem;background:${c};border-radius:2px;"></span> ${f}</span>`)}
+    </div>
+    ${panels}</div>`;
+}
+```
+
+## Linear age slopes across datasets
+
+The linear model's age coefficient (d per month, 95% CI) for every dataset.
+Red intervals exclude zero (9 of 25); even there, growth is gradual — at
+most 0.17 d per month.
+
+```{ojs slope-forest}
+slope_forest = {
+  const rows = d3.sort(slopes, (d) => -d.estimate);
+  return Plot.plot({
+    width: 780, height: rows.length * 24 + 60,
+    marginLeft: 240,
+    x: { label: "Age slope (d per month)" },
+    y: { domain: rows.map((d) => d.dataset), label: null },
+    marks: [
+      Plot.ruleX([0], { strokeDasharray: "3,3", stroke: "#999" }),
+      Plot.ruleY(rows, { y: "dataset", x1: "ci_lb", x2: "ci_ub",
+        stroke: (d) => d.significant ? "#dc322f" : "#333", strokeWidth: 1.6 }),
+      Plot.dot(rows, { y: "dataset", x: "estimate",
+        fill: (d) => d.significant ? "#dc322f" : "#333", r: 4,
+        title: (d) => `${d.dataset}\n${d.estimate.toFixed(3)} [${d.ci_lb.toFixed(3)}, ${d.ci_ub.toFixed(3)}]\np = ${d.p.toFixed(4)}`,
+        tip: true })
+    ]
+  });
+}
+```
+
+## Model comparison (ΔAICc)
+
+Lower is better; 0.00 marks each dataset's best-fitting form. Differences
+above 4 (shaded) are conventionally considered meaningful — they occur in
+only six datasets, and the winner is never the linear model.
+
+```{ojs aic-table}
+aic_table = {
+  const forms = ["Constant", "Linear", "Log", "Quadratic"];
+  const byds = d3.group(aic, (d) => d.dataset);
+  const rows = [...byds.entries()].map(([ds, vals]) => {
+    const r = { dataset: ds };
+    for (const f of forms) r[f] = vals.find((v) => v.form === f)?.delta;
+    return r;
+  });
+  const cell = (v) => v === undefined ? "" :
+    html`<td style="text-align:right; padding:0.25rem 0.75rem;
+      ${v === 0 ? "font-weight:700;" : ""}
+      ${v > 4 ? "background:#fdecea;" : ""}">${v.toFixed(2)}</td>`;
+  return html`<div style="overflow-x:auto;"><table style="border-collapse:collapse; font-size:0.9rem;">
+    <thead><tr style="border-bottom:2px solid #ccc;">
+      <th style="text-align:left; padding:0.25rem 0.75rem;">dataset</th>
+      ${forms.map((f) => html`<th style="text-align:right; padding:0.25rem 0.75rem;">${f}</th>`)}
+    </tr></thead>
+    <tbody>${rows.map((r) => html`<tr style="border-bottom:1px solid #eee;">
+      <td style="padding:0.25rem 0.75rem;">${r.dataset}</td>
+      ${forms.map((f) => cell(r[f]))}</tr>`)}</tbody>
+  </table></div>`;
+}
+```
+
+## Why might trajectories look flat? An interactive explainer
+
+The paper tested four explanations for flat trajectories. Two of them can be
+felt directly: **publication bias** that is stronger for younger infants
+props up early effect sizes, and **method adaptation** (harder tasks for
+older infants) pushes later effect sizes down — both flatten an underlying
+increase. Set a true developmental slope, then apply each distortion and
+watch what the observed literature would show.
+
+```{ojs explainer-controls}
+viewof true_slope = Inputs.range([0, 0.1], { label: "True slope (d/month)",
+  step: 0.005, value: 0.05 })
+
+viewof bias_strength = Inputs.range([0, 1], {
+  label: "Age-graded publication bias", step: 0.05, value: 0 })
+
+viewof adaptation = Inputs.range([0, 0.1], {
+  label: "Method adaptation (d/month penalty)", step: 0.005, value: 0 })
+
+viewof resample = Inputs.button("Resample studies")
+```
+
+```{ojs explainer-plot}
+explainer = {
+  resample;
+  const n = 120;
+  const rand_norm = () => {
+    const u = Math.random() || 1e-12, v = Math.random();
+    return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
+  };
+  // simulate studies across 0-36 months
+  let pts = d3.range(n).map(() => {
+    const age = Math.random() * 36;
+    const se = 0.15 + Math.random() * 0.25;
+    const true_es = 0.1 + true_slope * age - adaptation * age;
+    const obs = true_es + rand_norm() * se;
+    // age-graded publication bias: young + null results get suppressed
+    const sig = obs / se > 1.64;
+    const suppress_p = !sig ? bias_strength * Math.max(0, (36 - age) / 36) : 0;
+    return { age, obs, se, published: Math.random() > suppress_p };
+  });
+  const pub = pts.filter((d) => d.published);
+  const fit = (rows) => {
+    const sw = d3.sum(rows, (d) => 1 / (d.se * d.se));
+    const mx = d3.sum(rows, (d) => d.age / (d.se * d.se)) / sw;
+    const my = d3.sum(rows, (d) => d.obs / (d.se * d.se)) / sw;
+    const b = d3.sum(rows, (d) => (d.age - mx) * (d.obs - my) / (d.se * d.se)) /
+      d3.sum(rows, (d) => (d.age - mx) ** 2 / (d.se * d.se));
+    return { a: my - b * mx, b };
+  };
+  const f = fit(pub);
+  const lines = [
+    { x1: 0, y1: 0.1, x2: 36, y2: 0.1 + true_slope * 36, kind: "true slope (no distortion)" },
+    { x1: 0, y1: f.a, x2: 36, y2: f.a + f.b * 36, kind: "what the published literature shows" }
+  ];
+  return Plot.plot({
+    width: 780, height: 420,
+    marginLeft: 55,
+    x: { label: "Mean age (months)" },
+    y: { label: "Effect size (d)" },
+    color: { legend: true,
+             domain: ["true slope (no distortion)", "what the published literature shows"],
+             range: ["#999", "#dc322f"] },
+    marks: [
+      Plot.ruleY([0], { strokeDasharray: "3,3", stroke: "#ccc" }),
+      Plot.dot(pts, { x: "age", y: "obs", r: 3,
+        fill: (d) => d.published ? "#268bd2" : "#bbb",
+        fillOpacity: (d) => d.published ? 0.6 : 0.35,
+        title: (d) => d.published ? "published" : "unpublished (suppressed)" }),
+      ...lines.map((l) => Plot.link([l], { x1: "x1", y1: "y1", x2: "x2", y2: "y2",
+        stroke: "kind", strokeWidth: 2.5,
+        strokeDasharray: l.kind.startsWith("true") ? "6,4" : null }))
+    ]
+  });
+}
+```
+
+*Grey points are studies that were run but never published. The paper found
+that neither distortion consistently explains the observed flatness — see
+[the full analyses](https://doi.org/10.1111/desc.70028).*
+
+---
+
+Data and models: [Cao et al. (2025)](https://doi.org/10.1111/desc.70028),
+fitted objects from the paper's
+[repository](https://github.com/anjiecao/metalabr_exp). The paper's corpus
+merges some MetaLab datasets (gaze following, word segmentation), splits
+language discrimination/preference, and uses the updated IDS-preference
+data of Zettersten et al. (2024) — so panels here can differ from the same
+datasets on the [explorer](explorer.qmd).

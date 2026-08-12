@@ -19,6 +19,12 @@ website:
         text: Datasets
       - href: explorer.qmd
         text: Visualizations
+      - text: Analyses
+        menu:
+          - href: age-curves.qmd
+            text: Age Curves
+          - href: replicability.qmd
+            text: Replicability
       - text: Tools
         menu:
           - href: power-analysis.qmd
