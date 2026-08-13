@@ -47,8 +47,14 @@ dataset_meta = registry.find((d) => d.name === dataset_name)
 
 viewof subset_choice = {
   const subsets = dataset_meta.subset ?? [];
+  if (!subsets.length) {
+    // no subsets for this dataset: fixed value, no control shown
+    const el = html`<div></div>`;
+    el.value = "All data";
+    return el;
+  }
   return Inputs.radio(["All data", ...subsets], {
-    label: subsets.length ? "Subset" : "",
+    label: "Subset",
     value: "All data"
   });
 }
@@ -148,6 +154,10 @@ power_boxes = {
 
 #### Power as a function of sample size
 
+*N is the number of infants **per group**: for a within-participant design
+(most MetaLab datasets) that is the total number of infants; for a
+between-participant design, each condition needs N infants.*
+
 ::: {.panel-tabset}
 
 ## Plot
@@ -162,7 +172,7 @@ power_plot = {
   return Plot.plot({
     width: 780, height: 430,
     marginLeft: 55,
-    x: { label: "Number of participants (N)", domain: [0, max_n] },
+    x: { label: "Number of participants per group (N)", domain: [0, max_n] },
     y: { label: "Power to reject the null at p < .05", domain: [0, 1] },
     marks: [
       Plot.ruleY([0.8], { strokeDasharray: "5,4", stroke: "#666" }),

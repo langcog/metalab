@@ -30,3 +30,20 @@ html`<style>
   }
 </style>`
 ```
+
+```{ojs input-button-css}
+html`<style>
+  .${ojs_ns} button {
+    background-color: #fff;
+    color: #212529;
+    border: 1px solid #c6ced6;
+    border-radius: 0.4rem;
+    padding: 0.25rem 0.9rem;
+    cursor: pointer;
+  }
+
+  .${ojs_ns} button:hover {
+    background-color: #eef2f6;
+  }
+</style>`
+```

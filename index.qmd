@@ -83,6 +83,14 @@ acquisition and cognitive development. Anyone can use the data to explore
 phenomena in early development, plan a study with meta-analytically grounded
 power analyses, or contribute new effect sizes to a growing, curated database.
 
+Two papers are the best introduction to the project. **[Bergmann et al.
+(2018)](https://doi.org/10.1111/cdev.13079)** describes the database and uses
+it to diagnose the field's statistical power and methodological choices — see
+the live [Replicability](replicability.qmd) analyses. **[Cao et al.
+(2025)](https://doi.org/10.1111/desc.70028)** asks how effect sizes change
+over development across 25 datasets — see [Age Curves](age-curves.qmd). New
+to meta-analysis? Start with the [primer](about.qmd#a-short-meta-analysis-primer).
+
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-4}

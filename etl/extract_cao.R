@@ -59,13 +59,30 @@ cat(sprintf("curves: %d rows, %d datasets, forms: %s\n",
 ## ---- AICc model comparison (Table 2) ----
 aic <- readRDS(file.path(repo, "cached_data", "age_models_df.Rds")) %>%
   filter(ic == "AICc") %>%
-  transmute(dataset, form = model_spec_clean, aicc = REML) %>%
+  transmute(dataset,
+            # normalize to the label the curves/table use ("Const" in the
+            # cached models vs "Constant" everywhere else)
+            form = dplyr::recode(model_spec_clean, Const = "Constant"),
+            aicc = REML) %>%
   group_by(dataset) %>%
   mutate(delta = aicc - min(aicc)) %>%
   ungroup()
 write_json(aic, "slices/cao/aic.json", dataframe = "rows", digits = 4)
 cat(sprintf("aic: %d rows (%d datasets)\n", nrow(aic),
             dplyr::n_distinct(aic$dataset)))
+
+## ---- individual effect sizes (the trimmed 2520-row corpus) ----
+## data/metalab_data_mini.csv is written by analysis/00_trimming.Rmd and is
+## the paper's final analysis corpus (25 datasets, Cao dataset names, sign
+## flips and merges applied) -- the right points to overlay on the curves
+points <- readr::read_csv(file.path(repo, "data", "metalab_data_mini.csv"),
+                          show_col_types = FALSE) %>%
+  transmute(dataset = ds_clean, cite = short_cite,
+            age = mean_age_months, d = d_calc, d_var = d_var_calc) %>%
+  filter(is.finite(age), is.finite(d))
+write_json(points, "slices/cao/points.json", dataframe = "rows", digits = 4)
+cat(sprintf("points: %d rows (%d datasets)\n", nrow(points),
+            dplyr::n_distinct(points$dataset)))
 
 ## ---- linear age slopes (Figure 2) ----
 slopes <- readRDS(file.path(repo, "cached_data", "all_slope_estimates.Rds")) %>%

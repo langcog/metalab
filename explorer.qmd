@@ -69,8 +69,14 @@ viewof es_type = Inputs.select(es_choices, { label: "Effect size type", value: "
 
 viewof subset_choice = {
   const subsets = dataset_meta.subset ?? [];
+  if (!subsets.length) {
+    // no subsets for this dataset: fixed value, no control shown
+    const el = html`<div></div>`;
+    el.value = "All data";
+    return el;
+  }
   return Inputs.radio(["All data", ...subsets], {
-    label: subsets.length ? "Subset" : "",
+    label: "Subset",
     value: "All data"
   });
 }
@@ -140,7 +146,8 @@ viewof curve_type = Inputs.radio(new Map([["LOESS", "loess"], ["Linear", "lm"]])
 ```{ojs dataset-blurb}
 html`<div style="font-size: 0.82rem; color: #555; margin-top: 0.75rem;">
   <p>${dataset_meta.short_desc ?? ""}</p>
-  <p><em>Citation:</em> ${dataset_meta.full_citation ?? dataset_meta.citation ?? ""}</p>
+  <p><em>Citation:</em> ${dataset_meta.full_citation ?? dataset_meta.citation ?? ""}
+  ${dataset_meta.link ? html` <a href="${dataset_meta.link}">[source paper]</a>` : ""}</p>
   <p><a href="resources/csv/${dataset_meta.filename}.csv" download>Download full dataset (CSV)</a></p>
 </div>`
 ```
@@ -343,6 +350,11 @@ Inputs.table(mod_groups.length === 0 ? [] :
 :::
 
 #### Forest plot
+
+Black points are the observed effect sizes (with 95% CIs); **colored
+triangles are the model's estimated effect sizes** given the selected
+moderators (one color per moderator group — with no moderators selected,
+every study shares the overall meta-analytic estimate).
 
 ::: {.panel-tabset}
 

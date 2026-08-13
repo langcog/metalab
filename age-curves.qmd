@@ -20,6 +20,8 @@ published model fits ([repository](https://github.com/anjiecao/metalabr_exp)).
 curves = d3.json("slices/cao/curves.json")
 aic = d3.json("slices/cao/aic.json")
 slopes = d3.json("slices/cao/slopes.json")
+es_points = d3.json("slices/cao/points.json")
+points_by_ds = d3.group(es_points, (d) => d.dataset)
 
 form_colors = ({ Constant: "#dc322f", Linear: "#859900", Log: "#2aa198",
   Quadratic: "#6c71c4" })
@@ -41,27 +43,42 @@ viewof forms_shown = Inputs.checkbox(Object.keys(form_colors), {
 })
 
 viewof show_ribbons = Inputs.toggle({ label: "95% CI ribbons", value: false })
+
+viewof show_points = Inputs.toggle({ label: "Individual effect sizes", value: true })
 ```
 
 ```{ojs curve-panels}
 trajectory_panels = {
   clear_loading();
   const panels = cao_datasets.map((ds) => {
-    // start at 1 month: the log model's predictions diverge as age -> 0,
-    // outside every dataset's observed range
+    const pts = points_by_ds.get(ds) ?? [];
+    // clamp predictions to the dataset's own observed age range: the log
+    // model diverges as age -> 0, and each dataset was only fit within its
+    // own range (e.g. neonatal imitation lives entirely below 2 months)
+    const amin = Math.max(d3.min(pts, (d) => d.age) ?? 1, 0.01);
+    const amax = d3.max(pts, (d) => d.age) ?? 36;
     const cd = curves.filter((d) => d.dataset === ds &&
-      forms_shown.includes(d.form) && d.age_months >= 1);
-    const ymin = d3.min(cd, (d) => show_ribbons ? d.ci_lb : d.pred);
-    const ymax = d3.max(cd, (d) => show_ribbons ? d.ci_ub : d.pred);
+      forms_shown.includes(d.form) && d.age_months >= amin && d.age_months <= amax);
+    let ymin = d3.min(cd, (d) => show_ribbons ? d.ci_lb : d.pred);
+    let ymax = d3.max(cd, (d) => show_ribbons ? d.ci_ub : d.pred);
+    if (show_points && pts.length) {
+      // include the bulk of the points without letting outliers flatten the
+      // curves; dots are clipped at the panel edge
+      const ds_d = pts.map((p) => p.d).sort(d3.ascending);
+      ymin = Math.min(ymin, d3.quantileSorted(ds_d, 0.02));
+      ymax = Math.max(ymax, d3.quantileSorted(ds_d, 0.98));
+    }
     const pad = (ymax - ymin) * 0.08 || 0.1;
     const plot = Plot.plot({
       width: 235, height: 160,
       marginLeft: 38, marginBottom: 28,
-      x: { label: "age (mo)", ticks: 4, domain: [1, 36] },
+      x: { label: "age (mo)", ticks: 4, domain: [amin, amax] },
       y: { label: "d", ticks: 4,
            domain: [Math.min(ymin - pad, 0), ymax + pad] },
       marks: [
         Plot.ruleY([0], { strokeDasharray: "3,3", stroke: "#999" }),
+        ...(show_points ? [Plot.dot(pts, { x: "age", y: "d", r: 1.6,
+          fill: "#4a5568", fillOpacity: 0.3, clip: true })] : []),
         ...(show_ribbons ? [Plot.areaY(cd, { x: "age_months", y1: "ci_lb",
           y2: "ci_ub", z: "form", fill: (d) => form_colors[d.form],
           fillOpacity: 0.12 })] : []),
@@ -113,9 +130,15 @@ slope_forest = {
 
 ## Model comparison (ΔAICc)
 
-Lower is better; 0.00 marks each dataset's best-fitting form. Differences
-above 4 (shaded) are conventionally considered meaningful — they occur in
-only six datasets, and the winner is never the linear model.
+Each row is a dataset; each column is one of the four candidate trajectory
+shapes. A cell shows how much worse that shape fits than the dataset's
+best-fitting shape, in AICc units: **0.00 (bold) marks the winner**, and
+bigger numbers mean worse fits. Shapes within ~4 units of the winner are
+statistically indistinguishable from it; shaded cells (Δ > 4) are
+meaningfully worse. In 19 of 25 datasets nothing is shaded — the four shapes
+can't be told apart, usually because there is little age-related change to
+describe. In the six datasets with a meaningful contrast, the winner is
+logarithmic or quadratic, never linear.
 
 ```{ojs aic-table}
 aic_table = {
