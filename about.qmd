@@ -109,7 +109,7 @@ contributing? See [About](about.qmd) or write to any of the leaders.
 ### Leaders
 
 - **Christina Bergmann** — Osnabrück University of Applied Sciences & MPI for Psycholinguistics · <chbergma@gmail.com>
-- **Sho Tsuji** — The University of Tokyo · <tsujish@gmail.com>
+- **Sho Tsuji** — CNRS / The University of Tokyo · <sho.tsuji@ens.psl.eu>
 
 ### Governing board
 
