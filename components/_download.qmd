@@ -1,0 +1,14 @@
+```{ojs download-helper}
+//| output: false
+download_csv = (rows, filename) => {
+  if (!rows || !rows.length) return html`<span></span>`;
+  const cols = Object.keys(rows[0]);
+  const esc = (v) => {
+    const s = String(v ?? "");
+    return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+  };
+  const csv = [cols.join(","), ...rows.map((r) => cols.map((c) => esc(r[c])).join(","))].join("\n");
+  const url = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
+  return html`<a class="btn btn-sm btn-outline-primary" href=${url} download=${filename}>Download CSV</a>`;
+}
+```

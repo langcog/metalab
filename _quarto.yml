@@ -1,0 +1,67 @@
+lang: en
+
+project:
+  title: "MetaLab"
+  type: website
+  render:
+    - "*.qmd"
+  resources:
+    - "slices/**"
+    - "resources/**"
+
+website:
+  site-url: https://langcog.github.io/metalab/
+  favicon: images/favicon.ico
+  navbar:
+    title: MetaLab
+    left:
+      - href: datasets.qmd
+        text: Datasets
+      - text: Analyses
+        menu:
+          - href: explorer.qmd
+            text: Visualizations
+          - href: age-curves.qmd
+            text: Age Curves
+          - href: replicability.qmd
+            text: Replicability
+          - href: power-analysis.qmd
+            text: Power Analysis
+          - href: power-simulation.qmd
+            text: Power Simulation
+          - href: validator.qmd
+            text: Dataset Validator
+      - href: publications.qmd
+        text: Publications
+      - href: about.qmd
+        text: About
+  page-footer:
+    center: |
+      [![Creative Commons Attribution 4.0 license](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)<br>
+      Unless otherwise noted, MetaLab and its datasets are licensed under a
+      [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).<br>
+      Data hosted on [Redivis](https://stanford.redivis.com/datasets/81tq-8dp5ge6b9) ·
+      [GitHub](https://github.com/langcog/metalab)
+
+format:
+  datapage-html:
+    theme: theme.scss
+    mainfont: "Helvetica Neue, Helvetica, Arial, sans-serif"
+    fontsize: 15px
+    include-in-header:
+      - text: |
+          <script>
+          // The Observable runtime schedules on requestAnimationFrame, which
+          // never fires in hidden documents (prerendering, preview panes,
+          // automation) -- OJS cells then hang forever with no error. If the
+          // page LOADS hidden, fall back to a timer-based scheduler.
+          if (document.visibilityState === "hidden") {
+            window.requestAnimationFrame = (cb) => setTimeout(() => cb(performance.now()), 16);
+          }
+          </script>
+
+execute:
+  echo: false
+  message: false
+  warning: false
+  error: false

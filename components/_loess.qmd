@@ -1,0 +1,64 @@
+```{ojs loess-helper}
+//| output: false
+// weighted LOESS (tricube kernel, local linear fit), matching the smoother
+// the shiny visualization drew with geom_smooth(method="loess", span=1,
+// aes(weight = 1/es_var))
+loess_points = (data, { x = "x", y = "y", w = null, span = 1, grid = 80 } = {}) => {
+  const wf = typeof w === "function" ? w : w ? (d) => +d[w] : () => 1;
+  const pts = data
+    .map((d) => ({ x: +d[x], y: +d[y], w: wf(d) }))
+    .filter((d) => Number.isFinite(d.x) && Number.isFinite(d.y) && Number.isFinite(d.w))
+    .sort((a, b) => a.x - b.x);
+  if (pts.length < 4) return [];
+
+  const k = Math.max(2, Math.ceil(span * pts.length));
+  const x0 = pts[0].x, x1 = pts[pts.length - 1].x;
+  const out = [];
+  for (let i = 0; i <= grid; i++) {
+    const xt = x0 + (x1 - x0) * (i / grid);
+    const dists = pts.map((p) => Math.abs(p.x - xt)).sort((a, b) => a - b);
+    const dmax = dists[Math.min(k, dists.length) - 1] || 1e-9;
+    let sw = 0, swx = 0, swy = 0, swxx = 0, swxy = 0;
+    for (const p of pts) {
+      const u = Math.abs(p.x - xt) / dmax;
+      if (u >= 1) continue;
+      const tw = Math.pow(1 - Math.pow(u, 3), 3) * p.w;
+      sw += tw; swx += tw * p.x; swy += tw * p.y;
+      swxx += tw * p.x * p.x; swxy += tw * p.x * p.y;
+    }
+    if (sw <= 0) continue;
+    const denom = sw * swxx - swx * swx;
+    let yt;
+    if (Math.abs(denom) < 1e-12) yt = swy / sw;
+    else {
+      const b = (sw * swxy - swx * swy) / denom;
+      const a = (swy - b * swx) / sw;
+      yt = a + b * xt;
+    }
+    out.push({ [x]: xt, [y]: yt });
+  }
+  return out;
+}
+
+// weighted least squares line, matching geom_smooth(method="lm",
+// aes(weight = 1/es_var)); returns endpoints
+wls_points = (data, { x = "x", y = "y", w = null } = {}) => {
+  const wf = typeof w === "function" ? w : w ? (d) => +d[w] : () => 1;
+  const pts = data
+    .map((d) => ({ x: +d[x], y: +d[y], w: wf(d) }))
+    .filter((d) => Number.isFinite(d.x) && Number.isFinite(d.y) && Number.isFinite(d.w));
+  if (pts.length < 3) return [];
+  let sw = 0, swx = 0, swy = 0, swxx = 0, swxy = 0;
+  for (const p of pts) {
+    sw += p.w; swx += p.w * p.x; swy += p.w * p.y;
+    swxx += p.w * p.x * p.x; swxy += p.w * p.x * p.y;
+  }
+  const denom = sw * swxx - swx * swx;
+  if (Math.abs(denom) < 1e-12) return [];
+  const b = (sw * swxy - swx * swy) / denom;
+  const a = (swy - b * swx) / sw;
+  const xs = pts.map((p) => p.x);
+  const x0 = Math.min(...xs), x1 = Math.max(...xs);
+  return [{ [x]: x0, [y]: a + b * x0 }, { [x]: x1, [y]: a + b * x1 }];
+}
+```

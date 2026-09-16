@@ -1,12 +1,10 @@
-public/*
-.DS_Store
-blogdown/*
-resources/*
+.secrets
 .Rproj.user
-content/dataset/*
 .Rhistory
-static/rmarkdown-libs/*
-static/explore/*
-static/report/*
-content/**/*.html
+_site/
+/.quarto/
+data/
+*.log
+etl/staging/
 
+**/*.quarto_ipynb

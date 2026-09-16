@@ -1,0 +1,12 @@
+```{=html}
+<div class="ml-loading" id="ml-loading">
+  <div class="ml-spinner"></div>
+  Loading data…
+</div>
+```
+
+```{ojs spinner-helper}
+//| output: false
+// call once the first visualization has rendered
+clear_loading = () => document.getElementById("ml-loading")?.remove()
+```

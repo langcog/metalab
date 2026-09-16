@@ -1,58 +1,49 @@
-# Developing for Metalab
+# MetaLab datapage
 
-Building MetaLab locally will allow you to make changes, including
-text or data updates, adding new pages, or enhancing Shiny
-applications.
+A static rebuild of [metalab.stanford.edu](https://metalab.stanford.edu) on the
+datapages pattern: data hosted on [Redivis](https://stanford.redivis.com/datasets/81tq-8dp5ge6b9)
+(versioned, citable), site built with Quarto, visualization in-browser with
+Observable Plot. Supersedes the Hugo site + Posit Connect Shiny apps (which
+went offline when the `metalab-shiny.com` server died).
 
-## Software Requirements (one-time setup)
+This branch (`datapage`) is developed in a worktree and will replace `main` +
+`gh-pages` at cutover.
 
-- [R](https://cloud.r-project.org/) >= 4.02
-- [Hugo Extended](https://gohugo.io/getting-started/installing/) >= v0.74.3
-
-One easy way to install Hugo Extended is to use the blogdown
-package.
-
-```
-install.packages("markdown")
-install.packages("blogdown") #only required if you do not already have it
-blogdown::install_hugo()
-```
-
-## Install the required packages (one-time setup)
-
-To install all the required R packages on your system, run the
-following commad after opening this project in RStudio:
+## Architecture
 
 ```
-renv::restore()
+32 curator Google Sheets --etl/fetch_fresh.R--> etl/staging/v*/  (parquet)
+etl/staging              --etl/upload_redivis.R--> Redivis: datapages.metalab (versioned release)
+etl/staging              --etl/write_site_data.R--> slices/*.json + resources/csv/*  (committed)
+slices/                  --quarto render (no R!)--> _site/  (GitHub Pages)
 ```
 
-## Updating to latest data (optional)
+- **The render needs no R and no tokens**: all site data is committed as JSON
+  slices (~2 MB) rebuilt by `etl/write_site_data.R` after each data release.
+- **Data releases** are two-phase: `etl/fetch_fresh.R` (fetch + validate +
+  compute effect sizes via the legacy metalabr pipeline, archive raw sheets)
+  → `etl/upload_redivis.R <staging_dir> "notes" [--release]`. Release names
+  ("2023.1", "2026.1") map to Redivis version tags in `etl/versions.json`.
+- 7 datasets' upstream sheets were deleted at some point after 2023
+  (HTTP 410): their rows are carried forward verbatim from the 2023 snapshot,
+  marked by `datasets.sheet_status = "unavailable_upstream"`.
 
-If the spreadsheets have been updated and you want to try the latest
-available data, you can run:
+## Redivis tables
+
+| table | grain |
+|---|---|
+| `effect_sizes` | one row per effect size (all datasets; raw coded fields + derived ES columns) |
+| `datasets` | one row per dataset (registry + summary counts + provenance) |
+| `fields` | spec for coded columns (from metadata/spec.yaml) |
+| `fields_derived` | spec for pipeline-derived columns |
+
+## Local development
 
 ```
-source(here::here("build", "update-metalab-data.R"))
+Rscript etl/write_site_data.R   # only after a new data release
+quarto render                    # -> _site/
 ```
 
-If you do not run this command, your build will use the dataset that
-the current MetaLab site uses.
-
-## Building MetaLab (each time you want to make changes)
-
-You are now ready to build MetaLab. The commands below will serve the
-site locally on your computer. The build script may take a few minutes
-to run. When completed, it will be serving a local copy of the MetaLab
-site at http://localhost:4321/metalab
-
-
-```
-source(here::here("build", "build-metalab-site.R"))
-blogdown::serve_site()
-```
-
-## Editing content
-
-You can now try editing existing content in the `content`
-directory. Your changes will automatically reload in your web browser.
+Note: pages hang in *hidden* browser tabs by design of the Observable
+runtime (requestAnimationFrame never fires); a shim in `_quarto.yml` falls
+back to a timer scheduler when a page loads hidden.

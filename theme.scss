@@ -1,0 +1,147 @@
+/*-- scss:defaults --*/
+
+// MetaLab palette (from the legacy Hugo theme data/themes/metalab.toml):
+// brick-red navbar, blue links/accents
+$metalab-red: #dd4b39;
+$metalab-blue: #2962ff;
+
+$primary: $metalab-blue;
+$link-color: $metalab-blue;
+$navbar-bg: $metalab-red;
+$navbar-fg: #ffffff;
+
+/*-- scss:rules --*/
+
+.navbar {
+  .navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .nav-link {
+    color: #ecf0f5 !important;
+    &:hover, &.active {
+      color: #ffffff !important;
+    }
+  }
+}
+
+// hero block on the home page
+.metalab-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0 1rem 0;
+
+  .hero-left {
+    flex: 1 1 24rem;
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      border: none;
+      margin-bottom: 0.75rem;
+    }
+    .tagline {
+      font-size: 1.25rem;
+      color: #444;
+    }
+  }
+  .hero-right {
+    flex: 1 1 20rem;
+    font-size: 1.15rem;
+  }
+}
+
+.stat-strong {
+  font-weight: 700;
+}
+
+// dataset cards
+.dataset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.dataset-card {
+  border: 1px solid #e3e6ea;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background: #fff;
+
+  h3 {
+    font-size: 1.05rem;
+    margin: 0 0 0.4rem 0;
+    a { text-decoration: none; }
+  }
+  .card-desc {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+  }
+  .card-stats {
+    font-size: 0.8rem;
+    color: #777;
+  }
+  .card-frozen {
+    font-size: 0.75rem;
+    color: #a15c00;
+  }
+}
+
+// viz layout: sidebar of controls + main plot area
+.viz-layout {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.viz-sidebar {
+  flex: 0 0 17rem;
+  position: sticky;
+  top: 4rem;
+  background: #f7f8fa;
+  border: 1px solid #e3e6ea;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.viz-main {
+  flex: 1 1 30rem;
+  min-width: 0;
+}
+
+// loading spinner (removed by the first plot cell)
+.ml-loading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #666;
+  margin: 1.5rem 0;
+}
+
+.ml-spinner {
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 3px solid #e3e6ea;
+  border-top-color: $metalab-blue;
+  border-radius: 50%;
+  animation: ml-spin 0.8s linear infinite;
+}
+
+@keyframes ml-spin {
+  to { transform: rotate(360deg); }
+}
+
+.value-box {
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  background: $metalab-blue;
+  min-width: 9rem;
+
+  .vb-value { font-size: 1.6rem; font-weight: 700; line-height: 1.1; }
+  .vb-label { font-size: 0.8rem; opacity: 0.9; }
+}

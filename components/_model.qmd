@@ -1,0 +1,53 @@
+```{ojs model-helpers}
+//| output: false
+// helpers for working with the precomputed metafor model grid
+// (slices/models/<short_name>.json; see etl/precompute_models.R)
+
+// reconstruct symmetric vcov from stored lower triangle (column-major,
+// diag included, as R's lower.tri(x, diag = TRUE) extracts)
+unpack_vcov = (lower, p) => {
+  const V = Array.from({ length: p }, () => new Array(p).fill(0));
+  let idx = 0;
+  for (let j = 0; j < p; j++)
+    for (let i = j; i < p; i++) {
+      V[i][j] = V[j][i] = lower[idx++];
+    }
+  return V;
+}
+
+// design vector for one data row (or synthetic row of moderator values)
+design_row = (row, combo, mods) => {
+  return combo.coefs.map((c) => {
+    if (c.name === "intrcpt") return 1;
+    if (mods.includes(c.name)) return +row[c.name];  // numeric moderator
+    for (const m of Object.keys(combo.levels ?? {})) {
+      if (c.name.startsWith(m))
+        return String(row[m]) === c.name.slice(m.length) ? 1 : 0;
+    }
+    return 0;
+  });
+}
+
+dot = (a, b) => a.reduce((s, v, i) => s + v * b[i], 0)
+
+quad_form = (x, V) => {
+  let s = 0;
+  for (let i = 0; i < x.length; i++)
+    for (let j = 0; j < x.length; j++) s += x[i] * V[i][j] * x[j];
+  return s;
+}
+
+// R's make.unique: append .1, .2, ... to repeats
+make_unique = (names) => {
+  const seen = new Map();
+  return names.map((n) => {
+    if (!seen.has(n)) { seen.set(n, 0); return n; }
+    const k = seen.get(n) + 1; seen.set(n, k);
+    return `${n}.${k}`;
+  });
+}
+
+fmt_p = (p) => p < 0.0001 ? "< .0001" : "= " + p.toFixed(4).replace(/^0/, "")
+
+days_per_month = 365.2425 / 12
+```
