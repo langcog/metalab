@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MetaLab</title>
+<title>Datasets – MetaLab</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -159,7 +159,7 @@ if (document.visibilityState === "hidden") {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./datasets.html"> 
+    <a class="nav-link active" href="./datasets.html" aria-current="page"> 
 <span class="menu-text">Datasets</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -209,7 +209,23 @@ if (document.visibilityState === "hidden") {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Datasets</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
@@ -219,123 +235,55 @@ if (document.visibilityState === "hidden") {
 
 
 
-<div class="ml-loading" id="ml-loading">
-  <div class="ml-spinner"></div>
-  Loading data…
-</div>
+
+<p>Each MetaLab dataset is a curated meta-analysis of a phenomenon in early language or cognitive development. Click a dataset to explore it interactively; full data for every dataset can be downloaded on its page or from the <a href="https://stanford.redivis.com/datasets/81tq-8dp5ge6b9">versioned archive on Redivis</a>.</p>
 <div class="cell hidden">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="27" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 26;"><span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">// call once the first visualization has rendered</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>clear_loading <span class="op">=</span> () <span class="kw">=&gt;</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"ml-loading"</span>)<span class="op">?.</span><span class="fu">remove</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="13" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 12;"><span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>registry <span class="op">=</span> d3<span class="op">.</span><span class="fu">json</span>(<span class="st">"slices/datasets.json"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>domains <span class="op">=</span> ([</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">id</span><span class="op">:</span> <span class="st">"early_language"</span><span class="op">,</span> <span class="dt">title</span><span class="op">:</span> <span class="st">"Early language"</span><span class="op">,</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">desc</span><span class="op">:</span> <span class="st">"How do children learn their native language?"</span> }<span class="op">,</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">id</span><span class="op">:</span> <span class="st">"cognitive_development"</span><span class="op">,</span> <span class="dt">title</span><span class="op">:</span> <span class="st">"Cognitive development"</span><span class="op">,</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="dt">desc</span><span class="op">:</span> <span class="st">"What is the nature of children's understanding?"</span> }</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display hidden">
-<div id="ojs-cell-1" data-nodetype="declaration">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
-<div class="metalab-hero">
-<div class="hero-left">
-<p><img src="images/metalab-logo.png" class="img-fluid" style="max-width: 420px; width: 100%;" alt="MetaLab"></p>
-<p><span class="tagline">Interactive, community-augmented meta-analysis tools for cognitive development research</span></p>
-<p style="margin-top: 1.25rem;">
-<a class="btn btn-primary" href="./explorer.html">Explore the data</a> <a class="btn btn-outline-primary" href="./datasets.html">Browse datasets</a> <a class="btn btn-outline-primary" href="./about.html">Documentation</a>
-</p>
-<p>New MetaLab user? Check out <a href="./about.html">About</a> first!</p>
-</div>
-<div class="hero-right">
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="40" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 39;"><span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>stats <span class="op">=</span> d3<span class="op">.</span><span class="fu">json</span>(<span class="st">"slices/stats.json"</span>)</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;p&gt;The MetaLab database contains</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;span class="stat-strong"&gt;</span><span class="sc">${</span>stats<span class="op">.</span><span class="at">n_effect_sizes</span><span class="op">.</span><span class="fu">toLocaleString</span>()<span class="sc">}</span><span class="vs"> effect sizes&lt;/span&gt;</span></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="vs">from &lt;span class="stat-strong"&gt;</span><span class="sc">${</span>stats<span class="op">.</span><span class="at">n_datasets</span><span class="sc">}</span><span class="vs"> meta-analyses&lt;/span&gt; across</span></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="vs">two domains of cognitive development, based on data from</span></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;span class="stat-strong"&gt;</span><span class="sc">${</span>stats<span class="op">.</span><span class="at">n_papers</span><span class="op">.</span><span class="fu">toLocaleString</span>()<span class="sc">}</span><span class="vs"> papers&lt;/span&gt; and</span></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;span class="stat-strong"&gt;</span><span class="sc">${</span>stats<span class="op">.</span><span class="at">n_subjects</span><span class="op">.</span><span class="fu">toLocaleString</span>()<span class="sc">}</span><span class="vs"> subjects&lt;/span&gt;.&lt;/p&gt;</span></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;p style="font-size: 0.85rem; color: #777;"&gt;Data release </span><span class="sc">${</span>stats<span class="op">.</span><span class="at">source_release</span><span class="sc">}</span></span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="vs">· &lt;a href="https://stanford.redivis.com/datasets/81tq-8dp5ge6b9"&gt;versioned archive on Redivis&lt;/a&gt;&lt;/p&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
+<div class="cell-output cell-output-display hidden">
 <div>
-<div id="ojs-cell-2-1" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-2-2" data-nodetype="expression">
+<div id="ojs-cell-1-2" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb3--1"><a href="#cb3--1" aria-hidden="true" tabindex="-1"></a>hero_funnel <span class="op">=</span> {</span>
-<span id="cb3-0"><a href="#cb3-0" aria-hidden="true" tabindex="-1"></a>  <span class="co">// live funnel plot (IDS preference, Hedges' g) -- the legacy home page</span></span>
-<span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">// showed a static image of this plot; here it is computed from the</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// current release</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> rows <span class="op">=</span> <span class="cf">await</span> d3<span class="op">.</span><span class="fu">json</span>(<span class="st">"slices/es/idspref.json"</span>)<span class="op">;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clear_loading</span>()<span class="op">;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> pts <span class="op">=</span> rows</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> ({ <span class="dt">es</span><span class="op">:</span> <span class="op">+</span>d<span class="op">.</span><span class="at">g_calc</span><span class="op">,</span> <span class="dt">se</span><span class="op">:</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sqrt</span>(<span class="op">+</span>d<span class="op">.</span><span class="at">g_var_calc</span>) }))</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> <span class="bu">Number</span><span class="op">.</span><span class="fu">isFinite</span>(d<span class="op">.</span><span class="at">es</span>) <span class="op">&amp;&amp;</span> <span class="bu">Number</span><span class="op">.</span><span class="fu">isFinite</span>(d<span class="op">.</span><span class="at">se</span>))<span class="op">;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> center <span class="op">=</span> d3<span class="op">.</span><span class="fu">mean</span>(pts<span class="op">,</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">es</span>)<span class="op">;</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> L <span class="op">=</span> <span class="fl">1.05</span> <span class="op">*</span> d3<span class="op">.</span><span class="fu">max</span>(pts<span class="op">,</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">se</span>)<span class="op">;</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> grid <span class="op">=</span> d3<span class="op">.</span><span class="fu">range</span>(<span class="dv">0</span><span class="op">,</span> L <span class="op">*</span> <span class="fl">1.0001</span><span class="op">,</span> L <span class="op">/</span> <span class="dv">50</span>)<span class="op">;</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> tri95 <span class="op">=</span> grid<span class="op">.</span><span class="fu">map</span>((s) <span class="kw">=&gt;</span> ({ <span class="dt">se</span><span class="op">:</span> s<span class="op">,</span> <span class="dt">x1</span><span class="op">:</span> center <span class="op">-</span> <span class="fl">1.96</span> <span class="op">*</span> s<span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> center <span class="op">+</span> <span class="fl">1.96</span> <span class="op">*</span> s }))<span class="op">;</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> tri99 <span class="op">=</span> grid<span class="op">.</span><span class="fu">map</span>((s) <span class="kw">=&gt;</span> ({ <span class="dt">se</span><span class="op">:</span> s<span class="op">,</span> <span class="dt">x1</span><span class="op">:</span> center <span class="op">-</span> <span class="fl">2.576</span> <span class="op">*</span> s<span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> center <span class="op">+</span> <span class="fl">2.576</span> <span class="op">*</span> s }))<span class="op">;</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> xmin <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(center <span class="op">-</span> <span class="fl">2.576</span> <span class="op">*</span> L<span class="op">,</span> d3<span class="op">.</span><span class="fu">min</span>(pts<span class="op">,</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">es</span>))<span class="op">;</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> xmax <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(center <span class="op">+</span> <span class="fl">2.576</span> <span class="op">*</span> L<span class="op">,</span> d3<span class="op">.</span><span class="fu">max</span>(pts<span class="op">,</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">es</span>))<span class="op">;</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">html</span><span class="vs">`&lt;div style="margin-top: 0.5rem;"&gt;</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="font-size: 0.85rem; color: #444; margin-bottom: 0.2rem;"&gt;</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;b&gt;Funnel plot&lt;/b&gt; of bias in effect sizes</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;span style="color:#999;"&gt;(infant-directed speech preference — live)&lt;/span&gt;&lt;/div&gt;</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="vs">    </span><span class="sc">${</span>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>      <span class="dt">width</span><span class="op">:</span> <span class="dv">460</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">280</span><span class="op">,</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>      <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">45</span><span class="op">,</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> { <span class="dt">label</span><span class="op">:</span> <span class="st">"Effect size"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> [xmin<span class="op">,</span> xmax] }<span class="op">,</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> { <span class="dt">label</span><span class="op">:</span> <span class="st">"Standard error"</span><span class="op">,</span> <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> L]<span class="op">,</span> <span class="dt">reverse</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">,</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">rect</span>([{}]<span class="op">,</span> { <span class="dt">x1</span><span class="op">:</span> xmin<span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> xmax<span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> L<span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#e6e6e6"</span> })<span class="op">,</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">areaX</span>(tri99<span class="op">,</span> { <span class="dt">y</span><span class="op">:</span> <span class="st">"se"</span><span class="op">,</span> <span class="dt">x1</span><span class="op">:</span> <span class="st">"x1"</span><span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> <span class="st">"x2"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#fff"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.5</span> })<span class="op">,</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">areaX</span>(tri95<span class="op">,</span> { <span class="dt">y</span><span class="op">:</span> <span class="st">"se"</span><span class="op">,</span> <span class="dt">x1</span><span class="op">:</span> <span class="st">"x1"</span><span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> <span class="st">"x2"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#fff"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.5</span> })<span class="op">,</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">ruleX</span>([center]<span class="op">,</span> { <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"2,2"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#333"</span> })<span class="op">,</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">dot</span>(pts<span class="op">,</span> { <span class="dt">x</span><span class="op">:</span> <span class="st">"es"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"se"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#268bd2"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">3</span> })</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>      ]</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    })<span class="sc">}</span><span class="vs">&lt;/div&gt;`</span><span class="op">;</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="22" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 21;"><span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>domains<span class="op">.</span><span class="fu">map</span>((dom) <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;h2&gt;</span><span class="sc">${</span>dom<span class="op">.</span><span class="at">title</span><span class="sc">}</span><span class="vs">&lt;/h2&gt;</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;p&gt;</span><span class="sc">${</span>dom<span class="op">.</span><span class="at">desc</span><span class="sc">}</span><span class="vs">&lt;/p&gt;</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;div class="dataset-grid"&gt;</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="vs">    </span><span class="sc">${</span>registry<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">domain</span> <span class="op">===</span> dom<span class="op">.</span><span class="at">id</span>)<span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div class="dataset-card"&gt;</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;h3&gt;&lt;a href="explorer.html?dataset=</span><span class="sc">${</span><span class="pp">encodeURIComponent</span>(d<span class="op">.</span><span class="at">short_name</span>)<span class="sc">}</span><span class="vs">"&gt;</span><span class="sc">${</span>d<span class="op">.</span><span class="at">name</span><span class="sc">}</span><span class="vs">&lt;/a&gt;&lt;/h3&gt;</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;div class="card-desc"&gt;</span><span class="sc">${</span>d<span class="op">.</span><span class="at">short_desc</span> <span class="op">??</span> <span class="st">""</span><span class="sc">}</span><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;div class="card-stats"&gt;</span><span class="sc">${</span>d<span class="op">.</span><span class="at">num_papers</span><span class="sc">}</span><span class="vs"> papers · </span><span class="sc">${</span>d<span class="op">.</span><span class="at">num_experiments</span><span class="sc">}</span><span class="vs"> effect sizes · </span><span class="sc">${</span>d<span class="op">.</span><span class="at">num_subjects</span><span class="op">.</span><span class="fu">toLocaleString</span>()<span class="sc">}</span><span class="vs"> subjects&lt;/div&gt;</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;/div&gt;`</span>)<span class="sc">}</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;/div&gt;`</span>)<span class="sc">}</span><span class="vs">`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-3" data-nodetype="declaration">
+<div id="ojs-cell-2" data-nodetype="expression">
 
 </div>
 </div>
 </div>
-</div>
-</div>
-<section id="what-is-metalab" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-metalab">What is MetaLab?</h2>
-<p>MetaLab is a collection of community-augmented meta-analyses of language acquisition and cognitive development. Anyone can use the data to explore phenomena in early development, plan a study with meta-analytically grounded power analyses, or contribute new effect sizes to a growing, curated database.</p>
-<p>Two papers are the best introduction to the project. <strong><a href="https://doi.org/10.1111/cdev.13079">Bergmann et al. (2018)</a></strong> describes the database and uses it to diagnose the field’s statistical power and methodological choices — see the live <a href="./replicability.html">Replicability</a> analyses. <strong><a href="https://doi.org/10.1111/desc.70028">Cao et al. (2025)</a></strong> asks how effect sizes change over development across 25 datasets — see <a href="./age-curves.html">Age Curves</a>. New to meta-analysis? Start with the <a href="./about.html#a-short-meta-analysis-primer">primer</a>.</p>
-<div class="grid">
-<section id="explore" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="explore">Explore</h3>
-<p>Interactive <a href="./explorer.html">visualizations</a> of every dataset: effect sizes across age, funnel plots, forest plots, and moderator analyses — plus <a href="./age-curves.html">analyses</a> of what the whole database says about development.</p>
-</section>
-<section id="plan" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="plan">Plan</h3>
-<p>Meta-analytic <a href="./power-analysis.html">power analysis</a>: how many participants do you need, given everything the literature already knows about your effect?</p>
-</section>
-<section id="contribute" class="level3 g-col-12 g-col-md-4">
-<h3 class="anchored" data-anchor-id="contribute">Contribute</h3>
-<p>Add new effect sizes or datasets — see <a href="./about.html">About</a> and the dataset <a href="./validator.html">validator</a>.</p>
-</section>
-</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vIGNhbGwgb25jZSB0aGUgZmlyc3QgdmlzdWFsaXphdGlvbiBoYXMgcmVuZGVyZWRcbmNsZWFyX2xvYWRpbmcgPSAoKSA9PiBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcIm1sLWxvYWRpbmdcIik/LnJlbW92ZSgpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJzdGF0cyA9IGQzLmpzb24oXCJzbGljZXMvc3RhdHMuanNvblwiKVxuXG5odG1sYDxwPlRoZSBNZXRhTGFiIGRhdGFiYXNlIGNvbnRhaW5zXG48c3BhbiBjbGFzcz1cInN0YXQtc3Ryb25nXCI+JHtzdGF0cy5uX2VmZmVjdF9zaXplcy50b0xvY2FsZVN0cmluZygpfSBlZmZlY3Qgc2l6ZXM8L3NwYW4+XG5mcm9tIDxzcGFuIGNsYXNzPVwic3RhdC1zdHJvbmdcIj4ke3N0YXRzLm5fZGF0YXNldHN9IG1ldGEtYW5hbHlzZXM8L3NwYW4+IGFjcm9zc1xudHdvIGRvbWFpbnMgb2YgY29nbml0aXZlIGRldmVsb3BtZW50LCBiYXNlZCBvbiBkYXRhIGZyb21cbjxzcGFuIGNsYXNzPVwic3RhdC1zdHJvbmdcIj4ke3N0YXRzLm5fcGFwZXJzLnRvTG9jYWxlU3RyaW5nKCl9IHBhcGVyczwvc3Bhbj4gYW5kXG48c3BhbiBjbGFzcz1cInN0YXQtc3Ryb25nXCI+JHtzdGF0cy5uX3N1YmplY3RzLnRvTG9jYWxlU3RyaW5nKCl9IHN1YmplY3RzPC9zcGFuPi48L3A+XG48cCBzdHlsZT1cImZvbnQtc2l6ZTogMC44NXJlbTsgY29sb3I6ICM3Nzc7XCI+RGF0YSByZWxlYXNlICR7c3RhdHMuc291cmNlX3JlbGVhc2V9XG7CtyA8YSBocmVmPVwiaHR0cHM6Ly9zdGFuZm9yZC5yZWRpdmlzLmNvbS9kYXRhc2V0cy84MXRxLThkcDVnZTZiOVwiPnZlcnNpb25lZCBhcmNoaXZlIG9uIFJlZGl2aXM8L2E+PC9wPmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Imhlcm9fZnVubmVsID0ge1xuICAvLyBsaXZlIGZ1bm5lbCBwbG90IChJRFMgcHJlZmVyZW5jZSwgSGVkZ2VzJyBnKSAtLSB0aGUgbGVnYWN5IGhvbWUgcGFnZVxuICAvLyBzaG93ZWQgYSBzdGF0aWMgaW1hZ2Ugb2YgdGhpcyBwbG90OyBoZXJlIGl0IGlzIGNvbXB1dGVkIGZyb20gdGhlXG4gIC8vIGN1cnJlbnQgcmVsZWFzZVxuICBjb25zdCByb3dzID0gYXdhaXQgZDMuanNvbihcInNsaWNlcy9lcy9pZHNwcmVmLmpzb25cIik7XG4gIGNsZWFyX2xvYWRpbmcoKTtcbiAgY29uc3QgcHRzID0gcm93c1xuICAgIC5tYXAoKGQpID0+ICh7IGVzOiArZC5nX2NhbGMsIHNlOiBNYXRoLnNxcnQoK2QuZ192YXJfY2FsYykgfSkpXG4gICAgLmZpbHRlcigoZCkgPT4gTnVtYmVyLmlzRmluaXRlKGQuZXMpICYmIE51bWJlci5pc0Zpbml0ZShkLnNlKSk7XG4gIGNvbnN0IGNlbnRlciA9IGQzLm1lYW4ocHRzLCAoZCkgPT4gZC5lcyk7XG4gIGNvbnN0IEwgPSAxLjA1ICogZDMubWF4KHB0cywgKGQpID0+IGQuc2UpO1xuICBjb25zdCBncmlkID0gZDMucmFuZ2UoMCwgTCAqIDEuMDAwMSwgTCAvIDUwKTtcbiAgY29uc3QgdHJpOTUgPSBncmlkLm1hcCgocykgPT4gKHsgc2U6IHMsIHgxOiBjZW50ZXIgLSAxLjk2ICogcywgeDI6IGNlbnRlciArIDEuOTYgKiBzIH0pKTtcbiAgY29uc3QgdHJpOTkgPSBncmlkLm1hcCgocykgPT4gKHsgc2U6IHMsIHgxOiBjZW50ZXIgLSAyLjU3NiAqIHMsIHgyOiBjZW50ZXIgKyAyLjU3NiAqIHMgfSkpO1xuICBjb25zdCB4bWluID0gTWF0aC5taW4oY2VudGVyIC0gMi41NzYgKiBMLCBkMy5taW4ocHRzLCAoZCkgPT4gZC5lcykpO1xuICBjb25zdCB4bWF4ID0gTWF0aC5tYXgoY2VudGVyICsgMi41NzYgKiBMLCBkMy5tYXgocHRzLCAoZCkgPT4gZC5lcykpO1xuICByZXR1cm4gaHRtbGA8ZGl2IHN0eWxlPVwibWFyZ2luLXRvcDogMC41cmVtO1wiPlxuICAgIDxkaXYgc3R5bGU9XCJmb250LXNpemU6IDAuODVyZW07IGNvbG9yOiAjNDQ0OyBtYXJnaW4tYm90dG9tOiAwLjJyZW07XCI+XG4gICAgICA8Yj5GdW5uZWwgcGxvdDwvYj4gb2YgYmlhcyBpbiBlZmZlY3Qgc2l6ZXNcbiAgICAgIDxzcGFuIHN0eWxlPVwiY29sb3I6Izk5OTtcIj4oaW5mYW50LWRpcmVjdGVkIHNwZWVjaCBwcmVmZXJlbmNlIOKAlCBsaXZlKTwvc3Bhbj48L2Rpdj5cbiAgICAke1Bsb3QucGxvdCh7XG4gICAgICB3aWR0aDogNDYwLCBoZWlnaHQ6IDI4MCxcbiAgICAgIG1hcmdpbkxlZnQ6IDQ1LFxuICAgICAgeDogeyBsYWJlbDogXCJFZmZlY3Qgc2l6ZVwiLCBkb21haW46IFt4bWluLCB4bWF4XSB9LFxuICAgICAgeTogeyBsYWJlbDogXCJTdGFuZGFyZCBlcnJvclwiLCBkb21haW46IFswLCBMXSwgcmV2ZXJzZTogdHJ1ZSB9LFxuICAgICAgbWFya3M6IFtcbiAgICAgICAgUGxvdC5yZWN0KFt7fV0sIHsgeDE6IHhtaW4sIHgyOiB4bWF4LCB5MTogMCwgeTI6IEwsIGZpbGw6IFwiI2U2ZTZlNlwiIH0pLFxuICAgICAgICBQbG90LmFyZWFYKHRyaTk5LCB7IHk6IFwic2VcIiwgeDE6IFwieDFcIiwgeDI6IFwieDJcIiwgZmlsbDogXCIjZmZmXCIsIGZpbGxPcGFjaXR5OiAwLjUgfSksXG4gICAgICAgIFBsb3QuYXJlYVgodHJpOTUsIHsgeTogXCJzZVwiLCB4MTogXCJ4MVwiLCB4MjogXCJ4MlwiLCBmaWxsOiBcIiNmZmZcIiwgZmlsbE9wYWNpdHk6IDAuNSB9KSxcbiAgICAgICAgUGxvdC5ydWxlWChbY2VudGVyXSwgeyBzdHJva2VEYXNoYXJyYXk6IFwiMiwyXCIsIHN0cm9rZTogXCIjMzMzXCIgfSksXG4gICAgICAgIFBsb3QuZG90KHB0cywgeyB4OiBcImVzXCIsIHk6IFwic2VcIiwgZmlsbDogXCIjMjY4YmQyXCIsIGZpbGxPcGFjaXR5OiAwLjcsIHI6IDMgfSlcbiAgICAgIF1cbiAgICB9KX08L2Rpdj5gO1xufVxuIn1dfQ==
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InJlZ2lzdHJ5ID0gZDMuanNvbihcInNsaWNlcy9kYXRhc2V0cy5qc29uXCIpXG5kb21haW5zID0gKFtcbiAgeyBpZDogXCJlYXJseV9sYW5ndWFnZVwiLCB0aXRsZTogXCJFYXJseSBsYW5ndWFnZVwiLFxuICAgIGRlc2M6IFwiSG93IGRvIGNoaWxkcmVuIGxlYXJuIHRoZWlyIG5hdGl2ZSBsYW5ndWFnZT9cIiB9LFxuICB7IGlkOiBcImNvZ25pdGl2ZV9kZXZlbG9wbWVudFwiLCB0aXRsZTogXCJDb2duaXRpdmUgZGV2ZWxvcG1lbnRcIixcbiAgICBkZXNjOiBcIldoYXQgaXMgdGhlIG5hdHVyZSBvZiBjaGlsZHJlbidzIHVuZGVyc3RhbmRpbmc/XCIgfVxuXSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Imh0bWxgJHtkb21haW5zLm1hcCgoZG9tKSA9PiBodG1sYFxuICA8aDI+JHtkb20udGl0bGV9PC9oMj5cbiAgPHA+JHtkb20uZGVzY308L3A+XG4gIDxkaXYgY2xhc3M9XCJkYXRhc2V0LWdyaWRcIj5cbiAgICAke3JlZ2lzdHJ5LmZpbHRlcigoZCkgPT4gZC5kb21haW4gPT09IGRvbS5pZCkubWFwKChkKSA9PiBodG1sYFxuICAgICAgPGRpdiBjbGFzcz1cImRhdGFzZXQtY2FyZFwiPlxuICAgICAgICA8aDM+PGEgaHJlZj1cImV4cGxvcmVyLmh0bWw/ZGF0YXNldD0ke2VuY29kZVVSSUNvbXBvbmVudChkLnNob3J0X25hbWUpfVwiPiR7ZC5uYW1lfTwvYT48L2gzPlxuICAgICAgICA8ZGl2IGNsYXNzPVwiY2FyZC1kZXNjXCI+JHtkLnNob3J0X2Rlc2MgPz8gXCJcIn08L2Rpdj5cbiAgICAgICAgPGRpdiBjbGFzcz1cImNhcmQtc3RhdHNcIj4ke2QubnVtX3BhcGVyc30gcGFwZXJzIMK3ICR7ZC5udW1fZXhwZXJpbWVudHN9IGVmZmVjdCBzaXplcyDCtyAke2QubnVtX3N1YmplY3RzLnRvTG9jYWxlU3RyaW5nKCl9IHN1YmplY3RzPC9kaXY+XG4gICAgICA8L2Rpdj5gKX1cbiAgPC9kaXY+YCl9YFxuIn1dfQ==
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
