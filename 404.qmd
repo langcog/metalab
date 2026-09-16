@@ -1,0 +1,18 @@
+---
+title: "Page not found"
+toc: false
+---
+
+This page doesn't exist — but the data probably still does. MetaLab was
+rebuilt in 2026, and some old links changed:
+
+- Looking for a **dataset**? They're all on the [Datasets](datasets.qmd)
+  page, and every dataset can be explored interactively in
+  [Visualizations](explorer.qmd).
+- Looking for the **apps** (visualization, power analysis, power simulation,
+  validator)? They now run right in your browser, under
+  **Analyses** in the navigation bar.
+- Looking for **documentation**? See [About](about.qmd), which also has the
+  full changelog of what moved where.
+
+Still stuck? [Open an issue](https://github.com/langcog/metalab/issues).
