@@ -106,6 +106,13 @@ $navbar-fg: #ffffff;
   border: 1px solid #e3e6ea;
   border-radius: 0.5rem;
   padding: 1rem;
+
+  // once the layout wraps to one column the sticky panel would pin over
+  // the plots while scrolling
+  @media (max-width: 991.98px) {
+    position: static;
+    flex-basis: 100%;
+  }
 }
 
 .viz-main {
