@@ -90,7 +90,7 @@ models_all = d3.json(`slices/models/${dataset_meta.short_name}.json`)
 
 slice = subset_choice === "All data"
   ? slice_all
-  : slice_all.filter((d) => d[subset_choice] === true)
+  : slice_all.filter((d) => d[subset_choice] === true || d[subset_choice] === 1)
 
 es_col = `${es_type}_calc`
 es_var_col = `${es_type}_var_calc`

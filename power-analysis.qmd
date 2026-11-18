@@ -68,7 +68,7 @@ models_all = d3.json(`slices/models/${dataset_meta.short_name}.json`)
 
 slice = subset_choice === "All data"
   ? slice_all
-  : slice_all.filter((d) => d[subset_choice] === true)
+  : slice_all.filter((d) => d[subset_choice] === true || d[subset_choice] === 1)
 
 pwr_rows = slice.filter((d) =>
   Number.isFinite(+d.d_calc) && Number.isFinite(+d.d_var_calc))
