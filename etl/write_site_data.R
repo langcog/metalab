@@ -35,12 +35,11 @@ stats <- list(
 write_json(stats, "slices/stats.json", auto_unbox = TRUE, pretty = TRUE)
 
 ## ---- datasets.json ----
+# I() keeps these as JSON arrays: auto_unbox would otherwise write a
+# one-element list as a bare string, and the pages call .map() on them
 registry <- datasets %>%
-  mutate(moderators = map(moderators, fromJSON),
-         subset = map(subset, \(j) {
-           v <- fromJSON(j)
-           if (length(v) == 0) list() else v
-         }),
+  mutate(moderators = map(moderators, \(j) I(as.character(fromJSON(j)))),
+         subset = map(subset, \(j) I(as.character(fromJSON(j)))),
          across(c(num_experiments, num_papers, num_subjects), ~ round(.x))) %>%
   select(short_name, name, domain, filename, short_desc, description,
          full_citation, citation, curator, systematic, moderators, subset,
